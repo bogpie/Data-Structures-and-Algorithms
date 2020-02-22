@@ -79,6 +79,11 @@ int main ()
     int *v,n;
 
     printf("n= ");
+
+    /// FILE * input = fopen("input.txt","r");
+    ///FILE * output = fopen("output.txt","w");
+
+    ///fscanf(input,"%d",&n);
     scanf ("%d",&n);
 
     aloc(&v,n);
