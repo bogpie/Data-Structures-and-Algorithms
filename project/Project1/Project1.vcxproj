@@ -18,6 +18,15 @@
       <Platform>x64</Platform>
     </ProjectConfiguration>
   </ItemGroup>
+  <ItemGroup>
+    <None Include="..\..\tema_1_atp_cup\cerinte.in" />
+    <None Include="..\..\tema_1_atp_cup\date.in" />
+    <None Include="..\..\tema_1_atp_cup\date.out" />
+    <None Include="..\..\tema_1_atp_cup\rezultate.out" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\tema_1_atp_cup\main.c" />
+  </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>16.0</VCProjectVersion>
     <ProjectGuid>{1CC12F66-A420-4889-985D-41BA903B91E4}</ProjectGuid>
@@ -137,9 +146,6 @@
       <GenerateDebugInformation>true</GenerateDebugInformation>
     </Link>
   </ItemDefinitionGroup>
-  <ItemGroup>
-    <ClCompile Include="..\..\c03.liste\1.c" />
-  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>

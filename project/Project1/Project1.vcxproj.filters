@@ -15,7 +15,21 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="..\..\c03.liste\1.c">
+    <None Include="..\..\tema_1_atp_cup\cerinte.in">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="..\..\tema_1_atp_cup\date.in">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="..\..\tema_1_atp_cup\rezultate.out">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="..\..\tema_1_atp_cup\date.out">
+      <Filter>Resource Files</Filter>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\tema_1_atp_cup\main.c">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
