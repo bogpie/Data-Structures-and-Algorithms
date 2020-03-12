@@ -1,4 +1,0 @@
-﻿  main.c
-C:\Users\Bogdan\Documents\GitHub\sda\tema_1_atp_cup\main.c(35,6): warning C4101: 'score': unreferenced local variable
-C:\Users\Bogdan\Documents\GitHub\sda\tema_1_atp_cup\main.c(73,7): warning C4101: 'score': unreferenced local variable
-  Project1.vcxproj -> C:\Users\Bogdan\Documents\GitHub\sda\project\Project1\Debug\Project1.exe

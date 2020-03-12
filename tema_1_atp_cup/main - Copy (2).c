@@ -1,5 +1,7 @@
 #define _CRT_SECURE_NO_WARNINGS
 #define NAMELENGTH 50
+//#pragma warning( push )
+//#pragma warning( disable : 6054 )
 
 #include <stdio.h>
 #include <stdlib.h>
@@ -42,7 +44,6 @@ void fParseDate(FILE* dateIn,int * adrNrCountries,Node * start)
 	int score;
 
 	int nrCountries;
-
 	fscanf(dateIn, "%d", &nrCountries);
 	*adrNrCountries = nrCountries;
 
@@ -55,17 +56,14 @@ void fParseDate(FILE* dateIn,int * adrNrCountries,Node * start)
 	for (int iCountry = 0; iCountry < nrCountries; ++iCountry)
 	{
 		Country country;
-		char name[NAMELENGTH];
-		fscanf(dateIn, "%s" , name);
+		fscanf(dateIn, "%s" , country.name);
 		fscanf(dateIn, "%d", &country.nrPlayers);
-		country.name = malloc(sizeof(char) * strlen(name));
-		strcpy(country.name, name);
 		country.vPlayers = malloc(sizeof(Player) * country.nrPlayers);
 		for (int iPlayer = 0; iPlayer < country.nrPlayers; ++iPlayer)
 		{
 			Player player;
 			char firstName[NAMELENGTH], lastName[NAMELENGTH];
-			fscanf(dateIn, "%s%s%d", firstName, lastName, &player.score);
+			fscanf(dateIn, "%s%s%d", firstName, lastName, player.score);
 			player.firstName = malloc(sizeof(char) * strlen(firstName));
 			player.lastName = malloc(sizeof(char) * strlen(lastName));
 			strcpy(player.firstName, firstName);
@@ -109,46 +107,27 @@ void fParseCerinte(FILE * cerinteIn,int vCerinte[5],Player vTwoPlayers[2])
 	}
 }
 
-void fPrintList(Node* start)
-{
-	Node* node = start->next;
-	while (node != start)
-	{
-		Country country = node->country;
-		printf("\ncountry name = %s", country.name);
-		printf("\ncountry has %s players: ", country.nrPlayers);
-		for (int iPlayer = 0; iPlayer < country.nrPlayers; ++iPlayer)
-		{
-			Player player = country.vPlayers[iPlayer];
-			printf("\n%s %s score %d", player.firstName, player.lastName, player.score);
-
-		}
-	}
-}
-
 int main()
 {
 	FILE* cerinteOut = fopen("date.out", "w");
 	FILE* rezultateOut = fopen("rezultate.out", "w");
+	
 	FILE* dateIn = fopen("date.in", "r");
 	
 	
+	//Country* vCountries;
+	
 	Node* start = malloc(sizeof(Node));
+	start->next = NULL;
 
 	int nrCountries;
-
-
-
-
 	fParseDate(dateIn,&nrCountries,start);
-	fPrintList(start);
 
 	FILE* cerinteIn = fopen("cerinte.in", "r");
 	int vCerinte[5];
-	Player vTwoPlayers[2]; 
-
-
+	Player vTwoPlayers[2]; // se memoreaza?
 	fParseCerinte(cerinteIn,vCerinte,vTwoPlayers);
 
 	return 0;
 }
+//#pragma warning( pop )

@@ -1,0 +1,6 @@
+﻿  main.c
+C:\Users\Bogdan\Documents\GitHub\sda\tema_1_atp_cup\main.c(42,6): warning C4101: 'score': unreferenced local variable
+C:\Users\Bogdan\Documents\GitHub\sda\tema_1_atp_cup\main.c(41,7): warning C4101: 'countryName': unreferenced local variable
+C:\Users\Bogdan\Documents\GitHub\sda\tema_1_atp_cup\main.c(99,7): warning C4101: 'score': unreferenced local variable
+C:\Users\Bogdan\Documents\GitHub\sda\tema_1_atp_cup\main.c(119,10): warning C4477: 'printf' : format string '%s' requires an argument of type 'char *', but variadic argument 1 has type 'int'
+  project.vcxproj -> C:\Users\Bogdan\Documents\GitHub\sda\tema_1_atp_cup\Debug\project.exe
