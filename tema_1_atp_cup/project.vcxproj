@@ -23,6 +23,7 @@
     <ProjectGuid>{59116F89-E737-4136-9412-87A8F6ACB602}</ProjectGuid>
     <RootNamespace>project</RootNamespace>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+    <ProjectName>tenis</ProjectName>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
@@ -145,6 +146,9 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="tenis.c" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="tenis.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

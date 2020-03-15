@@ -6,6 +6,7 @@
 #include <stdlib.h>
 #include <string.h>
 
+
 typedef struct Player Player;
 struct Player
 {
@@ -72,7 +73,9 @@ typedef struct Tree Tree;
 struct Tree
 {
 	TreeNode* root;
+	int size;
 };
+
 
 int fMin(int a, int b)
 {
@@ -622,7 +625,7 @@ void fOpenAllCommandLine(FILE** adrCerinteIn, FILE** adrDateIn, FILE** adrRezult
 	*adrRezultateOut = fopen(argv[3], "w");
 }
 
-void alocTreeNode(TreeNode** adrTreeNode)
+void alocNode(TreeNode** adrTreeNode)
 {
 	TreeNode* treeNode;
 	treeNode = malloc(sizeof(TreeNode));
@@ -630,46 +633,65 @@ void alocTreeNode(TreeNode** adrTreeNode)
 	*adrTreeNode = treeNode;
 }
 
-void fInsert(Player player, TreeNode** adrTreeNode)
+void fInsert(Player player, Tree* tree)
 {
-	TreeNode* treeNode = *adrTreeNode;
-
-	if (treeNode == NULL)
+	if (tree->size == 0)
 	{
-		alocTreeNode(&treeNode);
-		treeNode->player = player;
-		*adrTreeNode = treeNode;
-		return;
+		(tree->root)->player = player;
 	}
-
-	Player nodePlayer = treeNode->player;
-	if (player.score > nodePlayer.score)
-	{
-		fInsert(player, &treeNode->right);
-	}
-	else if (player.score < nodePlayer.score)
-	{
-		fInsert(player, &treeNode->left);
-
-	}	
 	else
 	{
-		if (strcmp(player.firstName, nodePlayer.firstName) < 1)
+		TreeNode* treeNode = tree->root;
+
+		while (1)
 		{
-			treeNode->player = player;
-			*adrTreeNode = treeNode;
-		}
-		else if (strcmp(player.firstName, nodePlayer.firstName) == 0)
-		{
-			if (strcmp(player.lastName, nodePlayer.lastName) == -1)
+			Player nodePlayer = treeNode->player;
+
+			if (player.score > nodePlayer.score)
 			{
-				treeNode->player = player;
-				*adrTreeNode = treeNode;
+				if (treeNode->right == NULL)
+				{
+					alocNode(&treeNode->right);
+					(treeNode->right)->player = player;
+					break;
+				}
+				treeNode = treeNode->right;
+			}
+			else if (player.score < nodePlayer.score)
+			{
+				if (treeNode->left == NULL)
+				{
+					alocNode(&treeNode->left);
+					(treeNode->left)->player = player;
+					break;
+				}
+				treeNode = treeNode->left;
+			}
+			else
+			{
+				if (strcmp(player.firstName, nodePlayer.firstName) < 1)
+				{
+					treeNode->player = player;
+					break;
+				}
+				else if (strcmp(player.firstName, nodePlayer.firstName) == 0)
+				{
+					if (strcmp(player.lastName, nodePlayer.lastName) == -1)
+					{
+						treeNode->player = player;
+					}
+					break;
+				}
+				else
+				{
+					break;
+				}
 			}
 		}
 	}
-	return;
-	
+	++tree->size;
+		
+		
 }
 	
 void fTree(Stack* fourStack, Tree* tree)
@@ -682,7 +704,8 @@ void fTree(Stack* fourStack, Tree* tree)
 		for (int iPlayer = 0; iPlayer < country.nrPlayers; ++iPlayer)
 		{
 			Player player = *country.vAdrPlayers[iPlayer];
-			fInsert(player, &tree->root);
+
+			fInsert(player, tree);
 		}
 
 		fPop(&fourStack);
@@ -780,27 +803,6 @@ void fIdentifyAndCount(FILE* rezultateOut, Player* vTwoPlayers, Tree* tree)
 	fprintf(rezultateOut,"\n%d", nrBetween);
 }
 
-void fErase(Node* start,Player* vTwoPlayers,int* vCerinte)
-{
-	Node* node = start->next;
-
-	while (node != start)
-	{
-		Country* adrCountry = node->adrCountry;
-
-		for (int iPlayer = 0; iPlayer < adrCountry->nrPlayers; ++iPlayer)
-		{
-			Player* adrPlayer = adrCountry->vAdrPlayers[iPlayer];
-			free(adrPlayer);
-		}
-		node = node->next;
-		free(adrCountry);
-	}
-	free(start);
-	free(vTwoPlayers);
-	free(vCerinte);
-}
-
 int main(int argc, char* argv[])
 {
 	FILE* cerinteIn=NULL;
@@ -810,40 +812,37 @@ int main(int argc, char* argv[])
 	fOpenAllCommandLine(&cerinteIn, &dateIn, &rezultateOut,argc,argv);
 
 	Node* start = malloc(sizeof(Node));
-	int nrCountries,*vCerinte=malloc(sizeof(int)*5);
+	int nrCountries;
 	fParseDate(dateIn, &nrCountries, start);
+	int vCerinte[5];
 	Player* vTwoPlayers=malloc(sizeof(Player)*2);
 	fParseCerinte(cerinteIn, vCerinte, vTwoPlayers);
-
 	if (vCerinte[1] == 1)
 	{
 		fEliminate(start, &nrCountries);
 	}
 	fPrint(start, rezultateOut);
 
-	if (vCerinte[2] == 1)
-	{
-		Stack* stack = malloc(sizeof(Stack));
-		stack->top = NULL;
-		stack->size = 0;
-		fStack(start, &stack);
-		Stack* fourStack = malloc(sizeof(Stack));
-		fourStack->top = NULL;
-		fourStack->size = 0;
-		fTournament(stack, rezultateOut, &fourStack);
-		Tree* tree = malloc(sizeof(tree));
-		tree->root = NULL;
+	if (vCerinte[2] == 0) return 0;
+	Stack* stack=malloc(sizeof(Stack));
+	stack->top = NULL;
+	stack->size = 0;
+	fStack(start, &stack);
+	Stack* fourStack = malloc(sizeof(Stack));
+	fourStack->top = NULL;
+	fourStack->size = 0;
+	fTournament(stack,rezultateOut,&fourStack);
+	Tree* tree = malloc(sizeof(tree));
+	tree->size = 0;
+	alocNode(&tree->root);
 
-		if (vCerinte[3] == 1)
-		{
-			fRanking(rezultateOut, fourStack, tree);
-			if (vCerinte[4] == 1)
-			{
-				fIdentifyAndCount(rezultateOut, vTwoPlayers, tree);
-			}
-		}
-		
-	}
-	fErase(start,vTwoPlayers,vCerinte);
+	if (vCerinte[3] == 0) return 0;
+	fRanking(rezultateOut,fourStack, tree);
+
+	if (vCerinte[4] == 0) return 0;
+	fIdentifyAndCount(rezultateOut, vTwoPlayers, tree);
+
+	
+ 
 	return 0;
 }
