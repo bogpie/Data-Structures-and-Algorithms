@@ -20,7 +20,7 @@ struct Country
 	char* name;
 	int nrPlayers;
 	int globalScore;
-	Player* vPlayers;
+	Player** vAdrPlayers;
 };
 
 typedef struct Node Node;
@@ -42,7 +42,8 @@ struct StackNode
 typedef struct QueueNode QueueNode;
 struct QueueNode
 {
-	Player player;
+	Player* adrPlayer1;
+	Player* adrPlayer2;
 	QueueNode* next;
 };
 
@@ -132,7 +133,7 @@ void fParseDate(FILE* dateIn, int* adrNrCountries, Node* start)
 		country.name = malloc(sizeof(char) * strlen(countryName));
 		strcpy(country.name, countryName);
 
-		country.vPlayers = malloc(sizeof(Player) * country.nrPlayers);
+		country.vAdrPlayers = malloc(sizeof(Player*) * country.nrPlayers);
 
 		for (int iPlayer = 0; iPlayer < country.nrPlayers; ++iPlayer)
 		{
@@ -141,8 +142,8 @@ void fParseDate(FILE* dateIn, int* adrNrCountries, Node* start)
 			fscanf(dateIn, "%s%s%d", firstName, lastName, &player.score);
 			fStrAlloc(&player.firstName, firstName);
 			fStrAlloc(&player.lastName, lastName);
-			//country.vAdrPlayers[iPlayer] = malloc(sizeof(Player));
-			country.vPlayers[iPlayer] = player;
+			country.vAdrPlayers[iPlayer] = malloc(sizeof(Player));
+			*country.vAdrPlayers[iPlayer] = player;
 		}
 
 		Node* node = malloc(sizeof(Node));
@@ -189,7 +190,7 @@ void fConsole(Node* start)
 		printf("\ncountry has %d players: ", country.nrPlayers);
 		for (int iPlayer = 0; iPlayer < country.nrPlayers; ++iPlayer)
 		{
-			Player player = country.vPlayers[iPlayer];
+			Player player = *country.vAdrPlayers[iPlayer];
 			printf("\n%s %s score %d", player.firstName, player.lastName, player.score);
 
 		}
@@ -226,7 +227,7 @@ void fPrintLong(Node* start, FILE* rezultateOut)
 		printf("\ncountry has %d players: ", country.nrPlayers);
 		for (int iPlayer = 0; iPlayer < country.nrPlayers; ++iPlayer)
 		{
-			Player player = country.vPlayers[iPlayer];
+			Player player = *country.vAdrPlayers[iPlayer];
 			printf("\n%s %s score %d", player.firstName, player.lastName, player.score);
 
 		}
@@ -246,7 +247,7 @@ void fFindMinim(Node* start, float* adrMinim)
 
 		for (int iPlayer = 0; iPlayer < country.nrPlayers; ++iPlayer)
 		{
-			Player player = country.vPlayers[iPlayer];
+			Player player = *country.vAdrPlayers[iPlayer];
 			init += player.score;
 		}
 		init /= country.nrPlayers;
@@ -301,7 +302,7 @@ void fDeleteMinim(Node* start, int nrCountries, float minim)
 
 		for (int iPlayer = 0; iPlayer < country.nrPlayers; ++iPlayer)
 		{
-			Player player = country.vPlayers[iPlayer];
+			Player player = *country.vAdrPlayers[iPlayer];
 			init += player.score;
 		}
 		init /= country.nrPlayers;
@@ -389,13 +390,14 @@ void fDeque(Queue* queue)
 {
 	QueueNode* dequedNode = queue->front;
 	queue->front = (queue->front)->next;
-	free(dequedNode);
+	//free(dequedNode);
 }
 
-void fEnqueue(Queue* queue, Player* adrPlayer)
+void fEnqueue(Queue* queue, Player* adrPlayer1,Player* adrPlayer2)
 {
 	QueueNode* queueNode = malloc(sizeof(QueueNode));
-	queueNode->player = *adrPlayer;
+	queueNode->adrPlayer1 = adrPlayer1;
+	queueNode->adrPlayer2 = adrPlayer2;
 	queueNode->next = NULL;
 
 	if (queue->rear == NULL)
@@ -415,20 +417,22 @@ void fEnqueue(Queue* queue, Player* adrPlayer)
 
 void fQueue(Country* adrCountry1, Country* adrCountry2, Queue* queue)
 {
+	Country country1 = *adrCountry1;
+	Country country2 = *adrCountry2;
 
-	Player player1;
-	Player player2; 
+	Player* adrPlayer1 = NULL;
+	Player* adrPlayer2 = NULL;
 
-	for (int iPlayer = 0; iPlayer < adrCountry1->nrPlayers; ++iPlayer)
+	for (int iPlayer = 0; iPlayer < country1.nrPlayers; ++iPlayer)
 	{
-		//adrPlayer1 = malloc(sizeof(Player));
+		adrPlayer1 = malloc(sizeof(Player));
+		adrPlayer1 = country1.vAdrPlayers[iPlayer];
 
-		for (int jPlayer = 0; jPlayer < adrCountry2->nrPlayers; ++jPlayer)
+		for (int jPlayer = 0; jPlayer < country2.nrPlayers; ++jPlayer)
 		{
-
-			fEnqueue(queue, &((*adrCountry1).vPlayers[iPlayer]));
-			fEnqueue(queue, &((*adrCountry2).vPlayers[jPlayer]));
-			
+			adrPlayer2 = malloc(sizeof(Player));
+			adrPlayer2 = country2.vAdrPlayers[jPlayer];
+			fEnqueue(queue, adrPlayer1,adrPlayer2);
 		
 		}
 	}
@@ -479,6 +483,7 @@ void fTournament(Stack* stack,FILE* rezultateOut,Stack** adrFourStack)
 		while (stack->top != NULL)
 		{
 			int* vLocal = malloc(sizeof(int) * 2);
+			QueueNode* queueNode = malloc(sizeof(QueueNode));
 
 			Country * adrCountry1 = NULL, * adrCountry2 = NULL;
 
@@ -510,12 +515,9 @@ void fTournament(Stack* stack,FILE* rezultateOut,Stack** adrFourStack)
 			vLocal[0] = vLocal[1] = 0;
 			while (queue->front != NULL)
 			{
-				Player* adrPlayer1 = &queue->front->player;
-				Player* adrPlayer2 = &queue->front->next->player;
-
-
-				//adrPlayer1->score = 33;
-
+				QueueNode* queueNode = queue->front;
+				Player* adrPlayer1 = queueNode->adrPlayer1;
+				Player* adrPlayer2 = queueNode->adrPlayer2;
 				Player player1 = *adrPlayer1, player2 = *adrPlayer2;
 
 				fprintf(rezultateOut, "%s %s %d ", player1.firstName, player1.lastName, player1.score);
@@ -539,10 +541,10 @@ void fTournament(Stack* stack,FILE* rezultateOut,Stack** adrFourStack)
 					++vLocal[1];
 
 				}
-				(queue->front->player).score = player1.score;
-				((queue->front->next)->player).score = player2.score;
 
-				fDeque(queue);
+				adrPlayer1->score = player1.score;
+				adrPlayer2->score = player2.score;
+
 				fDeque(queue);
 			}
 
@@ -564,13 +566,13 @@ void fTournament(Stack* stack,FILE* rezultateOut,Stack** adrFourStack)
 				Country country = *adrCountry1;
 				for (int iPlayer = 0; iPlayer < country.nrPlayers; ++iPlayer)
 				{
-					Player player = country.vPlayers[iPlayer];
+					Player player = *country.vAdrPlayers[iPlayer];
 					if (player.score > maxim) maxim = player.score;
 				}
 				country = *adrCountry2;
 				for (int iPlayer = 0; iPlayer < country.nrPlayers; ++iPlayer)
 				{
-					Player player = country.vPlayers[iPlayer];
+					Player player = *country.vAdrPlayers[iPlayer];
 					if (player.score > maxim)
 					{
 						fPush(&winner, adrCountry2);
@@ -679,7 +681,7 @@ void fTree(Stack* fourStack, Tree* tree)
 
 		for (int iPlayer = 0; iPlayer < country.nrPlayers; ++iPlayer)
 		{
-			Player player = country.vPlayers[iPlayer];
+			Player player = *country.vAdrPlayers[iPlayer];
 			fInsert(player, &tree->root);
 		}
 
@@ -786,13 +788,11 @@ void fErase(Node* start,Player* vTwoPlayers,int* vCerinte)
 	{
 		Country* adrCountry = node->adrCountry;
 
-		/*
 		for (int iPlayer = 0; iPlayer < adrCountry->nrPlayers; ++iPlayer)
 		{
-			Player* adrPlayer = adrCountry->vPlayers[iPlayer];
+			Player* adrPlayer = adrCountry->vAdrPlayers[iPlayer];
 			free(adrPlayer);
 		}
-		*/
 		node = node->next;
 		free(adrCountry);
 	}

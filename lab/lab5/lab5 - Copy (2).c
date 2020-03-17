@@ -7,7 +7,7 @@
 typedef struct Node Node;
 struct Node
 {
-    int* adrX;
+    int x;
     Node* next;
 };
 
@@ -31,10 +31,10 @@ struct Stack
 };
 
 
-void fEnqueue(Queue* queue, int * adrX)
+void fEnqueue(Queue* queue, int x)
 {
     Node* node = malloc(sizeof(Node));
-    node->adrX = adrX;
+    node->x = x;
     node->next = NULL;
     if (queue->rear == NULL)
     {
@@ -72,41 +72,40 @@ int fDeque(Queue* queue)
 {
     if (isEmpty(queue)) exit(1);
     Node* dequed = queue->front;
-    int returned = *(dequed->adrX);
+    int returned = dequed->x;
     queue->front = queue->front->next;
     free(dequed);
     return  returned;
 }
 
 
-void fModify(int ** adrAdrX)
+void fModify(int * adrX)
 {
-    **adrAdrX = -1;
+    *adrX = -1;
 }
 
 int main()
 {
-    int * adrX;
+    int x;
     Queue* queue;
     fCreateQueue(&queue);
 
-     adrX = malloc(sizeof(int));
    
-     *adrX = 123;
+     x = 123;
 
 
   
-    fEnqueue(queue, adrX);
-    fEnqueue(queue, adrX);
-    fEnqueue(queue, adrX);
+    fEnqueue(queue, x);
+    fEnqueue(queue, x);
+    fEnqueue(queue, x);
 
-    fModify(&queue->front->adrX);
-    int x = fDeque(queue);
+    fModify(&queue->front->x);
+    x = fDeque(queue);
     printf("%d ", x);
-     x = fDeque(queue);
+    x = fDeque(queue);
     printf("%d ", x);
 
-     x = fDeque(queue);
+    x = fDeque(queue);
     printf("%d ", x);
 
    
