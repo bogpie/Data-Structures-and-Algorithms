@@ -3,11 +3,19 @@
 #include <stdlib.h>
 #include <string.h>
 
+typedef struct Player Player;
+struct Player
+{
+    char* lastName;
+    char* firstName;
+    int score;
+};
+
 
 typedef struct Node Node;
 struct Node
 {
-    int* adrX;
+    Player* adrPlayer;
     Node* next;
 };
 
@@ -31,10 +39,10 @@ struct Stack
 };
 
 
-void fEnqueue(Queue* queue, int * adrX)
+void fEnqueue(Queue* queue, Player * adrPlayer)
 {
     Node* node = malloc(sizeof(Node));
-    node->adrX = adrX;
+    node->adrPlayer = adrPlayer;
     node->next = NULL;
     if (queue->rear == NULL)
     {
@@ -68,46 +76,50 @@ int isEmpty(Queue* queue)
     return 0;
 }
 
-int fDeque(Queue* queue)
+Player fDeque(Queue* queue)
 {
     if (isEmpty(queue)) exit(1);
     Node* dequed = queue->front;
-    int returned = *(dequed->adrX);
+    Player returned = *(dequed->adrPlayer);
     queue->front = queue->front->next;
     free(dequed);
     return  returned;
 }
 
 
-void fModify(int ** adrAdrX)
+void fModify(Player * adrPlayer)
 {
-    **adrAdrX = -1;
+    (*adrPlayer).score = -1;
 }
 
 int main()
 {
-    int * adrX;
+    Player * adrPlayer;
     Queue* queue;
     fCreateQueue(&queue);
 
-     adrX = malloc(sizeof(int));
+    adrPlayer = malloc(sizeof(Player));
    
-     *adrX = 123;
+     adrPlayer->score = 123;
 
 
   
-    fEnqueue(queue, adrX);
-    fEnqueue(queue, adrX);
-    fEnqueue(queue, adrX);
+    fEnqueue(queue, adrPlayer);
+    fEnqueue(queue, adrPlayer);
+    fEnqueue(queue, adrPlayer);
 
-    fModify(&queue->front->adrX);
-    int x = fDeque(queue);
-    printf("%d ", x);
-     x = fDeque(queue);
-    printf("%d ", x);
+    Player player;
 
-     x = fDeque(queue);
-    printf("%d ", x);
+    fModify(queue->front->adrPlayer);
+
+
+    player = fDeque(queue);
+    printf("%d ", adrPlayer->score);
+    player = fDeque(queue);
+    printf("%d ", adrPlayer->score);
+
+    player = fDeque(queue);
+    printf("%d ", adrPlayer->score);
 
    
     return 0;
