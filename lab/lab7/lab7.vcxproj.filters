@@ -15,21 +15,7 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <None Include="cerinte.in">
-      <Filter>Resource Files</Filter>
-    </None>
-    <None Include="date.in">
-      <Filter>Resource Files</Filter>
-    </None>
-    <None Include="date.out">
-      <Filter>Resource Files</Filter>
-    </None>
-    <None Include="rezultate.out">
-      <Filter>Resource Files</Filter>
-    </None>
-  </ItemGroup>
-  <ItemGroup>
-    <ClCompile Include="tenis.c">
+    <ClCompile Include="lab7_piele_bogdan_312ab_2.c">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

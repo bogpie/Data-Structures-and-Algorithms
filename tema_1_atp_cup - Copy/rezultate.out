@@ -1,104 +1,285 @@
+Elvetia
+China
+Franta
+Spania
+Georgia
+Letonia
+Romania
+Estonia
+Germania
 Rusia
+Croatia
+Suedia
 Australia
+Brazilia
 Serbia
 Belgia
 Argentina
+Japonia
 Chile
 Polonia
-Georgia
+Uruguai
+Pakistan
+Danemarca
+Norvegia
+Irlanda
+Turcia
+Cipru
+Italia
+Grecia
+India
+Slovacia
+Bulgaria
 
 ====== ETAPA 1 ======
 
-Georgia 0 ----- Polonia 0
-Metreveli Aleksandre 28 vs Kubot Lukasz 24
-Metreveli Aleksandre 33 vs Fibak Wojtek 23
-Metreveli Aleksandre 38 vs Tloczynski Ignacy 34
-Basilashvili Nikoloz 20 vs Kubot Lukasz 24
-Basilashvili Nikoloz 20 vs Fibak Wojtek 23
-Basilashvili Nikoloz 20 vs Tloczynski Ignacy 34
-Tsidavze George 29 vs Kubot Lukasz 29
-Tsidavze George 31 vs Fibak Wojtek 28
-Tsidavze George 36 vs Tloczynski Ignacy 39
+Bulgaria 0 ----- Slovacia 0
+Dimitrov Grigor 19 vs Klizan Martin 30
+Dimitrov Grigor 19 vs Beck Karol 25
+Dimitrov Grigor 19 vs Mecir Miloslav 22
+Kuzmanov Dimitar 30 vs Klizan Martin 35
+Kuzmanov Dimitar 30 vs Beck Karol 30
+Kuzmanov Dimitar 32 vs Mecir Miloslav 27
+Lazarov Alexander 27 vs Klizan Martin 40
+Lazarov Alexander 27 vs Beck Karol 32
+Lazarov Alexander 27 vs Mecir Miloslav 27
 
-Chile 0 ----- Argentina 0
-Gonzalez Fernando 26 vs Coria Guillermo 26
-Gonzalez Fernando 28 vs Acasuso Jose 29
-Gonzalez Fernando 28 vs Mayer Leonardo 19
-Rios Marcelo 30 vs Coria Guillermo 28
-Rios Marcelo 35 vs Acasuso Jose 34
-Rios Marcelo 40 vs Mayer Leonardo 19
-Massu Nicolas 18 vs Coria Guillermo 28
-Massu Nicolas 18 vs Acasuso Jose 34
-Massu Nicolas 18 vs Mayer Leonardo 19
+India 0 ----- Grecia 0
+Paes Leander 23 vs Tsitsipas Stefanos 20
+Paes Leander 28 vs Jakupovic Alexandros 19
+Paes Leander 33 vs Economidis Konstantinos 25
+Bhambri Yuki 26 vs Tsitsipas Stefanos 20
+Bhambri Yuki 31 vs Jakupovic Alexandros 19
+Bhambri Yuki 36 vs Economidis Konstantinos 25
+Nagal Sumit 22 vs Tsitsipas Stefanos 20
+Nagal Sumit 27 vs Jakupovic Alexandros 19
+Nagal Sumit 32 vs Economidis Konstantinos 25
+
+Italia 0 ----- Cipru 0
+Fognini Fabio 29 vs Baghdatis Marcos 19
+Fognini Fabio 34 vs Chrysochos Petros 30
+Fognini Fabio 39 vs Pervolarakis Michail 28
+Cecchinato Marco 25 vs Baghdatis Marcos 19
+Cecchinato Marco 30 vs Chrysochos Petros 30
+Cecchinato Marco 32 vs Pervolarakis Michail 28
+Berrettini Matteo 30 vs Baghdatis Marcos 19
+Berrettini Matteo 35 vs Chrysochos Petros 32
+Berrettini Matteo 40 vs Pervolarakis Michail 28
+
+Turcia 0 ----- Irlanda 0
+Ilhan Marsel 27 vs McGee James 25
+Ilhan Marsel 32 vs Sorensen Louk 28
+Ilhan Marsel 37 vs Cluskey James 23
+Celikbilek Altug 20 vs McGee James 25
+Celikbilek Altug 20 vs Sorensen Louk 28
+Celikbilek Altug 20 vs Cluskey James 23
+Ilkel Cem 28 vs McGee James 30
+Ilkel Cem 28 vs Sorensen Louk 33
+Ilkel Cem 28 vs Cluskey James 28
+
+Norvegia 0 ----- Danemarca 0
+Durasovic Viktor 22 vs Nielsen Kurt 27
+Durasovic Viktor 22 vs Carlsen Kenneth 20
+Durasovic Viktor 27 vs Ulrich Lars 30
+Ruud Casper 26 vs Nielsen Kurt 32
+Ruud Casper 26 vs Carlsen Kenneth 20
+Ruud Casper 31 vs Ulrich Lars 35
+Langaard Conrad 20 vs Nielsen Kurt 37
+Langaard Conrad 20 vs Carlsen Kenneth 20
+Langaard Conrad 22 vs Ulrich Lars 40
+
+Pakistan 0 ----- Uruguai 0
+Khan Aqeel 17 vs Cuevas Martin 19
+Khan Aqeel 17 vs Cuevas Pablo 27
+Khan Aqeel 17 vs Behar Ariel 25
+Meer Saeed 25 vs Cuevas Martin 24
+Meer Saeed 30 vs Cuevas Pablo 32
+Meer Saeed 30 vs Behar Ariel 30
+Rahim Haroon 22 vs Cuevas Martin 24
+Rahim Haroon 22 vs Cuevas Pablo 37
+Rahim Haroon 22 vs Behar Ariel 32
+
+Polonia 0 ----- Chile 0
+Kubot Lukasz 24 vs Gonzalez Fernando 26
+Kubot Lukasz 24 vs Rios Marcelo 30
+Kubot Lukasz 24 vs Massu Nicolas 19
+Fibak Wojtek 23 vs Gonzalez Fernando 31
+Fibak Wojtek 23 vs Rios Marcelo 35
+Fibak Wojtek 23 vs Massu Nicolas 19
+Tloczynski Ignacy 34 vs Gonzalez Fernando 36
+Tloczynski Ignacy 34 vs Rios Marcelo 40
+Tloczynski Ignacy 34 vs Massu Nicolas 19
+
+Japonia 0 ----- Argentina 0
+Taro Daniel 25 vs Coria Guillermo 22
+Taro Daniel 30 vs Acasuso Jose 29
+Taro Daniel 35 vs Mayer Leonardo 27
+Nishikori Kei 30 vs Coria Guillermo 22
+Nishikori Kei 35 vs Acasuso Jose 29
+Nishikori Kei 40 vs Mayer Leonardo 27
+Tatsuma Ito 22 vs Coria Guillermo 22
+Tatsuma Ito 24 vs Acasuso Jose 29
+Tatsuma Ito 24 vs Mayer Leonardo 27
 
 Belgia 0 ----- Serbia 0
 Malisse Xavier 23 vs Dokovic Novak 31
-Malisse Xavier 23 vs Zimonjic Nenad 24
+Malisse Xavier 23 vs Zimonjic Nenad 29
 Malisse Xavier 23 vs Troicki Victor 23
-Bemelmans Ruben 25 vs Dokovic Novak 36
-Bemelmans Ruben 25 vs Zimonjic Nenad 29
-Bemelmans Ruben 25 vs Troicki Victor 25
+Bemelmans Ruben 20 vs Dokovic Novak 36
+Bemelmans Ruben 20 vs Zimonjic Nenad 34
+Bemelmans Ruben 20 vs Troicki Victor 25
 Darcis Steve 27 vs Dokovic Novak 41
-Darcis Steve 27 vs Zimonjic Nenad 34
-Darcis Steve 27 vs Troicki Victor 27
+Darcis Steve 27 vs Zimonjic Nenad 39
+Darcis Steve 27 vs Troicki Victor 30
 
-Australia 0 ----- Rusia 0
-Perry Todd 21 vs Andreev Igor 24
-Perry Todd 21 vs Davidenko Nikolai 30
-Perry Todd 21 vs Safin Marat 28
-Rafter Patrick 32 vs Andreev Igor 29
-Rafter Patrick 37 vs Davidenko Nikolai 35
-Rafter Patrick 42 vs Safin Marat 33
-Hanley Paul 23 vs Andreev Igor 29
-Hanley Paul 23 vs Davidenko Nikolai 35
-Hanley Paul 23 vs Safin Marat 33
+Brazilia 0 ----- Australia 0
+Kuerten Gustavo 24 vs Perry Todd 21
+Kuerten Gustavo 29 vs Rafter Patrick 26
+Kuerten Gustavo 34 vs Hanley Paul 21
+Melo Marcelo 19 vs Perry Todd 21
+Melo Marcelo 19 vs Rafter Patrick 26
+Melo Marcelo 19 vs Hanley Paul 21
+Bellucci Thomaz 25 vs Perry Todd 26
+Bellucci Thomaz 25 vs Rafter Patrick 31
+Bellucci Thomaz 25 vs Hanley Paul 26
+
+Suedia 0 ----- Croatia 0
+Borg Bjorn 21 vs Ancic Mario 19
+Borg Bjorn 26 vs Ljubicic Ivan 22
+Borg Bjorn 31 vs Cilic Marin 22
+Edberg Stefan 24 vs Ancic Mario 19
+Edberg Stefan 29 vs Ljubicic Ivan 22
+Edberg Stefan 34 vs Cilic Marin 22
+Lindstedt Robert 18 vs Ancic Mario 19
+Lindstedt Robert 18 vs Ljubicic Ivan 22
+Lindstedt Robert 18 vs Cilic Marin 22
+
+Rusia 0 ----- Germania 0
+Andreev Igor 24 vs Haas Tommy 31
+Andreev Igor 24 vs Kiefer Nicolas 26
+Andreev Igor 24 vs Becker Boris 28
+Davidenko Nikolai 30 vs Haas Tommy 36
+Davidenko Nikolai 30 vs Kiefer Nicolas 31
+Davidenko Nikolai 30 vs Becker Boris 33
+Safin Marat 28 vs Haas Tommy 41
+Safin Marat 28 vs Kiefer Nicolas 36
+Safin Marat 28 vs Becker Boris 38
+
+Estonia 0 ----- Romania 0
+Zopp Jurgen 28 vs Hanescu Victor 31
+Zopp Jurgen 28 vs Tecau Horia 33
+Zopp Jurgen 28 vs Cruciat Adrian 23
+Tamm Kristjan 31 vs Hanescu Victor 36
+Tamm Kristjan 31 vs Tecau Horia 38
+Tamm Kristjan 31 vs Cruciat Adrian 23
+Ivanov Vladimir 21 vs Hanescu Victor 41
+Ivanov Vladimir 21 vs Tecau Horia 43
+Ivanov Vladimir 21 vs Cruciat Adrian 23
+
+Letonia 0 ----- Georgia 0
+Gulbis Ernests 28 vs Metreveli Aleksandre 28
+Gulbis Ernests 30 vs Basilashvili Nikoloz 20
+Gulbis Ernests 35 vs Tsidavze George 29
+Lejnieks Karlis 30 vs Metreveli Aleksandre 30
+Lejnieks Karlis 32 vs Basilashvili Nikoloz 20
+Lejnieks Karlis 37 vs Tsidavze George 29
+Pavlovs Deniss 25 vs Metreveli Aleksandre 32
+Pavlovs Deniss 25 vs Basilashvili Nikoloz 20
+Pavlovs Deniss 30 vs Tsidavze George 29
+
+Spania 0 ----- Franta 0
+Ferrer David 29 vs Serra Florent 21
+Ferrer David 34 vs Monfils Gael 25
+Ferrer David 39 vs Pouille Lucas 34
+Nadal Rafael 36 vs Serra Florent 21
+Nadal Rafael 41 vs Monfils Gael 25
+Nadal Rafael 46 vs Pouille Lucas 34
+Montanes Albert 22 vs Serra Florent 21
+Montanes Albert 27 vs Monfils Gael 25
+Montanes Albert 32 vs Pouille Lucas 34
+
+China 0 ----- Elvetia 0
+Xin Gao 25 vs Rosset Marc 23
+Xin Gao 30 vs Federer Roger 38
+Xin Gao 30 vs Chiudinelli Marco 28
+Zhe Li 20 vs Rosset Marc 23
+Zhe Li 20 vs Federer Roger 43
+Zhe Li 20 vs Chiudinelli Marco 28
+Ze Zhang 18 vs Rosset Marc 28
+Ze Zhang 18 vs Federer Roger 48
+Ze Zhang 18 vs Chiudinelli Marco 33
 
 === WINNER ===
-Rusia --- 18
-Serbia --- 21
-Chile --- 13
-Polonia --- 13
+Elvetia --- 21
+Spania --- 24
+Letonia --- 20
+Romania --- 21
+Germania --- 27
+Suedia --- 18
+Australia --- 18
+Serbia --- 25
+Japonia --- 19
+Chile --- 18
+Uruguai --- 22
+Danemarca --- 19
+Irlanda --- 16
+Italia --- 25
+India --- 27
+Slovacia --- 20
 
 ====== ETAPA 2 ======
 
-Polonia 13 ----- Chile 13
-Kubot Lukasz 31 vs Gonzalez Fernando 33
-Kubot Lukasz 31 vs Rios Marcelo 45
-Kubot Lukasz 31 vs Massu Nicolas 18
-Fibak Wojtek 28 vs Gonzalez Fernando 38
-Fibak Wojtek 28 vs Rios Marcelo 50
-Fibak Wojtek 28 vs Massu Nicolas 18
-Tloczynski Ignacy 44 vs Gonzalez Fernando 43
-Tloczynski Ignacy 49 vs Rios Marcelo 55
-Tloczynski Ignacy 49 vs Massu Nicolas 18
+Slovacia 20 ----- India 27
+Klizan Martin 45 vs Paes Leander 38
+Klizan Martin 50 vs Bhambri Yuki 41
+Klizan Martin 55 vs Nagal Sumit 37
+Beck Karol 37 vs Paes Leander 38
+Beck Karol 37 vs Bhambri Yuki 41
+Beck Karol 37 vs Nagal Sumit 37
+Mecir Miloslav 29 vs Paes Leander 43
+Mecir Miloslav 29 vs Bhambri Yuki 46
+Mecir Miloslav 29 vs Nagal Sumit 39
 
-Serbia 21 ----- Rusia 18
-Dokovic Novak 46 vs Andreev Igor 34
-Dokovic Novak 51 vs Davidenko Nikolai 40
-Dokovic Novak 56 vs Safin Marat 38
-Zimonjic Nenad 39 vs Andreev Igor 34
-Zimonjic Nenad 44 vs Davidenko Nikolai 40
-Zimonjic Nenad 49 vs Safin Marat 38
-Troicki Victor 29 vs Andreev Igor 34
-Troicki Victor 29 vs Davidenko Nikolai 40
-Troicki Victor 29 vs Safin Marat 38
+Italia 25 ----- Irlanda 16
+Fognini Fabio 44 vs McGee James 35
+Fognini Fabio 49 vs Sorensen Louk 38
+Fognini Fabio 54 vs Cluskey James 30
+Cecchinato Marco 37 vs McGee James 35
+Cecchinato Marco 42 vs Sorensen Louk 38
+Cecchinato Marco 47 vs Cluskey James 30
+Berrettini Matteo 45 vs McGee James 35
+Berrettini Matteo 50 vs Sorensen Louk 38
+Berrettini Matteo 55 vs Cluskey James 30
 
-=== WINNER ===
-Serbia --- 39
-Chile --- 28
+Danemarca 19 ----- Uruguai 22
+Nielsen Kurt 42 vs Cuevas Martin 29
+Nielsen Kurt 47 vs Cuevas Pablo 42
+Nielsen Kurt 52 vs Behar Ariel 37
+Carlsen Kenneth 22 vs Cuevas Martin 29
+Carlsen Kenneth 22 vs Cuevas Pablo 42
+Carlsen Kenneth 22 vs Behar Ariel 37
+Ulrich Lars 45 vs Cuevas Martin 34
+Ulrich Lars 50 vs Cuevas Pablo 47
+Ulrich Lars 55 vs Behar Ariel 42
 
-====== ETAPA 3 ======
+Chile 18 ----- Japonia 19
+Gonzalez Fernando 41 vs Taro Daniel 40
+Gonzalez Fernando 46 vs Nishikori Kei 45
+Gonzalez Fernando 51 vs Tatsuma Ito 24
+Rios Marcelo 45 vs Taro Daniel 40
+Rios Marcelo 50 vs Nishikori Kei 45
+Rios Marcelo 55 vs Tatsuma Ito 24
+Massu Nicolas 19 vs Taro Daniel 40
+Massu Nicolas 19 vs Nishikori Kei 45
+Massu Nicolas 19 vs Tatsuma Ito 24
 
-Chile 28 ----- Serbia 39
-Gonzalez Fernando 43 vs Dokovic Novak 61
-Gonzalez Fernando 43 vs Zimonjic Nenad 54
-Gonzalez Fernando 43 vs Troicki Victor 29
-Rios Marcelo 60 vs Dokovic Novak 66
-Rios Marcelo 60 vs Zimonjic Nenad 59
-Rios Marcelo 65 vs Troicki Victor 29
-Massu Nicolas 18 vs Dokovic Novak 71
-Massu Nicolas 18 vs Zimonjic Nenad 59
-Massu Nicolas 18 vs Troicki Victor 29
-
-=== WINNER ===
-Serbia --- 57
+Serbia 25 ----- Australia 18
+Dokovic Novak 46 vs Perry Todd 31
+Dokovic Novak 51 vs Rafter Patrick 36
+Dokovic Novak 56 vs Hanley Paul 31
+Zimonjic Nenad 44 vs Perry Todd 31
+Zimonjic Nenad 49 vs Rafter Patrick 36
+Zimonjic Nenad 54 vs Hanley Paul 31
+Troicki Victor 35 vs Perry Todd 31
+Troicki Victor 40 vs Rafter Patrick 36
+Troicki Victor 45 vs Hanley 
