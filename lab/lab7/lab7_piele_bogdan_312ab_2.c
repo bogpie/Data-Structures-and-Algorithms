@@ -5,37 +5,39 @@
 #include <stdlib.h>
 
 typedef struct TreeNode TreeNode;
-struct TreeNode
+struct TreeNode // nod de arbore
 {
 	int val;
 	TreeNode* left;
 	TreeNode* right;
 };
 
-typedef struct StackNode StackNode;
+typedef struct StackNode StackNode; // nod de stiva
 struct StackNode
 {
 	int val;
 	StackNode* next;
 };
 
-void fPrintTree(TreeNode* root)
+void fPrintTree(TreeNode* root) // afisarea arborelui, parametru : radacina lui
 {
 	if (root == NULL) return;
+
+	// se afiseaza parcurgandu-se inorder arborele
 
 	fPrintTree(root->left);
 	printf("%d ", root->val);
 	fPrintTree(root->right);
 }
 
-void fAlocTreeNode(TreeNode** adrTreeNode)
+void fAlocTreeNode(TreeNode** adrTreeNode) // alocarea nodului de arbore transmis prin referinta
 {
 	*adrTreeNode = malloc(sizeof(TreeNode));
 	(*adrTreeNode)->left = NULL;
 	(*adrTreeNode)->right = NULL;
 }
 
-void fInsert(int val, TreeNode** adrTreeNode)
+void fInsert(int val, TreeNode** adrTreeNode) // inserarea unei valori in BST
 {
 	TreeNode* treeNode = *adrTreeNode;
 
@@ -53,34 +55,39 @@ void fInsert(int val, TreeNode** adrTreeNode)
 
 	if (val > treeNode->val)
 	{
-		fInsert(val, &treeNode->right);
+		fInsert(val, &treeNode->right); 
+		// apelare recursiva, noua radacina este nodul din dreapta pentru ca valoarea de inserat este mai mare decat nodul curent (radacina curenta)
 	}
 	else
 	{
 		fInsert(val, &treeNode->left);
+		// stanga (valoare mai mica)
 	}
 	
 }
 
-void fFindSucc(int key, TreeNode* crtNode,int * adrSucc)
+// gasirea succesorului; parametrii : cheia nodului caruia ii vom gasi succesorul, nodul curent din parcurgere, valoarea succesorului transmisa prin refeinta
+void fFindSucc(int key, TreeNode* crtNode,int * adrSucc) 
 {
-	if (crtNode == NULL)
+	if (crtNode == NULL) // nu mai putem parcurge pe aceasta ramura
 	{
 		return;
 	}
-	if (crtNode->val <= key)
+	if (crtNode->val <= key) 
 	{
-		fFindSucc(key, crtNode->right, adrSucc);
+		fFindSucc(key, crtNode->right, adrSucc); // cautam in dreapta succesorul; succesorul ar trebui sa fie o valoare mai mare 
 		return;
 	}
 	else
 	{
 		int succ = *adrSucc;
 		if (crtNode->val < succ)
+		// succesorul unui nod are CEA MAI MICA valoare MAI MARE decat cheia lui
+		// asadar cautam daca putem actualiza valoarea gasita pentru succesor
 		{
 			succ = crtNode->val;
 			*adrSucc = succ;
-			fFindSucc(key, crtNode->left, adrSucc);
+			fFindSucc(key, crtNode->left, adrSucc); // cautam in stanga succesorul
 			return;
 		}
 	}
@@ -94,12 +101,15 @@ void fFindPred(int key, TreeNode* crtNode,int * adrPred)
 	}
 	if (crtNode->val >= key)
 	{
+		// predecesorul ar trebui sa fie o valoare mai mica 
 		fFindPred(key, crtNode->left, adrPred);
 		return;
 	}
 	else
 	{
 		int pred = *adrPred;
+		
+		//daca putem actualiza predecesorul
 		if (crtNode->val > pred)
 		{
 			pred = crtNode->val;
@@ -111,6 +121,8 @@ void fFindPred(int key, TreeNode* crtNode,int * adrPred)
 }
 
 void fFind(int key, TreeNode* root, int* adrExists, TreeNode** adrKeyNode)
+// gasirea unei valori in BST
+// parametrii: cheie,radacina, valoare "boolean" corespunzatoare existentei cheii (referinta), adresa nodului cu cheie (nodul prin referinta)
 {
 	if (root == NULL)
 	{
@@ -198,13 +210,13 @@ void fKeyFunctions(TreeNode* root, int key)
 void fSwap(int * adr_x,int * adr_y)
 {
 	int aux = *adr_y;
-	adr_y = adr_x;
-	adr_x = aux;
+	*adr_y = *adr_x;
+	*adr_x = aux;
 }
 
 //se afiseaza elementele intre x si y, inclusiv x si y
 //pentru a nu include x si y, se modifica "<=", respectiv ">=" cu "<", respectiv ":>"
-void fPrintBetween(TreeNode* root, int x, int y) 
+void fPrintBetween(TreeNode* root, int x, int y)  
 {
 	if (root == NULL) return;
 
@@ -250,7 +262,7 @@ void fAlocStackNode(StackNode** adrStackNode)
 	(*adrStackNode)->next = NULL;
 }
 
-void fCompareStacks(StackNode* top, StackNode* top2, int* adrEquals)
+void fCompareStacks(StackNode* top, StackNode* top2, short* adrEquals)
 {
 	while (top != NULL)
 	{
@@ -276,7 +288,8 @@ void fPush(StackNode** adrTop, int val)
 	*adrTop = newTop;
 }
 
-void fGenerateStack(TreeNode* root,StackNode** adrTop)
+void fGenerateStack(TreeNode* root,StackNode** adrTop) 
+// generarea unei stive cu valorile BST (stiva va avea valorile sortate descrescator; parametrii: radacina arborelui, stiva (top-ul ei - prin referinta)
 {
 	if (root == NULL) return;
 	fGenerateStack(root->left,adrTop);
@@ -284,12 +297,15 @@ void fGenerateStack(TreeNode* root,StackNode** adrTop)
 	fGenerateStack(root->right, adrTop);
 }
 
-void fCompareTrees(int n,TreeNode* root,int n2,TreeNode* root2,int* adrEquals)
+void fCompareTrees(int n,TreeNode* root,int n2,TreeNode* root2,short* adrEquals)
 {
+	// doi BST se compara prin compararea celor 2 stive generate dupa acestia
+	// parametrii - numerele de noduri si radacinile arborilor; variabila "boolean" - au sau nu aceleasi valori
 	if (n != n2)
 	{
-		printf("\narborii nu au acelasi nr de elemente");
-		return 0;
+		printf("\narborii nu au acelasi nr de elemente deci");
+		*adrEquals = 0;
+		return ;
 	}
 	StackNode* top, *top2;
 	fAlocStackNode(&top);
@@ -321,7 +337,7 @@ int main()
 	printf("\ny="); scanf("%d", &y);
 	if (y < x)
 	{
-		fSwap(x, y);
+		fSwap(&x, &y);
 	}
 	printf("\n");
 	fPrintBetween(root,x, y);
@@ -331,7 +347,7 @@ int main()
 	printf("\n-> se citeste al doilea arbore\n");
 	fReadTree(&n2, &root2);
 
-	int equals=0;
+	short equals=0;
 	fCompareTrees(n, root, n2, root2,&equals);
 	if (equals == 1)
 	{

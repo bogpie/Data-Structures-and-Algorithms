@@ -6,44 +6,58 @@
 
 
 typedef struct TreeNode TreeNode;
-struct TreeNode
+struct TreeNode // nodul de arbore
 {
 	int val;
 	TreeNode* left;
 	TreeNode* right;
 };
 
-int fRecursiveCheck(TreeNode* root, int* adrPrev)
+int fRecursiveCheck(TreeNode* root, int* adrPrev) 
+// iteram recursiv arborele pt a vedea daca este bst
+// transmitem radacina arborelui prin valoare si numarul anterior parcurs prin referinta
 {
 	if (root != NULL)
 	{
+		// parcurgerea este analoaga metodei "inorder"
+		// un bst afisat inorder este crescator
+
 		if (!fRecursiveCheck(root->left, adrPrev))
 		{
-			return 0;
+			return 0; // returnam 0 daca nu este bst
 		}
+
+		// acum subarborele stang respecta proprietatea bst
+		// cautam si daca radacina curenta o respecta (are valoarea mai mare decat cea a nodului anterior parcurs)
 
 		if (root->val <= *adrPrev)
 		{
 			return 0;
 		}
 
+
 		*adrPrev = root->val;
+
+		// subarborele drept
 
 		return fRecursiveCheck(root->right, adrPrev);
 	}
 	return 1;
 }
 
-int fCheckBst(TreeNode* root)
+int fCheckBst(TreeNode* root) 
 {
 	int prev = INT_MIN;
-	return (fRecursiveCheck(root, &prev));
+	// initializam valoarea nodului parcurs anterior cu o valoare foarte mica
+	// astfel valoarea urmatoare va fi clar mai mare, un eventual bst va avea toate numerele inserate mai mari decat INT_MIN
+
+	return (fRecursiveCheck(root, &prev)); // e nevoie de o parcurgere recursiva inorder
 }
 
-void CreateTreeNode(TreeNode** adrRoot)
+void CreateTreeNode(TreeNode** adrRoot) // creem un nod (tranmis prin referinta)
 {
 	int val;
-	char boolean;
+	char boolean; // d pentru da , n sau alt caracter pentru nu
 
 	TreeNode* root = malloc(sizeof(TreeNode));
 
@@ -70,11 +84,10 @@ void CreateTreeNode(TreeNode** adrRoot)
 		CreateTreeNode(&root->right);
 	}
 
-
-	*adrRoot = root;
+	*adrRoot = root; // deoarece radacina e tranmisa prin referinta
 }
 
-void PrintTree(TreeNode* root)
+void PrintTree(TreeNode* root) // afisarea elementelor arborelui prin metoda inorder
 {
 	if (root == NULL) return;
 
@@ -91,8 +104,6 @@ int main()
 
 	printf("\n");
 	PrintTree(root);
-
-	int minimCrt = INT_MAX;
 
 	int isBst = fCheckBst(root); 
 
