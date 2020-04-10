@@ -5,6 +5,7 @@
 #include <stdlib.h>
 
 
+
 typedef struct TreeNode TreeNode;
 struct TreeNode // nodul de arbore
 {
@@ -54,7 +55,7 @@ int fCheckBst(TreeNode* root)
 	return (fRecursiveCheck(root, &prev)); // e nevoie de o parcurgere recursiva inorder
 }
 
-void CreateTreeNode(TreeNode** adrRoot) // creem un nod (tranmis prin referinta)
+void fCreateTreeNode(TreeNode** adrRoot) // creem un nod (tranmis prin referinta)
 {
 	int val;
 	char boolean; // d pentru da , n sau alt caracter pentru nu
@@ -73,7 +74,7 @@ void CreateTreeNode(TreeNode** adrRoot) // creem un nod (tranmis prin referinta)
 	scanf("%c", &boolean);
 	if (boolean == 'd')
 	{
-		CreateTreeNode(&root->left);
+		fCreateTreeNode(&root->left);
 	}
 
 	printf("nodul cu val %d are subarb drept?", val);
@@ -81,29 +82,37 @@ void CreateTreeNode(TreeNode** adrRoot) // creem un nod (tranmis prin referinta)
 	scanf("%c", &boolean);
 	if (boolean == 'd')
 	{
-		CreateTreeNode(&root->right);
+		fCreateTreeNode(&root->right);
 	}
 
 	*adrRoot = root; // deoarece radacina e tranmisa prin referinta
 }
 
-void PrintTree(TreeNode* root) // afisarea elementelor arborelui prin metoda inorder
+void fPrintTree(TreeNode* root) // afisarea elementelor arborelui prin metoda inorder
 {
 	if (root == NULL) return;
 
-	PrintTree(root->left);
+	fPrintTree(root->left);
 	printf("%d ", root->val);
-	PrintTree(root->right);
+	fPrintTree(root->right);
 }
 
+void fDestroyTree(TreeNode* root)
+{
+	// parcurgere postorder pentru stergerea elementelor din arbore
+	if (root == NULL) return;
+	fDestroyTree(root->left);
+	fDestroyTree(root->right);
+	free(root);
+}
 
 int main()
 {
 	TreeNode* root;
-	CreateTreeNode(&root);
+	fCreateTreeNode(&root);
 
 	printf("\n");
-	PrintTree(root);
+	fPrintTree(root);
 
 	int isBst = fCheckBst(root); 
 
@@ -115,7 +124,8 @@ int main()
 	{
 		printf("\nnu este BST");
 	}
-	else exit(1);
+	
+	fDestroyTree(root);
 
 	return 0;
 }

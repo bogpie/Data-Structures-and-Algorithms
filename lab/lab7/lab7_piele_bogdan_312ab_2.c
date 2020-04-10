@@ -315,6 +315,14 @@ void fCompareTrees(int n,TreeNode* root,int n2,TreeNode* root2,short* adrEquals)
 	fCompareStacks(top,top2,adrEquals);
 }
 
+void fDestroyTree(TreeNode* root)
+{
+	// parcurgere postorder pentru stergerea elementelor din arbore
+	if (root == NULL) return;
+	fDestroyTree(root->left);
+	fDestroyTree(root->right);
+	free(root);
+}
 
 int main()
 {
@@ -357,6 +365,8 @@ int main()
 	{
 		printf("\narborii nu au aceleasi valori");
 	}
+
+	fDestroyTree(root);
 
 	return 0;
 }
