@@ -145,10 +145,21 @@
     <None Include="rezultate.out" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="Header.c" />
+    <ClCompile Include="ListHeader.c" />
+    <ClCompile Include="QueueHeader.c" />
+    <ClCompile Include="StackHeader.c" />
     <ClCompile Include="tenis.c" />
+    <ClCompile Include="TreeHeader.c" />
+    <ClCompile Include="UtilHeader.c" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="tenis.h" />
+    <ClInclude Include="Header.h" />
+    <ClInclude Include="ListHeader.h" />
+    <ClInclude Include="QueueHeader.h" />
+    <ClInclude Include="StackHeader.h" />
+    <ClInclude Include="TreeHeader.h" />
+    <ClInclude Include="UtilHeader.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
