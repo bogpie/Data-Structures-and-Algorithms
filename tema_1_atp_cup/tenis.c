@@ -61,5 +61,8 @@ int main(int argc, char* argv[])
 	fEraseList(start);
 	free(vTwoPlayers);
 	free(vCerinte);
+	fclose(dateIn);
+	fclose(cerinteIn);
+	fclose(rezultateOut);
 	return 0;
 }

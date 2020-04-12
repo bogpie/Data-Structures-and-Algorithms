@@ -3,4 +3,5 @@ build:
 run:
 	./tenis cerinte.in date.in rezultate.out
 clean:
-	rm tenis
+	rm -f *.o
+	rm -f tenis

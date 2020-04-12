@@ -1,7 +1,7 @@
 #pragma once
 
 #ifndef HEADER
-
+	#define HEADER
 	#include "UtilHeader.h"
 
 	typedef struct Player Player;

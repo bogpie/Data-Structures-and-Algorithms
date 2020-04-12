@@ -25,7 +25,7 @@ Mai folosesc UtilHeader.h si UtilHeader.c pentru:
 - includerea bibliotecilor. <string.h> este utila in folosirea functiilor strcmp pentru compararea de texte, iar strcpy o folosesc pentru transmiterea unui sir dintr-un buffer intr-o variabila (vector) alocata dinamic
 
 O problema intereanta este cum sa sincronizam punctajele unor jucatori in urma modificarilor facute dupa meciuri. Exista mai multe solutii: functii de actualizare, variabile statice etc. Am realizat dupa ceva timp ca e mai simplu sa folosesc in structurile de lista, coada si stiva pointeri la jucatori, respectiv la tari. Astfel, in operatiile de actualizare vom lucra mereu cu structura ce corespunde adresei, in loc sa creem copii la structura si sa pierdem valorile modificate. De asemenea, prin aceasta metoda nu este nevoie sa modificam structurile date in enunt (de Player si de Country).
-O structura auxiliara importanta folosita este stiva ultimelor patru tari ramase in competitie. Adaugarea in momentul sferturilor de finala a adreselor la tari in aceasta stiva nu prezinta problema modificarii punctajelor din semifinala si din finala datorita lucrului fara duplicari in alte variabile ale structurilor.
+O structura auxiliara importanta pe care am folosit-o este stiva ultimelor patru tari ramase in competitie. Adaugarea in momentul sferturilor de finala a adreselor la tari in aceasta stiva nu prezinta problema modificarii punctajelor din semifinala si din finala datorita lucrului fara duplicari in alte variabile ale structurilor.
 
 Iata cum functioneaza simularea turneului, pe baza stivei de tari (stack) :
 - se initializeaza stiva winner
