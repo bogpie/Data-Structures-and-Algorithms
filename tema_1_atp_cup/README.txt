@@ -1,20 +1,18 @@
 Realizarea efectiva a cerintelor se face in main.c, functiile si structurile folosite fiind incluse in "Header.h".
 
-Pentru ca am realizat ca am un cod foarte lung, am decis sa impart si acest header in mai multe parti, pentru fiecare structura de date : ListHeader, QueueHeader, StackHeader, TreeHeader. In acestea, stochez structurile definite si functiile (cele mai) generale specifice acelor structuri:
-- Initializarea structurii
-- Adaugarea unui element
-- Popularea structurii cu mai multe adaugari de elemente
-- Cautarea unui element
-- Stergerea unui element
-- Distrugerea structurii
+Pentru ca am realizat ca am un cod foarte lung, am decis sa impart si acest header in mai multe parti, pentru fiecare structura de date : ListHeader, QueueHeader, StackHeader, TreeHeader. In acestea, stochez structurile definite si functiile specifice acelor structuri. Aceste functii pot fi:
+- initializarea structurii
+- adaugarea unui element
+- popularea structurii cu mai multe adaugari de elemente
+- cautarea unui element
+- stergerea unui element
+- distrugerea structurii
+- duplicarea
+- gasirea unei valori minime
+- stergerea elementului cu o valoare minima
+- numararea elementelor intre 2 valori
 
-si, in functie de structura:
-- Duplicarea
-- Gasirea unei valori minime
-- Stergerea elementului cu o valoare minima
-- Numararea elementelor intre 2 valori
-
-Extern acestor headere raman functii parinte, mai complexe:
+Extern acestor headere de structura raman in "Header.h" functii "parinte", mai complexe:
 - simulare turneu 
 - simulare meci
 - parsarea fisierelor de intrare
