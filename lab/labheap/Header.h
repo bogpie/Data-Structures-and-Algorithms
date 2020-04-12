@@ -5,6 +5,7 @@
 	#define HEADER
 	#include <stdio.h>
 	#include <stdlib.h>
+	#include <limits.h>
 
 	typedef struct Heap Heap;
 	struct Heap
@@ -35,5 +36,9 @@
 	void fHeapifyUp(Heap* heap, int pos);
 
 	void fInsert(Heap* heap, int key);
+
+	void fDeleteNode(Heap* heap, int pos);
+
+	void fHeapSort(Heap* heap);
 
 #endif

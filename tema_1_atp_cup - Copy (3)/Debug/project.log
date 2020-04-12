@@ -1,0 +1,2 @@
+﻿C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\MSBuild\Microsoft\VC\v160\Microsoft.CppBuild.targets(459,5): warning MSB8028: The intermediate directory (Debug\) contains files shared from another project (project.vcxproj).  This can lead to incorrect clean and rebuild behavior.
+  project.vcxproj -> C:\Users\Bogdan\Documents\GitHub\sda\tema_1_atp_cup\Debug\tenis.exe

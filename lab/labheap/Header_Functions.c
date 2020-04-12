@@ -1,5 +1,5 @@
 #include "Header.h"
-
+#include <limits.h>
 
 void fCreateHeap(Heap** adrHeap, int capacity)
 {
@@ -20,7 +20,7 @@ void fCreateHeap(Heap** adrHeap, int capacity)
 void fResize(Heap* heap)
 {
 	heap->capacity *= 2;
-	int* arr = malloc(sizeof(heap->capacity));
+	int* arr = realloc(heap->arr,sizeof(int)*heap->capacity);
 	if (heap->arr == NULL)
 	{
 		printf("no more memory left");
@@ -43,7 +43,7 @@ void fErase(Heap** adrHeap)
 void fPrint(Heap* heap)
 {
 	int i;
-	for (int i = 0; i < heap->size; ++i)
+	for (i = 0; i < heap->size; ++i)
 	{
 		printf("%d ", (*heap).arr[i]);
 	}
@@ -51,7 +51,7 @@ void fPrint(Heap* heap)
 
 void fParent(Heap* heap, int child, int* adrParent)
 {
-	if (child >= heap->size)
+	if (child >= heap->size || child == 0)
 	{
 		*adrParent = -1;
 		return;
@@ -62,21 +62,29 @@ void fParent(Heap* heap, int child, int* adrParent)
 void fLeftChild(Heap* heap, int parent, int* adrLeftChild)
 {
 	int leftChild = -1;
-	if (leftChild < heap->size && parent >= 0)
+	if (parent < heap->size && parent >= 0)
 	{
 		leftChild = 2 * parent + 1;
-
 	}
+	if (leftChild >= heap->size)
+	{
+		leftChild = -1; // pozitia este in afara arborelui, nodul este frunza
+	}
+
 	*adrLeftChild = leftChild;
 }
 
 void fRightChild(Heap* heap, int parent, int* adrRightChild)
 {
 	int rightChild = -1;
-	if (rightChild < heap->size && parent >= 0)
+	if (parent < heap->size && parent >= 0)
 	{
 		rightChild = 2 * parent + 2;
 
+	}
+	if (rightChild >= heap->size)
+	{
+		rightChild = -1; // pozitia este in afara arborelui, nodul este frunza
 	}
 	*adrRightChild = rightChild;
 }
@@ -85,13 +93,14 @@ void fFindMinim(Heap* heap, int* adrMinim)
 {
 	if (heap->size == 0)
 	{
-		*adrMinim = INT_MAX;
+		*adrMinim = INT_MAX; 
 	}
 	*adrMinim = heap->arr[0];
 }
 
 void fSwap(int* adrA, int* adrB)
 {
+	//interschimbare
 	int aux = *adrA;
 	*adrA = *adrB;
 	*adrB = aux;
@@ -99,6 +108,7 @@ void fSwap(int* adrA, int* adrB)
 
 void fHeapifyDown(Heap* heap, int pos)
 {
+	//cernere in jos iterativa
 	int isHeapified = 0;
 	int leftChild, rightChild, posMin = pos;
 
@@ -140,34 +150,34 @@ void fHeapifyDown(Heap* heap, int pos)
 
 void fHeapifyUp(Heap* heap, int pos)
 {
+	// cernere in sus iterativa
 	int isHeapified = 0;
-	int parent, posMin = pos;
+	int parent, posMax = pos;
 
 	while (!isHeapified)
 	{
 		isHeapified = 1;
-		posMin = pos;
+		posMax = pos; // (re)initializam pozitia nodului mai mare 
 		fParent(heap, pos, &parent);
 		if (parent == -1)
 		{
-			return;
+			break;
 		}
 		int* arr = heap->arr;
 
-		if (arr[parent] < arr[posMin])
+		if (arr[parent] > arr[posMax])
 		{
-			posMin = parent;
+			posMax = parent;
 		}
 
-		if (posMin != pos)
+		if (posMax != pos)
 		{
-			fSwap(&heap->arr[pos], &heap->arr[posMin]);
+			fSwap(&heap->arr[pos], &heap->arr[posMax]);
 			isHeapified = 0;
-			pos = posMin;
+			pos = posMax;
 		}
 	}
-
-
+	return;
 }
 
 void fInsert(Heap* heap, int key)
@@ -183,4 +193,46 @@ void fInsert(Heap* heap, int key)
 
 	fHeapifyUp(heap,pos);
 	
+}
+
+void fDeleteNode(Heap* heap, int pos)
+{
+	int lastPos= heap->size - 1;
+	fSwap(&heap->arr[lastPos], &heap->arr[pos]); // pt pastrarea proprietatii de arbore complet
+
+	int parent;
+	fParent(heap, pos, &parent);
+
+	heap->arr[--heap->size] = 0;
+
+	if (heap->arr[pos] < heap->arr[parent])
+	{
+		fHeapifyUp(heap, pos);
+	}
+	else
+	{
+		fHeapifyDown(heap, pos);
+	}
+}
+
+void fHeapSort(Heap* heap)
+{
+	int n = heap->size;	
+
+	/// verificare ca proprietatile heapului sunt in regula definite
+	while (n > heap->capacity) 
+	{ 
+		fResize(heap) ; 
+	}	
+	for (int i = (n - 1) / 2 - 1; i >= 0; --i)
+	{
+		fHeapifyDown(heap,i);
+	}
+	///
+
+	for (int i = n - 1; i >= 0; --i)
+	{
+		fSwap(&heap->arr[0], &heap->arr[i]); // in 0 mereu minim;
+		fHeapifyDown(heap, 0);
+	}
 }

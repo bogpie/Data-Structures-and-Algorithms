@@ -18,6 +18,7 @@ void fAlocTreeNode(TreeNode** adrTreeNode)
 	*adrTreeNode = treeNode;
 }
 
+
 void fInsertInTree(Player player, TreeNode** adrTreeNode)
 {
 	//inseram in BST un jucator, parcurgerea recursiva se face in functie de scor
@@ -64,6 +65,7 @@ void fInsertInTree(Player player, TreeNode** adrTreeNode)
 	return;
 
 }
+
 
 void fPrintTree(TreeNode* treeNode, FILE* rezultateOut)
 {

@@ -5,6 +5,7 @@
 #include <limits.h>
 #include "Header.h"
 
+//min heap
 int main()
 {
 	Heap* heap = NULL;
@@ -27,29 +28,67 @@ int main()
 		fInsert(heap,key);
 	}
 
+	printf("\nvectorul heap-ului : ");
 	fPrint(heap);
 
 	int parent,child,minim;
 
-	printf("child ( nodul fiu ) : ");
+	printf("\ndaca nodul fiu se afla la pozitia : ");
 	scanf("%d", &child);
 	fParent(heap, child, &parent);
-	
+	if (parent == -1)
+	{
+		printf("\natunci nodul este radacina");
+	}
+	else
+	{
+		printf("\natunci nodul parinte se afla la pozitia %d", parent);
+
+	}
 
 	int leftChild, rightChild;
-	printf("nodul parinte : ");
-	printf("\nparent position : ");
+	printf("\ndaca nodul parinte se afla la pozitia : ");
 	scanf("%d", &parent);
 	fLeftChild(heap, parent, &leftChild);
 	fRightChild(heap, parent, &rightChild);
-	fFindMinim(heap,&minim);
 
-	int position;
-	printf("\nposition : "); scanf("%d", &position);
-	fHeapifyDown(heap,position);
-	fHeapifyUp(heap,position);
+	printf("\natunci copilul stang ");
+	if (leftChild == -1)
+	{
+		printf("nu exista ");
+	}
+	else
+	{
+		printf("este la pozitia %d ", leftChild);
+	}
+	printf("si copilul drept ");
+	if (rightChild == -1)
+	{
+		printf("nu exista ");
+	}
+	else
+	{
+		printf("este la pozitia %d ", rightChild);
+	}
 
+	fFindMinim(heap, &minim);
+	printf("\nminimul heapului este %d", minim);
 
+	int pos;
+	printf("\npozitia nodului de sters : "); scanf("%d", &pos);
+
+	fDeleteNode(heap,pos);
+	
+	printf("\nvectorul heap-ului este acum: ");
+	fPrint(heap);
+
+	printf("\nam populat vectorul din heap. acum il sortam: ");
+	//proprietate de min heap => sortare crescatoare
+	fHeapSort(heap);
+
+	printf("\nheapul sortat:");
+	fPrint(heap);
 
 	fErase(&heap);
+	printf("\nheapul a fost sters");
 }
