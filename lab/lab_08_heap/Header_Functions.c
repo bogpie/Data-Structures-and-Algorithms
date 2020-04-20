@@ -20,7 +20,7 @@ void fCreateHeap(Heap** adrHeap, int capacity)
 void fResize(Heap* heap)
 {
 	heap->capacity *= 2;
-	int* arr = realloc(heap->arr,sizeof(int)*heap->capacity);
+	int* arr = realloc(heap->arr, sizeof(int) * heap->capacity);
 	if (heap->arr == NULL)
 	{
 		printf("no more memory left");
@@ -93,7 +93,7 @@ void fFindMinim(Heap* heap, int* adrMinim)
 {
 	if (heap->size == 0)
 	{
-		*adrMinim = INT_MAX; 
+		*adrMinim = INT_MAX;
 	}
 	*adrMinim = heap->arr[0];
 }
@@ -118,7 +118,7 @@ void fHeapifyDown(Heap* heap, int pos)
 		posMin = pos;
 		fLeftChild(heap, pos, &leftChild);
 		fRightChild(heap, pos, &rightChild);
-		if (leftChild == -1 || rightChild == -1)
+		if (leftChild == -1 && rightChild == -1)
 		{
 			return;
 		}
@@ -191,13 +191,13 @@ void fInsert(Heap* heap, int key)
 	pos = heap->size++;
 	heap->arr[pos] = key;
 
-	fHeapifyUp(heap,pos);
-	
+	fHeapifyUp(heap, pos);
+
 }
 
 void fDeleteNode(Heap* heap, int pos)
 {
-	int lastPos= heap->size - 1;
+	int lastPos = heap->size - 1;
 	fSwap(&heap->arr[lastPos], &heap->arr[pos]); // pt pastrarea proprietatii de arbore complet
 
 	int parent;
@@ -218,31 +218,22 @@ void fDeleteNode(Heap* heap, int pos)
 void fHeapSort(Heap* heap)
 {
 
-
 	int n = heap->size;
-	while (n > heap->capacity) 
-	{ 
-		fResize(heap) ; 
-	}	
+	while (n > heap->capacity)
+	{
+		fResize(heap);
+	}
 
 
-	while (heap->size>0)
+	while (heap->size > 0)
 	{
 		n = heap->size;
-
-		for (int i = n-1; i >= 0; --i) // limita sup??
+		for (int i = (n - 1) / 2; i >= 0; --i) // limita sup??
 		{
 			fHeapifyDown(heap, i);
 		}
 		printf("%d ", heap->arr[0]);
-
 		fDeleteNode(heap, 0);
-
-		/*for (int i = n - 1; i >= 0; --i)
-		{
-			fSwap(&heap->arr[0], &heap->arr[i]); // in 0 mereu minim;
-			fHeapifyDown(heap, 0);
-		}*/
 	}
-	
+
 }
