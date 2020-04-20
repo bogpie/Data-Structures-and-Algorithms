@@ -217,22 +217,32 @@ void fDeleteNode(Heap* heap, int pos)
 
 void fHeapSort(Heap* heap)
 {
-	int n = heap->size;	
 
-	/// verificare ca proprietatile heapului sunt in regula definite
+
+	int n = heap->size;
 	while (n > heap->capacity) 
 	{ 
 		fResize(heap) ; 
 	}	
-	for (int i = (n - 1) / 2 - 1; i >= 0; --i)
-	{
-		fHeapifyDown(heap,i);
-	}
-	///
 
-	for (int i = n - 1; i >= 0; --i)
+
+	while (heap->size>0)
 	{
-		fSwap(&heap->arr[0], &heap->arr[i]); // in 0 mereu minim;
-		fHeapifyDown(heap, 0);
+		n = heap->size;
+
+		for (int i = n-1; i >= 0; --i) // limita sup??
+		{
+			fHeapifyDown(heap, i);
+		}
+		printf("%d ", heap->arr[0]);
+
+		fDeleteNode(heap, 0);
+
+		/*for (int i = n - 1; i >= 0; --i)
+		{
+			fSwap(&heap->arr[0], &heap->arr[i]); // in 0 mereu minim;
+			fHeapifyDown(heap, 0);
+		}*/
 	}
+	
 }

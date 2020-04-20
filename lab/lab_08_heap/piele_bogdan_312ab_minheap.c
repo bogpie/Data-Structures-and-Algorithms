@@ -86,8 +86,8 @@ int main()
 	//proprietate de min heap => sortare crescatoare
 	fHeapSort(heap);
 
-	printf("\nheapul sortat:");
-	fPrint(heap);
+	//printf("\nheapul sortat:");
+	//fPrint(heap);
 
 	fErase(&heap);
 	printf("\nheapul a fost sters");
