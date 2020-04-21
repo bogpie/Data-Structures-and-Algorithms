@@ -215,25 +215,32 @@ void fDeleteNode(Heap* heap, int pos)
 	}
 }
 
-void fHeapSort(Heap* heap)
+void fHeapSort(Heap* heap,int *vSorted)
 {
-
 	int n = heap->size;
 	while (n > heap->capacity)
 	{
 		fResize(heap);
 	}
-
+	for (int i = (n - 1) / 2; i >= 0; --i)
+	{
+		fHeapifyDown(heap, i);
+	}
+	// a fost verificata proprietatea de minheap
+	// se ignora frunzele in cernerea in jos (nu au subarbori => subarborii de un singur element deja respecta proprietatea)
 
 	while (heap->size > 0)
 	{
 		n = heap->size;
-		for (int i = (n - 1) / 2; i >= 0; --i) // limita sup??
-		{
-			fHeapifyDown(heap, i);
-		}
-		printf("%d ", heap->arr[0]);
-		fDeleteNode(heap, 0);
+		int popped = heap->arr[0];
+		fDeleteNode(heap, 0); // care modifica si heap->size
+
+		heap->arr[heap->size] = popped;
+		// stergerea presupune in functia mea decrementarea size-ului heap-ului si modificarea valorii de sters cu 0
+		// asa ca, pentru o eventuala afisare sortata, trebuie resetata valoarea ultimului nod de la 0 la valoarea gasita (nu vrem sa se piarda)
+		// ea va fi ignorata la urmatoarele operatii pe arbore (pentru ca heap->size tocmai a fost decrementat)
+
+		fHeapifyDown(heap, 0);
 	}
 
 }

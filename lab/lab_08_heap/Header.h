@@ -40,5 +40,5 @@
 	void fDeleteNode(Heap* heap, int pos);
 
 	void fHeapSort(Heap* heap);
-
+	
 #endif

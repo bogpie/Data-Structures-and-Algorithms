@@ -76,18 +76,19 @@ int main()
 
 	int pos;
 	printf("\npozitia nodului de sters : "); scanf("%d", &pos);
-
-	fDeleteNode(heap,pos);
-	
+	fDeleteNode(heap, pos); 
+	--nrKeys;
 	printf("\nvectorul heap-ului este acum: ");
 	fPrint(heap);
 
-	printf("\nam populat vectorul din heap. acum il sortam: ");
-	//proprietate de min heap => sortare crescatoare
+	printf("\nam populat vectorul din heap. acum sortam elementele lui descrescator (minheap!): ");
+	//int* vSorted = malloc(sizeof(int) * nrKeys);
 	fHeapSort(heap);
-
-	//printf("\nheapul sortat:");
-	//fPrint(heap);
+	heap->size = nrKeys;
+	for (int i = 0; i < nrKeys; ++i)
+	{
+		printf("%d ", heap->arr[i]);
+	}
 
 	fErase(&heap);
 	printf("\nheapul a fost sters");
