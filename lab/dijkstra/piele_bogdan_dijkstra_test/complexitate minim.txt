@@ -1,0 +1,1 @@
+complexitatea extragerii minimului dintr-un minHeap este O(1) (este primul element din heap). in schimb, trebuie facuta si o rearanjare a heap-ului care are complexitatea O(logn)

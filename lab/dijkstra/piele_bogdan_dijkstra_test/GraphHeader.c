@@ -1,5 +1,4 @@
-#include "Header.h"
-
+#include "MainHeader.h"
 
 void fPointerTest(void* ptr)
 {
@@ -9,15 +8,28 @@ void fPointerTest(void* ptr)
 	}
 }
 
-void fCreateGraphMat(GraphMat* graphMat, int orientat)
+void fCreateGraphMat(GraphMat* graphMat, FILE* input)
+{
+	int iEdge;
+	for (iEdge = 0; iEdge < graphMat->nrEdges; ++iEdge)
+	{
+		int nodeIndex, neighbourIndex,cost;
+		fscanf(input,"%d%d%d", &nodeIndex, &neighbourIndex,&cost);
+		graphMat->mat[nodeIndex][neighbourIndex] = cost;
+	}
+}
+
+void fCreateGraphMatOld(GraphMat* graphMat, int orientat)
 {
 	printf("\nnr noduri:");
 	int nrVertexes = graphMat->nrVertexes;
 
 	graphMat->nrEdges = 0;
-	for (int i = 0; i < nrVertexes; ++i)
+	int i;
+	for (i = 0; i < nrVertexes; ++i)
 	{
-		for (int j = 0; j < nrVertexes; ++j)
+		int j;
+		for (j = 0; j < nrVertexes; ++j)
 		{
 			if (i == j || graphMat->mat[i][j] == 1 || (orientat == 0 && i > j))
 			{
@@ -50,7 +62,7 @@ void fInsertEdge(GraphList* graphList, int i, int j)
 
 }
 
-void fInitGraphList(GraphList** adrGraphList, int nrVertexes)
+void fInitGraphList(GraphList** adrGraphList, int nrVertexes,int nrEdges)
 {
 	GraphList* graphList = *adrGraphList;
 	graphList = malloc(sizeof(GraphList));
@@ -59,7 +71,8 @@ void fInitGraphList(GraphList** adrGraphList, int nrVertexes)
 	graphList->vLists = malloc(sizeof(ListNode*) * nrVertexes);
 	*adrGraphList = graphList;
 
-	for (int i = 0; i < nrVertexes; ++i)
+	int i;
+	for (i = 0; i < nrVertexes; ++i)
 	{
 		graphList->vLists[i] = malloc(sizeof(ListNode*));
 		graphList->vLists[i]->index = i;
@@ -74,9 +87,11 @@ void fMatToList(GraphMat* graphMat, GraphList** adrGraphList)
 
 	int nrVertexes = graphList->nrVertexes = graphMat->nrVertexes;
 	graphList->nrEdges = graphMat->nrEdges;
-	for (int i = 0; i < nrVertexes; ++i)
+	int i;
+	for (i = 0; i < nrVertexes; ++i)
 	{
-		for (int j = 0; j < nrVertexes; ++j)
+		int j;
+		for (j = 0; j < nrVertexes; ++j)
 		{
 			if (graphMat->mat[i][j]) //exista arc i--j
 			{
@@ -92,7 +107,8 @@ void fListToMat(GraphList* graphList, GraphMat** adrGraphMat)
 	GraphMat* graphMat = *adrGraphMat;
 	int nrVertexes = graphMat->nrVertexes = graphList->nrVertexes;
 	graphMat->nrEdges = graphMat->nrEdges;
-	for (int i = 0; i < nrVertexes; ++i)
+	int i;
+	for (i = 0; i < nrVertexes; ++i)
 	{
 		int index1 = graphList->vLists[i]->index;
 		ListNode* listNode = graphList->vLists[i]->next;
@@ -107,7 +123,8 @@ void fListToMat(GraphList* graphList, GraphMat** adrGraphMat)
 
 void fEraseGraphMat(GraphMat* graphMat)
 {
-	for (int i = 0; i < graphMat->nrVertexes; ++i)
+	int i;
+	for (i = 0; i < graphMat->nrVertexes; ++i)
 	{
 		int j;
 		for (j = 0; j < graphMat->nrVertexes; ++j)
@@ -127,9 +144,9 @@ void fEraseGraphMat(GraphMat* graphMat)
 
 void fPrintGraphList(GraphList* graphList)
 {
-	for (int i = 0; i < graphList->nrVertexes; ++i)
+	int i;
+	for (i = 0; i < graphList->nrVertexes; ++i)
 	{
-
 		ListNode* listNode = graphList->vLists[i];
 		printf("\nincidente cu %d: ", graphList->vLists[i]->index);
 
@@ -150,10 +167,12 @@ void fPrintGraphList(GraphList* graphList)
 void fPrintGraphMat(GraphMat* graphMat)
 {
 	int nrVertexes = graphMat->nrVertexes;
-	for (int i = 0; i < nrVertexes; ++i)
+	int i;
+	for (i = 0; i < nrVertexes; ++i)
 	{
 		printf("\nincidente cu %d: ", i);
-		for (int j = 0; j < nrVertexes; ++j)
+		int j;
+		for (j = 0; j < nrVertexes; ++j)
 		{
 			if (graphMat->mat[i][j] == 1)
 			{
@@ -179,7 +198,8 @@ void fFindNeighbourMat(GraphMat* graphMat, int x)
 {
 	int nrVertexes = graphMat->nrVertexes;
 	printf("\nincidente cu %d: ", x);
-	for (int j = 0; j < nrVertexes; ++j)
+	int j;
+	for (j = 0; j < nrVertexes; ++j)
 	{
 		if (graphMat->mat[x][j] == 1)
 		{
@@ -188,14 +208,16 @@ void fFindNeighbourMat(GraphMat* graphMat, int x)
 	}
 }
 
-void fInitGraphMat(GraphMat** adrGraphMat, int nrVertexes)
+void fInitGraphMat(GraphMat** adrGraphMat, int nrVertexes,int nrEdges)
 {
 	GraphMat* graphMat = malloc(sizeof(GraphMat));
 	fPointerTest(graphMat);
 	*adrGraphMat = graphMat;
 	graphMat->mat = calloc(nrVertexes, sizeof(int*));
 	graphMat->nrVertexes = nrVertexes;
-	for (int i = 0; i < nrVertexes; ++i)
+	graphMat->nrEdges = nrEdges;
+	int i;
+	for (i = 0; i < nrVertexes; ++i)
 	{
 		graphMat->mat[i] = calloc(nrVertexes, sizeof(int));
 	}
@@ -205,7 +227,8 @@ void fInitGraphMat(GraphMat** adrGraphMat, int nrVertexes)
 
 void fEraseGraphList(GraphList* graphList)
 {
-	for (int i = 0; i < graphList->nrVertexes; ++i)
+	int i;
+	for (i = 0; i < graphList->nrVertexes; ++i)
 	{
 		ListNode* listNode = graphList->vLists[i];
 		while (listNode != NULL)
@@ -242,8 +265,8 @@ void fTestEdgeMat(GraphMat* graphMat, int x, int y)
 void fTestEdgeList(GraphList* graphList, int x, int y)
 {
 	printf("\ntest pe graficul cu lista: ");
-
-	for (int i = 0; i < graphList->nrVertexes; ++i)
+	int i;
+	for (i = 0; i < graphList->nrVertexes; ++i)
 	{
 		int index1 = graphList->vLists[i]->index;
 		if (index1 == x)
@@ -268,9 +291,11 @@ void fTestEdgeList(GraphList* graphList, int x, int y)
 void fCopyMat(int** sourceMat, int*** adrDestMat, int nrVertexes)
 {
 	int** destMat = *adrDestMat;
-	for (int i = 0; i < nrVertexes; ++i)
+	int i;
+	for (i = 0; i < nrVertexes; ++i)
 	{
-		for (int j = 0; j < nrVertexes; ++j)
+		int j;
+		for (j = 0; j < nrVertexes; ++j)
 		{
 			destMat[i][j] = sourceMat[i][j];
 		}
@@ -282,17 +307,21 @@ void fRoy(GraphMat* graphMat, int nrVertexes)
 {
 	int** pathMat;
 	pathMat = calloc(nrVertexes, sizeof(int*));
-	for (int i = 0; i < nrVertexes; ++i)
+	int i;
+	for (i = 0; i < nrVertexes; ++i)
 	{
 		pathMat[i] = calloc(nrVertexes, sizeof(int));
 	}
 	fCopyMat(graphMat->mat, &pathMat, nrVertexes);
-	for (int index1 = 0; index1 < nrVertexes; ++index1)
+	int index1;
+	for (index1 = 0; index1 < nrVertexes; ++index1)
 	{
-		for (int index2 = 0; index2 < nrVertexes; ++index2)
+		int index2;
+		for (index2 = 0; index2 < nrVertexes; ++index2)
 		{
 			if (index1 == index2) continue;
-			for (int intermediar = 0; intermediar < nrVertexes; ++intermediar)
+			int intermediar;
+			for (intermediar = 0; intermediar < nrVertexes; ++intermediar)
 			{
 				if (pathMat[index1][index2]) continue;
 				if (pathMat[index1][intermediar] == 1 && pathMat[intermediar][index2] == 1)
@@ -303,10 +332,11 @@ void fRoy(GraphMat* graphMat, int nrVertexes)
 		}
 	}
 
-	for (int index1 = 0; index1 < nrVertexes; ++index1)
+	for (index1 = 0; index1 < nrVertexes; ++index1)
 	{
 		printf("\nexista drum de la %d la : ", index1);
-		for (int index2 = 0; index2 < nrVertexes; ++index2)
+		int index2;
+		for (index2 = 0; index2 < nrVertexes; ++index2)
 		{
 			if (pathMat[index1][index2])
 			{
