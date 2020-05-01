@@ -1,0 +1,12 @@
+﻿  Header.c
+  piele_bogdan_lab_09.c
+C:\Users\Bogdan\Documents\GitHub\sda\lab\lab_09_graf\piele_bogdan_lab_09.c(11,15): warning C4013: 'fInitGraphMat' undefined; assuming extern returning int
+C:\Users\Bogdan\Documents\GitHub\sda\lab\lab_09_graf\piele_bogdan_lab_09.c(28,16): warning C4013: 'fPrintGraphMat' undefined; assuming extern returning int
+C:\Users\Bogdan\Documents\GitHub\sda\lab\lab_09_graf\piele_bogdan_lab_09.c(37,14): warning C4013: 'fTestEdgeMat' undefined; assuming extern returning int
+C:\Users\Bogdan\Documents\GitHub\sda\lab\lab_09_graf\piele_bogdan_lab_09.c(38,15): warning C4013: 'fTestEdgeList' undefined; assuming extern returning int
+C:\Users\Bogdan\Documents\GitHub\sda\lab\lab_09_graf\piele_bogdan_lab_09.c(43,19): warning C4013: 'fFindNeighbourMat' undefined; assuming extern returning int
+C:\Users\Bogdan\Documents\GitHub\sda\lab\lab_09_graf\piele_bogdan_lab_09.c(45,20): warning C4013: 'fFindNeighbourList' undefined; assuming extern returning int
+C:\Users\Bogdan\Documents\GitHub\sda\lab\lab_09_graf\piele_bogdan_lab_09.c(48,6): warning C4013: 'fRoy' undefined; assuming extern returning int
+C:\Users\Bogdan\Documents\GitHub\sda\lab\lab_09_graf\piele_bogdan_lab_09.c(51,17): warning C4013: 'fEraseGraphList' undefined; assuming extern returning int
+  Generating Code...
+  lab_09_graf.vcxproj -> C:\Users\Bogdan\Documents\GitHub\sda\lab\lab_09_graf\Debug\lab_09_graf.exe

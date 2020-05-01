@@ -1,0 +1,2 @@
+C:\Users\Administrator\Documents\GitHub\sda\lab\dijkstra\Debug\dijkstra.exe
+C:\Users\Administrator\Documents\GitHub\sda\lab\dijkstra\Debug\dijkstra.pdb

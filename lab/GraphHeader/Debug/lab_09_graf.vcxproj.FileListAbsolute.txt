@@ -1,0 +1,2 @@
+C:\Users\Administrator\Documents\GitHub\sda\lab\lab_09_graf\Debug\lab_09_graf.exe
+C:\Users\Administrator\Documents\GitHub\sda\lab\lab_09_graf\Debug\lab_09_graf.pdb

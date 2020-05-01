@@ -1,4 +1,4 @@
-#include "Header.h"
+#include "GraphHeader.h"
 
 
 void fPointerTest(void* ptr)
@@ -9,7 +9,18 @@ void fPointerTest(void* ptr)
 	}
 }
 
-void fCreateGraphMat(GraphMat* graphMat, int orientat)
+void fCreateGraphMat(GraphMat* graphMat, FILE* input)
+{
+	for (int iEdge = 0; iEdge < graphMat->nrEdges; ++iEdge)
+	{
+		int nodeIndex, neighbourIndex,cost;
+		char car;
+		fscanf(input,"%d%d%d", &nodeIndex, &neighbourIndex,&cost);
+		graphMat->mat[nodeIndex][neighbourIndex] = cost;
+	}
+}
+
+void fCreateGraphMatOld(GraphMat* graphMat, int orientat)
 {
 	printf("\nnr noduri:");
 	int nrVertexes = graphMat->nrVertexes;
@@ -50,7 +61,7 @@ void fInsertEdge(GraphList* graphList, int i, int j)
 
 }
 
-void fInitGraphList(GraphList** adrGraphList, int nrVertexes)
+void fInitGraphList(GraphList** adrGraphList, int nrVertexes,int nrEdges)
 {
 	GraphList* graphList = *adrGraphList;
 	graphList = malloc(sizeof(GraphList));
@@ -188,13 +199,14 @@ void fFindNeighbourMat(GraphMat* graphMat, int x)
 	}
 }
 
-void fInitGraphMat(GraphMat** adrGraphMat, int nrVertexes)
+void fInitGraphMat(GraphMat** adrGraphMat, int nrVertexes,int nrEdges)
 {
 	GraphMat* graphMat = malloc(sizeof(GraphMat));
 	fPointerTest(graphMat);
 	*adrGraphMat = graphMat;
 	graphMat->mat = calloc(nrVertexes, sizeof(int*));
 	graphMat->nrVertexes = nrVertexes;
+	graphMat->nrEdges = nrEdges;
 	for (int i = 0; i < nrVertexes; ++i)
 	{
 		graphMat->mat[i] = calloc(nrVertexes, sizeof(int));
