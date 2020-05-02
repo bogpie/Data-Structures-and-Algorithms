@@ -139,6 +139,15 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="piele_bogdan_312ab_tema_2_avion.c" />
+    <ClCompile Include="UtilHeader.c" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="MainHeader.h" />
+    <ClInclude Include="UtilHeader.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="date.in" />
+    <None Include="rezultate.out" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

@@ -18,5 +18,24 @@
     <ClCompile Include="piele_bogdan_312ab_tema_2_avion.c">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="UtilHeader.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="MainHeader.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="UtilHeader.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="date.in">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="rezultate.out">
+      <Filter>Resource Files</Filter>
+    </None>
   </ItemGroup>
 </Project>
