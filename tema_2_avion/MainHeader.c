@@ -12,34 +12,36 @@ void fReadIslands(FILE* input, int* adrNrIslands, Island** adrVectorIslands)
 		char vChar[NAMELENGTH];
 		Island island;
 
-		fgets(vChar, NAMELENGTH, input);
+		fscanf(input,"%s", vChar);
 		while (vChar[0] != 'I')
 		{
-			fgets(vChar, NAMELENGTH, input);
+			fscanf(input, "%s", vChar);
 		}
 
 		fStrAlloc(&island.name, vChar);
 
-		fscanf(input, "%d", &island.nrResources);
+		fscanf(input, "%s", vChar);
+		island.nrResources = atoi(vChar);
+
 		island.vResources = malloc(sizeof(Resource) * island.nrResources);
 		for (int idResource = 0; idResource < island.nrResources; ++idResource)
 		{
 			Resource resource;// optional
 			//char vChar[NAMELENGTH];
 
-			fgets(vChar, NAMELENGTH, input);
+			fscanf(input, "%s", vChar);
 			while (vChar[0] == '\n')
 			{
-				fgets(vChar, NAMELENGTH, input);
+				fscanf(input, "%s", vChar);
 			}
 
-			char* ptr = strtok(vChar, " \t");
-			strcpy(vChar, ptr);
 			fStrAlloc(&resource.name, vChar);
 
-			ptr = strtok(NULL, " \t");
-			resource.quantity = atoi(ptr);
+			fscanf(input, "%s", vChar);
+			resource.quantity = atoi(vChar);
+
 			island.vResources[idResource] = resource;
+
 		}
 		
 

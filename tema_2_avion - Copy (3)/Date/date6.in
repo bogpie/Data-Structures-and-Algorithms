@@ -1,0 +1,37 @@
+5
+Island1
+	3
+	Fier 300
+	Aur 250
+	Lemn 450
+Island2
+	1
+	Argint 300
+Island3
+	2
+	Aur 200
+	Piatra 150
+Island4
+	1
+	Diamant 300
+Island5
+	0
+5
+Island1 - Island3 30
+Island1 - Island5 5
+Island2 - Island4 10
+Island2 - Island3 10
+Island5 - Island4 12
+conexiune Island1 Island5
+legatura Island2
+conexiune Island2 Island3
+max_cantitate Aur
+conexiune Island1 Island2
+legatura Island5
+timp_zbor Island1 Island2
+max_resurse
+drum_zbor Island1 Island2
+timp_zbor Island1 Island4
+drum_zbor Island1 Island3
+anulare_zbor Island1 Island5
+timp_zbor Island1 Island2

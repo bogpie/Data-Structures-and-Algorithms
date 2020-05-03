@@ -1,0 +1,116 @@
+15
+Island1
+	2
+	Aur 100
+	Granit 50
+Island2
+	4
+	Alama 500
+	Grafit 324
+	Argint 300
+	Granit 250
+Island3
+	2
+	Aur 150
+	Piatra 150
+Island4
+	1
+	Fier 300
+Island5
+	2
+	Telina 30
+	Granit 200
+Island6
+	3
+	Fier 300
+	Aur 250
+	Grafit 450
+Island7
+	5
+	Carbune 300
+	Piatra 200
+	Fier 210
+	Granit 450
+	Lemn 200
+Island8
+	3
+	Alama 200
+	Fier 190
+	Piatra 150
+Island9
+	2
+	Aur 100
+	Piatra 150
+Island10
+	4
+	Argint 300
+	Fier 250
+	Alama 500
+	Piatra 120
+Island11
+	3
+	Smaralde 55
+	Argint 120
+	Piatra 150
+Island12
+	0
+Island13
+	4
+	Argint 120
+	Aur 35
+	Rubine 15
+	Piatra 150
+Island14
+	3
+	Argint 120
+	Fier 150
+	Grafit 20
+Island15
+	3
+	Telina 50
+	Aur 120
+	Piatra 150
+7
+Island1 - Island15 59
+Island2 - Island3 15
+Island2 - Island14 20
+Island6 - Island10 37
+Island3 - Island8 29
+Island7 - Island9 10
+Island12 - Island5 13
+conexiune Island1 Island15
+adauga_zbor Island1 Island2 12
+adauga_zbor Island1 Island12 5
+min_zbor Island3 Island12
+timp_zbor Island2 Island12
+drum_zbor Island4 Island5
+adauga_zbor Island2 Island7 25
+adauga_zbor Island12 Island9 50
+adauga_zbor Island2 Island11 11
+adauga_zbor Island2 Island10 10
+adauga_zbor Island10 Island11 4
+adauga_zbor Island11 Island12 4
+adauga_zbor Island1 Island12 20
+min_zbor Island3 Island12
+timp_zbor Island3 Island12
+drum_zbor Island3 Island12
+adauga_zbor Island1 Island12 2
+drum_zbor Island3 Island12
+min_zbor Island3 Island12
+legatura Island7
+max_resurse
+drum_zbor Island1 Island9
+timp_zbor Island1 Island9
+anulare_zbor Island2 Island7
+conexiune Island4 Island5
+drum_zbor Island1 Island9
+timp_zbor Island1 Island9
+adauga_zbor Island3 Island6 29
+adauga_zbor Island6 Island7 10
+max_cantitate Argint
+timp_zbor Island4 Island5
+adauga_zbor Island3 Island5 20
+adauga_zbor Island5 Island6 5
+adauga_zbor Island2 Island7 60
+drum_zbor Island2 Island7
+min_zbor Island2 Island7

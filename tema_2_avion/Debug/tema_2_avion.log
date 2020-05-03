@@ -1,4 +1,4 @@
-﻿19:39:16.507     0>Search paths being used for $(MSBuildExtensionsPath) are C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\MSBuild;$(MSBuildProgramFiles32)\MSBuild
+﻿20:26:31.056     0>Search paths being used for $(MSBuildExtensionsPath) are C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\MSBuild;$(MSBuildProgramFiles32)\MSBuild
                    Trying to import C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\MSBuild\$(MSBuildToolsVersion)\Microsoft.Common.props using extensions path C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\MSBuild
                    Property reassignment: $(MSBuildProjectExtensionsPath)="C:\Users\Administrator\Documents\GitHub\sda\tema_2_avion\obj\" (previous value: "obj\") at C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\MSBuild\Current\Microsoft.Common.props (56,5)
                    Search paths being used for $(MSBuildExtensionsPath) are C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\MSBuild;$(MSBuildProgramFiles32)\MSBuild
@@ -954,7 +954,7 @@
                    Overriding target "GetNativeManifest" in project "C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\MSBuild\Current\Bin\Microsoft.Common.CurrentVersion.targets" with target "GetNativeManifest" from project "C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\MSBuild\Microsoft\VC\v160\Microsoft.CppCommon.targets".
                    Overriding target "GetTargetPathWithTargetPlatformMoniker" in project "C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\MSBuild\Current\Bin\Microsoft.Common.CurrentVersion.targets" with target "GetTargetPathWithTargetPlatformMoniker" from project "C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\MSBuild\Microsoft\VC\v160\Microsoft.Cpp.DesignTime.targets".
                    The target "CoreCompile" listed in a BeforeTargets attribute at "C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\MSBuild\Microsoft\VisualStudio\v16.0\CodeAnalysis\Microsoft.CodeAnalysis.targets (59,12)" does not exist in the project, and will be ignored.
-Build started 03-May-20 7:39:17 PM.
+Build started 03-May-20 8:26:31 PM.
 Environment at start of build:
                    ALLUSERSPROFILE = C:\ProgramData
                    APPDATA = C:\Users\Administrator\AppData\Roaming
@@ -963,8 +963,6 @@ Environment at start of build:
                    CommonProgramFiles = C:\Program Files (x86)\Common Files
                    CommonProgramFiles(x86) = C:\Program Files (x86)\Common Files
                    CommonProgramW6432 = C:\Program Files\Common Files
-                   COMPLUS_InstallRoot = 
-                   COMPLUS_Version = 
                    COMPUTERNAME = PBG-PC
                    ComSpec = C:\WINDOWS\system32\cmd.exe
                    DriverData = C:\Windows\System32\Drivers\DriverData
@@ -993,7 +991,7 @@ Environment at start of build:
                    ProgramW6432 = C:\Program Files
                    PSModulePath = C:\Program Files\WindowsPowerShell\Modules;C:\WINDOWS\system32\WindowsPowerShell\v1.0\Modules
                    PUBLIC = C:\Users\Public
-                   ServiceHubLogSessionKey = C6120792
+                   ServiceHubLogSessionKey = 25708F67
                    SESSIONNAME = Console
                    SystemDrive = C:
                    SystemRoot = C:\WINDOWS
@@ -1013,8 +1011,8 @@ Environment at start of build:
                    VSSKUEDITION = Enterprise
                    windir = C:\WINDOWS
 
-Logging verbosity is set to: Diagnostic.19:39:16.766     1>Project "C:\Users\Administrator\Documents\GitHub\sda\tema_2_avion\tema_2_avion.vcxproj" on node 2 (Build target(s)).
-19:39:16.766     1>Initial Properties:
+Logging verbosity is set to: Diagnostic.20:26:31.226     1>Project "C:\Users\Administrator\Documents\GitHub\sda\tema_2_avion\tema_2_avion.vcxproj" on node 2 (Build target(s)).
+20:26:31.226     1>Initial Properties:
                    _AfterCompileWinFXInternalDependsOn = 
                            PrepareResourcesForSatelliteAssemblies;
                            MergeLocalizationDirectives;
@@ -1959,7 +1957,7 @@ Logging verbosity is set to: Diagnostic.19:39:16.766     1>Project "C:\Users\Adm
                    MSBuildRuntimeType = Full
                    MSBuildRuntimeVersion = 4.0.30319
                    MSBuildSDKsPath = C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\MSBuild\Sdks
-                   MSBuildStartupDirectory = C:\WINDOWS\system32
+                   MSBuildStartupDirectory = C:\Users\Administrator\Documents\GitHub\sda\tema_2_avion
                    MSBuildToolsPath = C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\MSBuild\Current\Bin
                    MSBuildToolsPath32 = C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\MSBuild\Current\Bin
                    MSBuildToolsPath64 = C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\MSBuild\Current\Bin\amd64
@@ -2233,7 +2231,7 @@ Logging verbosity is set to: Diagnostic.19:39:16.766     1>Project "C:\Users\Adm
                    SDKReferenceDirectoryRoot = C:\Users\Administrator\AppData\Local\Microsoft SDKs;C:\Program Files (x86)\Microsoft SDKs
                    SDKReferenceRegistryRoot = Software\Microsoft\Microsoft SDKs
                    SDKVersion = 10.0
-                   ServiceHubLogSessionKey = C6120792
+                   ServiceHubLogSessionKey = 25708F67
                    SESSIONNAME = Console
                    SGenFilesOutputGroupDependenciesDependsOn = 
                          ;
@@ -2468,9 +2466,9 @@ Logging verbosity is set to: Diagnostic.19:39:16.766     1>Project "C:\Users\Adm
                    VsInstallRoot = C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise
                    VSLANG = 1033
                    VSSKUEDITION = Enterprise
-                   VSTEL_CurrentSolutionBuildID = 23348718
+                   VSTEL_CurrentSolutionBuildID = 26183500
                    VSTEL_ProjectID = {F8CE697C-76E5-45BC-AA6B-2DC30999A7FA}
-                   VSTEL_SolutionSessionID = {CA5423CC-1076-4865-B5B3-21F4129EBE74}
+                   VSTEL_SolutionSessionID = {D6ED6F0F-845B-4410-8155-A4CB07BEE477}
                    VSVersion = $(VisualStudioVersion)
                    WDKBinRoot = C:\Program Files (x86)\Windows Kits\10\bin\10.0.18362.0
                    WebBrowserDebuggerDebuggerType = Auto
@@ -2533,9 +2531,9 @@ Logging verbosity is set to: Diagnostic.19:39:16.766     1>Project "C:\Users\Adm
                    XamlTemporaryAssemblyName = tema_2_avion
                    YieldDuringToolExecution = true
 
-19:39:16.766     1>Building with tools version "Current".
+20:26:31.226     1>Building with tools version "Current".
                    Target "EnableIntermediateOutputPathMismatchWarning" skipped, due to false condition; ('$(RestoreProjectStyle)' == 'PackageReference') was evaluated as ('' == 'PackageReference').
-19:39:16.766     1>Target "_CheckForInvalidConfigurationAndPlatform: (TargetId:2)" in file "C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\MSBuild\Current\Bin\Microsoft.Common.CurrentVersion.targets" from project "C:\Users\Administrator\Documents\GitHub\sda\tema_2_avion\tema_2_avion.vcxproj" (target "SetTelemetryEnvironmentVariables" depends on it):
+20:26:31.227     1>Target "_CheckForInvalidConfigurationAndPlatform: (TargetId:2)" in file "C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\MSBuild\Current\Bin\Microsoft.Common.CurrentVersion.targets" from project "C:\Users\Administrator\Documents\GitHub\sda\tema_2_avion\tema_2_avion.vcxproj" (target "SetTelemetryEnvironmentVariables" depends on it):
                    Set Property: _InvalidConfigurationMessageText=The OutputPath property is not set for project 'tema_2_avion.vcxproj'.  Please check to make sure that you have specified a valid combination of Configuration and Platform for this project.  Configuration='Debug'  Platform='Win32'.
                    Set Property: _InvalidConfigurationMessageText=The OutputPath property is not set for project 'tema_2_avion.vcxproj'.  Please check to make sure that you have specified a valid combination of Configuration and Platform for this project.  Configuration='Debug'  Platform='Win32'.  This error may also appear if some other project is trying to follow a project-to-project reference to this project, this project has been unloaded or is not included in the solution, and the referencing project does not build using the same or an equivalent Configuration or Platform.
                    Task "Error" skipped, due to false condition; ( '$(_InvalidConfigurationError)' == 'true' ) was evaluated as ( '' == 'true' ).
@@ -2556,21 +2554,21 @@ Logging verbosity is set to: Diagnostic.19:39:16.766     1>Project "C:\Users\Adm
                    Task "Error" skipped, due to false condition; ('$(IntermediateOutputPath)' != '' and !HasTrailingSlash('$(IntermediateOutputPath)')) was evaluated as ('Debug\' != '' and !HasTrailingSlash('Debug\')).
                    Task "Error" skipped, due to false condition; ( '$(_InitialMSBuildProjectExtensionsPath)' != '' And '$(MSBuildProjectExtensionsPath)' != '$(_InitialMSBuildProjectExtensionsPath)' ) was evaluated as ( 'C:\Users\Administrator\Documents\GitHub\sda\tema_2_avion\obj\' != '' And 'C:\Users\Administrator\Documents\GitHub\sda\tema_2_avion\obj\' != 'C:\Users\Administrator\Documents\GitHub\sda\tema_2_avion\obj\' ).
                    Task "Warning" skipped, due to false condition; ( '$(EnableBaseIntermediateOutputPathMismatchWarning)' == 'true' And '$(_InitialBaseIntermediateOutputPath)' != '$(BaseIntermediateOutputPath)' And '$(BaseIntermediateOutputPath)' != '$(MSBuildProjectExtensionsPath)' ) was evaluated as ( '' == 'true' And 'obj\' != 'obj\' And 'obj\' != 'C:\Users\Administrator\Documents\GitHub\sda\tema_2_avion\obj\' ).
-19:39:16.780     1>Done building target "_CheckForInvalidConfigurationAndPlatform" in project "tema_2_avion.vcxproj".: (TargetId:2)
+20:26:31.229     1>Done building target "_CheckForInvalidConfigurationAndPlatform" in project "tema_2_avion.vcxproj".: (TargetId:2)
                    Target "_CheckForInvalidConfigurationAndPlatform" skipped. Previously built successfully.
-19:39:16.780     1>Target "SetTelemetryEnvironmentVariables: (TargetId:3)" in file "C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\MSBuild\Microsoft\VC\v160\Microsoft.Cpp.DesignTime.targets" from project "C:\Users\Administrator\Documents\GitHub\sda\tema_2_avion\tema_2_avion.vcxproj" (target "Build" depends on it):
+20:26:31.229     1>Target "SetTelemetryEnvironmentVariables: (TargetId:3)" in file "C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\MSBuild\Microsoft\VC\v160\Microsoft.Cpp.DesignTime.targets" from project "C:\Users\Administrator\Documents\GitHub\sda\tema_2_avion\tema_2_avion.vcxproj" (target "Build" depends on it):
                    Using "SetEnv" task from assembly "C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\MSBuild\Microsoft\VC\v160\Microsoft.Build.CppTasks.Common.dll".
                    Task "SetEnv" (TaskId:4)
                      Task Parameter:Name=VSTEL_SolutionSessionID (TaskId:4)
-                     Task Parameter:Value={CA5423CC-1076-4865-B5B3-21F4129EBE74} (TaskId:4)
+                     Task Parameter:Value={D6ED6F0F-845B-4410-8155-A4CB07BEE477} (TaskId:4)
                      Task Parameter:Prefix=False (TaskId:4)
-                     VSTEL_SolutionSessionID={CA5423CC-1076-4865-B5B3-21F4129EBE74} (TaskId:4)
+                     VSTEL_SolutionSessionID={D6ED6F0F-845B-4410-8155-A4CB07BEE477} (TaskId:4)
                    Done executing task "SetEnv". (TaskId:4)
                    Task "SetEnv" (TaskId:5)
                      Task Parameter:Name=VSTEL_CurrentSolutionBuildID (TaskId:5)
-                     Task Parameter:Value=23348718 (TaskId:5)
+                     Task Parameter:Value=26183500 (TaskId:5)
                      Task Parameter:Prefix=False (TaskId:5)
-                     VSTEL_CurrentSolutionBuildID=23348718 (TaskId:5)
+                     VSTEL_CurrentSolutionBuildID=26183500 (TaskId:5)
                    Done executing task "SetEnv". (TaskId:5)
                    Task "SetEnv" (TaskId:6)
                      Task Parameter:Name=VSTEL_ProjectID (TaskId:6)
@@ -2579,8 +2577,8 @@ Logging verbosity is set to: Diagnostic.19:39:16.766     1>Project "C:\Users\Adm
                      VSTEL_ProjectID={F8CE697C-76E5-45BC-AA6B-2DC30999A7FA} (TaskId:6)
                      Output Property: VSTEL_ProjectID={F8CE697C-76E5-45BC-AA6B-2DC30999A7FA} (TaskId:6)
                    Done executing task "SetEnv". (TaskId:6)
-19:39:16.780     1>Done building target "SetTelemetryEnvironmentVariables" in project "tema_2_avion.vcxproj".: (TargetId:3)
-19:39:16.780     1>Target "_PrepareForBuild: (TargetId:4)" in file "C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\MSBuild\Microsoft\VC\v160\Microsoft.BuildSteps.Targets" from project "C:\Users\Administrator\Documents\GitHub\sda\tema_2_avion\tema_2_avion.vcxproj" (target "Build" depends on it):
+20:26:31.230     1>Done building target "SetTelemetryEnvironmentVariables" in project "tema_2_avion.vcxproj".: (TargetId:3)
+20:26:31.230     1>Target "_PrepareForBuild: (TargetId:4)" in file "C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\MSBuild\Microsoft\VC\v160\Microsoft.BuildSteps.Targets" from project "C:\Users\Administrator\Documents\GitHub\sda\tema_2_avion\tema_2_avion.vcxproj" (target "Build" depends on it):
                    Set Property: BuildType=Build
                    Set Property: _BuildActionType=Build
                    Task "CreateItem" skipped, due to false condition; ('%(CustomBuild.IncludeFileToTool)'!='') was evaluated as (''!='').
@@ -2588,17 +2586,17 @@ Logging verbosity is set to: Diagnostic.19:39:16.766     1>Project "C:\Users\Adm
                        CustomBuildStep=
                            tema_2_avion
                                    Message=Performing Custom Build Step
-19:39:16.780     1>Done building target "_PrepareForBuild" in project "tema_2_avion.vcxproj".: (TargetId:4)
-19:39:16.780     1>Target "_PrepareForReferenceResolution: (TargetId:5)" in file "C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\MSBuild\Microsoft\VC\v160\Microsoft.CppBuild.targets" from project "C:\Users\Administrator\Documents\GitHub\sda\tema_2_avion\tema_2_avion.vcxproj" (target "ResolveReferences" depends on it):
+20:26:31.230     1>Done building target "_PrepareForBuild" in project "tema_2_avion.vcxproj".: (TargetId:4)
+20:26:31.230     1>Target "_PrepareForReferenceResolution: (TargetId:5)" in file "C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\MSBuild\Microsoft\VC\v160\Microsoft.CppBuild.targets" from project "C:\Users\Administrator\Documents\GitHub\sda\tema_2_avion\tema_2_avion.vcxproj" (target "ResolveReferences" depends on it):
                    Set Property: TargetFrameworkMoniker=
                    Set Property: _FindDependencies=false
                    Set Property: AdditionalExplicitAssemblyReferences=
                    Task "Message" skipped, due to false condition; ('$(_REFERENCE_DEBUG)'=='true') was evaluated as (''=='true').
-19:39:16.781     1>Done building target "_PrepareForReferenceResolution" in project "tema_2_avion.vcxproj".: (TargetId:5)
+20:26:31.231     1>Done building target "_PrepareForReferenceResolution" in project "tema_2_avion.vcxproj".: (TargetId:5)
                    Target "ComputeCrtSDKReference" skipped, due to false condition; ('@(ClCompile)'!='' and '$(WindowsAppContainer)'=='true' and '$(UseCrtSDKReference)' != 'false') was evaluated as ('DijkstraHeader.c;GraphHeader.c;MainHeader.c;MinHeapHeader.c;piele_bogdan_312ab_tema_2_avion.c;TrieHeader.c;UtilHeader.c'!='' and 'false'=='true' and '' != 'false').
-19:39:16.781     1>Target "BeforeResolveReferences: (TargetId:6)" in file "C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\MSBuild\Current\Bin\Microsoft.Common.CurrentVersion.targets" from project "C:\Users\Administrator\Documents\GitHub\sda\tema_2_avion\tema_2_avion.vcxproj" (target "ResolveReferences" depends on it):
-19:39:16.781     1>Done building target "BeforeResolveReferences" in project "tema_2_avion.vcxproj".: (TargetId:6)
-19:39:16.781     1>Target "AssignProjectConfiguration: (TargetId:7)" in file "C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\MSBuild\Current\Bin\Microsoft.Common.CurrentVersion.targets" from project "C:\Users\Administrator\Documents\GitHub\sda\tema_2_avion\tema_2_avion.vcxproj" (target "ResolveReferences" depends on it):
+20:26:31.231     1>Target "BeforeResolveReferences: (TargetId:6)" in file "C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\MSBuild\Current\Bin\Microsoft.Common.CurrentVersion.targets" from project "C:\Users\Administrator\Documents\GitHub\sda\tema_2_avion\tema_2_avion.vcxproj" (target "ResolveReferences" depends on it):
+20:26:31.231     1>Done building target "BeforeResolveReferences" in project "tema_2_avion.vcxproj".: (TargetId:6)
+20:26:31.231     1>Target "AssignProjectConfiguration: (TargetId:7)" in file "C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\MSBuild\Current\Bin\Microsoft.Common.CurrentVersion.targets" from project "C:\Users\Administrator\Documents\GitHub\sda\tema_2_avion\tema_2_avion.vcxproj" (target "ResolveReferences" depends on it):
                    Set Property: ShouldUnsetParentConfigurationAndPlatform=true
                    Using "AssignProjectConfiguration" task from assembly "Microsoft.Build.Tasks.Core, Version=15.1.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a".
                    Task "AssignProjectConfiguration" (TaskId:7)
@@ -2613,12 +2611,12 @@ Logging verbosity is set to: Diagnostic.19:39:16.766     1>Project "C:\Users\Adm
                      Task Parameter:OnlyReferenceAndBuildProjectsEnabledInSolutionConfiguration=True (TaskId:7)
                      Task Parameter:ShouldUnsetParentConfigurationAndPlatform=True (TaskId:7)
                    Done executing task "AssignProjectConfiguration". (TaskId:7)
-19:39:16.781     1>Done building target "AssignProjectConfiguration" in project "tema_2_avion.vcxproj".: (TargetId:7)
+20:26:31.231     1>Done building target "AssignProjectConfiguration" in project "tema_2_avion.vcxproj".: (TargetId:7)
                    Target "AssignProjectConfiguration" skipped. Previously built successfully.
-19:39:16.781     1>Target "_SplitProjectReferencesByFileExistence: (TargetId:8)" in file "C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\MSBuild\Current\Bin\Microsoft.Common.CurrentVersion.targets" from project "C:\Users\Administrator\Documents\GitHub\sda\tema_2_avion\tema_2_avion.vcxproj" (target "PrepareProjectReferences" depends on it):
+20:26:31.232     1>Target "_SplitProjectReferencesByFileExistence: (TargetId:8)" in file "C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\MSBuild\Current\Bin\Microsoft.Common.CurrentVersion.targets" from project "C:\Users\Administrator\Documents\GitHub\sda\tema_2_avion\tema_2_avion.vcxproj" (target "PrepareProjectReferences" depends on it):
                    Task "ResolveNonMSBuildProjectOutput" skipped, due to false condition; ('$(BuildingInsideVisualStudio)'=='true' and '@(ProjectReferenceWithConfiguration)'!='') was evaluated as ('true'=='true' and ''!='').
-19:39:16.781     1>Done building target "_SplitProjectReferencesByFileExistence" in project "tema_2_avion.vcxproj".: (TargetId:8)
-19:39:16.781     1>Target "_GetProjectReferenceTargetFrameworkProperties: (TargetId:9)" in file "C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\MSBuild\Current\Bin\Microsoft.Common.CurrentVersion.targets" from project "C:\Users\Administrator\Documents\GitHub\sda\tema_2_avion\tema_2_avion.vcxproj" (target "PrepareProjectReferences" depends on it):
+20:26:31.232     1>Done building target "_SplitProjectReferencesByFileExistence" in project "tema_2_avion.vcxproj".: (TargetId:8)
+20:26:31.232     1>Target "_GetProjectReferenceTargetFrameworkProperties: (TargetId:9)" in file "C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\MSBuild\Current\Bin\Microsoft.Common.CurrentVersion.targets" from project "C:\Users\Administrator\Documents\GitHub\sda\tema_2_avion\tema_2_avion.vcxproj" (target "PrepareProjectReferences" depends on it):
                    Set Property: ReferringTargetFrameworkForProjectReferences=.NETFramework,Version=v4.0
                    Using "MSBuild" task from assembly "Microsoft.Build.Tasks.Core, Version=15.1.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a".
                    Task "MSBuild" (TaskId:8)
@@ -2628,22 +2626,22 @@ Logging verbosity is set to: Diagnostic.19:39:16.766     1>Project "C:\Users\Adm
                      Task Parameter:SkipNonexistentTargets=True (TaskId:8)
                    Done executing task "MSBuild". (TaskId:8)
                    Task "GetReferenceNearestTargetFrameworkTask" skipped, due to false condition; ('@(_ProjectReferenceTargetFrameworkPossibilities->Count())' != '0' and '$(ReferringTargetFrameworkForProjectReferences)' != '') was evaluated as ('0' != '0' and '.NETFramework,Version=v4.0' != '').
-19:39:16.782     1>Done building target "_GetProjectReferenceTargetFrameworkProperties" in project "tema_2_avion.vcxproj".: (TargetId:9)
-19:39:16.782     1>Target "PrepareProjectReferences: (TargetId:10)" in file "C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\MSBuild\Current\Bin\Microsoft.Common.CurrentVersion.targets" from project "C:\Users\Administrator\Documents\GitHub\sda\tema_2_avion\tema_2_avion.vcxproj" (target "ResolveProjectReferences" depends on it):
-19:39:16.782     1>Done building target "PrepareProjectReferences" in project "tema_2_avion.vcxproj".: (TargetId:10)
+20:26:31.233     1>Done building target "_GetProjectReferenceTargetFrameworkProperties" in project "tema_2_avion.vcxproj".: (TargetId:9)
+20:26:31.233     1>Target "PrepareProjectReferences: (TargetId:10)" in file "C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\MSBuild\Current\Bin\Microsoft.Common.CurrentVersion.targets" from project "C:\Users\Administrator\Documents\GitHub\sda\tema_2_avion\tema_2_avion.vcxproj" (target "ResolveProjectReferences" depends on it):
+20:26:31.233     1>Done building target "PrepareProjectReferences" in project "tema_2_avion.vcxproj".: (TargetId:10)
                    Target "_RemoveNameMetadataFromProjectReferenceItems" skipped, due to false condition; ('@(ProjectReference)'!='') was evaluated as (''!='').
-19:39:16.782     1>Target "ResolveProjectReferences: (TargetId:11)" in file "C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\MSBuild\Current\Bin\Microsoft.Common.CurrentVersion.targets" from project "C:\Users\Administrator\Documents\GitHub\sda\tema_2_avion\tema_2_avion.vcxproj" (target "ResolveReferences" depends on it):
+20:26:31.233     1>Target "ResolveProjectReferences: (TargetId:11)" in file "C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\MSBuild\Current\Bin\Microsoft.Common.CurrentVersion.targets" from project "C:\Users\Administrator\Documents\GitHub\sda\tema_2_avion\tema_2_avion.vcxproj" (target "ResolveReferences" depends on it):
                    Task "MSBuild" skipped, due to false condition; ('%(_MSBuildProjectReferenceExistent.BuildReference)' == 'true' and '@(ProjectReferenceWithConfiguration)' != '' and ('$(BuildingInsideVisualStudio)' == 'true' or '$(BuildProjectReferences)' != 'true') and '$(VisualStudioVersion)' != '10.0' and '@(_MSBuildProjectReferenceExistent)' != '') was evaluated as ('' == 'true' and '' != '' and ('true' == 'true' or 'true' != 'true') and '16.0' != '10.0' and '' != '').
                    Task "MSBuild" skipped, due to false condition; ('%(_MSBuildProjectReferenceExistent.BuildReference)' == 'true' and '@(ProjectReferenceWithConfiguration)' != '' and '$(BuildingInsideVisualStudio)' != 'true' and '$(BuildProjectReferences)' == 'true' and '@(_MSBuildProjectReferenceExistent)' != '') was evaluated as ('' == 'true' and '' != '' and 'true' != 'true' and 'true' == 'true' and '' != '').
                    Task "MSBuild" skipped, due to false condition; ('%(_MSBuildProjectReferenceExistent.BuildReference)' == 'true' and '@(ProjectReferenceWithConfiguration)' != '' and '$(BuildingProject)' == 'true' and '@(_MSBuildProjectReferenceExistent)' != '') was evaluated as ('' == 'true' and '' != '' and 'true' == 'true' and '' != '').
                    Task "Warning" skipped, due to false condition; ('@(ProjectReferenceWithConfiguration)' != '' and '@(_MSBuildProjectReferenceNonexistent)' != '') was evaluated as ('' != '' and '' != '').
-19:39:16.783     1>Done building target "ResolveProjectReferences" in project "tema_2_avion.vcxproj".: (TargetId:11)
+20:26:31.234     1>Done building target "ResolveProjectReferences" in project "tema_2_avion.vcxproj".: (TargetId:11)
                    Target "FindInvalidProjectReferences" skipped, due to false condition; ('$(FindInvalidProjectReferences)' == 'true') was evaluated as ('' == 'true').
                    Target "ResolveNativeReferences" skipped, due to false condition; ('@(NativeReference)'!='') was evaluated as (''!='').
                    Target "_PrepareForReferenceResolution" skipped. Previously built successfully.
                    Target "ResolveProjectReferences" skipped. Previously built successfully.
                    Target "FindInvalidProjectReferences" skipped, due to false condition; ('$(FindInvalidProjectReferences)' == 'true') was evaluated as ('' == 'true').
-19:39:16.783     1>Target "GetFrameworkPaths: (TargetId:12)" in file "C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\MSBuild\Current\Bin\Microsoft.NETFramework.CurrentVersion.targets" from project "C:\Users\Administrator\Documents\GitHub\sda\tema_2_avion\tema_2_avion.vcxproj" (target "ResolveAssemblyReferences" depends on it):
+20:26:31.234     1>Target "GetFrameworkPaths: (TargetId:12)" in file "C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\MSBuild\Current\Bin\Microsoft.NETFramework.CurrentVersion.targets" from project "C:\Users\Administrator\Documents\GitHub\sda\tema_2_avion\tema_2_avion.vcxproj" (target "ResolveAssemblyReferences" depends on it):
                    Added Item(s): _TargetFramework40DirectoryItem=C:\WINDOWS\Microsoft.NET\Framework\v4.0.30319
                    Added Item(s): _TargetFramework35DirectoryItem=C:\WINDOWS\Microsoft.NET\Framework\v3.5
                    Added Item(s): _TargetFramework30DirectoryItem=C:\WINDOWS\Microsoft.NET\Framework\v3.0
@@ -2653,18 +2651,18 @@ Logging verbosity is set to: Diagnostic.19:39:16.766     1>Project "C:\Users\Adm
                    Set Property: TargetFrameworkDirectory=C:\WINDOWS\Microsoft.NET\Framework\v4.0.30319
                    Set Property: TargetFrameworkSDKDirectory=C:\Program Files (x86)\Microsoft SDKs\Windows\v10.0A\
                    Added Item(s): _TargetFrameworkSDKDirectoryItem=C:\Program Files (x86)\Microsoft SDKs\Windows\v10.0A\
-19:39:16.783     1>Done building target "GetFrameworkPaths" in project "tema_2_avion.vcxproj".: (TargetId:12)
+20:26:31.234     1>Done building target "GetFrameworkPaths" in project "tema_2_avion.vcxproj".: (TargetId:12)
                    Target "_PrepareForReferenceResolution" skipped. Previously built successfully.
                    Target "GetWinFXPath" skipped, due to false condition; (('@(Page)' != '' or '@(ApplicationDefinition)' != '' or '@(Resource)' != '') and ('$(GetWinFXNativePath)' != '' or '$(GetWinFXWoWPath)' != '' )) was evaluated as (('' != '' or '' != '' or '' != '') and ('' != '' or '' != '' )).
                    Target "GetFrameworkPaths" skipped. Previously built successfully.
-19:39:16.783     1>Target "GetReferenceAssemblyPaths: (TargetId:13)" in file "C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\MSBuild\Current\Bin\Microsoft.Common.CurrentVersion.targets" from project "C:\Users\Administrator\Documents\GitHub\sda\tema_2_avion\tema_2_avion.vcxproj" (target "ResolveAssemblyReferences" depends on it):
+20:26:31.235     1>Target "GetReferenceAssemblyPaths: (TargetId:13)" in file "C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\MSBuild\Current\Bin\Microsoft.Common.CurrentVersion.targets" from project "C:\Users\Administrator\Documents\GitHub\sda\tema_2_avion\tema_2_avion.vcxproj" (target "ResolveAssemblyReferences" depends on it):
                    Set Property: TargetFrameworkDirectory=
                    Task "GetReferenceAssemblyPaths" skipped, due to false condition; ('$(TargetFrameworkMoniker)' != '' and ('$(_TargetFrameworkDirectories)' == '' or '$(_FullFrameworkReferenceAssemblyPaths)' == '')) was evaluated as ('' != '' and ('C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0' == '' or 'C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0' == '')).
                    Set Property: TargetFrameworkDirectory=C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0;;
                    Set Property: TargetFrameworkDirectory=C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0;;;C:\Program Files %28x86%29\Windows Kits\10\References
                    Set Property: RemoveAssemblyFoldersIfNoTargetFramework=true
-19:39:16.783     1>Done building target "GetReferenceAssemblyPaths" in project "tema_2_avion.vcxproj".: (TargetId:13)
-19:39:16.783     1>Target "SetBuildDefaultEnvironmentVariables: (TargetId:14)" in file "C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\MSBuild\Microsoft\VC\v160\Microsoft.Cpp.Current.targets" from project "C:\Users\Administrator\Documents\GitHub\sda\tema_2_avion\tema_2_avion.vcxproj" (target "PrepareForBuild" depends on it):
+20:26:31.235     1>Done building target "GetReferenceAssemblyPaths" in project "tema_2_avion.vcxproj".: (TargetId:13)
+20:26:31.235     1>Target "SetBuildDefaultEnvironmentVariables: (TargetId:14)" in file "C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\MSBuild\Microsoft\VC\v160\Microsoft.Cpp.Current.targets" from project "C:\Users\Administrator\Documents\GitHub\sda\tema_2_avion\tema_2_avion.vcxproj" (target "PrepareForBuild" depends on it):
                    Task "SetEnv" (TaskId:9)
                      Task Parameter:Name=PATH (TaskId:9)
                      Task Parameter:Value=C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\VC\Tools\MSVC\14.25.28610\bin\HostX86\x86;C:\Program Files (x86)\Windows Kits\10\bin\10.0.18362.0\x86;;C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\Common7\tools;C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\Common7\ide;C:\Program Files (x86)\HTML Help Workshop;;C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\MSBuild\Current\Bin;C:\WINDOWS\Microsoft.NET\Framework\v4.0.30319\;;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\ProgramData\chocolatey\bin;C:\MinGW\bin;C:\Program Files\Microsoft SQL Server\130\Tools\Binn\;C:\Users\Administrator\AppData\Local\Microsoft\WindowsApps;C:\Users\Administrator\AppData\Local\GitHubDesktop\bin; (TaskId:9)
@@ -2693,10 +2691,10 @@ Logging verbosity is set to: Diagnostic.19:39:16.766     1>Project "C:\Users\Adm
                      INCLUDE=C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\VC\Tools\MSVC\14.25.28610\include;;C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\VC\Tools\MSVC\14.25.28610\atlmfc\include;;C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\VC\Auxiliary\VS\include;;C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\ucrt;;;C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\um;C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\shared;C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\winrt;C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\cppwinrt;C:\Program Files (x86)\Windows Kits\NETFXSDK\4.8\Include\um; (TaskId:12)
                      Output Property: INCLUDE=C:\Program Files %28x86%29\Microsoft Visual Studio\2019\Enterprise\VC\Tools\MSVC\14.25.28610\include%3b%3bC:\Program Files %28x86%29\Microsoft Visual Studio\2019\Enterprise\VC\Tools\MSVC\14.25.28610\atlmfc\include%3b%3bC:\Program Files %28x86%29\Microsoft Visual Studio\2019\Enterprise\VC\Auxiliary\VS\include%3b%3bC:\Program Files %28x86%29\Windows Kits\10\Include\10.0.18362.0\ucrt%3b%3b%3bC:\Program Files %28x86%29\Windows Kits\10\Include\10.0.18362.0\um%3bC:\Program Files %28x86%29\Windows Kits\10\Include\10.0.18362.0\shared%3bC:\Program Files %28x86%29\Windows Kits\10\Include\10.0.18362.0\winrt%3bC:\Program Files %28x86%29\Windows Kits\10\Include\10.0.18362.0\cppwinrt%3bC:\Program Files %28x86%29\Windows Kits\NETFXSDK\4.8\Include\um%3b (TaskId:12)
                    Done executing task "SetEnv". (TaskId:12)
-19:39:16.784     1>Done building target "SetBuildDefaultEnvironmentVariables" in project "tema_2_avion.vcxproj".: (TargetId:14)
+20:26:31.236     1>Done building target "SetBuildDefaultEnvironmentVariables" in project "tema_2_avion.vcxproj".: (TargetId:14)
                    Target "SetUserMacroEnvironmentVariables" skipped, due to false condition; ('@(BuildMacro)' != '' and '$(DesignTimeBuild)' != 'true') was evaluated as ('' != '' and '' != 'true').
                    Target "_PrepareForReferenceResolution" skipped. Previously built successfully.
-19:39:16.784     1>Target "GetResolvedWinMD: (TargetId:15)" in file "C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\MSBuild\Microsoft\VC\v160\Microsoft.CppBuild.targets" from project "C:\Users\Administrator\Documents\GitHub\sda\tema_2_avion\tema_2_avion.vcxproj" (target "PrepareForBuild" depends on it):
+20:26:31.236     1>Target "GetResolvedWinMD: (TargetId:15)" in file "C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\MSBuild\Microsoft\VC\v160\Microsoft.CppBuild.targets" from project "C:\Users\Administrator\Documents\GitHub\sda\tema_2_avion\tema_2_avion.vcxproj" (target "PrepareForBuild" depends on it):
                    Added Item(s): 
                        Link=
                            tmp
@@ -2779,8 +2777,8 @@ Logging verbosity is set to: Diagnostic.19:39:16.766     1>Project "C:\Users\Adm
                                    TypeLibraryResourceID=1
                                    UACExecutionLevel=AsInvoker
                                    UACUIAccess=false
-19:39:16.791     1>Done building target "GetResolvedWinMD" in project "tema_2_avion.vcxproj".: (TargetId:15)
-19:39:16.791     1>Target "_CheckWindowsSDKInstalled: (TargetId:16)" in file "C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\MSBuild\Microsoft\VC\v160\Microsoft.Cpp.WindowsSDK.targets" from project "C:\Users\Administrator\Documents\GitHub\sda\tema_2_avion\tema_2_avion.vcxproj" (target "PrepareForBuild" depends on it):
+20:26:31.237     1>Done building target "GetResolvedWinMD" in project "tema_2_avion.vcxproj".: (TargetId:15)
+20:26:31.237     1>Target "_CheckWindowsSDKInstalled: (TargetId:16)" in file "C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\MSBuild\Microsoft\VC\v160\Microsoft.Cpp.WindowsSDK.targets" from project "C:\Users\Administrator\Documents\GitHub\sda\tema_2_avion\tema_2_avion.vcxproj" (target "PrepareForBuild" depends on it):
                    Set Property: WindowsSDKInstalled=false
                    Set Property: WindowsSDK_UAP_Support=false
                    Set Property: WindowsSDK_Desktop_Support=false
@@ -2789,11 +2787,11 @@ Logging verbosity is set to: Diagnostic.19:39:16.766     1>Project "C:\Users\Adm
                    Set Property: WindowsSDK_Desktop_Support=true
                    Task "VCMessage" skipped, due to false condition; ('$(WindowsSDKInstalled)' != 'true') was evaluated as ('true' != 'true').
                    Task "VCMessage" skipped, due to false condition; ('$(WindowsAppContainer)' != 'true' and '$(WindowsSDK_Desktop_Support)' != true) was evaluated as ('false' != 'true' and 'true' != true).
-19:39:16.792     1>Done building target "_CheckWindowsSDKInstalled" in project "tema_2_avion.vcxproj".: (TargetId:16)
+20:26:31.237     1>Done building target "_CheckWindowsSDKInstalled" in project "tema_2_avion.vcxproj".: (TargetId:16)
                    Target "GetFrameworkPaths" skipped. Previously built successfully.
                    Target "GetReferenceAssemblyPaths" skipped. Previously built successfully.
                    Target "AssignLinkMetadata" skipped, due to false condition; ( '$(SynthesizeLinkMetadata)' == 'true' ) was evaluated as ( '' == 'true' ).
-19:39:16.792     1>Target "SetCABuildNativeEnvironmentVariables: (TargetId:17)" in file "C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\MSBuild\Microsoft\VisualStudio\v16.0\CodeAnalysis\Microsoft.CodeAnalysis.targets" from project "C:\Users\Administrator\Documents\GitHub\sda\tema_2_avion\tema_2_avion.vcxproj" (target "PrepareForBuild" depends on it):
+20:26:31.237     1>Target "SetCABuildNativeEnvironmentVariables: (TargetId:17)" in file "C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\MSBuild\Microsoft\VisualStudio\v16.0\CodeAnalysis\Microsoft.CodeAnalysis.targets" from project "C:\Users\Administrator\Documents\GitHub\sda\tema_2_avion\tema_2_avion.vcxproj" (target "PrepareForBuild" depends on it):
                    Task "SetEnv" (TaskId:13)
                      Task Parameter:Value=C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\VC\Tools\MSVC\14.25.28610\atlmfc\include;C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\VC\Tools\MSVC\14.25.28610\include;C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\ucrt;;C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\um;C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\shared;C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\winrt;C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\cppwinrt;C:\Program Files (x86)\Windows Kits\NETFXSDK\4.8\Include\um; (TaskId:13)
                      Task Parameter:Name=CAExcludePath (TaskId:13)
@@ -2801,8 +2799,8 @@ Logging verbosity is set to: Diagnostic.19:39:16.766     1>Project "C:\Users\Adm
                      CAExcludePath=C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\VC\Tools\MSVC\14.25.28610\atlmfc\include;C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\VC\Tools\MSVC\14.25.28610\include;C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\ucrt;;C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\um;C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\shared;C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\winrt;C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\cppwinrt;C:\Program Files (x86)\Windows Kits\NETFXSDK\4.8\Include\um; (TaskId:13)
                    Done executing task "SetEnv". (TaskId:13)
                    Task "SetEnv" skipped, due to false condition; ('$(RunMsvcAnalysis)'=='true' and '$(VCCodeAnalysisUX)'=='true') was evaluated as ('false'=='true' and 'true'=='true').
-19:39:16.792     1>Done building target "SetCABuildNativeEnvironmentVariables" in project "tema_2_avion.vcxproj".: (TargetId:17)
-19:39:16.792     1>Target "PrepareForBuild: (TargetId:18)" in file "C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\MSBuild\Microsoft\VC\v160\Microsoft.CppBuild.targets" from project "C:\Users\Administrator\Documents\GitHub\sda\tema_2_avion\tema_2_avion.vcxproj" (target "ResolveAssemblyReferences" depends on it):
+20:26:31.237     1>Done building target "SetCABuildNativeEnvironmentVariables" in project "tema_2_avion.vcxproj".: (TargetId:17)
+20:26:31.237     1>Target "PrepareForBuild: (TargetId:18)" in file "C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\MSBuild\Microsoft\VC\v160\Microsoft.CppBuild.targets" from project "C:\Users\Administrator\Documents\GitHub\sda\tema_2_avion\tema_2_avion.vcxproj" (target "ResolveAssemblyReferences" depends on it):
                    Set Property: TargetDir=C:\Users\Administrator\Documents\GitHub\sda\tema_2_avion\Debug\
                    Set Property: LocalDebuggerCommand=C:\Users\Administrator\Documents\GitHub\sda\tema_2_avion\Debug\tema_2_avion.exe
                    Set Property: BuildProjectReferences=false
@@ -2936,23 +2934,23 @@ Logging verbosity is set to: Diagnostic.19:39:16.766     1>Project "C:\Users\Adm
                              C:\Users\Administrator\Documents\GitHub\sda\tema_2_avion\Debug\
                              Debug\tema_2_avion.tlog\ (TaskId:16)
                    Done executing task "MakeDir". (TaskId:16)
-19:39:16.798     1>Done building target "PrepareForBuild" in project "tema_2_avion.vcxproj".: (TargetId:18)
+20:26:31.243     1>Done building target "PrepareForBuild" in project "tema_2_avion.vcxproj".: (TargetId:18)
                    Target "_PrepareForReferenceResolution" skipped. Previously built successfully.
                    Target "ComputeCrtSDKReference" skipped, due to false condition; ('@(ClCompile)'!='' and '$(WindowsAppContainer)'=='true' and '$(UseCrtSDKReference)' != 'false') was evaluated as ('DijkstraHeader.c;GraphHeader.c;MainHeader.c;MinHeapHeader.c;piele_bogdan_312ab_tema_2_avion.c;TrieHeader.c;UtilHeader.c'!='' and 'false'=='true' and '' != 'false').
                    Target "GetInstalledSDKLocations" skipped, due to false condition; ('@(SDKReference)' != '') was evaluated as ('' != '').
-19:39:16.798     1>Target "ResolveSDKReferences: (TargetId:19)" in file "C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\MSBuild\Current\Bin\Microsoft.Common.CurrentVersion.targets" from project "C:\Users\Administrator\Documents\GitHub\sda\tema_2_avion\tema_2_avion.vcxproj" (target "ResolveAssemblyReferences" depends on it):
+20:26:31.243     1>Target "ResolveSDKReferences: (TargetId:19)" in file "C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\MSBuild\Current\Bin\Microsoft.Common.CurrentVersion.targets" from project "C:\Users\Administrator\Documents\GitHub\sda\tema_2_avion\tema_2_avion.vcxproj" (target "ResolveAssemblyReferences" depends on it):
                    Task "ResolveSDKReference" skipped, due to false condition; ('@(SDKReference)'!='') was evaluated as (''!='').
-19:39:16.798     1>Done building target "ResolveSDKReferences" in project "tema_2_avion.vcxproj".: (TargetId:19)
+20:26:31.243     1>Done building target "ResolveSDKReferences" in project "tema_2_avion.vcxproj".: (TargetId:19)
                    Target "ResolveSDKReferences" skipped. Previously built successfully.
-19:39:16.798     1>Target "ExpandSDKReferences: (TargetId:20)" in file "C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\MSBuild\Current\Bin\Microsoft.Common.CurrentVersion.targets" from project "C:\Users\Administrator\Documents\GitHub\sda\tema_2_avion\tema_2_avion.vcxproj" (target "ResolveAssemblyReferences" depends on it):
+20:26:31.243     1>Target "ExpandSDKReferences: (TargetId:20)" in file "C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\MSBuild\Current\Bin\Microsoft.Common.CurrentVersion.targets" from project "C:\Users\Administrator\Documents\GitHub\sda\tema_2_avion\tema_2_avion.vcxproj" (target "ResolveAssemblyReferences" depends on it):
                    Task "GetSDKReferenceFiles" skipped, due to false condition; ('@(ResolvedSDKReference)'!='') was evaluated as (''!='').
-19:39:16.798     1>Done building target "ExpandSDKReferences" in project "tema_2_avion.vcxproj".: (TargetId:20)
+20:26:31.243     1>Done building target "ExpandSDKReferences" in project "tema_2_avion.vcxproj".: (TargetId:20)
                    Target "ResolveNuGetPackageAssets" skipped, due to false condition; ('$(ResolveNuGetPackages)' == 'true' and exists('$(ProjectLockFile)')) was evaluated as ('true' == 'true' and exists('obj\project.assets.json')).
                    Target "FakesGenerateBeforeBuild" skipped, due to false condition; (@(Fakes) != '' AND $(BuildingProject)) was evaluated as ( != '' AND true).
                    Target "ImplicitlyExpandNETStandardFacades" skipped, due to false condition; ('$(ImplicitlyExpandNETStandardFacades)' == 'true') was evaluated as ('' == 'true').
                    Target "_HandlePackageFileConflicts" skipped, due to false condition; ('@(Reference)' != '' Or '@(ReferenceCopyLocalPaths)' != '') was evaluated as ('' != '' Or '' != '').
                    Target "ImplicitlyExpandNETStandardFacades" skipped, due to false condition; ('$(ImplicitlyExpandNETStandardFacades)' == 'true') was evaluated as ('' == 'true').
-19:39:16.798     1>Target "ResolveAssemblyReferences: (TargetId:21)" in file "C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\MSBuild\Current\Bin\Microsoft.Common.CurrentVersion.targets" from project "C:\Users\Administrator\Documents\GitHub\sda\tema_2_avion\tema_2_avion.vcxproj" (target "ResolveReferences" depends on it):
+20:26:31.244     1>Target "ResolveAssemblyReferences: (TargetId:21)" in file "C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\MSBuild\Current\Bin\Microsoft.Common.CurrentVersion.targets" from project "C:\Users\Administrator\Documents\GitHub\sda\tema_2_avion\tema_2_avion.vcxproj" (target "ResolveReferences" depends on it):
                    Added Item(s): 
                        _ReferenceInstalledAssemblyDirectory=
                            C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0
@@ -2962,20 +2960,20 @@ Logging verbosity is set to: Diagnostic.19:39:16.766     1>Project "C:\Users\Adm
                    Set Property: ResolveAssemblyWarnOrErrorOnTargetArchitectureMismatch=Warning
                    Set Property: FindDependenciesOfExternallyResolvedReferences=false
                    Task "ResolveAssemblyReference" skipped, due to false condition; ('@(Reference)'!='' or '@(_ResolvedProjectReferencePaths)'!='' or '@(_ExplicitReference)' != '') was evaluated as (''!='' or ''!='' or '' != '').
-19:39:16.798     1>Done building target "ResolveAssemblyReferences" in project "tema_2_avion.vcxproj".: (TargetId:21)
+20:26:31.244     1>Done building target "ResolveAssemblyReferences" in project "tema_2_avion.vcxproj".: (TargetId:21)
                    Target "GenerateBindingRedirects" skipped, due to false condition; ('$(AutoGenerateBindingRedirects)' == 'true' and '$(GenerateBindingRedirectsOutputType)' == 'true') was evaluated as ('' == 'true' and 'true' == 'true').
                    Target "_RemoveZipFileSuggestedRedirect" skipped, due to false condition; ('$(_TargetFrameworkVersionWithoutV)' >= '4.7.1' And '$(AllowZipFileRedirect)' != 'true') was evaluated as ('4.0' >= '4.7.1' And '' != 'true').
                    Target "GenerateBindingRedirectsUpdateAppConfig" skipped, due to false condition; ('$(AutoGenerateBindingRedirects)' == 'true' and '$(GenerateBindingRedirectsOutputType)' == 'true' and Exists('$(_GenerateBindingRedirectsIntermediateAppConfig)')) was evaluated as ('' == 'true' and 'true' == 'true' and Exists('Debug\tema_2_avion.exe.config')).
                    Target "ResolveComReferences" skipped, due to false condition; ('@(COMReference)'!='' or '@(COMFileReference)'!='') was evaluated as (''!='' or ''!='').
-19:39:16.798     1>Target "AfterResolveReferences: (TargetId:22)" in file "C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\MSBuild\Current\Bin\Microsoft.Common.CurrentVersion.targets" from project "C:\Users\Administrator\Documents\GitHub\sda\tema_2_avion\tema_2_avion.vcxproj" (target "ResolveReferences" depends on it):
-19:39:16.798     1>Done building target "AfterResolveReferences" in project "tema_2_avion.vcxproj".: (TargetId:22)
+20:26:31.244     1>Target "AfterResolveReferences: (TargetId:22)" in file "C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\MSBuild\Current\Bin\Microsoft.Common.CurrentVersion.targets" from project "C:\Users\Administrator\Documents\GitHub\sda\tema_2_avion\tema_2_avion.vcxproj" (target "ResolveReferences" depends on it):
+20:26:31.244     1>Done building target "AfterResolveReferences" in project "tema_2_avion.vcxproj".: (TargetId:22)
                    Target "ImplicitlyExpandDesignTimeFacades" skipped, due to false condition; ('$(ImplicitlyExpandDesignTimeFacades)' == 'true') was evaluated as ('' == 'true').
                    Target "ResolveTestReferences" skipped, due to false condition; ('@(Shadow)'!='') was evaluated as (''!='').
-19:39:16.798     1>Target "ResolveReferences: (TargetId:23)" in file "C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\MSBuild\Current\Bin\Microsoft.Common.CurrentVersion.targets" from project "C:\Users\Administrator\Documents\GitHub\sda\tema_2_avion\tema_2_avion.vcxproj" (target "Build" depends on it):
-19:39:16.798     1>Done building target "ResolveReferences" in project "tema_2_avion.vcxproj".: (TargetId:23)
+20:26:31.244     1>Target "ResolveReferences: (TargetId:23)" in file "C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\MSBuild\Current\Bin\Microsoft.Common.CurrentVersion.targets" from project "C:\Users\Administrator\Documents\GitHub\sda\tema_2_avion\tema_2_avion.vcxproj" (target "Build" depends on it):
+20:26:31.244     1>Done building target "ResolveReferences" in project "tema_2_avion.vcxproj".: (TargetId:23)
                    Target "PrepareForBuild" skipped. Previously built successfully.
                    Target "PrepareForBuild" skipped. Previously built successfully.
-19:39:16.799     1>Target "InitializeBuildStatus: (TargetId:24)" in file "C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\MSBuild\Microsoft\VC\v160\Microsoft.CppBuild.targets" from project "C:\Users\Administrator\Documents\GitHub\sda\tema_2_avion\tema_2_avion.vcxproj" (target "Build" depends on it):
+20:26:31.244     1>Target "InitializeBuildStatus: (TargetId:24)" in file "C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\MSBuild\Microsoft\VC\v160\Microsoft.CppBuild.targets" from project "C:\Users\Administrator\Documents\GitHub\sda\tema_2_avion\tema_2_avion.vcxproj" (target "Build" depends on it):
                    Using "ReadLinesFromFile" task from assembly "Microsoft.Build.Tasks.Core, Version=15.1.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a".
                    Task "ReadLinesFromFile" (TaskId:17)
                      Task Parameter:File=Debug\tema_2_avion.tlog\tema_2_avion.lastbuildstate (TaskId:17)
@@ -3003,33 +3001,33 @@ Logging verbosity is set to: Diagnostic.19:39:16.766     1>Project "C:\Users\Adm
                      Task Parameter:Files=Debug\tema_2_avion.tlog\unsuccessfulbuild (TaskId:19)
                      Creating "Debug\tema_2_avion.tlog\unsuccessfulbuild" because "AlwaysCreate" was specified. (TaskId:19)
                    Done executing task "Touch". (TaskId:19)
-19:39:16.809     1>Done building target "InitializeBuildStatus" in project "tema_2_avion.vcxproj".: (TargetId:24)
+20:26:31.248     1>Done building target "InitializeBuildStatus" in project "tema_2_avion.vcxproj".: (TargetId:24)
                    Target "PrepareProjectReferences" skipped. Previously built successfully.
-19:39:16.809     1>Target "BuildGenerateSourcesTraverse: (TargetId:25)" in file "C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\MSBuild\Current\Bin\Microsoft.Common.CurrentVersion.targets" from project "C:\Users\Administrator\Documents\GitHub\sda\tema_2_avion\tema_2_avion.vcxproj" (target "BuildGenerateSources" depends on it):
+20:26:31.248     1>Target "BuildGenerateSourcesTraverse: (TargetId:25)" in file "C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\MSBuild\Current\Bin\Microsoft.Common.CurrentVersion.targets" from project "C:\Users\Administrator\Documents\GitHub\sda\tema_2_avion\tema_2_avion.vcxproj" (target "BuildGenerateSources" depends on it):
                    Task "MSBuild" skipped, due to false condition; ('$(BuildPassReferences)' == 'true' and '@(ProjectReferenceWithConfiguration)' != '' and '@(_MSBuildProjectReferenceExistent)' != '' and '%(_MSBuildProjectReferenceExistent.BuildReference)' == 'true') was evaluated as ('' == 'true' and '' != '' and '' != '' and '' == 'true').
-19:39:16.809     1>Done building target "BuildGenerateSourcesTraverse" in project "tema_2_avion.vcxproj".: (TargetId:25)
+20:26:31.248     1>Done building target "BuildGenerateSourcesTraverse" in project "tema_2_avion.vcxproj".: (TargetId:25)
                    Target "PrepareForBuild" skipped. Previously built successfully.
                    Target "ResolveReferences" skipped. Previously built successfully.
-19:39:16.809     1>Target "BeforeBuildGenerateSources: (TargetId:26)" in file "C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\MSBuild\Microsoft\VC\v160\Microsoft.BuildSteps.Targets" from project "C:\Users\Administrator\Documents\GitHub\sda\tema_2_avion\tema_2_avion.vcxproj" (target "_BuildGenerateSourcesAction" depends on it):
-19:39:16.809     1>Done building target "BeforeBuildGenerateSources" in project "tema_2_avion.vcxproj".: (TargetId:26)
-19:39:16.809     1>Target "PreBuildEvent: (TargetId:27)" in file "C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\MSBuild\Microsoft\VC\v160\Microsoft.CppCommon.targets" from project "C:\Users\Administrator\Documents\GitHub\sda\tema_2_avion\tema_2_avion.vcxproj" (target "_BuildGenerateSourcesAction" depends on it):
+20:26:31.248     1>Target "BeforeBuildGenerateSources: (TargetId:26)" in file "C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\MSBuild\Microsoft\VC\v160\Microsoft.BuildSteps.Targets" from project "C:\Users\Administrator\Documents\GitHub\sda\tema_2_avion\tema_2_avion.vcxproj" (target "_BuildGenerateSourcesAction" depends on it):
+20:26:31.248     1>Done building target "BeforeBuildGenerateSources" in project "tema_2_avion.vcxproj".: (TargetId:26)
+20:26:31.248     1>Target "PreBuildEvent: (TargetId:27)" in file "C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\MSBuild\Microsoft\VC\v160\Microsoft.CppCommon.targets" from project "C:\Users\Administrator\Documents\GitHub\sda\tema_2_avion\tema_2_avion.vcxproj" (target "_BuildGenerateSourcesAction" depends on it):
                    Task "Message" skipped, due to false condition; ('%(PreBuildEvent.Message)' != '' and '%(PreBuildEvent.Command)' != '') was evaluated as ('' != '' and '' != '').
                    Task "Exec" skipped, due to false condition; ('%(PreBuildEvent.Command)' != '') was evaluated as ('' != '').
-19:39:16.809     1>Done building target "PreBuildEvent" in project "tema_2_avion.vcxproj".: (TargetId:27)
+20:26:31.248     1>Done building target "PreBuildEvent" in project "tema_2_avion.vcxproj".: (TargetId:27)
                    Target "PrepareForBuild" skipped. Previously built successfully.
                    Target "InitializeBuildStatus" skipped. Previously built successfully.
                    Target "SetBuildDefaultEnvironmentVariables" skipped. Previously built successfully.
                    Target "SetUserMacroEnvironmentVariables" skipped, due to false condition; ('@(BuildMacro)' != '' and '$(DesignTimeBuild)' != 'true') was evaluated as ('' != '' and '' != 'true').
-19:39:16.809     1>Target "_SelectedFiles: (TargetId:28)" in file "C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\MSBuild\Microsoft\VC\v160\Microsoft.CppBuild.targets" from project "C:\Users\Administrator\Documents\GitHub\sda\tema_2_avion\tema_2_avion.vcxproj" (target "SelectCustomBuild" depends on it):
-19:39:16.809     1>Done building target "_SelectedFiles" in project "tema_2_avion.vcxproj".: (TargetId:28)
-19:39:16.809     1>Target "SelectCustomBuild: (TargetId:29)" in file "C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\MSBuild\Microsoft\VC\v160\Microsoft.CppBuild.targets" from project "C:\Users\Administrator\Documents\GitHub\sda\tema_2_avion\tema_2_avion.vcxproj" (target "CustomBuild" depends on it):
-19:39:16.809     1>Done building target "SelectCustomBuild" in project "tema_2_avion.vcxproj".: (TargetId:29)
-19:39:16.809     1>Target "ComputeCustomBuildOutput: (TargetId:30)" in file "C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\MSBuild\Microsoft\VC\v160\Microsoft.CppBuild.targets" from project "C:\Users\Administrator\Documents\GitHub\sda\tema_2_avion\tema_2_avion.vcxproj" (target "CustomBuild" depends on it):
+20:26:31.248     1>Target "_SelectedFiles: (TargetId:28)" in file "C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\MSBuild\Microsoft\VC\v160\Microsoft.CppBuild.targets" from project "C:\Users\Administrator\Documents\GitHub\sda\tema_2_avion\tema_2_avion.vcxproj" (target "SelectCustomBuild" depends on it):
+20:26:31.249     1>Done building target "_SelectedFiles" in project "tema_2_avion.vcxproj".: (TargetId:28)
+20:26:31.249     1>Target "SelectCustomBuild: (TargetId:29)" in file "C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\MSBuild\Microsoft\VC\v160\Microsoft.CppBuild.targets" from project "C:\Users\Administrator\Documents\GitHub\sda\tema_2_avion\tema_2_avion.vcxproj" (target "CustomBuild" depends on it):
+20:26:31.249     1>Done building target "SelectCustomBuild" in project "tema_2_avion.vcxproj".: (TargetId:29)
+20:26:31.249     1>Target "ComputeCustomBuildOutput: (TargetId:30)" in file "C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\MSBuild\Microsoft\VC\v160\Microsoft.CppBuild.targets" from project "C:\Users\Administrator\Documents\GitHub\sda\tema_2_avion\tema_2_avion.vcxproj" (target "CustomBuild" depends on it):
                    Task "CreateItem" skipped, due to false condition; ('%(CustomBuildOutputs.OutputItemType)'!='') was evaluated as (''!='').
                    Task "MakeDir" (TaskId:20)
                    Done executing task "MakeDir". (TaskId:20)
-19:39:16.810     1>Done building target "ComputeCustomBuildOutput" in project "tema_2_avion.vcxproj".: (TargetId:30)
-19:39:16.810     1>Target "CustomBuild: (TargetId:31)" in file "C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\MSBuild\Microsoft\VC\v160\Microsoft.CppCommon.targets" from project "C:\Users\Administrator\Documents\GitHub\sda\tema_2_avion\tema_2_avion.vcxproj" (target "_BuildGenerateSourcesAction" depends on it):
+20:26:31.249     1>Done building target "ComputeCustomBuildOutput" in project "tema_2_avion.vcxproj".: (TargetId:30)
+20:26:31.249     1>Target "CustomBuild: (TargetId:31)" in file "C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\MSBuild\Microsoft\VC\v160\Microsoft.CppCommon.targets" from project "C:\Users\Administrator\Documents\GitHub\sda\tema_2_avion\tema_2_avion.vcxproj" (target "_BuildGenerateSourcesAction" depends on it):
                    Set Property: CustomBuildToolArchitecture=Native32Bit
                    Using "GetOutOfDateItems" task from assembly "C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\MSBuild\Microsoft\VC\v160\Microsoft.Build.CppTasks.Common.dll".
                    Task "GetOutOfDateItems" (TaskId:21)
@@ -3049,12 +3047,12 @@ Logging verbosity is set to: Diagnostic.19:39:16.766     1>Project "C:\Users\Adm
                    Done executing task "GetOutOfDateItems". (TaskId:22)
                    Task "ParallelCustomBuild" skipped, due to false condition; ('@(_ParallelCustomBuild)' != '') was evaluated as ('' != '').
                    Task "CustomBuild" skipped, due to false condition; ('@(_CustomBuild)' != '') was evaluated as ('' != '').
-19:39:16.811     1>Done building target "CustomBuild" in project "tema_2_avion.vcxproj".: (TargetId:31)
+20:26:31.250     1>Done building target "CustomBuild" in project "tema_2_avion.vcxproj".: (TargetId:31)
                    Target "FxExport" skipped, due to false condition; ('@(FxCompile)' != '') was evaluated as ('' != '').
                    Target "FxCompile" skipped, due to false condition; ('@(FxCompile)' != '') was evaluated as ('' != '').
                    Target "_CreateCopyFileItems" skipped, due to false condition; ('@(CopyFileToFolders)' != '') was evaluated as ('' != '').
                    Target "_SelectedFiles" skipped. Previously built successfully.
-19:39:16.811     1>Target "CopyFileToFolders: (TargetId:32)" in file "C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\MSBuild\Microsoft\VC\v160\Microsoft.CppCommon.targets" from project "C:\Users\Administrator\Documents\GitHub\sda\tema_2_avion\tema_2_avion.vcxproj" (target "_BuildGenerateSourcesAction" depends on it):
+20:26:31.250     1>Target "CopyFileToFolders: (TargetId:32)" in file "C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\MSBuild\Microsoft\VC\v160\Microsoft.CppCommon.targets" from project "C:\Users\Administrator\Documents\GitHub\sda\tema_2_avion\tema_2_avion.vcxproj" (target "_BuildGenerateSourcesAction" depends on it):
                    Task "GetOutOfDateItems" (TaskId:23)
                      Task Parameter:OutputsMetadataName=FullDestinationPath (TaskId:23)
                      Task Parameter:CommandMetadataName=FullDestinationPath (TaskId:23)
@@ -3062,54 +3060,54 @@ Logging verbosity is set to: Diagnostic.19:39:16.766     1>Project "C:\Users\Adm
                      Task Parameter:TLogNamePrefix=CopyFile (TaskId:23)
                    Done executing task "GetOutOfDateItems". (TaskId:23)
                    Task "Copy" skipped, due to false condition; ('@(_OutOfDateCopyFile)' != '') was evaluated as ('' != '').
-19:39:16.811     1>Done building target "CopyFileToFolders" in project "tema_2_avion.vcxproj".: (TargetId:32)
+20:26:31.250     1>Done building target "CopyFileToFolders" in project "tema_2_avion.vcxproj".: (TargetId:32)
                    Target "Xsd" skipped, due to false condition; ('@(Xsd)' != '') was evaluated as ('' != '').
-19:39:16.811     1>Target "_Xsd: (TargetId:33)" in file "C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\MSBuild\Microsoft\VC\v160\Microsoft.CppBuild.targets" from project "C:\Users\Administrator\Documents\GitHub\sda\tema_2_avion\tema_2_avion.vcxproj" (target "_BuildGenerateSourcesAction" depends on it):
-19:39:16.811     1>Done building target "_Xsd" in project "tema_2_avion.vcxproj".: (TargetId:33)
-19:39:16.811     1>Target "MakeDirsForMidl: (TargetId:34)" in file "C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\MSBuild\Microsoft\VC\v160\Microsoft.CppBuild.targets" from project "C:\Users\Administrator\Documents\GitHub\sda\tema_2_avion\tema_2_avion.vcxproj" (target "_Midl" depends on it):
+20:26:31.250     1>Target "_Xsd: (TargetId:33)" in file "C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\MSBuild\Microsoft\VC\v160\Microsoft.CppBuild.targets" from project "C:\Users\Administrator\Documents\GitHub\sda\tema_2_avion\tema_2_avion.vcxproj" (target "_BuildGenerateSourcesAction" depends on it):
+20:26:31.251     1>Done building target "_Xsd" in project "tema_2_avion.vcxproj".: (TargetId:33)
+20:26:31.251     1>Target "MakeDirsForMidl: (TargetId:34)" in file "C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\MSBuild\Microsoft\VC\v160\Microsoft.CppBuild.targets" from project "C:\Users\Administrator\Documents\GitHub\sda\tema_2_avion\tema_2_avion.vcxproj" (target "_Midl" depends on it):
                    Set Property: Midl_OutputDir=
                    Task "Makedir" (TaskId:24)
                    Done executing task "Makedir". (TaskId:24)
-19:39:16.811     1>Done building target "MakeDirsForMidl" in project "tema_2_avion.vcxproj".: (TargetId:34)
+20:26:31.251     1>Done building target "MakeDirsForMidl" in project "tema_2_avion.vcxproj".: (TargetId:34)
                    Target "Midl" skipped, due to false condition; ('@(Midl)' != '') was evaluated as ('' != '').
                    Target "FxExport" skipped, due to false condition; ('@(FxCompile)' != '') was evaluated as ('' != '').
                    Target "FxCompile" skipped, due to false condition; ('@(FxCompile)' != '') was evaluated as ('' != '').
-19:39:16.811     1>Target "ComputeMIDLGeneratedCompileInputs: (TargetId:35)" in file "C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\MSBuild\Microsoft\VC\v160\Microsoft.CppBuild.targets" from project "C:\Users\Administrator\Documents\GitHub\sda\tema_2_avion\tema_2_avion.vcxproj" (target "_Midl" depends on it):
+20:26:31.251     1>Target "ComputeMIDLGeneratedCompileInputs: (TargetId:35)" in file "C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\MSBuild\Microsoft\VC\v160\Microsoft.CppBuild.targets" from project "C:\Users\Administrator\Documents\GitHub\sda\tema_2_avion\tema_2_avion.vcxproj" (target "_Midl" depends on it):
                    Set Property: Midl_OutputDir=
-19:39:16.812     1>Done building target "ComputeMIDLGeneratedCompileInputs" in project "tema_2_avion.vcxproj".: (TargetId:35)
-19:39:16.812     1>Target "AfterMidl: (TargetId:36)" in file "C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\MSBuild\Microsoft\VC\v160\Microsoft.CppBuild.targets" from project "C:\Users\Administrator\Documents\GitHub\sda\tema_2_avion\tema_2_avion.vcxproj" (target "_Midl" depends on it):
-19:39:16.812     1>Done building target "AfterMidl" in project "tema_2_avion.vcxproj".: (TargetId:36)
-19:39:16.812     1>Target "_Midl: (TargetId:37)" in file "C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\MSBuild\Microsoft\VC\v160\Microsoft.CppBuild.targets" from project "C:\Users\Administrator\Documents\GitHub\sda\tema_2_avion\tema_2_avion.vcxproj" (target "_BuildGenerateSourcesAction" depends on it):
-19:39:16.812     1>Done building target "_Midl" in project "tema_2_avion.vcxproj".: (TargetId:37)
-19:39:16.812     1>Target "AfterBuildGenerateSources: (TargetId:38)" in file "C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\MSBuild\Microsoft\VC\v160\Microsoft.BuildSteps.Targets" from project "C:\Users\Administrator\Documents\GitHub\sda\tema_2_avion\tema_2_avion.vcxproj" (target "_BuildGenerateSourcesAction" depends on it):
-19:39:16.812     1>Done building target "AfterBuildGenerateSources" in project "tema_2_avion.vcxproj".: (TargetId:38)
-19:39:16.812     1>Target "AfterBuildGenerateSourcesEvent: (TargetId:39)" in file "C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\MSBuild\Microsoft\VC\v160\Microsoft.CppBuild.targets" from project "C:\Users\Administrator\Documents\GitHub\sda\tema_2_avion\tema_2_avion.vcxproj" (target "_BuildGenerateSourcesAction" depends on it):
-19:39:16.812     1>Done building target "AfterBuildGenerateSourcesEvent" in project "tema_2_avion.vcxproj".: (TargetId:39)
-19:39:16.812     1>Target "_BuildGenerateSourcesAction: (TargetId:40)" in file "C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\MSBuild\Microsoft\VC\v160\Microsoft.CppBuild.targets" from project "C:\Users\Administrator\Documents\GitHub\sda\tema_2_avion\tema_2_avion.vcxproj" (target "BuildGenerateSources" depends on it):
-19:39:16.812     1>Done building target "_BuildGenerateSourcesAction" in project "tema_2_avion.vcxproj".: (TargetId:40)
-19:39:16.812     1>Target "BuildGenerateSources: (TargetId:41)" in file "C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\MSBuild\Current\Bin\Microsoft.Common.CurrentVersion.targets" from project "C:\Users\Administrator\Documents\GitHub\sda\tema_2_avion\tema_2_avion.vcxproj" (target "Build" depends on it):
-19:39:16.812     1>Done building target "BuildGenerateSources" in project "tema_2_avion.vcxproj".: (TargetId:41)
+20:26:31.251     1>Done building target "ComputeMIDLGeneratedCompileInputs" in project "tema_2_avion.vcxproj".: (TargetId:35)
+20:26:31.251     1>Target "AfterMidl: (TargetId:36)" in file "C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\MSBuild\Microsoft\VC\v160\Microsoft.CppBuild.targets" from project "C:\Users\Administrator\Documents\GitHub\sda\tema_2_avion\tema_2_avion.vcxproj" (target "_Midl" depends on it):
+20:26:31.251     1>Done building target "AfterMidl" in project "tema_2_avion.vcxproj".: (TargetId:36)
+20:26:31.251     1>Target "_Midl: (TargetId:37)" in file "C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\MSBuild\Microsoft\VC\v160\Microsoft.CppBuild.targets" from project "C:\Users\Administrator\Documents\GitHub\sda\tema_2_avion\tema_2_avion.vcxproj" (target "_BuildGenerateSourcesAction" depends on it):
+20:26:31.251     1>Done building target "_Midl" in project "tema_2_avion.vcxproj".: (TargetId:37)
+20:26:31.251     1>Target "AfterBuildGenerateSources: (TargetId:38)" in file "C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\MSBuild\Microsoft\VC\v160\Microsoft.BuildSteps.Targets" from project "C:\Users\Administrator\Documents\GitHub\sda\tema_2_avion\tema_2_avion.vcxproj" (target "_BuildGenerateSourcesAction" depends on it):
+20:26:31.251     1>Done building target "AfterBuildGenerateSources" in project "tema_2_avion.vcxproj".: (TargetId:38)
+20:26:31.251     1>Target "AfterBuildGenerateSourcesEvent: (TargetId:39)" in file "C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\MSBuild\Microsoft\VC\v160\Microsoft.CppBuild.targets" from project "C:\Users\Administrator\Documents\GitHub\sda\tema_2_avion\tema_2_avion.vcxproj" (target "_BuildGenerateSourcesAction" depends on it):
+20:26:31.251     1>Done building target "AfterBuildGenerateSourcesEvent" in project "tema_2_avion.vcxproj".: (TargetId:39)
+20:26:31.251     1>Target "_BuildGenerateSourcesAction: (TargetId:40)" in file "C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\MSBuild\Microsoft\VC\v160\Microsoft.CppBuild.targets" from project "C:\Users\Administrator\Documents\GitHub\sda\tema_2_avion\tema_2_avion.vcxproj" (target "BuildGenerateSources" depends on it):
+20:26:31.251     1>Done building target "_BuildGenerateSourcesAction" in project "tema_2_avion.vcxproj".: (TargetId:40)
+20:26:31.251     1>Target "BuildGenerateSources: (TargetId:41)" in file "C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\MSBuild\Current\Bin\Microsoft.Common.CurrentVersion.targets" from project "C:\Users\Administrator\Documents\GitHub\sda\tema_2_avion\tema_2_avion.vcxproj" (target "Build" depends on it):
+20:26:31.251     1>Done building target "BuildGenerateSources" in project "tema_2_avion.vcxproj".: (TargetId:41)
                    Target "PrepareProjectReferences" skipped. Previously built successfully.
-19:39:16.812     1>Target "BuildCompileTraverse: (TargetId:42)" in file "C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\MSBuild\Current\Bin\Microsoft.Common.CurrentVersion.targets" from project "C:\Users\Administrator\Documents\GitHub\sda\tema_2_avion\tema_2_avion.vcxproj" (target "BuildCompile" depends on it):
+20:26:31.251     1>Target "BuildCompileTraverse: (TargetId:42)" in file "C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\MSBuild\Current\Bin\Microsoft.Common.CurrentVersion.targets" from project "C:\Users\Administrator\Documents\GitHub\sda\tema_2_avion\tema_2_avion.vcxproj" (target "BuildCompile" depends on it):
                    Task "MSBuild" skipped, due to false condition; ('$(BuildPassReferences)' == 'true' and '@(ProjectReferenceWithConfiguration)' != '' and '@(_MSBuildProjectReferenceExistent)' != ''  and '%(_MSBuildProjectReferenceExistent.BuildReference)' == 'true') was evaluated as ('' == 'true' and '' != '' and '' != ''  and '' == 'true').
-19:39:16.812     1>Done building target "BuildCompileTraverse" in project "tema_2_avion.vcxproj".: (TargetId:42)
+20:26:31.251     1>Done building target "BuildCompileTraverse" in project "tema_2_avion.vcxproj".: (TargetId:42)
                    Target "PrepareForBuild" skipped. Previously built successfully.
                    Target "ResolveReferences" skipped. Previously built successfully.
-19:39:16.812     1>Target "BeforeClCompile: (TargetId:43)" in file "C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\MSBuild\Microsoft\VC\v160\Microsoft.CppBuild.targets" from project "C:\Users\Administrator\Documents\GitHub\sda\tema_2_avion\tema_2_avion.vcxproj" (target "_ClCompile" depends on it):
-19:39:16.812     1>Done building target "BeforeClCompile" in project "tema_2_avion.vcxproj".: (TargetId:43)
+20:26:31.251     1>Target "BeforeClCompile: (TargetId:43)" in file "C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\MSBuild\Microsoft\VC\v160\Microsoft.CppBuild.targets" from project "C:\Users\Administrator\Documents\GitHub\sda\tema_2_avion\tema_2_avion.vcxproj" (target "_ClCompile" depends on it):
+20:26:31.251     1>Done building target "BeforeClCompile" in project "tema_2_avion.vcxproj".: (TargetId:43)
                    Target "GenerateTargetFrameworkMonikerAttribute" skipped, due to false condition; ('$(GenerateTargetFrameworkAttribute)' == 'true') was evaluated as ('false' == 'true').
                    Target "ComputeMIDLGeneratedCompileInputs" skipped. Previously built successfully.
-19:39:16.812     1>Target "ComputeCLInputPDBName: (TargetId:44)" in file "C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\MSBuild\Microsoft\VC\v160\Microsoft.CppBuild.targets" from project "C:\Users\Administrator\Documents\GitHub\sda\tema_2_avion\tema_2_avion.vcxproj" (target "_ClCompile" depends on it):
-19:39:16.812     1>Done building target "ComputeCLInputPDBName" in project "tema_2_avion.vcxproj".: (TargetId:44)
+20:26:31.251     1>Target "ComputeCLInputPDBName: (TargetId:44)" in file "C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\MSBuild\Microsoft\VC\v160\Microsoft.CppBuild.targets" from project "C:\Users\Administrator\Documents\GitHub\sda\tema_2_avion\tema_2_avion.vcxproj" (target "_ClCompile" depends on it):
+20:26:31.251     1>Done building target "ComputeCLInputPDBName" in project "tema_2_avion.vcxproj".: (TargetId:44)
                    Target "ResolveReferences" skipped. Previously built successfully.
-19:39:16.812     1>Target "FindReferenceAssembliesForReferences: (TargetId:45)" in file "C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\MSBuild\Current\Bin\Microsoft.Common.CurrentVersion.targets" from project "C:\Users\Administrator\Documents\GitHub\sda\tema_2_avion\tema_2_avion.vcxproj" (target "ComputeReferenceCLInput" depends on it):
-19:39:16.812     1>Done building target "FindReferenceAssembliesForReferences" in project "tema_2_avion.vcxproj".: (TargetId:45)
-19:39:16.812     1>Target "ComputeReferenceCLInput: (TargetId:46)" in file "C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\MSBuild\Microsoft\VC\v160\Microsoft.CppBuild.targets" from project "C:\Users\Administrator\Documents\GitHub\sda\tema_2_avion\tema_2_avion.vcxproj" (target "_ClCompile" depends on it):
+20:26:31.251     1>Target "FindReferenceAssembliesForReferences: (TargetId:45)" in file "C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\MSBuild\Current\Bin\Microsoft.Common.CurrentVersion.targets" from project "C:\Users\Administrator\Documents\GitHub\sda\tema_2_avion\tema_2_avion.vcxproj" (target "ComputeReferenceCLInput" depends on it):
+20:26:31.251     1>Done building target "FindReferenceAssembliesForReferences" in project "tema_2_avion.vcxproj".: (TargetId:45)
+20:26:31.251     1>Target "ComputeReferenceCLInput: (TargetId:46)" in file "C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\MSBuild\Microsoft\VC\v160\Microsoft.CppBuild.targets" from project "C:\Users\Administrator\Documents\GitHub\sda\tema_2_avion\tema_2_avion.vcxproj" (target "_ClCompile" depends on it):
                    Task "WriteLinesToFile" skipped, due to false condition; ('@(_ReferenceCopyLocalPaths)'!='' and '$(DesignTimeBuild)' != 'true') was evaluated as (''!='' and '' != 'true').
                    Task "WriteLinesToFile" skipped, due to false condition; ('@(ReferenceCopyLocalPaths)'!='' and '$(DesignTimeBuild)' != 'true') was evaluated as (''!='' and '' != 'true').
                    Task "Message" skipped, due to false condition; ('$(_REFERENCE_DEBUG)'=='true') was evaluated as (''=='true').
-19:39:16.812     1>Done building target "ComputeReferenceCLInput" in project "tema_2_avion.vcxproj".: (TargetId:46)
-19:39:16.812     1>Target "WarnCompileDuplicatedFilename: (TargetId:47)" in file "C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\MSBuild\Microsoft\VC\v160\Microsoft.CppBuild.targets" from project "C:\Users\Administrator\Documents\GitHub\sda\tema_2_avion\tema_2_avion.vcxproj" (target "_ClCompile" depends on it):
+20:26:31.252     1>Done building target "ComputeReferenceCLInput" in project "tema_2_avion.vcxproj".: (TargetId:46)
+20:26:31.252     1>Target "WarnCompileDuplicatedFilename: (TargetId:47)" in file "C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\MSBuild\Microsoft\VC\v160\Microsoft.CppBuild.targets" from project "C:\Users\Administrator\Documents\GitHub\sda\tema_2_avion\tema_2_avion.vcxproj" (target "_ClCompile" depends on it):
                    Task "VCMessage" skipped, due to false condition; ('%(ClCompile.ExcludedFromBuild)' != 'true' and '%(Filename)%(Extension)' != '@(ClCompile->'%(Filename)%(Extension)')' and '%(ObjectFileName)' == '@(ClCompile->Metadata(ObjectFileName)->Distinct())') was evaluated as ('' != 'true' and 'DijkstraHeader.c' != 'DijkstraHeader.c' and 'Debug\' == 'Debug\').
                    Task "VCMessage" skipped, due to false condition; ('%(ClCompile.ExcludedFromBuild)' != 'true' and '%(Filename)%(Extension)' != '@(ClCompile->'%(Filename)%(Extension)')' and '%(ObjectFileName)' == '@(ClCompile->Metadata(ObjectFileName)->Distinct())') was evaluated as ('' != 'true' and 'GraphHeader.c' != 'GraphHeader.c' and 'Debug\' == 'Debug\').
                    Task "VCMessage" skipped, due to false condition; ('%(ClCompile.ExcludedFromBuild)' != 'true' and '%(Filename)%(Extension)' != '@(ClCompile->'%(Filename)%(Extension)')' and '%(ObjectFileName)' == '@(ClCompile->Metadata(ObjectFileName)->Distinct())') was evaluated as ('' != 'true' and 'MainHeader.c' != 'MainHeader.c' and 'Debug\' == 'Debug\').
@@ -3117,10 +3115,10 @@ Logging verbosity is set to: Diagnostic.19:39:16.766     1>Project "C:\Users\Adm
                    Task "VCMessage" skipped, due to false condition; ('%(ClCompile.ExcludedFromBuild)' != 'true' and '%(Filename)%(Extension)' != '@(ClCompile->'%(Filename)%(Extension)')' and '%(ObjectFileName)' == '@(ClCompile->Metadata(ObjectFileName)->Distinct())') was evaluated as ('' != 'true' and 'piele_bogdan_312ab_tema_2_avion.c' != 'piele_bogdan_312ab_tema_2_avion.c' and 'Debug\' == 'Debug\').
                    Task "VCMessage" skipped, due to false condition; ('%(ClCompile.ExcludedFromBuild)' != 'true' and '%(Filename)%(Extension)' != '@(ClCompile->'%(Filename)%(Extension)')' and '%(ObjectFileName)' == '@(ClCompile->Metadata(ObjectFileName)->Distinct())') was evaluated as ('' != 'true' and 'TrieHeader.c' != 'TrieHeader.c' and 'Debug\' == 'Debug\').
                    Task "VCMessage" skipped, due to false condition; ('%(ClCompile.ExcludedFromBuild)' != 'true' and '%(Filename)%(Extension)' != '@(ClCompile->'%(Filename)%(Extension)')' and '%(ObjectFileName)' == '@(ClCompile->Metadata(ObjectFileName)->Distinct())') was evaluated as ('' != 'true' and 'UtilHeader.c' != 'UtilHeader.c' and 'Debug\' == 'Debug\').
-19:39:16.814     1>Done building target "WarnCompileDuplicatedFilename" in project "tema_2_avion.vcxproj".: (TargetId:47)
-19:39:16.814     1>Target "FixupCLCompileOptions: (TargetId:48)" in file "C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\MSBuild\Microsoft\VC\v160\Microsoft.CppCommon.targets" from project "C:\Users\Administrator\Documents\GitHub\sda\tema_2_avion\tema_2_avion.vcxproj" (target "_ClCompile" depends on it):
-19:39:16.815     1>Done building target "FixupCLCompileOptions" in project "tema_2_avion.vcxproj".: (TargetId:48)
-19:39:16.815     1>Target "MakeDirsForCl: (TargetId:49)" in file "C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\MSBuild\Microsoft\VC\v160\Microsoft.CppBuild.targets" from project "C:\Users\Administrator\Documents\GitHub\sda\tema_2_avion\tema_2_avion.vcxproj" (target "_ClCompile" depends on it):
+20:26:31.253     1>Done building target "WarnCompileDuplicatedFilename" in project "tema_2_avion.vcxproj".: (TargetId:47)
+20:26:31.253     1>Target "FixupCLCompileOptions: (TargetId:48)" in file "C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\MSBuild\Microsoft\VC\v160\Microsoft.CppCommon.targets" from project "C:\Users\Administrator\Documents\GitHub\sda\tema_2_avion\tema_2_avion.vcxproj" (target "_ClCompile" depends on it):
+20:26:31.254     1>Done building target "FixupCLCompileOptions" in project "tema_2_avion.vcxproj".: (TargetId:48)
+20:26:31.254     1>Target "MakeDirsForCl: (TargetId:49)" in file "C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\MSBuild\Microsoft\VC\v160\Microsoft.CppBuild.targets" from project "C:\Users\Administrator\Documents\GitHub\sda\tema_2_avion\tema_2_avion.vcxproj" (target "_ClCompile" depends on it):
                    Added Item(s): ClDirsToMake=C:\Users\Administrator\Documents\GitHub\sda\tema_2_avion\Debug
                    Added Item(s): ClDirsToMake=C:\Users\Administrator\Documents\GitHub\sda\tema_2_avion\Debug
                    Added Item(s): ClDirsToMake=C:\Users\Administrator\Documents\GitHub\sda\tema_2_avion\Debug
@@ -3139,7 +3137,7 @@ Logging verbosity is set to: Diagnostic.19:39:16.766     1>Project "C:\Users\Adm
                            C:\Users\Administrator\Documents\GitHub\sda\tema_2_avion\Debug
                            C:\Users\Administrator\Documents\GitHub\sda\tema_2_avion\Debug
                            C:\Users\Administrator\Documents\GitHub\sda\tema_2_avion\Debug
-19:39:16.815     1>Done building target "MakeDirsForCl" in project "tema_2_avion.vcxproj".: (TargetId:49)
+20:26:31.255     1>Done building target "MakeDirsForCl" in project "tema_2_avion.vcxproj".: (TargetId:49)
                    Target "_SelectedFiles" skipped. Previously built successfully.
                    Target "GenerateTargetFrameworkMonikerAttribute" skipped, due to false condition; ('$(GenerateTargetFrameworkAttribute)' == 'true') was evaluated as ('false' == 'true').
                    Target "ComputeMIDLGeneratedCompileInputs" skipped. Previously built successfully.
@@ -3148,10 +3146,10 @@ Logging verbosity is set to: Diagnostic.19:39:16.766     1>Project "C:\Users\Adm
                    Target "WarnCompileDuplicatedFilename" skipped. Previously built successfully.
                    Target "FixupCLCompileOptions" skipped. Previously built successfully.
                    Target "SelectCustomBuild" skipped. Previously built successfully.
-19:39:16.815     1>Target "SelectClCompile: (TargetId:50)" in file "C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\MSBuild\Microsoft\VC\v160\Microsoft.CppBuild.targets" from project "C:\Users\Administrator\Documents\GitHub\sda\tema_2_avion\tema_2_avion.vcxproj" (target "ClCompile" depends on it):
-19:39:16.815     1>Done building target "SelectClCompile" in project "tema_2_avion.vcxproj".: (TargetId:50)
+20:26:31.255     1>Target "SelectClCompile: (TargetId:50)" in file "C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\MSBuild\Microsoft\VC\v160\Microsoft.CppBuild.targets" from project "C:\Users\Administrator\Documents\GitHub\sda\tema_2_avion\tema_2_avion.vcxproj" (target "ClCompile" depends on it):
+20:26:31.255     1>Done building target "SelectClCompile" in project "tema_2_avion.vcxproj".: (TargetId:50)
                    Target "ManagedIncrementalBuildPreProcessDependencyGraph" skipped, due to false condition; ('@(ClCompile)' != '' and '$(EnableManagedIncrementalBuild)' == 'True') was evaluated as ('DijkstraHeader.c;GraphHeader.c;MainHeader.c;MinHeapHeader.c;piele_bogdan_312ab_tema_2_avion.c;TrieHeader.c;UtilHeader.c' != '' and 'false' == 'True').
-19:39:16.815     1>Target "ClCompile: (TargetId:51)" in file "C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\MSBuild\Microsoft\VC\v160\Microsoft.CppCommon.targets" from project "C:\Users\Administrator\Documents\GitHub\sda\tema_2_avion\tema_2_avion.vcxproj" (target "_ClCompile" depends on it):
+20:26:31.255     1>Target "ClCompile: (TargetId:51)" in file "C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\MSBuild\Microsoft\VC\v160\Microsoft.CppCommon.targets" from project "C:\Users\Administrator\Documents\GitHub\sda\tema_2_avion\tema_2_avion.vcxproj" (target "_ClCompile" depends on it):
                    Set Property: CLToolArchitecture=Native32Bit
                    Task "Delete" skipped, due to false condition; ('%(ClCompile.DebugInformationFormat)' != '' and '%(ClCompile.DebugInformationFormat)' != 'None' and '%(ClCompile.DebugInformationFormat)' != 'OldStyle' and '%(ClCompile.ProgramDataBaseFileName)' != '' and !Exists(%(ClCompile.ProgramDataBaseFileName))) was evaluated as ('EditAndContinue' != '' and 'EditAndContinue' != 'None' and 'EditAndContinue' != 'OldStyle' and 'Debug\vc142.pdb' != '' and !Exists(Debug\vc142.pdb)).
                    Task "MultiToolTask" skipped, due to false condition; ('%(ClCompile.ExcludedFromBuild)' != 'true' and '%(ClCompile.CompilerIteration)' == '' and '$(MultiProcCL)' == 'true') was evaluated as ('' != 'true' and '' == '' and 'false' == 'true').
@@ -3773,58 +3771,58 @@ Logging verbosity is set to: Diagnostic.19:39:16.766     1>Project "C:\Users\Adm
                      	C:\USERS\ADMINISTRATOR\DOCUMENTS\GITHUB\SDA\TEMA_2_AVION\DEBUG\PIELE_BOGDAN_312AB_TEMA_2_AVION.OBJ (TaskId:26)
                      	C:\USERS\ADMINISTRATOR\DOCUMENTS\GITHUB\SDA\TEMA_2_AVION\DEBUG\TRIEHEADER.OBJ (TaskId:26)
                      	C:\USERS\ADMINISTRATOR\DOCUMENTS\GITHUB\SDA\TEMA_2_AVION\DEBUG\UTILHEADER.OBJ (TaskId:26)
-                     MainHeader.c will be compiled because C:\Users\Administrator\Documents\GitHub\sda\tema_2_avion\MainHeader.c was modified at 03-May-20 7:36:05 PM. (TaskId:26)
+                     MainHeader.c will be compiled because C:\Users\Administrator\Documents\GitHub\sda\tema_2_avion\MainHeader.c was modified at 03-May-20 8:26:27 PM. (TaskId:26)
                      Outputs for C:\USERS\ADMINISTRATOR\DOCUMENTS\GITHUB\SDA\TEMA_2_AVION\MAINHEADER.C: (TaskId:26)
                      	C:\USERS\ADMINISTRATOR\DOCUMENTS\GITHUB\SDA\TEMA_2_AVION\DEBUG\MAINHEADER.OBJ (TaskId:26)
                      Write Tracking Logs: (TaskId:26)
                      	Debug\tema_2_avion.tlog\CL.write.1.tlog (TaskId:26)
                      Environment Variables passed to tool: (TaskId:26)
-                       VS_UNICODE_OUTPUT=1016 (TaskId:26)
+                       VS_UNICODE_OUTPUT=132 (TaskId:26)
                      C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\VC\Tools\MSVC\14.25.28610\bin\HostX86\x86\CL.exe /c /ZI /JMC /nologo /W3 /WX- /diagnostics:column /sdl /Od /Oy- /D _DEBUG /D _CONSOLE /D _UNICODE /D UNICODE /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /permissive- /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"Debug\\" /Fd"Debug\vc142.pdb" /Gd /TC /analyze- /FC /errorReport:prompt MainHeader.c (TaskId:26)
                      Tracking command: (TaskId:26)
-                     C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\MSBuild\Current\Bin\Tracker.exe /d "C:\Program Files (x86)\MSBuild\15.0\FileTracker\FileTracker32.dll" /i C:\Users\Administrator\Documents\GitHub\sda\tema_2_avion\Debug\tema_2_avion.tlog /r C:\USERS\ADMINISTRATOR\DOCUMENTS\GITHUB\SDA\TEMA_2_AVION\MAINHEADER.C /b MSBuildConsole_CancelEvent5c2b2eb460fd4d69b5473a295676c0d3  /c "C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\VC\Tools\MSVC\14.25.28610\bin\HostX86\x86\CL.exe"  /c /ZI /JMC /nologo /W3 /WX- /diagnostics:column /sdl /Od /Oy- /D _DEBUG /D _CONSOLE /D _UNICODE /D UNICODE /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /permissive- /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"Debug\\" /Fd"Debug\vc142.pdb" /Gd /TC /analyze- /FC /errorReport:prompt MainHeader.c (TaskId:26)
+                     C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\MSBuild\Current\Bin\Tracker.exe /d "C:\Program Files (x86)\MSBuild\15.0\FileTracker\FileTracker32.dll" /i C:\Users\Administrator\Documents\GitHub\sda\tema_2_avion\Debug\tema_2_avion.tlog /r C:\USERS\ADMINISTRATOR\DOCUMENTS\GITHUB\SDA\TEMA_2_AVION\MAINHEADER.C /b MSBuildConsole_CancelEvent0d347cf83935448b88704258c1358fcf  /c "C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\VC\Tools\MSVC\14.25.28610\bin\HostX86\x86\CL.exe"  /c /ZI /JMC /nologo /W3 /WX- /diagnostics:column /sdl /Od /Oy- /D _DEBUG /D _CONSOLE /D _UNICODE /D UNICODE /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /permissive- /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"Debug\\" /Fd"Debug\vc142.pdb" /Gd /TC /analyze- /FC /errorReport:prompt MainHeader.c (TaskId:26)
                      MainHeader.c (TaskId:26)
                    Done executing task "CL". (TaskId:26)
-19:39:17.877     1>Done building target "ClCompile" in project "tema_2_avion.vcxproj".: (TargetId:51)
+20:26:31.912     1>Done building target "ClCompile" in project "tema_2_avion.vcxproj".: (TargetId:51)
                    Target "RunSelectedFileNativeCodeAnalysis" skipped, due to false condition; ('$(RunMsvcAnalysis)'=='true' and '$(SelectedFiles)'!='') was evaluated as ('false'=='true' and ''!='').
                    Target "ManagedIncrementalBuildPostProcessDependencyGraph" skipped, due to false condition; ('@(ClCompile)' != '' and '$(EnableManagedIncrementalBuild)' == 'True') was evaluated as ('DijkstraHeader.c;GraphHeader.c;MainHeader.c;MinHeapHeader.c;piele_bogdan_312ab_tema_2_avion.c;TrieHeader.c;UtilHeader.c' != '' and 'false' == 'True').
                    Target "NoAnalysisToolEnabledWarning" skipped, due to false condition; ('$(RunCppAnalysis)'=='true' AND '$(EnableMicrosoftCodeAnalysis)'=='false' AND '$(EnableClangTidyCodeAnalysis)'=='false') was evaluated as ('false'=='true' AND 'true'=='false' AND 'false'=='false').
                    Target "RunSelectedFileClangTidy" skipped, due to false condition; ('$(RunClangCppAnalysis)'=='true' AND '$(SelectedFiles)'!='') was evaluated as ('false'=='true' AND ''!='').
                    Target "MicrosoftAnalysisIncompatiableWithClangCl" skipped, due to false condition; ('$(RunCppAnalysis)'=='true' AND '$(EnableMicrosoftCodeAnalysis)'=='true' AND '$(UseClangCl)'=='true') was evaluated as ('false'=='true' AND 'true'=='true' AND ''=='true').
-19:39:17.878     1>Target "AfterClCompile: (TargetId:52)" in file "C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\MSBuild\Microsoft\VC\v160\Microsoft.CppBuild.targets" from project "C:\Users\Administrator\Documents\GitHub\sda\tema_2_avion\tema_2_avion.vcxproj" (target "_ClCompile" depends on it):
-19:39:17.878     1>Done building target "AfterClCompile" in project "tema_2_avion.vcxproj".: (TargetId:52)
-19:39:17.878     1>Target "_ClCompile: (TargetId:53)" in file "C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\MSBuild\Microsoft\VC\v160\Microsoft.CppBuild.targets" from project "C:\Users\Administrator\Documents\GitHub\sda\tema_2_avion\tema_2_avion.vcxproj" (target "_BuildCompileAction" depends on it):
-19:39:17.878     1>Done building target "_ClCompile" in project "tema_2_avion.vcxproj".: (TargetId:53)
+20:26:31.912     1>Target "AfterClCompile: (TargetId:52)" in file "C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\MSBuild\Microsoft\VC\v160\Microsoft.CppBuild.targets" from project "C:\Users\Administrator\Documents\GitHub\sda\tema_2_avion\tema_2_avion.vcxproj" (target "_ClCompile" depends on it):
+20:26:31.912     1>Done building target "AfterClCompile" in project "tema_2_avion.vcxproj".: (TargetId:52)
+20:26:31.912     1>Target "_ClCompile: (TargetId:53)" in file "C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\MSBuild\Microsoft\VC\v160\Microsoft.CppBuild.targets" from project "C:\Users\Administrator\Documents\GitHub\sda\tema_2_avion\tema_2_avion.vcxproj" (target "_BuildCompileAction" depends on it):
+20:26:31.912     1>Done building target "_ClCompile" in project "tema_2_avion.vcxproj".: (TargetId:53)
                    Target "_ResGen" skipped, due to false condition; ('@(EmbeddedResource)'!='') was evaluated as (''!='').
-19:39:17.878     1>Target "BeforeResourceCompile: (TargetId:54)" in file "C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\MSBuild\Microsoft\VC\v160\Microsoft.CppBuild.targets" from project "C:\Users\Administrator\Documents\GitHub\sda\tema_2_avion\tema_2_avion.vcxproj" (target "_ResourceCompile" depends on it):
-19:39:17.878     1>Done building target "BeforeResourceCompile" in project "tema_2_avion.vcxproj".: (TargetId:54)
-19:39:17.878     1>Target "MakeDirsForResourceCompile: (TargetId:55)" in file "C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\MSBuild\Microsoft\VC\v160\Microsoft.CppBuild.targets" from project "C:\Users\Administrator\Documents\GitHub\sda\tema_2_avion\tema_2_avion.vcxproj" (target "_ResourceCompile" depends on it):
+20:26:31.912     1>Target "BeforeResourceCompile: (TargetId:54)" in file "C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\MSBuild\Microsoft\VC\v160\Microsoft.CppBuild.targets" from project "C:\Users\Administrator\Documents\GitHub\sda\tema_2_avion\tema_2_avion.vcxproj" (target "_ResourceCompile" depends on it):
+20:26:31.912     1>Done building target "BeforeResourceCompile" in project "tema_2_avion.vcxproj".: (TargetId:54)
+20:26:31.913     1>Target "MakeDirsForResourceCompile: (TargetId:55)" in file "C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\MSBuild\Microsoft\VC\v160\Microsoft.CppBuild.targets" from project "C:\Users\Administrator\Documents\GitHub\sda\tema_2_avion\tema_2_avion.vcxproj" (target "_ResourceCompile" depends on it):
                    Added Item(s): RcDirsToMake=C:\Users\Administrator\Documents\GitHub\sda\tema_2_avion\Debug
                    Task "MakeDir" (TaskId:27)
                      Task Parameter:Directories=C:\Users\Administrator\Documents\GitHub\sda\tema_2_avion\Debug (TaskId:27)
                    Done executing task "MakeDir". (TaskId:27)
                    Removed Item(s): RcDirsToMake=C:\Users\Administrator\Documents\GitHub\sda\tema_2_avion\Debug
-19:39:17.878     1>Done building target "MakeDirsForResourceCompile" in project "tema_2_avion.vcxproj".: (TargetId:55)
+20:26:31.913     1>Done building target "MakeDirsForResourceCompile" in project "tema_2_avion.vcxproj".: (TargetId:55)
                    Target "ResourceCompile" skipped, due to false condition; ('@(ResourceCompile)' != '') was evaluated as ('' != '').
-19:39:17.878     1>Target "AfterResourceCompile: (TargetId:56)" in file "C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\MSBuild\Microsoft\VC\v160\Microsoft.CppBuild.targets" from project "C:\Users\Administrator\Documents\GitHub\sda\tema_2_avion\tema_2_avion.vcxproj" (target "_ResourceCompile" depends on it):
-19:39:17.878     1>Done building target "AfterResourceCompile" in project "tema_2_avion.vcxproj".: (TargetId:56)
-19:39:17.878     1>Target "_ResourceCompile: (TargetId:57)" in file "C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\MSBuild\Microsoft\VC\v160\Microsoft.CppBuild.targets" from project "C:\Users\Administrator\Documents\GitHub\sda\tema_2_avion\tema_2_avion.vcxproj" (target "_BuildCompileAction" depends on it):
-19:39:17.878     1>Done building target "_ResourceCompile" in project "tema_2_avion.vcxproj".: (TargetId:57)
+20:26:31.913     1>Target "AfterResourceCompile: (TargetId:56)" in file "C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\MSBuild\Microsoft\VC\v160\Microsoft.CppBuild.targets" from project "C:\Users\Administrator\Documents\GitHub\sda\tema_2_avion\tema_2_avion.vcxproj" (target "_ResourceCompile" depends on it):
+20:26:31.913     1>Done building target "AfterResourceCompile" in project "tema_2_avion.vcxproj".: (TargetId:56)
+20:26:31.913     1>Target "_ResourceCompile: (TargetId:57)" in file "C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\MSBuild\Microsoft\VC\v160\Microsoft.CppBuild.targets" from project "C:\Users\Administrator\Documents\GitHub\sda\tema_2_avion\tema_2_avion.vcxproj" (target "_BuildCompileAction" depends on it):
+20:26:31.913     1>Done building target "_ResourceCompile" in project "tema_2_avion.vcxproj".: (TargetId:57)
                    Target "_ImpLib" skipped, due to false condition; ('$(ImpLibCompiled)' == 'true') was evaluated as ('' == 'true').
                    Target "_Lib" skipped, due to false condition; ('$(LibCompiled)' == 'true') was evaluated as ('' == 'true').
-19:39:17.878     1>Target "AfterBuildCompileEvent: (TargetId:58)" in file "C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\MSBuild\Microsoft\VC\v160\Microsoft.CppBuild.targets" from project "C:\Users\Administrator\Documents\GitHub\sda\tema_2_avion\tema_2_avion.vcxproj" (target "_BuildCompileAction" depends on it):
-19:39:17.878     1>Done building target "AfterBuildCompileEvent" in project "tema_2_avion.vcxproj".: (TargetId:58)
-19:39:17.878     1>Target "_BuildCompileAction: (TargetId:59)" in file "C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\MSBuild\Microsoft\VC\v160\Microsoft.CppBuild.targets" from project "C:\Users\Administrator\Documents\GitHub\sda\tema_2_avion\tema_2_avion.vcxproj" (target "BuildCompile" depends on it):
-19:39:17.878     1>Done building target "_BuildCompileAction" in project "tema_2_avion.vcxproj".: (TargetId:59)
-19:39:17.878     1>Target "BuildCompile: (TargetId:60)" in file "C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\MSBuild\Current\Bin\Microsoft.Common.CurrentVersion.targets" from project "C:\Users\Administrator\Documents\GitHub\sda\tema_2_avion\tema_2_avion.vcxproj" (target "Build" depends on it):
-19:39:17.878     1>Done building target "BuildCompile" in project "tema_2_avion.vcxproj".: (TargetId:60)
+20:26:31.913     1>Target "AfterBuildCompileEvent: (TargetId:58)" in file "C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\MSBuild\Microsoft\VC\v160\Microsoft.CppBuild.targets" from project "C:\Users\Administrator\Documents\GitHub\sda\tema_2_avion\tema_2_avion.vcxproj" (target "_BuildCompileAction" depends on it):
+20:26:31.913     1>Done building target "AfterBuildCompileEvent" in project "tema_2_avion.vcxproj".: (TargetId:58)
+20:26:31.913     1>Target "_BuildCompileAction: (TargetId:59)" in file "C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\MSBuild\Microsoft\VC\v160\Microsoft.CppBuild.targets" from project "C:\Users\Administrator\Documents\GitHub\sda\tema_2_avion\tema_2_avion.vcxproj" (target "BuildCompile" depends on it):
+20:26:31.913     1>Done building target "_BuildCompileAction" in project "tema_2_avion.vcxproj".: (TargetId:59)
+20:26:31.913     1>Target "BuildCompile: (TargetId:60)" in file "C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\MSBuild\Current\Bin\Microsoft.Common.CurrentVersion.targets" from project "C:\Users\Administrator\Documents\GitHub\sda\tema_2_avion\tema_2_avion.vcxproj" (target "Build" depends on it):
+20:26:31.913     1>Done building target "BuildCompile" in project "tema_2_avion.vcxproj".: (TargetId:60)
                    Target "PrepareProjectReferences" skipped. Previously built successfully.
-19:39:17.878     1>Target "BuildLinkTraverse: (TargetId:61)" in file "C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\MSBuild\Current\Bin\Microsoft.Common.CurrentVersion.targets" from project "C:\Users\Administrator\Documents\GitHub\sda\tema_2_avion\tema_2_avion.vcxproj" (target "BuildLink" depends on it):
+20:26:31.913     1>Target "BuildLinkTraverse: (TargetId:61)" in file "C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\MSBuild\Current\Bin\Microsoft.Common.CurrentVersion.targets" from project "C:\Users\Administrator\Documents\GitHub\sda\tema_2_avion\tema_2_avion.vcxproj" (target "BuildLink" depends on it):
                    Task "MSBuild" skipped, due to false condition; ('$(BuildPassReferences)' == 'true' and '@(ProjectReferenceWithConfiguration)' != '' and '@(_MSBuildProjectReferenceExistent)' != ''  and '%(_MSBuildProjectReferenceExistent.BuildReference)' == 'true') was evaluated as ('' == 'true' and '' != '' and '' != ''  and '' == 'true').
-19:39:17.878     1>Done building target "BuildLinkTraverse" in project "tema_2_avion.vcxproj".: (TargetId:61)
+20:26:31.913     1>Done building target "BuildLinkTraverse" in project "tema_2_avion.vcxproj".: (TargetId:61)
                    Target "PrepareForBuild" skipped. Previously built successfully.
                    Target "ResolveReferences" skipped. Previously built successfully.
-19:39:17.878     1>Target "ComputeLegacyManifestEmbedding: (TargetId:62)" in file "C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\MSBuild\Microsoft\VC\v160\Microsoft.CppBuild.targets" from project "C:\Users\Administrator\Documents\GitHub\sda\tema_2_avion\tema_2_avion.vcxproj" (target "_BuildLinkAction" depends on it):
+20:26:31.914     1>Target "ComputeLegacyManifestEmbedding: (TargetId:62)" in file "C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\MSBuild\Microsoft\VC\v160\Microsoft.CppBuild.targets" from project "C:\Users\Administrator\Documents\GitHub\sda\tema_2_avion\tema_2_avion.vcxproj" (target "_BuildLinkAction" depends on it):
                    Added Item(s): 
                        Manifest=
                            temp
@@ -3854,15 +3852,15 @@ Logging verbosity is set to: Diagnostic.19:39:16.766     1>Project "C:\Users\Adm
                                    TrackerLogDirectory=Debug\tema_2_avion.tlog\
                                    UpdateFileHashes=false
                                    VerboseOutput=true
-19:39:17.879     1>Done building target "ComputeLegacyManifestEmbedding" in project "tema_2_avion.vcxproj".: (TargetId:62)
-19:39:17.879     1>Target "BeforeLink: (TargetId:63)" in file "C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\MSBuild\Microsoft\VC\v160\Microsoft.CppBuild.targets" from project "C:\Users\Administrator\Documents\GitHub\sda\tema_2_avion\tema_2_avion.vcxproj" (target "_Link" depends on it):
-19:39:17.879     1>Done building target "BeforeLink" in project "tema_2_avion.vcxproj".: (TargetId:63)
-19:39:17.879     1>Target "ComputeRCOutputs: (TargetId:64)" in file "C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\MSBuild\Microsoft\VC\v160\Microsoft.CppBuild.targets" from project "C:\Users\Administrator\Documents\GitHub\sda\tema_2_avion\tema_2_avion.vcxproj" (target "ComputeRCGeneratedLinkInputs" depends on it):
-19:39:17.879     1>Done building target "ComputeRCOutputs" in project "tema_2_avion.vcxproj".: (TargetId:64)
-19:39:17.879     1>Target "ComputeRCGeneratedLinkInputs: (TargetId:65)" in file "C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\MSBuild\Microsoft\VC\v160\Microsoft.CppBuild.targets" from project "C:\Users\Administrator\Documents\GitHub\sda\tema_2_avion\tema_2_avion.vcxproj" (target "_Link" depends on it):
-19:39:17.879     1>Done building target "ComputeRCGeneratedLinkInputs" in project "tema_2_avion.vcxproj".: (TargetId:65)
-19:39:17.879     1>Target "ComputeManifestGeneratedLinkerInputs: (TargetId:66)" in file "C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\MSBuild\Microsoft\VC\v160\Microsoft.CppBuild.targets" from project "C:\Users\Administrator\Documents\GitHub\sda\tema_2_avion\tema_2_avion.vcxproj" (target "_Link" depends on it):
-19:39:17.879     1>Done building target "ComputeManifestGeneratedLinkerInputs" in project "tema_2_avion.vcxproj".: (TargetId:66)
+20:26:31.914     1>Done building target "ComputeLegacyManifestEmbedding" in project "tema_2_avion.vcxproj".: (TargetId:62)
+20:26:31.914     1>Target "BeforeLink: (TargetId:63)" in file "C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\MSBuild\Microsoft\VC\v160\Microsoft.CppBuild.targets" from project "C:\Users\Administrator\Documents\GitHub\sda\tema_2_avion\tema_2_avion.vcxproj" (target "_Link" depends on it):
+20:26:31.914     1>Done building target "BeforeLink" in project "tema_2_avion.vcxproj".: (TargetId:63)
+20:26:31.914     1>Target "ComputeRCOutputs: (TargetId:64)" in file "C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\MSBuild\Microsoft\VC\v160\Microsoft.CppBuild.targets" from project "C:\Users\Administrator\Documents\GitHub\sda\tema_2_avion\tema_2_avion.vcxproj" (target "ComputeRCGeneratedLinkInputs" depends on it):
+20:26:31.914     1>Done building target "ComputeRCOutputs" in project "tema_2_avion.vcxproj".: (TargetId:64)
+20:26:31.914     1>Target "ComputeRCGeneratedLinkInputs: (TargetId:65)" in file "C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\MSBuild\Microsoft\VC\v160\Microsoft.CppBuild.targets" from project "C:\Users\Administrator\Documents\GitHub\sda\tema_2_avion\tema_2_avion.vcxproj" (target "_Link" depends on it):
+20:26:31.914     1>Done building target "ComputeRCGeneratedLinkInputs" in project "tema_2_avion.vcxproj".: (TargetId:65)
+20:26:31.914     1>Target "ComputeManifestGeneratedLinkerInputs: (TargetId:66)" in file "C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\MSBuild\Microsoft\VC\v160\Microsoft.CppBuild.targets" from project "C:\Users\Administrator\Documents\GitHub\sda\tema_2_avion\tema_2_avion.vcxproj" (target "_Link" depends on it):
+20:26:31.914     1>Done building target "ComputeManifestGeneratedLinkerInputs" in project "tema_2_avion.vcxproj".: (TargetId:66)
                    Target "ComputeCustomBuildOutput" skipped. Previously built successfully.
                    Target "GenerateTargetFrameworkMonikerAttribute" skipped, due to false condition; ('$(GenerateTargetFrameworkAttribute)' == 'true') was evaluated as ('false' == 'true').
                    Target "ComputeMIDLGeneratedCompileInputs" skipped. Previously built successfully.
@@ -3870,7 +3868,7 @@ Logging verbosity is set to: Diagnostic.19:39:16.766     1>Project "C:\Users\Adm
                    Target "ComputeReferenceCLInput" skipped. Previously built successfully.
                    Target "WarnCompileDuplicatedFilename" skipped. Previously built successfully.
                    Target "FixupCLCompileOptions" skipped. Previously built successfully.
-19:39:17.879     1>Target "ComputeCLOutputs: (TargetId:67)" in file "C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\MSBuild\Microsoft\VC\v160\Microsoft.CppBuild.targets" from project "C:\Users\Administrator\Documents\GitHub\sda\tema_2_avion\tema_2_avion.vcxproj" (target "ComputeCLGeneratedLinkInputs" depends on it):
+20:26:31.914     1>Target "ComputeCLOutputs: (TargetId:67)" in file "C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\MSBuild\Microsoft\VC\v160\Microsoft.CppBuild.targets" from project "C:\Users\Administrator\Documents\GitHub\sda\tema_2_avion\tema_2_avion.vcxproj" (target "ComputeCLGeneratedLinkInputs" depends on it):
                    Added Item(s): 
                        Obj=
                            Debug\DijkstraHeader.obj
@@ -4377,8 +4375,8 @@ Logging verbosity is set to: Diagnostic.19:39:16.766     1>Project "C:\Users\Adm
                                    WholeProgramOptimization=false
                                    WinRTNoStdLib=false
                                    XMLDocumentationFileName=Debug\
-19:39:17.887     1>Done building target "ComputeCLOutputs" in project "tema_2_avion.vcxproj".: (TargetId:67)
-19:39:17.887     1>Target "ComputeCLGeneratedLinkInputs: (TargetId:68)" in file "C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\MSBuild\Microsoft\VC\v160\Microsoft.CppBuild.targets" from project "C:\Users\Administrator\Documents\GitHub\sda\tema_2_avion\tema_2_avion.vcxproj" (target "_Link" depends on it):
+20:26:31.922     1>Done building target "ComputeCLOutputs" in project "tema_2_avion.vcxproj".: (TargetId:67)
+20:26:31.922     1>Target "ComputeCLGeneratedLinkInputs: (TargetId:68)" in file "C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\MSBuild\Microsoft\VC\v160\Microsoft.CppBuild.targets" from project "C:\Users\Administrator\Documents\GitHub\sda\tema_2_avion\tema_2_avion.vcxproj" (target "_Link" depends on it):
                    Added Item(s): 
                        Link=
                            Debug\DijkstraHeader.obj
@@ -4647,11 +4645,11 @@ Logging verbosity is set to: Diagnostic.19:39:16.766     1>Project "C:\Users\Adm
                                    TypeLibraryResourceID=1
                                    UACExecutionLevel=AsInvoker
                                    UACUIAccess=false
-19:39:17.891     1>Done building target "ComputeCLGeneratedLinkInputs" in project "tema_2_avion.vcxproj".: (TargetId:68)
-19:39:17.891     1>Target "ComputeLinkInputsFromProject: (TargetId:69)" in file "C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\MSBuild\Microsoft\VC\v160\Microsoft.CppBuild.targets" from project "C:\Users\Administrator\Documents\GitHub\sda\tema_2_avion\tema_2_avion.vcxproj" (target "_Link" depends on it):
-19:39:17.891     1>Done building target "ComputeLinkInputsFromProject" in project "tema_2_avion.vcxproj".: (TargetId:69)
+20:26:31.924     1>Done building target "ComputeCLGeneratedLinkInputs" in project "tema_2_avion.vcxproj".: (TargetId:68)
+20:26:31.924     1>Target "ComputeLinkInputsFromProject: (TargetId:69)" in file "C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\MSBuild\Microsoft\VC\v160\Microsoft.CppBuild.targets" from project "C:\Users\Administrator\Documents\GitHub\sda\tema_2_avion\tema_2_avion.vcxproj" (target "_Link" depends on it):
+20:26:31.924     1>Done building target "ComputeLinkInputsFromProject" in project "tema_2_avion.vcxproj".: (TargetId:69)
                    Target "ComputeReferenceLinkInputs" skipped, due to false condition; (@(ProjectReference) != '') was evaluated as ( != '').
-19:39:17.891     1>Target "ComputeManifestInputsTargets: (TargetId:70)" in file "C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\MSBuild\Microsoft\VC\v160\Microsoft.CppBuild.targets" from project "C:\Users\Administrator\Documents\GitHub\sda\tema_2_avion\tema_2_avion.vcxproj" (target "_Link" depends on it):
+20:26:31.924     1>Target "ComputeManifestInputsTargets: (TargetId:70)" in file "C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\MSBuild\Microsoft\VC\v160\Microsoft.CppBuild.targets" from project "C:\Users\Administrator\Documents\GitHub\sda\tema_2_avion\tema_2_avion.vcxproj" (target "_Link" depends on it):
                    Added Item(s): 
                        Manifest=
                            temp
@@ -4682,10 +4680,10 @@ Logging verbosity is set to: Diagnostic.19:39:16.766     1>Project "C:\Users\Adm
                                    TrackerLogDirectory=Debug\tema_2_avion.tlog\
                                    UpdateFileHashes=false
                                    VerboseOutput=true
-19:39:17.892     1>Done building target "ComputeManifestInputsTargets" in project "tema_2_avion.vcxproj".: (TargetId:70)
+20:26:31.924     1>Done building target "ComputeManifestInputsTargets" in project "tema_2_avion.vcxproj".: (TargetId:70)
                    Target "ManifestResourceCompile" skipped, due to false condition; ('$(EmbedManifestBy)' == 'LINK' and '@(Manifest)' != '') was evaluated as ('LINK' == 'LINK' and '' != '').
                    Target "AssignWinFXEmbeddedResource" skipped, due to false condition; ('@(WinFXEmbeddedResource)' != '') was evaluated as ('' != '').
-19:39:17.892     1>Target "AssignTargetPaths: (TargetId:71)" in file "C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\MSBuild\Current\Bin\Microsoft.Common.CurrentVersion.targets" from project "C:\Users\Administrator\Documents\GitHub\sda\tema_2_avion\tema_2_avion.vcxproj" (target "PrepareResourceNames" depends on it):
+20:26:31.924     1>Target "AssignTargetPaths: (TargetId:71)" in file "C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\MSBuild\Current\Bin\Microsoft.Common.CurrentVersion.targets" from project "C:\Users\Administrator\Documents\GitHub\sda\tema_2_avion\tema_2_avion.vcxproj" (target "PrepareResourceNames" depends on it):
                    Using "AssignTargetPath" task from assembly "Microsoft.Build.Tasks.Core, Version=15.1.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a".
                    Task "AssignTargetPath" (TaskId:28)
                      Task Parameter:RootFolder=C:\Users\Administrator\Documents\GitHub\sda\tema_2_avion (TaskId:28)
@@ -4717,9 +4715,9 @@ Logging verbosity is set to: Diagnostic.19:39:16.766     1>Project "C:\Users\Adm
                    Done executing task "AssignTargetPath". (TaskId:31)
                    Task "AssignTargetPath" skipped, due to false condition; ('@(_DeploymentBaseManifestWithTargetPath)'=='' and '%(None.Extension)'=='.manifest') was evaluated as (''=='' and '.in'=='.manifest').
                    Task "AssignTargetPath" skipped, due to false condition; ('@(_DeploymentBaseManifestWithTargetPath)'=='' and '%(None.Extension)'=='.manifest') was evaluated as (''=='' and '.out'=='.manifest').
-19:39:17.893     1>Done building target "AssignTargetPaths" in project "tema_2_avion.vcxproj".: (TargetId:71)
+20:26:31.926     1>Done building target "AssignTargetPaths" in project "tema_2_avion.vcxproj".: (TargetId:71)
                    Target "AssignTargetPaths" skipped. Previously built successfully.
-19:39:17.893     1>Target "SplitResourcesByCulture: (TargetId:72)" in file "C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\MSBuild\Current\Bin\Microsoft.Common.CurrentVersion.targets" from project "C:\Users\Administrator\Documents\GitHub\sda\tema_2_avion\tema_2_avion.vcxproj" (target "PrepareResourceNames" depends on it):
+20:26:31.926     1>Target "SplitResourcesByCulture: (TargetId:72)" in file "C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\MSBuild\Current\Bin\Microsoft.Common.CurrentVersion.targets" from project "C:\Users\Administrator\Documents\GitHub\sda\tema_2_avion\tema_2_avion.vcxproj" (target "PrepareResourceNames" depends on it):
                    Task "Warning" skipped, due to false condition; ('@(ResxWithNoCulture)'!='') was evaluated as (''!='').
                    Task "Warning" skipped, due to false condition; ('@(ResxWithCulture)'!='') was evaluated as (''!='').
                    Task "Warning" skipped, due to false condition; ('@(NonResxWithCulture)'!='') was evaluated as (''!='').
@@ -4727,13 +4725,13 @@ Logging verbosity is set to: Diagnostic.19:39:16.766     1>Project "C:\Users\Adm
                    Using "AssignCulture" task from assembly "Microsoft.Build.Tasks.Core, Version=15.1.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a".
                    Task "AssignCulture" (TaskId:32)
                    Done executing task "AssignCulture". (TaskId:32)
-19:39:17.894     1>Done building target "SplitResourcesByCulture" in project "tema_2_avion.vcxproj".: (TargetId:72)
+20:26:31.926     1>Done building target "SplitResourcesByCulture" in project "tema_2_avion.vcxproj".: (TargetId:72)
                    Target "CreateManifestResourceNames" skipped, due to false condition; ('@(EmbeddedResource)' != '') was evaluated as ('' != '').
-19:39:17.894     1>Target "CreateCustomManifestResourceNames: (TargetId:73)" in file "C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\MSBuild\Current\Bin\Microsoft.Common.CurrentVersion.targets" from project "C:\Users\Administrator\Documents\GitHub\sda\tema_2_avion\tema_2_avion.vcxproj" (target "PrepareResourceNames" depends on it):
-19:39:17.894     1>Done building target "CreateCustomManifestResourceNames" in project "tema_2_avion.vcxproj".: (TargetId:73)
-19:39:17.894     1>Target "PrepareResourceNames: (TargetId:74)" in file "C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\MSBuild\Current\Bin\Microsoft.Common.CurrentVersion.targets" from project "C:\Users\Administrator\Documents\GitHub\sda\tema_2_avion\tema_2_avion.vcxproj" (target "_Link" depends on it):
-19:39:17.894     1>Done building target "PrepareResourceNames" in project "tema_2_avion.vcxproj".: (TargetId:74)
-19:39:17.894     1>Target "MakeDirsForLink: (TargetId:75)" in file "C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\MSBuild\Microsoft\VC\v160\Microsoft.CppBuild.targets" from project "C:\Users\Administrator\Documents\GitHub\sda\tema_2_avion\tema_2_avion.vcxproj" (target "_Link" depends on it):
+20:26:31.926     1>Target "CreateCustomManifestResourceNames: (TargetId:73)" in file "C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\MSBuild\Current\Bin\Microsoft.Common.CurrentVersion.targets" from project "C:\Users\Administrator\Documents\GitHub\sda\tema_2_avion\tema_2_avion.vcxproj" (target "PrepareResourceNames" depends on it):
+20:26:31.926     1>Done building target "CreateCustomManifestResourceNames" in project "tema_2_avion.vcxproj".: (TargetId:73)
+20:26:31.926     1>Target "PrepareResourceNames: (TargetId:74)" in file "C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\MSBuild\Current\Bin\Microsoft.Common.CurrentVersion.targets" from project "C:\Users\Administrator\Documents\GitHub\sda\tema_2_avion\tema_2_avion.vcxproj" (target "_Link" depends on it):
+20:26:31.926     1>Done building target "PrepareResourceNames" in project "tema_2_avion.vcxproj".: (TargetId:74)
+20:26:31.926     1>Target "MakeDirsForLink: (TargetId:75)" in file "C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\MSBuild\Microsoft\VC\v160\Microsoft.CppBuild.targets" from project "C:\Users\Administrator\Documents\GitHub\sda\tema_2_avion\tema_2_avion.vcxproj" (target "_Link" depends on it):
                    Set Property: _LinkImportLibrary=C:\Users\Administrator\Documents\GitHub\sda\tema_2_avion\Debug\tema_2_avion.lib
                    Added Item(s): _LinkImportLibraryFile=C:\Users\Administrator\Documents\GitHub\sda\tema_2_avion\Debug\tema_2_avion.lib
                    Added Item(s): LinkDirsToMake=C:\Users\Administrator\Documents\GitHub\sda\tema_2_avion\Debug
@@ -4755,25 +4753,25 @@ Logging verbosity is set to: Diagnostic.19:39:16.766     1>Project "C:\Users\Adm
                            C:\Users\Administrator\Documents\GitHub\sda\tema_2_avion\Debug
                            C:\Users\Administrator\Documents\GitHub\sda\tema_2_avion\Debug\
                    Removed Item(s): _LinkImportLibraryFile=C:\Users\Administrator\Documents\GitHub\sda\tema_2_avion\Debug\tema_2_avion.lib
-19:39:17.895     1>Done building target "MakeDirsForLink" in project "tema_2_avion.vcxproj".: (TargetId:75)
-19:39:17.896     1>Target "DoLinkOutputFilesMatch: (TargetId:76)" in file "C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\MSBuild\Microsoft\VC\v160\Microsoft.CppBuild.targets" from project "C:\Users\Administrator\Documents\GitHub\sda\tema_2_avion\tema_2_avion.vcxproj" (target "_Link" depends on it):
+20:26:31.927     1>Done building target "MakeDirsForLink" in project "tema_2_avion.vcxproj".: (TargetId:75)
+20:26:31.927     1>Target "DoLinkOutputFilesMatch: (TargetId:76)" in file "C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\MSBuild\Microsoft\VC\v160\Microsoft.CppBuild.targets" from project "C:\Users\Administrator\Documents\GitHub\sda\tema_2_avion\tema_2_avion.vcxproj" (target "_Link" depends on it):
                    Added Item(s): _OutputFileFromLink=C:\Users\Administrator\Documents\GitHub\sda\tema_2_avion\Debug\tema_2_avion.exe
                    Task "VCMessage" skipped, due to false condition; ('@(_OutputFileFromLink)' == '') was evaluated as ('C:\Users\Administrator\Documents\GitHub\sda\tema_2_avion\Debug\tema_2_avion.exe' == '').
                    Task "VCMessage" skipped, due to false condition; ('@(_OutputFileFromLink)' != '' and '%(_OutputFileFromLink.FullPath)' != '$([System.IO.Path]::GetFullPath($(TargetPath)))') was evaluated as ('C:\Users\Administrator\Documents\GitHub\sda\tema_2_avion\Debug\tema_2_avion.exe' != '' and 'C:\Users\Administrator\Documents\GitHub\sda\tema_2_avion\Debug\tema_2_avion.exe' != 'C:\Users\Administrator\Documents\GitHub\sda\tema_2_avion\Debug\tema_2_avion.exe').
                    Task "VCMessage" skipped, due to false condition; ('@(_OutputFileFromLink)' != '' and '%(_OutputFileFromLink.Extension)' != '' and '%(_OutputFileFromLink.Extension)' != '$(TargetExt)') was evaluated as ('C:\Users\Administrator\Documents\GitHub\sda\tema_2_avion\Debug\tema_2_avion.exe' != '' and '.exe' != '' and '.exe' != '.exe').
                    Task "VCMessage" skipped, due to false condition; ('@(_OutputFileFromLink)' != '' and '%(_OutputFileFromLink.Filename)' != '' and '%(_OutputFileFromLink.Filename)' != '$(TargetName)') was evaluated as ('C:\Users\Administrator\Documents\GitHub\sda\tema_2_avion\Debug\tema_2_avion.exe' != '' and 'tema_2_avion' != '' and 'tema_2_avion' != 'tema_2_avion').
                    Task "VCMessage" skipped, due to false condition; ('%(Link.MinimumRequiredVersion)' != '' and ('%(Link.Subsystem)' == '' or '%(Link.Subsystem)' == 'NotSet')) was evaluated as ('' != '' and ('Console' == '' or 'Console' == 'NotSet')).
-19:39:17.896     1>Done building target "DoLinkOutputFilesMatch" in project "tema_2_avion.vcxproj".: (TargetId:76)
-19:39:17.896     1>Target "PreLinkEvent: (TargetId:77)" in file "C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\MSBuild\Microsoft\VC\v160\Microsoft.CppCommon.targets" from project "C:\Users\Administrator\Documents\GitHub\sda\tema_2_avion\tema_2_avion.vcxproj" (target "_Link" depends on it):
+20:26:31.928     1>Done building target "DoLinkOutputFilesMatch" in project "tema_2_avion.vcxproj".: (TargetId:76)
+20:26:31.928     1>Target "PreLinkEvent: (TargetId:77)" in file "C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\MSBuild\Microsoft\VC\v160\Microsoft.CppCommon.targets" from project "C:\Users\Administrator\Documents\GitHub\sda\tema_2_avion\tema_2_avion.vcxproj" (target "_Link" depends on it):
                    Task "Message" skipped, due to false condition; ('%(PreLinkEvent.Message)' != '' and '%(PreLinkEvent.Command)' != '') was evaluated as ('' != '' and '' != '').
                    Task "Exec" skipped, due to false condition; ('%(PreLinkEvent.Command)' != '') was evaluated as ('' != '').
-19:39:17.897     1>Done building target "PreLinkEvent" in project "tema_2_avion.vcxproj".: (TargetId:77)
-19:39:17.897     1>Target "ComputeLinkSwitches: (TargetId:78)" in file "C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\MSBuild\Microsoft\VC\v160\Microsoft.CppCommon.targets" from project "C:\Users\Administrator\Documents\GitHub\sda\tema_2_avion\tema_2_avion.vcxproj" (target "Link" depends on it):
+20:26:31.928     1>Done building target "PreLinkEvent" in project "tema_2_avion.vcxproj".: (TargetId:77)
+20:26:31.929     1>Target "ComputeLinkSwitches: (TargetId:78)" in file "C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\MSBuild\Microsoft\VC\v160\Microsoft.CppCommon.targets" from project "C:\Users\Administrator\Documents\GitHub\sda\tema_2_avion\tema_2_avion.vcxproj" (target "Link" depends on it):
                    Set Property: Link_MinimalRebuildFromTracking=true
                    Set Property: LinkToolArchitecture=Native32Bit
                    Set Property: _GenerateWindowsMetadata=
-19:39:17.898     1>Done building target "ComputeLinkSwitches" in project "tema_2_avion.vcxproj".: (TargetId:78)
-19:39:17.898     1>Target "Link: (TargetId:79)" in file "C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\MSBuild\Microsoft\VC\v160\Microsoft.CppCommon.targets" from project "C:\Users\Administrator\Documents\GitHub\sda\tema_2_avion\tema_2_avion.vcxproj" (target "_Link" depends on it):
+20:26:31.929     1>Done building target "ComputeLinkSwitches" in project "tema_2_avion.vcxproj".: (TargetId:78)
+20:26:31.929     1>Target "Link: (TargetId:79)" in file "C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\MSBuild\Microsoft\VC\v160\Microsoft.CppCommon.targets" from project "C:\Users\Administrator\Documents\GitHub\sda\tema_2_avion\tema_2_avion.vcxproj" (target "_Link" depends on it):
                    Using "Link" task from assembly "C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\MSBuild\Microsoft\VC\v160\Microsoft.Build.CppTasks.Common.dll".
                    Task "Link" (TaskId:34)
                      Task Parameter:BuildingInIde=True (TaskId:34)
@@ -5217,7 +5215,7 @@ Logging verbosity is set to: Diagnostic.19:39:16.766     1>Project "C:\Users\Adm
                      	C:\PROGRAM FILES (X86)\WINDOWS KITS\10\LIB\10.0.18362.0\UCRT\X86\UCRTD.LIB (TaskId:34)
                      Source compilation required: input C:\USERS\ADMINISTRATOR\DOCUMENTS\GITHUB\SDA\TEMA_2_AVION\DEBUG\MAINHEADER.OBJ is newer than output C:\USERS\ADMINISTRATOR\DOCUMENTS\GITHUB\SDA\TEMA_2_AVION\DEBUG\TEMA_2_AVION.PDB. (TaskId:34)
                      Environment Variables passed to tool: (TaskId:34)
-                       VS_UNICODE_OUTPUT=1868 (TaskId:34)
+                       VS_UNICODE_OUTPUT=1500 (TaskId:34)
                      C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\VC\Tools\MSVC\14.25.28610\bin\HostX86\x86\link.exe /ERRORREPORT:PROMPT /OUT:"C:\Users\Administrator\Documents\GitHub\sda\tema_2_avion\Debug\tema_2_avion.exe" /INCREMENTAL /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG:FASTLINK /PDB:"C:\Users\Administrator\Documents\GitHub\sda\tema_2_avion\Debug\tema_2_avion.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:\Users\Administrator\Documents\GitHub\sda\tema_2_avion\Debug\tema_2_avion.lib" /MACHINE:X86 Debug\DijkstraHeader.obj
                      Debug\GraphHeader.obj
                      Debug\MainHeader.obj
@@ -5226,7 +5224,7 @@ Logging verbosity is set to: Diagnostic.19:39:16.766     1>Project "C:\Users\Adm
                      Debug\TrieHeader.obj
                      Debug\UtilHeader.obj (TaskId:34)
                      Tracking command: (TaskId:34)
-                     C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\MSBuild\Current\Bin\Tracker.exe /a /d "C:\Program Files (x86)\MSBuild\15.0\FileTracker\FileTracker32.dll" /i C:\Users\Administrator\Documents\GitHub\sda\tema_2_avion\Debug\tema_2_avion.tlog /r "C:\USERS\ADMINISTRATOR\DOCUMENTS\GITHUB\SDA\TEMA_2_AVION\DEBUG\DIJKSTRAHEADER.OBJ|C:\USERS\ADMINISTRATOR\DOCUMENTS\GITHUB\SDA\TEMA_2_AVION\DEBUG\GRAPHHEADER.OBJ|C:\USERS\ADMINISTRATOR\DOCUMENTS\GITHUB\SDA\TEMA_2_AVION\DEBUG\MAINHEADER.OBJ|C:\USERS\ADMINISTRATOR\DOCUMENTS\GITHUB\SDA\TEMA_2_AVION\DEBUG\MINHEAPHEADER.OBJ|C:\USERS\ADMINISTRATOR\DOCUMENTS\GITHUB\SDA\TEMA_2_AVION\DEBUG\PIELE_BOGDAN_312AB_TEMA_2_AVION.OBJ|C:\USERS\ADMINISTRATOR\DOCUMENTS\GITHUB\SDA\TEMA_2_AVION\DEBUG\TRIEHEADER.OBJ|C:\USERS\ADMINISTRATOR\DOCUMENTS\GITHUB\SDA\TEMA_2_AVION\DEBUG\UTILHEADER.OBJ" /b MSBuildConsole_CancelEvent7332e0dc36184dc3bc9550b73b068c23  /c "C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\VC\Tools\MSVC\14.25.28610\bin\HostX86\x86\link.exe"  /ERRORREPORT:PROMPT /OUT:"C:\Users\Administrator\Documents\GitHub\sda\tema_2_avion\Debug\tema_2_avion.exe" /INCREMENTAL /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG:FASTLINK /PDB:"C:\Users\Administrator\Documents\GitHub\sda\tema_2_avion\Debug\tema_2_avion.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:\Users\Administrator\Documents\GitHub\sda\tema_2_avion\Debug\tema_2_avion.lib" /MACHINE:X86 Debug\DijkstraHeader.obj
+                     C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\MSBuild\Current\Bin\Tracker.exe /a /d "C:\Program Files (x86)\MSBuild\15.0\FileTracker\FileTracker32.dll" /i C:\Users\Administrator\Documents\GitHub\sda\tema_2_avion\Debug\tema_2_avion.tlog /r "C:\USERS\ADMINISTRATOR\DOCUMENTS\GITHUB\SDA\TEMA_2_AVION\DEBUG\DIJKSTRAHEADER.OBJ|C:\USERS\ADMINISTRATOR\DOCUMENTS\GITHUB\SDA\TEMA_2_AVION\DEBUG\GRAPHHEADER.OBJ|C:\USERS\ADMINISTRATOR\DOCUMENTS\GITHUB\SDA\TEMA_2_AVION\DEBUG\MAINHEADER.OBJ|C:\USERS\ADMINISTRATOR\DOCUMENTS\GITHUB\SDA\TEMA_2_AVION\DEBUG\MINHEAPHEADER.OBJ|C:\USERS\ADMINISTRATOR\DOCUMENTS\GITHUB\SDA\TEMA_2_AVION\DEBUG\PIELE_BOGDAN_312AB_TEMA_2_AVION.OBJ|C:\USERS\ADMINISTRATOR\DOCUMENTS\GITHUB\SDA\TEMA_2_AVION\DEBUG\TRIEHEADER.OBJ|C:\USERS\ADMINISTRATOR\DOCUMENTS\GITHUB\SDA\TEMA_2_AVION\DEBUG\UTILHEADER.OBJ" /b MSBuildConsole_CancelEvent2f8e76c30a52400aa0f1c1d8f3b082fd  /c "C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\VC\Tools\MSVC\14.25.28610\bin\HostX86\x86\link.exe"  /ERRORREPORT:PROMPT /OUT:"C:\Users\Administrator\Documents\GitHub\sda\tema_2_avion\Debug\tema_2_avion.exe" /INCREMENTAL /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG:FASTLINK /PDB:"C:\Users\Administrator\Documents\GitHub\sda\tema_2_avion\Debug\tema_2_avion.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:\Users\Administrator\Documents\GitHub\sda\tema_2_avion\Debug\tema_2_avion.lib" /MACHINE:X86 Debug\DijkstraHeader.obj
                      Debug\GraphHeader.obj
                      Debug\MainHeader.obj
                      Debug\MinHeapHeader.obj
@@ -5246,36 +5244,36 @@ Logging verbosity is set to: Diagnostic.19:39:16.766     1>Project "C:\Users\Adm
                    Task "VCMessage" skipped, due to false condition; (('$(EmbedManifestBy)' != 'LINK' or '$(LegacyManifestEmbedding)' != 'true' or '$(LinkSkippedExecution)' == 'true') and
                                 %(Link.GenerateDebugInformation) == 'true' and %(Link.ProgramDataBaseFileName) != '') was evaluated as (('LINK' != 'LINK' or '' != 'true' or 'False' == 'true') and
                                 DebugFastLink == 'true' and  != '').
-19:39:18.404     1>Done building target "Link" in project "tema_2_avion.vcxproj".: (TargetId:79)
+20:26:32.232     1>Done building target "Link" in project "tema_2_avion.vcxproj".: (TargetId:79)
                    Target "MetaGenInputsOutputs" skipped, due to false condition; ('$(EnableManagedIncrementalBuild)' == 'True') was evaluated as ('false' == 'True').
                    Target "ComputeMetaGenInputs" skipped, due to false condition; ('$(CLRSupport)'!='' and '$(CLRSupport)'!='false' and '$(CLRSupport)'!='NetCore') was evaluated as ('false'!='' and 'false'!='false' and 'false'!='NetCore').
                    Target "MetaGen" skipped, due to false condition; ('@(MetaGen)' != '') was evaluated as ('' != '').
-19:39:18.405     1>Target "ComputeLinkImportLibraryOutputsForClean: (TargetId:80)" in file "C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\MSBuild\Microsoft\VC\v160\Microsoft.CppBuild.targets" from project "C:\Users\Administrator\Documents\GitHub\sda\tema_2_avion\tema_2_avion.vcxproj" (target "_Link" depends on it):
+20:26:32.232     1>Target "ComputeLinkImportLibraryOutputsForClean: (TargetId:80)" in file "C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\MSBuild\Microsoft\VC\v160\Microsoft.CppBuild.targets" from project "C:\Users\Administrator\Documents\GitHub\sda\tema_2_avion\tema_2_avion.vcxproj" (target "_Link" depends on it):
                    Task "WriteLinesToFile" skipped, due to false condition; ('@(_LinkSecondaryOutput)' != '') was evaluated as ('' != '').
-19:39:18.405     1>Done building target "ComputeLinkImportLibraryOutputsForClean" in project "tema_2_avion.vcxproj".: (TargetId:80)
-19:39:18.405     1>Target "AfterLink: (TargetId:81)" in file "C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\MSBuild\Microsoft\VC\v160\Microsoft.CppBuild.targets" from project "C:\Users\Administrator\Documents\GitHub\sda\tema_2_avion\tema_2_avion.vcxproj" (target "_Link" depends on it):
-19:39:18.405     1>Done building target "AfterLink" in project "tema_2_avion.vcxproj".: (TargetId:81)
-19:39:18.405     1>Target "_Link: (TargetId:82)" in file "C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\MSBuild\Microsoft\VC\v160\Microsoft.CppBuild.targets" from project "C:\Users\Administrator\Documents\GitHub\sda\tema_2_avion\tema_2_avion.vcxproj" (target "_BuildLinkAction" depends on it):
-19:39:18.405     1>Done building target "_Link" in project "tema_2_avion.vcxproj".: (TargetId:82)
-19:39:18.405     1>Target "_ALink: (TargetId:83)" in file "C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\MSBuild\Microsoft\VC\v160\Microsoft.CppBuild.targets" from project "C:\Users\Administrator\Documents\GitHub\sda\tema_2_avion\tema_2_avion.vcxproj" (target "_BuildLinkAction" depends on it):
-19:39:18.405     1>Done building target "_ALink" in project "tema_2_avion.vcxproj".: (TargetId:83)
+20:26:32.232     1>Done building target "ComputeLinkImportLibraryOutputsForClean" in project "tema_2_avion.vcxproj".: (TargetId:80)
+20:26:32.232     1>Target "AfterLink: (TargetId:81)" in file "C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\MSBuild\Microsoft\VC\v160\Microsoft.CppBuild.targets" from project "C:\Users\Administrator\Documents\GitHub\sda\tema_2_avion\tema_2_avion.vcxproj" (target "_Link" depends on it):
+20:26:32.232     1>Done building target "AfterLink" in project "tema_2_avion.vcxproj".: (TargetId:81)
+20:26:32.232     1>Target "_Link: (TargetId:82)" in file "C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\MSBuild\Microsoft\VC\v160\Microsoft.CppBuild.targets" from project "C:\Users\Administrator\Documents\GitHub\sda\tema_2_avion\tema_2_avion.vcxproj" (target "_BuildLinkAction" depends on it):
+20:26:32.232     1>Done building target "_Link" in project "tema_2_avion.vcxproj".: (TargetId:82)
+20:26:32.232     1>Target "_ALink: (TargetId:83)" in file "C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\MSBuild\Microsoft\VC\v160\Microsoft.CppBuild.targets" from project "C:\Users\Administrator\Documents\GitHub\sda\tema_2_avion\tema_2_avion.vcxproj" (target "_BuildLinkAction" depends on it):
+20:26:32.232     1>Done building target "_ALink" in project "tema_2_avion.vcxproj".: (TargetId:83)
                    Target "ComputeLegacyManifestEmbedding" skipped. Previously built successfully.
-19:39:18.406     1>Target "_Manifest: (TargetId:84)" in file "C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\MSBuild\Microsoft\VC\v160\Microsoft.CppBuild.targets" from project "C:\Users\Administrator\Documents\GitHub\sda\tema_2_avion\tema_2_avion.vcxproj" (target "_BuildLinkAction" depends on it):
+20:26:32.232     1>Target "_Manifest: (TargetId:84)" in file "C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\MSBuild\Microsoft\VC\v160\Microsoft.CppBuild.targets" from project "C:\Users\Administrator\Documents\GitHub\sda\tema_2_avion\tema_2_avion.vcxproj" (target "_BuildLinkAction" depends on it):
                    Task "CallTarget" skipped, due to false condition; ('$(LegacyManifestEmbedding)' == 'true') was evaluated as ('' == 'true').
-19:39:18.406     1>Done building target "_Manifest" in project "tema_2_avion.vcxproj".: (TargetId:84)
-19:39:18.406     1>Target "RegisterOutput: (TargetId:85)" in file "C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\MSBuild\Microsoft\VC\v160\Microsoft.CppCommon.targets" from project "C:\Users\Administrator\Documents\GitHub\sda\tema_2_avion\tema_2_avion.vcxproj" (target "_BuildLinkAction" depends on it):
+20:26:32.232     1>Done building target "_Manifest" in project "tema_2_avion.vcxproj".: (TargetId:84)
+20:26:32.232     1>Target "RegisterOutput: (TargetId:85)" in file "C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\MSBuild\Microsoft\VC\v160\Microsoft.CppCommon.targets" from project "C:\Users\Administrator\Documents\GitHub\sda\tema_2_avion\tema_2_avion.vcxproj" (target "_BuildLinkAction" depends on it):
                    Task "Exec" skipped, due to false condition; ('$(ConfigurationType)'=='DynamicLibrary' and '%(Link.RegisterOutput)'=='true' and '%(Link.PerUserRedirection)'!='true') was evaluated as ('Application'=='DynamicLibrary' and 'false'=='true' and 'false'!='true').
                    Task "Exec" skipped, due to false condition; ('$(ConfigurationType)'=='DynamicLibrary' and '%(Link.RegisterOutput)'=='true' and '%(Link.PerUserRedirection)'=='true') was evaluated as ('Application'=='DynamicLibrary' and 'false'=='true' and 'false'=='true').
                    Task "Exec" skipped, due to false condition; ('$(ConfigurationType)'=='Application' and '%(Link.RegisterOutput)'=='true' and '%(Link.PerUserRedirection)'!='true') was evaluated as ('Application'=='Application' and 'false'=='true' and 'false'!='true').
                    Task "Exec" skipped, due to false condition; ('$(ConfigurationType)'=='Application' and '%(Link.RegisterOutput)'=='true' and '%(Link.PerUserRedirection)'=='true') was evaluated as ('Application'=='Application' and 'false'=='true' and 'false'=='true').
                    Task "VCMessage" skipped, due to false condition; ('$(_RegisterOutputExitCode)' != '' and '$(_RegisterOutputExitCode)' != '0') was evaluated as ('' != '' and '' != '0').
-19:39:18.406     1>Done building target "RegisterOutput" in project "tema_2_avion.vcxproj".: (TargetId:85)
+20:26:32.233     1>Done building target "RegisterOutput" in project "tema_2_avion.vcxproj".: (TargetId:85)
                    Target "PrepareForBuild" skipped. Previously built successfully.
                    Target "ResolveReferences" skipped. Previously built successfully.
-19:39:18.406     1>Target "ResolvedXDCMake: (TargetId:86)" in file "C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\MSBuild\Microsoft\VC\v160\Microsoft.CppBuild.targets" from project "C:\Users\Administrator\Documents\GitHub\sda\tema_2_avion\tema_2_avion.vcxproj" (target "_XdcMake" depends on it):
+20:26:32.233     1>Target "ResolvedXDCMake: (TargetId:86)" in file "C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\MSBuild\Microsoft\VC\v160\Microsoft.CppBuild.targets" from project "C:\Users\Administrator\Documents\GitHub\sda\tema_2_avion\tema_2_avion.vcxproj" (target "_XdcMake" depends on it):
                    Task "MSBuild" skipped, due to false condition; ('%(_MSBuildProjectReferenceExistent.Extension)' == '.vcxproj' and '@(ProjectReferenceWithConfiguration)' != '' and '@(_MSBuildProjectReferenceExistent)' != '' and '$(_ClCompileGenerateXMLDocumentationFiles)' == 'true') was evaluated as ('' == '.vcxproj' and '' != '' and '' != '' and '' == 'true').
-19:39:18.406     1>Done building target "ResolvedXDCMake" in project "tema_2_avion.vcxproj".: (TargetId:86)
-19:39:18.406     1>Target "ComputeCLCompileGeneratedXDCFiles: (TargetId:87)" in file "C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\MSBuild\Microsoft\VC\v160\Microsoft.CppBuild.targets" from project "C:\Users\Administrator\Documents\GitHub\sda\tema_2_avion\tema_2_avion.vcxproj" (target "_XdcMake" depends on it):
+20:26:32.233     1>Done building target "ResolvedXDCMake" in project "tema_2_avion.vcxproj".: (TargetId:86)
+20:26:32.233     1>Target "ComputeCLCompileGeneratedXDCFiles: (TargetId:87)" in file "C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\MSBuild\Microsoft\VC\v160\Microsoft.CppBuild.targets" from project "C:\Users\Administrator\Documents\GitHub\sda\tema_2_avion\tema_2_avion.vcxproj" (target "_XdcMake" depends on it):
                    Added Item(s): 
                        XdcMake=
                            temp
@@ -5298,87 +5296,87 @@ Logging verbosity is set to: Diagnostic.19:39:16.766     1>Project "C:\Users\Adm
                                    OutputFile=C:\Users\Administrator\Documents\GitHub\sda\tema_2_avion\Debug\tema_2_avion.xml
                                    SuppressStartupBanner=true
                                    TrackerLogDirectory=Debug\tema_2_avion.tlog\
-19:39:18.407     1>Done building target "ComputeCLCompileGeneratedXDCFiles" in project "tema_2_avion.vcxproj".: (TargetId:87)
-19:39:18.407     1>Target "MakeDirsForXdcMake: (TargetId:88)" in file "C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\MSBuild\Microsoft\VC\v160\Microsoft.CppBuild.targets" from project "C:\Users\Administrator\Documents\GitHub\sda\tema_2_avion\tema_2_avion.vcxproj" (target "_XdcMake" depends on it):
+20:26:32.233     1>Done building target "ComputeCLCompileGeneratedXDCFiles" in project "tema_2_avion.vcxproj".: (TargetId:87)
+20:26:32.233     1>Target "MakeDirsForXdcMake: (TargetId:88)" in file "C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\MSBuild\Microsoft\VC\v160\Microsoft.CppBuild.targets" from project "C:\Users\Administrator\Documents\GitHub\sda\tema_2_avion\tema_2_avion.vcxproj" (target "_XdcMake" depends on it):
                    Task "MakeDir" (TaskId:36)
                    Done executing task "MakeDir". (TaskId:36)
-19:39:18.407     1>Done building target "MakeDirsForXdcMake" in project "tema_2_avion.vcxproj".: (TargetId:88)
+20:26:32.233     1>Done building target "MakeDirsForXdcMake" in project "tema_2_avion.vcxproj".: (TargetId:88)
                    Target "XdcMake" skipped, due to false condition; ('@(XdcMake)' != '') was evaluated as ('' != '').
-19:39:18.407     1>Target "_XdcMake: (TargetId:89)" in file "C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\MSBuild\Microsoft\VC\v160\Microsoft.CppBuild.targets" from project "C:\Users\Administrator\Documents\GitHub\sda\tema_2_avion\tema_2_avion.vcxproj" (target "_BuildLinkAction" depends on it):
-19:39:18.407     1>Done building target "_XdcMake" in project "tema_2_avion.vcxproj".: (TargetId:89)
-19:39:18.407     1>Target "ComputeCLCompileGeneratedSbrFiles: (TargetId:90)" in file "C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\MSBuild\Microsoft\VC\v160\Microsoft.CppBuild.targets" from project "C:\Users\Administrator\Documents\GitHub\sda\tema_2_avion\tema_2_avion.vcxproj" (target "_BscMake" depends on it):
-19:39:18.407     1>Done building target "ComputeCLCompileGeneratedSbrFiles" in project "tema_2_avion.vcxproj".: (TargetId:90)
-19:39:18.407     1>Target "MakeDirsForBscMake: (TargetId:91)" in file "C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\MSBuild\Microsoft\VC\v160\Microsoft.CppBuild.targets" from project "C:\Users\Administrator\Documents\GitHub\sda\tema_2_avion\tema_2_avion.vcxproj" (target "_BscMake" depends on it):
+20:26:32.234     1>Target "_XdcMake: (TargetId:89)" in file "C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\MSBuild\Microsoft\VC\v160\Microsoft.CppBuild.targets" from project "C:\Users\Administrator\Documents\GitHub\sda\tema_2_avion\tema_2_avion.vcxproj" (target "_BuildLinkAction" depends on it):
+20:26:32.234     1>Done building target "_XdcMake" in project "tema_2_avion.vcxproj".: (TargetId:89)
+20:26:32.234     1>Target "ComputeCLCompileGeneratedSbrFiles: (TargetId:90)" in file "C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\MSBuild\Microsoft\VC\v160\Microsoft.CppBuild.targets" from project "C:\Users\Administrator\Documents\GitHub\sda\tema_2_avion\tema_2_avion.vcxproj" (target "_BscMake" depends on it):
+20:26:32.234     1>Done building target "ComputeCLCompileGeneratedSbrFiles" in project "tema_2_avion.vcxproj".: (TargetId:90)
+20:26:32.234     1>Target "MakeDirsForBscMake: (TargetId:91)" in file "C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\MSBuild\Microsoft\VC\v160\Microsoft.CppBuild.targets" from project "C:\Users\Administrator\Documents\GitHub\sda\tema_2_avion\tema_2_avion.vcxproj" (target "_BscMake" depends on it):
                    Task "MakeDir" (TaskId:37)
                    Done executing task "MakeDir". (TaskId:37)
-19:39:18.407     1>Done building target "MakeDirsForBscMake" in project "tema_2_avion.vcxproj".: (TargetId:91)
+20:26:32.234     1>Done building target "MakeDirsForBscMake" in project "tema_2_avion.vcxproj".: (TargetId:91)
                    Target "BscMake" skipped, due to false condition; ('@(BscMake)' != '') was evaluated as ('' != '').
                    Target "CustomBuildStep" skipped, due to false condition; ('@(CustomBuildStep)' != '' and '$(SelectedFiles)'=='') was evaluated as ('' != '' and ''=='').
-19:39:18.407     1>Target "_BscMake: (TargetId:92)" in file "C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\MSBuild\Microsoft\VC\v160\Microsoft.CppBuild.targets" from project "C:\Users\Administrator\Documents\GitHub\sda\tema_2_avion\tema_2_avion.vcxproj" (target "_BuildLinkAction" depends on it):
-19:39:18.407     1>Done building target "_BscMake" in project "tema_2_avion.vcxproj".: (TargetId:92)
-19:39:18.407     1>Target "_GenerateSatelliteAssemblyInputs: (TargetId:93)" in file "C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\MSBuild\Current\Bin\Microsoft.Common.CurrentVersion.targets" from project "C:\Users\Administrator\Documents\GitHub\sda\tema_2_avion\tema_2_avion.vcxproj" (target "CreateSatelliteAssemblies" depends on it):
+20:26:32.234     1>Target "_BscMake: (TargetId:92)" in file "C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\MSBuild\Microsoft\VC\v160\Microsoft.CppBuild.targets" from project "C:\Users\Administrator\Documents\GitHub\sda\tema_2_avion\tema_2_avion.vcxproj" (target "_BuildLinkAction" depends on it):
+20:26:32.234     1>Done building target "_BscMake" in project "tema_2_avion.vcxproj".: (TargetId:92)
+20:26:32.234     1>Target "_GenerateSatelliteAssemblyInputs: (TargetId:93)" in file "C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\MSBuild\Current\Bin\Microsoft.Common.CurrentVersion.targets" from project "C:\Users\Administrator\Documents\GitHub\sda\tema_2_avion\tema_2_avion.vcxproj" (target "CreateSatelliteAssemblies" depends on it):
                    Task "Warning" skipped, due to false condition; ('@(ManifestResourceWithCulture)'!='' and '%(ManifestResourceWithCulture.EmittedForCompatibilityOnly)'=='') was evaluated as (''!='' and ''=='').
                    Task "Warning" skipped, due to false condition; ('@(ManifestNonResxWithCultureOnDisk)'!='' and '%(ManifestNonResxWithCultureOnDisk.EmittedForCompatibilityOnly)'=='') was evaluated as (''!='' and ''=='').
-19:39:18.407     1>Done building target "_GenerateSatelliteAssemblyInputs" in project "tema_2_avion.vcxproj".: (TargetId:93)
+20:26:32.234     1>Done building target "_GenerateSatelliteAssemblyInputs" in project "tema_2_avion.vcxproj".: (TargetId:93)
                    Target "ComputeIntermediateSatelliteAssemblies" skipped, due to false condition; (@(ReferenceSatellitePaths->'%(DestinationSubDirectory)') != '') was evaluated as ( != '').
                    Target "GenerateSatelliteAssemblies" skipped, due to false condition; ('@(_SatelliteAssemblyResourceInputs)' != '') was evaluated as ('' != '').
-19:39:18.408     1>Target "CreateSatelliteAssemblies: (TargetId:94)" in file "C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\MSBuild\Current\Bin\Microsoft.Common.CurrentVersion.targets" from project "C:\Users\Administrator\Documents\GitHub\sda\tema_2_avion\tema_2_avion.vcxproj" (target "_BuildLinkAction" depends on it):
-19:39:18.408     1>Done building target "CreateSatelliteAssemblies" in project "tema_2_avion.vcxproj".: (TargetId:94)
+20:26:32.234     1>Target "CreateSatelliteAssemblies: (TargetId:94)" in file "C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\MSBuild\Current\Bin\Microsoft.Common.CurrentVersion.targets" from project "C:\Users\Administrator\Documents\GitHub\sda\tema_2_avion\tema_2_avion.vcxproj" (target "_BuildLinkAction" depends on it):
+20:26:32.234     1>Done building target "CreateSatelliteAssemblies" in project "tema_2_avion.vcxproj".: (TargetId:94)
                    Target "CopyLocalNativeReference" skipped, due to false condition; ('$(CopyLocalProjectReference)' == 'true') was evaluated as ('false' == 'true').
-19:39:18.408     1>Target "_Appverifier: (TargetId:95)" in file "C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\MSBuild\Microsoft\VC\v160\Microsoft.CppBuild.targets" from project "C:\Users\Administrator\Documents\GitHub\sda\tema_2_avion\tema_2_avion.vcxproj" (target "_BuildLinkAction" depends on it):
-19:39:18.408     1>Done building target "_Appverifier" in project "tema_2_avion.vcxproj".: (TargetId:95)
-19:39:18.408     1>Target "_Deploy: (TargetId:96)" in file "C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\MSBuild\Microsoft\VC\v160\Microsoft.CppBuild.targets" from project "C:\Users\Administrator\Documents\GitHub\sda\tema_2_avion\tema_2_avion.vcxproj" (target "_BuildLinkAction" depends on it):
-19:39:18.408     1>Done building target "_Deploy" in project "tema_2_avion.vcxproj".: (TargetId:96)
+20:26:32.234     1>Target "_Appverifier: (TargetId:95)" in file "C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\MSBuild\Microsoft\VC\v160\Microsoft.CppBuild.targets" from project "C:\Users\Administrator\Documents\GitHub\sda\tema_2_avion\tema_2_avion.vcxproj" (target "_BuildLinkAction" depends on it):
+20:26:32.234     1>Done building target "_Appverifier" in project "tema_2_avion.vcxproj".: (TargetId:95)
+20:26:32.234     1>Target "_Deploy: (TargetId:96)" in file "C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\MSBuild\Microsoft\VC\v160\Microsoft.CppBuild.targets" from project "C:\Users\Administrator\Documents\GitHub\sda\tema_2_avion\tema_2_avion.vcxproj" (target "_BuildLinkAction" depends on it):
+20:26:32.234     1>Done building target "_Deploy" in project "tema_2_avion.vcxproj".: (TargetId:96)
                    Target "ComputeIntermediateSatelliteAssemblies" skipped, due to false condition; (@(ReferenceSatellitePaths->'%(DestinationSubDirectory)') != '') was evaluated as ( != '').
                    Target "_CopyFilesMarkedCopyLocal" skipped, due to false condition; ('@(ReferenceCopyLocalPaths)' != '') was evaluated as ('' != '').
                    Target "AssignTargetPaths" skipped. Previously built successfully.
                    Target "_SplitProjectReferencesByFileExistence" skipped. Previously built successfully.
                    Target "_GetProjectReferenceTargetFrameworkProperties" skipped. Previously built successfully.
-19:39:18.408     1>Target "_PopulateCommonStateForGetCopyToOutputDirectoryItems: (TargetId:97)" in file "C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\MSBuild\Current\Bin\Microsoft.Common.CurrentVersion.targets" from project "C:\Users\Administrator\Documents\GitHub\sda\tema_2_avion\tema_2_avion.vcxproj" (target "GetCopyToOutputDirectoryItems" depends on it):
+20:26:32.234     1>Target "_PopulateCommonStateForGetCopyToOutputDirectoryItems: (TargetId:97)" in file "C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\MSBuild\Current\Bin\Microsoft.Common.CurrentVersion.targets" from project "C:\Users\Administrator\Documents\GitHub\sda\tema_2_avion\tema_2_avion.vcxproj" (target "GetCopyToOutputDirectoryItems" depends on it):
                    Set Property: _GCTODIKeepDuplicates=false
                    Set Property: _GCTODIKeepMetadata=CopyToOutputDirectory;TargetPath
-19:39:18.408     1>Done building target "_PopulateCommonStateForGetCopyToOutputDirectoryItems" in project "tema_2_avion.vcxproj".: (TargetId:97)
-19:39:18.408     1>Target "GetCopyToOutputDirectoryXamlAppDefs: (TargetId:98)" in file "C:\WINDOWS\Microsoft.NET\Framework\v4.0.30319\Microsoft.Xaml.targets" from project "C:\Users\Administrator\Documents\GitHub\sda\tema_2_avion\tema_2_avion.vcxproj" (target "GetCopyToOutputDirectoryItems" depends on it):
+20:26:32.234     1>Done building target "_PopulateCommonStateForGetCopyToOutputDirectoryItems" in project "tema_2_avion.vcxproj".: (TargetId:97)
+20:26:32.234     1>Target "GetCopyToOutputDirectoryXamlAppDefs: (TargetId:98)" in file "C:\WINDOWS\Microsoft.NET\Framework\v4.0.30319\Microsoft.Xaml.targets" from project "C:\Users\Administrator\Documents\GitHub\sda\tema_2_avion\tema_2_avion.vcxproj" (target "GetCopyToOutputDirectoryItems" depends on it):
                    Task "AssignTargetPath" (TaskId:38)
                      Task Parameter:RootFolder=C:\Users\Administrator\Documents\GitHub\sda\tema_2_avion (TaskId:38)
                    Done executing task "AssignTargetPath". (TaskId:38)
-19:39:18.408     1>Done building target "GetCopyToOutputDirectoryXamlAppDefs" in project "tema_2_avion.vcxproj".: (TargetId:98)
-19:39:18.408     1>Target "GetCopyToOutputDirectoryItems: (TargetId:99)" in file "C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\MSBuild\Current\Bin\Microsoft.Common.CurrentVersion.targets" from project "C:\Users\Administrator\Documents\GitHub\sda\tema_2_avion\tema_2_avion.vcxproj" (target "_CopySourceItemsToOutputDirectory" depends on it):
+20:26:32.235     1>Done building target "GetCopyToOutputDirectoryXamlAppDefs" in project "tema_2_avion.vcxproj".: (TargetId:98)
+20:26:32.235     1>Target "GetCopyToOutputDirectoryItems: (TargetId:99)" in file "C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\MSBuild\Current\Bin\Microsoft.Common.CurrentVersion.targets" from project "C:\Users\Administrator\Documents\GitHub\sda\tema_2_avion\tema_2_avion.vcxproj" (target "_CopySourceItemsToOutputDirectory" depends on it):
                    Using "CallTarget" task from assembly "Microsoft.Build.Tasks.Core, Version=15.1.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a".
                    Task "CallTarget" (TaskId:39)
                      Task Parameter:Targets=_GetCopyToOutputDirectoryItemsFromTransitiveProjectReferences (TaskId:39)
                    Target "_PopulateCommonStateForGetCopyToOutputDirectoryItems" skipped. Previously built successfully.
-19:39:18.408     1>Target "_GetCopyToOutputDirectoryItemsFromTransitiveProjectReferences: (TargetId:100)" in file "C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\MSBuild\Current\Bin\Microsoft.Common.CurrentVersion.targets" from project "C:\Users\Administrator\Documents\GitHub\sda\tema_2_avion\tema_2_avion.vcxproj" (target "GetCopyToOutputDirectoryItems" depends on it):
+20:26:32.235     1>Target "_GetCopyToOutputDirectoryItemsFromTransitiveProjectReferences: (TargetId:100)" in file "C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\MSBuild\Current\Bin\Microsoft.Common.CurrentVersion.targets" from project "C:\Users\Administrator\Documents\GitHub\sda\tema_2_avion\tema_2_avion.vcxproj" (target "GetCopyToOutputDirectoryItems" depends on it):
                    Task "MSBuild" skipped, due to false condition; ('@(_MSBuildProjectReferenceExistent)' != '' and '$(_GetChildProjectCopyToOutputDirectoryItems)' == 'true' and '%(_MSBuildProjectReferenceExistent.Private)' != 'false' and '$(UseCommonOutputDirectory)' != 'true') was evaluated as ('' != '' and 'true' == 'true' and '' != 'false' and 'false' != 'true').
                    Task "AssignTargetPath" (TaskId:40)
                      Task Parameter:RootFolder=C:\Users\Administrator\Documents\GitHub\sda\tema_2_avion (TaskId:40)
                    Done executing task "AssignTargetPath". (TaskId:40)
-19:39:18.409     1>Done building target "_GetCopyToOutputDirectoryItemsFromTransitiveProjectReferences" in project "tema_2_avion.vcxproj".: (TargetId:100)
+20:26:32.236     1>Done building target "_GetCopyToOutputDirectoryItemsFromTransitiveProjectReferences" in project "tema_2_avion.vcxproj".: (TargetId:100)
                    Done executing task "CallTarget". (TaskId:39)
                    Task "CallTarget" (TaskId:41)
                      Task Parameter:Targets=_GetCopyToOutputDirectoryItemsFromThisProject (TaskId:41)
                    Target "AssignTargetPaths" skipped. Previously built successfully.
                    Target "_PopulateCommonStateForGetCopyToOutputDirectoryItems" skipped. Previously built successfully.
-19:39:18.409     1>Target "_GetCopyToOutputDirectoryItemsFromThisProject: (TargetId:101)" in file "C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\MSBuild\Current\Bin\Microsoft.Common.CurrentVersion.targets" from project "C:\Users\Administrator\Documents\GitHub\sda\tema_2_avion\tema_2_avion.vcxproj" (target "GetCopyToOutputDirectoryItems" depends on it):
+20:26:32.236     1>Target "_GetCopyToOutputDirectoryItemsFromThisProject: (TargetId:101)" in file "C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\MSBuild\Current\Bin\Microsoft.Common.CurrentVersion.targets" from project "C:\Users\Administrator\Documents\GitHub\sda\tema_2_avion\tema_2_avion.vcxproj" (target "GetCopyToOutputDirectoryItems" depends on it):
                    Task "AssignTargetPath" (TaskId:42)
                      Task Parameter:RootFolder=C:\Users\Administrator\Documents\GitHub\sda\tema_2_avion (TaskId:42)
                    Done executing task "AssignTargetPath". (TaskId:42)
-19:39:18.410     1>Done building target "_GetCopyToOutputDirectoryItemsFromThisProject" in project "tema_2_avion.vcxproj".: (TargetId:101)
+20:26:32.236     1>Done building target "_GetCopyToOutputDirectoryItemsFromThisProject" in project "tema_2_avion.vcxproj".: (TargetId:101)
                    Done executing task "CallTarget". (TaskId:41)
-19:39:18.410     1>Done building target "GetCopyToOutputDirectoryItems" in project "tema_2_avion.vcxproj".: (TargetId:99)
+20:26:32.236     1>Done building target "GetCopyToOutputDirectoryItems" in project "tema_2_avion.vcxproj".: (TargetId:99)
                    Target "_CopyOutOfDateSourceItemsToOutputDirectory" skipped, due to false condition; ( '@(_SourceItemsToCopyToOutputDirectory)' != '' ) was evaluated as ( '' != '' ).
                    Target "_CopyOutOfDateSourceItemsToOutputDirectoryAlways" skipped, due to false condition; ( '@(_SourceItemsToCopyToOutputDirectoryAlways)' != '' ) was evaluated as ( '' != '' ).
-19:39:18.410     1>Target "_CopySourceItemsToOutputDirectory: (TargetId:102)" in file "C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\MSBuild\Current\Bin\Microsoft.Common.CurrentVersion.targets" from project "C:\Users\Administrator\Documents\GitHub\sda\tema_2_avion\tema_2_avion.vcxproj" (target "CopyFilesToOutputDirectory" depends on it):
-19:39:18.410     1>Done building target "_CopySourceItemsToOutputDirectory" in project "tema_2_avion.vcxproj".: (TargetId:102)
+20:26:32.236     1>Target "_CopySourceItemsToOutputDirectory: (TargetId:102)" in file "C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\MSBuild\Current\Bin\Microsoft.Common.CurrentVersion.targets" from project "C:\Users\Administrator\Documents\GitHub\sda\tema_2_avion\tema_2_avion.vcxproj" (target "CopyFilesToOutputDirectory" depends on it):
+20:26:32.236     1>Done building target "_CopySourceItemsToOutputDirectory" in project "tema_2_avion.vcxproj".: (TargetId:102)
                    Target "_CopyAppConfigFile" skipped, due to false condition; ( '@(AppConfigWithTargetPath)' != '' ) was evaluated as ( '' != '' ).
                    Target "_CopyManifestFiles" skipped, due to false condition; ( '$(_DeploymentCopyApplicationManifest)'=='true' or '$(GenerateClickOnceManifests)'=='true' ) was evaluated as ( ''=='true' or ''=='true' ).
-19:39:18.410     1>Target "_CheckForCompileOutputs: (TargetId:103)" in file "C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\MSBuild\Current\Bin\Microsoft.Common.CurrentVersion.targets" from project "C:\Users\Administrator\Documents\GitHub\sda\tema_2_avion\tema_2_avion.vcxproj" (target "CopyFilesToOutputDirectory" depends on it):
+20:26:32.236     1>Target "_CheckForCompileOutputs: (TargetId:103)" in file "C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\MSBuild\Current\Bin\Microsoft.Common.CurrentVersion.targets" from project "C:\Users\Administrator\Documents\GitHub\sda\tema_2_avion\tema_2_avion.vcxproj" (target "CopyFilesToOutputDirectory" depends on it):
                    Added Item(s): FileWrites=Debug\tema_2_avion.exe
                    Set Property: _DocumentationFileProduced=false
                    Added Item(s): FileWrites=Debug\tema_2_avion.pdb
-19:39:18.411     1>Done building target "_CheckForCompileOutputs" in project "tema_2_avion.vcxproj".: (TargetId:103)
+20:26:32.237     1>Done building target "_CheckForCompileOutputs" in project "tema_2_avion.vcxproj".: (TargetId:103)
                    Target "_SGenCheckForOutputs" skipped, due to false condition; ('$(_SGenGenerateSerializationAssembliesConfig)' == 'On' or ('@(WebReferenceUrl)'!='' and '$(_SGenGenerateSerializationAssembliesConfig)' == 'Auto')) was evaluated as ('Off' == 'On' or (''!='' and 'Off' == 'Auto')).
-19:39:18.411     1>Target "CopyFilesToOutputDirectory: (TargetId:104)" in file "C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\MSBuild\Current\Bin\Microsoft.Common.CurrentVersion.targets" from project "C:\Users\Administrator\Documents\GitHub\sda\tema_2_avion\tema_2_avion.vcxproj" (target "PrepareForRun" depends on it):
+20:26:32.237     1>Target "CopyFilesToOutputDirectory: (TargetId:104)" in file "C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\MSBuild\Current\Bin\Microsoft.Common.CurrentVersion.targets" from project "C:\Users\Administrator\Documents\GitHub\sda\tema_2_avion\tema_2_avion.vcxproj" (target "PrepareForRun" depends on it):
                    Set Property: CreateHardLinksForCopyFilesToOutputDirectoryIfPossible=false
                    Set Property: CreateSymbolicLinksForCopyFilesToOutputDirectoryIfPossible=false
                    Set Property: ErrorIfLinkFailsForCopyFilesToOutputDirectory=false
@@ -5410,23 +5408,23 @@ Logging verbosity is set to: Diagnostic.19:39:16.766     1>Project "C:\Users\Adm
                    Task "Copy" skipped, due to false condition; ('@(ReferenceComWrappersToCopyLocal)' != '' or '@(ResolvedIsolatedComModules)' != '' or '@(_DeploymentLooseManifestFile)' != '' or '@(NativeReferenceFile)' != '' ) was evaluated as ('' != '' or '' != '' or '' != '' or '' != '' ).
                    Task "Copy" skipped, due to false condition; ('$(SkipCopyWinMDArtifact)' != 'true' and '@(WinMDExpArtifacts)' != '') was evaluated as ('' != 'true' and '' != '').
                    Task "Message" skipped, due to false condition; ('$(SkipCopyWinMDArtifact)' != 'true' and '$(_WindowsMetadataOutputPath)' != '') was evaluated as ('' != 'true' and '' != '').
-19:39:18.412     1>Done building target "CopyFilesToOutputDirectory" in project "tema_2_avion.vcxproj".: (TargetId:104)
-19:39:18.412     1>Target "PrepareForRun: (TargetId:105)" in file "C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\MSBuild\Current\Bin\Microsoft.Common.CurrentVersion.targets" from project "C:\Users\Administrator\Documents\GitHub\sda\tema_2_avion\tema_2_avion.vcxproj" (target "_BuildLinkAction" depends on it):
-19:39:18.412     1>Done building target "PrepareForRun" in project "tema_2_avion.vcxproj".: (TargetId:105)
+20:26:32.238     1>Done building target "CopyFilesToOutputDirectory" in project "tema_2_avion.vcxproj".: (TargetId:104)
+20:26:32.238     1>Target "PrepareForRun: (TargetId:105)" in file "C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\MSBuild\Current\Bin\Microsoft.Common.CurrentVersion.targets" from project "C:\Users\Administrator\Documents\GitHub\sda\tema_2_avion\tema_2_avion.vcxproj" (target "_BuildLinkAction" depends on it):
+20:26:32.238     1>Done building target "PrepareForRun" in project "tema_2_avion.vcxproj".: (TargetId:105)
                    Target "CustomBuildStep" skipped, due to false condition; ('@(CustomBuildStep)' != '' and '$(SelectedFiles)'=='') was evaluated as ('' != '' and ''=='').
-19:39:18.412     1>Target "PostBuildEvent: (TargetId:106)" in file "C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\MSBuild\Microsoft\VC\v160\Microsoft.CppCommon.targets" from project "C:\Users\Administrator\Documents\GitHub\sda\tema_2_avion\tema_2_avion.vcxproj" (target "_BuildLinkAction" depends on it):
+20:26:32.238     1>Target "PostBuildEvent: (TargetId:106)" in file "C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\MSBuild\Microsoft\VC\v160\Microsoft.CppCommon.targets" from project "C:\Users\Administrator\Documents\GitHub\sda\tema_2_avion\tema_2_avion.vcxproj" (target "_BuildLinkAction" depends on it):
                    Task "Message" skipped, due to false condition; ('%(PostBuildEvent.Message)' != '' and '%(PostBuildEvent.Command)' != '') was evaluated as ('' != '' and '' != '').
                    Task "Exec" skipped, due to false condition; ('%(PostBuildEvent.Command)' != '') was evaluated as ('' != '').
-19:39:18.413     1>Done building target "PostBuildEvent" in project "tema_2_avion.vcxproj".: (TargetId:106)
-19:39:18.413     1>Target "_BuildLinkAction: (TargetId:107)" in file "C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\MSBuild\Microsoft\VC\v160\Microsoft.CppBuild.targets" from project "C:\Users\Administrator\Documents\GitHub\sda\tema_2_avion\tema_2_avion.vcxproj" (target "BuildLink" depends on it):
-19:39:18.413     1>Done building target "_BuildLinkAction" in project "tema_2_avion.vcxproj".: (TargetId:107)
-19:39:18.413     1>Target "BuildLink: (TargetId:108)" in file "C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\MSBuild\Current\Bin\Microsoft.Common.CurrentVersion.targets" from project "C:\Users\Administrator\Documents\GitHub\sda\tema_2_avion\tema_2_avion.vcxproj" (target "Build" depends on it):
-19:39:18.413     1>Done building target "BuildLink" in project "tema_2_avion.vcxproj".: (TargetId:108)
-19:39:18.413     1>Target "AfterBuild: (TargetId:109)" in file "C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\MSBuild\Microsoft\VC\v160\Microsoft.BuildSteps.Targets" from project "C:\Users\Administrator\Documents\GitHub\sda\tema_2_avion\tema_2_avion.vcxproj" (target "Build" depends on it):
-19:39:18.413     1>Done building target "AfterBuild" in project "tema_2_avion.vcxproj".: (TargetId:109)
+20:26:32.239     1>Done building target "PostBuildEvent" in project "tema_2_avion.vcxproj".: (TargetId:106)
+20:26:32.239     1>Target "_BuildLinkAction: (TargetId:107)" in file "C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\MSBuild\Microsoft\VC\v160\Microsoft.CppBuild.targets" from project "C:\Users\Administrator\Documents\GitHub\sda\tema_2_avion\tema_2_avion.vcxproj" (target "BuildLink" depends on it):
+20:26:32.239     1>Done building target "_BuildLinkAction" in project "tema_2_avion.vcxproj".: (TargetId:107)
+20:26:32.239     1>Target "BuildLink: (TargetId:108)" in file "C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\MSBuild\Current\Bin\Microsoft.Common.CurrentVersion.targets" from project "C:\Users\Administrator\Documents\GitHub\sda\tema_2_avion\tema_2_avion.vcxproj" (target "Build" depends on it):
+20:26:32.239     1>Done building target "BuildLink" in project "tema_2_avion.vcxproj".: (TargetId:108)
+20:26:32.239     1>Target "AfterBuild: (TargetId:109)" in file "C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\MSBuild\Microsoft\VC\v160\Microsoft.BuildSteps.Targets" from project "C:\Users\Administrator\Documents\GitHub\sda\tema_2_avion\tema_2_avion.vcxproj" (target "Build" depends on it):
+20:26:32.239     1>Done building target "AfterBuild" in project "tema_2_avion.vcxproj".: (TargetId:109)
                    Target "_CheckForCompileOutputs" skipped. Previously built successfully.
                    Target "_SGenCheckForOutputs" skipped, due to false condition; ('$(_SGenGenerateSerializationAssembliesConfig)' == 'On' or ('@(WebReferenceUrl)'!='' and '$(_SGenGenerateSerializationAssembliesConfig)' == 'Auto')) was evaluated as ('Off' == 'On' or (''!='' and 'Off' == 'Auto')).
-19:39:18.413     1>Target "_CleanGetCurrentAndPriorFileWrites: (TargetId:110)" in file "C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\MSBuild\Current\Bin\Microsoft.Common.CurrentVersion.targets" from project "C:\Users\Administrator\Documents\GitHub\sda\tema_2_avion\tema_2_avion.vcxproj" (target "IncrementalClean" depends on it):
+20:26:32.239     1>Target "_CleanGetCurrentAndPriorFileWrites: (TargetId:110)" in file "C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\MSBuild\Current\Bin\Microsoft.Common.CurrentVersion.targets" from project "C:\Users\Administrator\Documents\GitHub\sda\tema_2_avion\tema_2_avion.vcxproj" (target "IncrementalClean" depends on it):
                    Task "ReadLinesFromFile" (TaskId:44)
                      Task Parameter:File=Debug\tema_2_avion.vcxproj.FileListAbsolute.txt (TaskId:44)
                      Output Item(s): 
@@ -5508,8 +5506,8 @@ Logging verbosity is set to: Diagnostic.19:39:16.766     1>Project "C:\Users\Adm
                              C:\Users\Administrator\Documents\GitHub\sda\tema_2_avion\Debug\tema_2_avion.exe
                              C:\Users\Administrator\Documents\GitHub\sda\tema_2_avion\Debug\tema_2_avion.pdb (TaskId:49)
                    Done executing task "RemoveDuplicates". (TaskId:49)
-19:39:18.415     1>Done building target "_CleanGetCurrentAndPriorFileWrites" in project "tema_2_avion.vcxproj".: (TargetId:110)
-19:39:18.415     1>Target "IncrementalClean: (TargetId:111)" in file "C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\MSBuild\Current\Bin\Microsoft.Common.CurrentVersion.targets" from project "C:\Users\Administrator\Documents\GitHub\sda\tema_2_avion\tema_2_avion.vcxproj" (target "Build" depends on it):
+20:26:32.241     1>Done building target "_CleanGetCurrentAndPriorFileWrites" in project "tema_2_avion.vcxproj".: (TargetId:110)
+20:26:32.241     1>Target "IncrementalClean: (TargetId:111)" in file "C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\MSBuild\Current\Bin\Microsoft.Common.CurrentVersion.targets" from project "C:\Users\Administrator\Documents\GitHub\sda\tema_2_avion\tema_2_avion.vcxproj" (target "Build" depends on it):
                    Task "FindUnderPath" (TaskId:50)
                      Task Parameter:Path=C:\Users\Administrator\Documents\GitHub\sda\tema_2_avion\Debug\ (TaskId:50)
                      Comparison path is "C:\Users\Administrator\Documents\GitHub\sda\tema_2_avion\Debug\". (TaskId:50)
@@ -5541,8 +5539,8 @@ Logging verbosity is set to: Diagnostic.19:39:16.766     1>Project "C:\Users\Adm
                              C:\Users\Administrator\Documents\GitHub\sda\tema_2_avion\Debug\tema_2_avion.pdb (TaskId:53)
                    Done executing task "RemoveDuplicates". (TaskId:53)
                    Task "WriteLinesToFile" skipped, due to false condition; ('@(_CleanUnfilteredPriorFileWrites)'!='@(_CleanUniqueRemainingFileWritesAfterIncrementalClean)') was evaluated as ('C:\Users\Administrator\Documents\GitHub\sda\tema_2_avion\Debug\tema_2_avion.exe;C:\Users\Administrator\Documents\GitHub\sda\tema_2_avion\Debug\tema_2_avion.pdb'!='C:\Users\Administrator\Documents\GitHub\sda\tema_2_avion\Debug\tema_2_avion.exe;C:\Users\Administrator\Documents\GitHub\sda\tema_2_avion\Debug\tema_2_avion.pdb').
-19:39:18.416     1>Done building target "IncrementalClean" in project "tema_2_avion.vcxproj".: (TargetId:111)
-19:39:18.416     1>Target "FinalizeBuildStatus: (TargetId:112)" in file "C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\MSBuild\Microsoft\VC\v160\Microsoft.CppBuild.targets" from project "C:\Users\Administrator\Documents\GitHub\sda\tema_2_avion\tema_2_avion.vcxproj" (target "Build" depends on it):
+20:26:32.242     1>Done building target "IncrementalClean" in project "tema_2_avion.vcxproj".: (TargetId:111)
+20:26:32.242     1>Target "FinalizeBuildStatus: (TargetId:112)" in file "C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\MSBuild\Microsoft\VC\v160\Microsoft.CppBuild.targets" from project "C:\Users\Administrator\Documents\GitHub\sda\tema_2_avion\tema_2_avion.vcxproj" (target "Build" depends on it):
                    Task "Delete" (TaskId:54)
                      Task Parameter:Files=Debug\tema_2_avion.tlog\unsuccessfulbuild (TaskId:54)
                      Deleting file "Debug\tema_2_avion.tlog\unsuccessfulbuild". (TaskId:54)
@@ -5551,50 +5549,44 @@ Logging verbosity is set to: Diagnostic.19:39:16.766     1>Project "C:\Users\Adm
                      Task Parameter:Files=Debug\tema_2_avion.tlog\tema_2_avion.lastbuildstate (TaskId:55)
                      Touching "Debug\tema_2_avion.tlog\tema_2_avion.lastbuildstate". (TaskId:55)
                    Done executing task "Touch". (TaskId:55)
-19:39:18.425     1>Done building target "FinalizeBuildStatus" in project "tema_2_avion.vcxproj".: (TargetId:112)
+20:26:32.252     1>Done building target "FinalizeBuildStatus" in project "tema_2_avion.vcxproj".: (TargetId:112)
                    Target "_CheckForInvalidConfigurationAndPlatform" skipped. Previously built successfully.
                    Target "_CheckForInvalidConfigurationAndPlatform" skipped. Previously built successfully.
-19:39:18.425     1>Target "Build: (TargetId:113)" in file "C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\MSBuild\Microsoft\VC\v160\Microsoft.BuildSteps.Targets" from project "C:\Users\Administrator\Documents\GitHub\sda\tema_2_avion\tema_2_avion.vcxproj" (entry point):
-19:39:18.425     1>Done building target "Build" in project "tema_2_avion.vcxproj".: (TargetId:113)
-19:39:18.425     1>Done Building Project "C:\Users\Administrator\Documents\GitHub\sda\tema_2_avion\tema_2_avion.vcxproj" (Build target(s)).
+20:26:32.252     1>Target "Build: (TargetId:113)" in file "C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\MSBuild\Microsoft\VC\v160\Microsoft.BuildSteps.Targets" from project "C:\Users\Administrator\Documents\GitHub\sda\tema_2_avion\tema_2_avion.vcxproj" (entry point):
+20:26:32.255     1>Done building target "Build" in project "tema_2_avion.vcxproj".: (TargetId:113)
+20:26:32.255     1>Done Building Project "C:\Users\Administrator\Documents\GitHub\sda\tema_2_avion\tema_2_avion.vcxproj" (Build target(s)).
 
 Project Evaluation Performance Summary:
-      260 ms  C:\Users\Administrator\Documents\GitHub\sda\tema_2_avion\tema_2_avion.vcxproj   1 calls
+      170 ms  C:\Users\Administrator\Documents\GitHub\sda\tema_2_avion\tema_2_avion.vcxproj   1 calls
 
 Project Performance Summary:
-     1659 ms  C:\Users\Administrator\Documents\GitHub\sda\tema_2_avion\tema_2_avion.vcxproj   1 calls
-               1659 ms  Build                                      1 calls
+     1028 ms  C:\Users\Administrator\Documents\GitHub\sda\tema_2_avion\tema_2_avion.vcxproj   1 calls
+               1028 ms  Build                                      1 calls
 
 Target Performance Summary:
         0 ms  _ResourceCompile                           1 calls
-        0 ms  DoLinkOutputFilesMatch                     1 calls
-        0 ms  PrepareResourceNames                       1 calls
-        0 ms  CreateCustomManifestResourceNames          1 calls
+        0 ms  ComputeManifestInputsTargets               1 calls
         0 ms  ComputeLinkInputsFromProject               1 calls
+        0 ms  PrepareForRun                              1 calls
         0 ms  ComputeManifestGeneratedLinkerInputs       1 calls
         0 ms  ComputeRCGeneratedLinkInputs               1 calls
         0 ms  ComputeRCOutputs                           1 calls
         0 ms  BeforeLink                                 1 calls
-        0 ms  ComputeLinkImportLibraryOutputsForClean    1 calls
+        0 ms  ComputeLegacyManifestEmbedding             1 calls
+        0 ms  SplitResourcesByCulture                    1 calls
         0 ms  BuildLinkTraverse                          1 calls
         0 ms  _BuildCompileAction                        1 calls
         0 ms  AfterBuildCompileEvent                     1 calls
+        0 ms  _BuildLinkAction                           1 calls
         0 ms  AfterResourceCompile                       1 calls
         0 ms  MakeDirsForResourceCompile                 1 calls
         0 ms  BeforeResourceCompile                      1 calls
         0 ms  _ClCompile                                 1 calls
-        0 ms  AfterClCompile                             1 calls
-        0 ms  SelectClCompile                            1 calls
+        0 ms  _GetCopyToOutputDirectoryItemsFromThisProject   1 calls
         0 ms  BuildCompile                               1 calls
-        0 ms  AfterLink                                  1 calls
-        0 ms  _Link                                      1 calls
-        0 ms  _ALink                                     1 calls
-        0 ms  AfterBuild                                 1 calls
         0 ms  BuildLink                                  1 calls
-        0 ms  _BuildLinkAction                           1 calls
-        0 ms  PrepareForRun                              1 calls
-        0 ms  _CopySourceItemsToOutputDirectory          1 calls
-        0 ms  GetCopyToOutputDirectoryXamlAppDefs        1 calls
+        0 ms  CreateCustomManifestResourceNames          1 calls
+        0 ms  PreLinkEvent                               1 calls
         0 ms  _PopulateCommonStateForGetCopyToOutputDirectoryItems   1 calls
         0 ms  _Deploy                                    1 calls
         0 ms  _Appverifier                               1 calls
@@ -5603,106 +5595,112 @@ Target Performance Summary:
         0 ms  _BscMake                                   1 calls
         0 ms  MakeDirsForBscMake                         1 calls
         0 ms  ComputeCLCompileGeneratedSbrFiles          1 calls
+        0 ms  PrepareResourceNames                       1 calls
         0 ms  _XdcMake                                   1 calls
-        0 ms  MakeDirsForXdcMake                         1 calls
+        0 ms  ComputeCLCompileGeneratedXDCFiles          1 calls
         0 ms  ResolvedXDCMake                            1 calls
-        0 ms  RegisterOutput                             1 calls
         0 ms  _Manifest                                  1 calls
-        0 ms  MakeDirsForCl                              1 calls
-        0 ms  ComputeReferenceCLInput                    1 calls
-        0 ms  Build                                      1 calls
-        0 ms  BuildGenerateSourcesTraverse               1 calls
-        0 ms  SelectCustomBuild                          1 calls
-        0 ms  _SelectedFiles                             1 calls
-        0 ms  BeforeBuildGenerateSources                 1 calls
-        0 ms  FindReferenceAssembliesForReferences       1 calls
-        0 ms  ResolveReferences                          1 calls
+        0 ms  _ALink                                     1 calls
+        0 ms  _Link                                      1 calls
+        0 ms  AfterLink                                  1 calls
+        0 ms  ComputeLinkImportLibraryOutputsForClean    1 calls
+        0 ms  ComputeLinkSwitches                        1 calls
+        0 ms  MakeDirsForXdcMake                         1 calls
+        0 ms  SelectClCompile                            1 calls
+        0 ms  AfterClCompile                             1 calls
         0 ms  AfterResolveReferences                     1 calls
+        0 ms  BuildGenerateSourcesTraverse               1 calls
+        0 ms  AfterBuild                                 1 calls
+        0 ms  ResolveReferences                          1 calls
+        0 ms  FindReferenceAssembliesForReferences       1 calls
         0 ms  ResolveAssemblyReferences                  1 calls
         0 ms  ExpandSDKReferences                        1 calls
         0 ms  ResolveSDKReferences                       1 calls
-        0 ms  BeforeResolveReferences                    1 calls
+        0 ms  BeforeBuildGenerateSources                 1 calls
         0 ms  SetCABuildNativeEnvironmentVariables       1 calls
         0 ms  GetReferenceAssemblyPaths                  1 calls
         0 ms  GetFrameworkPaths                          1 calls
         0 ms  PrepareProjectReferences                   1 calls
         0 ms  _SplitProjectReferencesByFileExistence     1 calls
+        0 ms  AssignProjectConfiguration                 1 calls
+        0 ms  BeforeResolveReferences                    1 calls
         0 ms  _PrepareForBuild                           1 calls
-        0 ms  SetTelemetryEnvironmentVariables           1 calls
+        0 ms  _CheckWindowsSDKInstalled                  1 calls
         0 ms  PreBuildEvent                              1 calls
+        0 ms  _CopySourceItemsToOutputDirectory          1 calls
+        0 ms  ComputeMIDLGeneratedCompileInputs          1 calls
         0 ms  AfterBuildGenerateSources                  1 calls
-        0 ms  ComputeCLInputPDBName                      1 calls
-        0 ms  BeforeClCompile                            1 calls
-        0 ms  BuildCompileTraverse                       1 calls
         0 ms  BuildGenerateSources                       1 calls
-        0 ms  _BuildGenerateSourcesAction                1 calls
-        0 ms  AfterBuildGenerateSourcesEvent             1 calls
         0 ms  _Midl                                      1 calls
         0 ms  AfterMidl                                  1 calls
-        0 ms  AssignProjectConfiguration                 1 calls
-        0 ms  MakeDirsForMidl                            1 calls
+        0 ms  BuildCompileTraverse                       1 calls
+        0 ms  SelectCustomBuild                          1 calls
+        0 ms  AfterBuildGenerateSourcesEvent             1 calls
+        0 ms  _BuildGenerateSourcesAction                1 calls
         0 ms  CopyFileToFolders                          1 calls
-        0 ms  _Xsd                                       1 calls
+        0 ms  BeforeClCompile                            1 calls
+        0 ms  ComputeCustomBuildOutput                   1 calls
+        0 ms  ComputeCLInputPDBName                      1 calls
+        0 ms  MakeDirsForMidl                            1 calls
+        1 ms  _GetCopyToOutputDirectoryItemsFromTransitiveProjectReferences   1 calls
+        1 ms  GetCopyToOutputDirectoryItems              1 calls
+        1 ms  _Xsd                                       1 calls
+        1 ms  RegisterOutput                             1 calls
+        1 ms  ResolveProjectReferences                   1 calls
+        1 ms  IncrementalClean                           1 calls
+        1 ms  GetResolvedWinMD                           1 calls
         1 ms  _CheckForCompileOutputs                    1 calls
         1 ms  PostBuildEvent                             1 calls
-        1 ms  _GetCopyToOutputDirectoryItemsFromThisProject   1 calls
-        1 ms  ComputeMIDLGeneratedCompileInputs          1 calls
+        1 ms  WarnCompileDuplicatedFilename              1 calls
         1 ms  _GetProjectReferenceTargetFrameworkProperties   1 calls
-        1 ms  AssignTargetPaths                          1 calls
-        1 ms  _CheckWindowsSDKInstalled                  1 calls
-        1 ms  MakeDirsForLink                            1 calls
-        1 ms  ComputeCLCompileGeneratedXDCFiles          1 calls
-        1 ms  PreLinkEvent                               1 calls
-        1 ms  ComputeLegacyManifestEmbedding             1 calls
-        1 ms  ComputeManifestInputsTargets               1 calls
-        1 ms  _PrepareForReferenceResolution             1 calls
-        1 ms  ComputeCustomBuildOutput                   1 calls
-        1 ms  SetBuildDefaultEnvironmentVariables        1 calls
         1 ms  FixupCLCompileOptions                      1 calls
-        1 ms  SplitResourcesByCulture                    1 calls
+        1 ms  _PrepareForReferenceResolution             1 calls
+        1 ms  MakeDirsForLink                            1 calls
+        1 ms  SetTelemetryEnvironmentVariables           1 calls
+        1 ms  DoLinkOutputFilesMatch                     1 calls
         1 ms  CustomBuild                                1 calls
-        1 ms  ComputeLinkSwitches                        1 calls
-        1 ms  IncrementalClean                           1 calls
-        1 ms  ResolveProjectReferences                   1 calls
+        1 ms  _SelectedFiles                             1 calls
+        1 ms  SetBuildDefaultEnvironmentVariables        1 calls
+        1 ms  MakeDirsForCl                              1 calls
         1 ms  CopyFilesToOutputDirectory                 1 calls
-        1 ms  _GetCopyToOutputDirectoryItemsFromTransitiveProjectReferences   1 calls
+        1 ms  ComputeReferenceCLInput                    1 calls
+        1 ms  GetCopyToOutputDirectoryXamlAppDefs        1 calls
+        2 ms  _CheckForInvalidConfigurationAndPlatform   1 calls
+        2 ms  ComputeCLGeneratedLinkInputs               1 calls
         2 ms  _CleanGetCurrentAndPriorFileWrites         1 calls
-        2 ms  WarnCompileDuplicatedFilename              1 calls
-        2 ms  GetCopyToOutputDirectoryItems              1 calls
-        4 ms  ComputeCLGeneratedLinkInputs               1 calls
+        2 ms  AssignTargetPaths                          1 calls
+        3 ms  Build                                      1 calls
+        4 ms  InitializeBuildStatus                      1 calls
         6 ms  PrepareForBuild                            1 calls
-        7 ms  GetResolvedWinMD                           1 calls
         8 ms  ComputeCLOutputs                           1 calls
-        9 ms  FinalizeBuildStatus                        1 calls
-       10 ms  InitializeBuildStatus                      1 calls
-       14 ms  _CheckForInvalidConfigurationAndPlatform   1 calls
-      506 ms  Link                                       1 calls
-     1062 ms  ClCompile                                  1 calls
+       10 ms  FinalizeBuildStatus                        1 calls
+      302 ms  Link                                       1 calls
+      657 ms  ClCompile                                  1 calls
 
 Task Performance Summary:
-        0 ms  Message                                    3 calls
         0 ms  AssignProjectConfiguration                 1 calls
-        0 ms  FindUnderPath                              5 calls
+        0 ms  ConvertToAbsolutePath                      1 calls
         0 ms  AssignCulture                              1 calls
         0 ms  RemoveDuplicates                           2 calls
-        1 ms  AssignTargetPath                           7 calls
+        1 ms  FindUnderPath                              5 calls
+        1 ms  CallTarget                                 2 calls
+        1 ms  Message                                    3 calls
         1 ms  CheckVCToolsetVersion                      1 calls
-        1 ms  MSBuild                                    1 calls
+        1 ms  Delete                                     2 calls
         1 ms  WriteLinesToFile                           1 calls
-        1 ms  MakeDir                                    9 calls
-        1 ms  SetEnv                                     8 calls
+        1 ms  MSBuild                                    1 calls
+        1 ms  AssignTargetPath                           7 calls
         1 ms  GetOutOfDateItems                          3 calls
-        1 ms  ConvertToAbsolutePath                      1 calls
+        1 ms  MakeDir                                    9 calls
         1 ms  Copy                                       1 calls
-        2 ms  Touch                                      2 calls
-        2 ms  CallTarget                                 2 calls
-        7 ms  ReadLinesFromFile                          2 calls
-        9 ms  Delete                                     2 calls
-      504 ms  Link                                       1 calls
-     1060 ms  CL                                         1 calls
+        2 ms  SetEnv                                     8 calls
+        2 ms  ReadLinesFromFile                          2 calls
+       11 ms  Touch                                      2 calls
+      299 ms  Link                                       1 calls
+      655 ms  CL                                         1 calls
 
 Build succeeded.
     0 Warning(s)
     0 Error(s)
 
-Time Elapsed 00:00:00.87
+Time Elapsed 00:00:00.54
