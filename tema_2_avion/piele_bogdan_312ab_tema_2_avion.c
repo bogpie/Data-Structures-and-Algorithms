@@ -1,5 +1,4 @@
 #include "MainHeader.h"
-#include "UtilHeader.h"
 
 int main(int argc, char* argv[])
 {
@@ -7,26 +6,31 @@ int main(int argc, char* argv[])
 	FILE* output = fopen(argv[2], "w");
 
 	int nrIslands;
-	fscanf(input, "%d", &nrIslands);
+	Island* vIslands = malloc(sizeof(Island) * nrIslands);
+	fReadIslands(input, &nrIslands, vIslands);
+	GraphMat* graphMat;
+	fReadConnecions(input, nrIslands, &graphMat);
 
-	for (int idIsland = 0; idIsland < nrIslands; ++idIsland)
+	TrieNode* trieRoot;
+	fInitTrieNode(&trieRoot);
+	while (!feof(input))
 	{
-		char vChar[NAMELENGTH];
-		fscanf(input, "%s", &vChar);
-		Island* island = malloc(sizeof(Island));
-		fStrAlloc(&island->name, vChar);
-		
-		fscanf(input, "%d", &island->nrResources);
-		island->vResources = malloc(sizeof(Resource) * island->nrResources);
-		for (int idResource = 0; idResource < island->nrResources; ++idResource)
+		char query[NAMELENGTH];
+		fscanf(input, "%s", query);
+		if (query[2] == 'x') // max_resurse
 		{
-			Resource resource = island->vResources[idResource]; // optional
-			char vChar[NAMELENGTH];
-			fscanf(input, "%s%d", vChar, resource.quantity);
-			fStrAlloc(&resource.name, vChar);
-			island->vResources[idResource] = resource;
+			for (int idIsland = 0; idIsland < nrIslands; ++idIsland)
+			{
+				Island island = vIslands[idIsland];
+				for (int idResource = 0; idResource < island.nrResources; ++idResource)
+				{
+					Resource resource = island.vResources[idResource];
+					fInsertInTrie(resource.name, trieRoot);
+				}
+			}
 		}
+		char* word = NULL;
+		fCountTrie(trieRoot,word,0 )
 	}
-
 	return 0;
 }

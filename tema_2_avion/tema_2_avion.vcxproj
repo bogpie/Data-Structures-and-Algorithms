@@ -138,11 +138,20 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="DijkstraHeader.c" />
+    <ClCompile Include="GraphHeader.c" />
+    <ClCompile Include="MainHeader.c" />
+    <ClCompile Include="MinHeapHeader.c" />
     <ClCompile Include="piele_bogdan_312ab_tema_2_avion.c" />
+    <ClCompile Include="TrieHeader.c" />
     <ClCompile Include="UtilHeader.c" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="DijkstraHeader.h" />
+    <ClInclude Include="GraphHeader.h" />
     <ClInclude Include="MainHeader.h" />
+    <ClInclude Include="MinHeapHeader.h" />
+    <ClInclude Include="TrieHeader.h" />
     <ClInclude Include="UtilHeader.h" />
   </ItemGroup>
   <ItemGroup>

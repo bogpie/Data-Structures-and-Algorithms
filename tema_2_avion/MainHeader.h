@@ -5,9 +5,11 @@
 #define MAINHEADER
 #define _CRT_SECURE_NO_WARNINGS
 
-#include <stdio.h>
-#include <stdlib.h>
-#include <string.h>
+#include "UtilHeader.h"
+#include "GraphHeader.h"
+#include "MinHeapHeader.h"
+#include "DijkstraHeader.h"
+#include "TrieHeader.h"
 
 typedef struct Resource Resource;
 struct Resource
@@ -27,6 +29,7 @@ struct Island
 	int tolerance;
 };
 
-#include "UtilHeader.h"
+void fReadIslands(FILE* input, int* adrNrIslands, Island* vIslands);
+void fReadConnections(FILE* input, int nrIslands, GraphMat** adrGraphMat);
 
 #endif
