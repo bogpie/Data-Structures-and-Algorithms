@@ -12,14 +12,18 @@ void fReadIslands(FILE* input, int* adrNrIslands, Island** adrVectorIslands)
 		char vChar[NAMELENGTH];
 		Island island;
 
+		memset(vChar, 0, strlen(vChar) * sizeof(char));
 		fscanf(input,"%s", vChar);
-		while (vChar[0] != 'I')
+		
+		
+		/*while (vChar[0] != 'I')
 		{
 			fscanf(input, "%s", vChar);
-		}
+		}*/
 
 		fStrAlloc(&island.name, vChar);
 
+		memset(vChar, 0, strlen(vChar) * sizeof(char));
 		fscanf(input, "%s", vChar);
 		island.nrResources = atoi(vChar);
 
@@ -29,6 +33,7 @@ void fReadIslands(FILE* input, int* adrNrIslands, Island** adrVectorIslands)
 			Resource resource;// optional
 			//char vChar[NAMELENGTH];
 
+			memset(vChar, 0, strlen(vChar) * sizeof(char));
 			fscanf(input, "%s", vChar);
 			while (vChar[0] == '\n')
 			{
@@ -37,6 +42,7 @@ void fReadIslands(FILE* input, int* adrNrIslands, Island** adrVectorIslands)
 
 			fStrAlloc(&resource.name, vChar);
 
+			memset(vChar, 0, strlen(vChar) * sizeof(char));
 			fscanf(input, "%s", vChar);
 			resource.quantity = atoi(vChar);
 
