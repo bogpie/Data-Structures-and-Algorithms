@@ -6,7 +6,7 @@ void fReadIslands(FILE* input, int* adrNrIslands, Island** adrVectorIslands)
 	fscanf(input, "%d", &nrIslands);
 	*adrNrIslands = nrIslands;
 
-	Island* vIslands = malloc(sizeof(Island) * (nrIslands + 2)); //indexarea insulelor in input e de al 1
+	Island* vIslands = malloc(sizeof(Island) * (nrIslands + 1)); //indexarea insulelor in input e de al 1
 
 
 
@@ -25,7 +25,7 @@ void fReadIslands(FILE* input, int* adrNrIslands, Island** adrVectorIslands)
 		//fscanf(input, "%s", vChar);island.nrResources = atoi(vChar);
 		fscanf(input, "%d", &island.nrResources);
 
-		island.vResources = malloc(sizeof(Resource) * (island.nrResources + 2));
+		island.vResources = malloc(sizeof(Resource) * island.nrResources);
 		for (int idResource = 0; idResource < island.nrResources; ++idResource)
 		{
 			Resource resource;
@@ -200,7 +200,7 @@ void fSolveTimpZbor(FILE* input, FILE* output, GraphMat* graphMat)
 	int time = INT_MAX;
 	int* vPrev = malloc(sizeof(int) * (graphMat->nrVertexes + 1));
 	fDijkstra(graphMat, leftIndex, rightIndex, &time, vPrev, 0);
-	
+
 	if (time == INT_MAX)
 	{
 		fprintf(output, "INF\n");
@@ -222,7 +222,7 @@ void fSolveMinZbor(FILE* input, FILE* output, GraphMat* graphMat)
 	int time;
 	int* vPrev = malloc(sizeof(int) * (graphMat->nrVertexes + 1));
 	fDijkstra(graphMat, leftIndex, rightIndex, &time, vPrev, 15);
-	fprintf(input, "%d\n", time);
+	fprintf(output, "%d\n", time);
 }
 
 void fNameToIndex(char* name, int* adrIndex)

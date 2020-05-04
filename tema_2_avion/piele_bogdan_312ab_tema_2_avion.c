@@ -18,7 +18,7 @@ int main(int argc, char* argv[])
 		char query[NAMELENGTH];
 		query[0] = '\0';
 		fscanf(input, "%s", query);
-		if (query[0] == '\0')
+		if (query[0] == '\0' || feof(input))
 		{
 			break;
 		}
@@ -60,8 +60,10 @@ int main(int argc, char* argv[])
 		{
 			fSolveMinZbor(input, output, graphMat);
 		}
-		else exit(2); // ar fi greseala la parsare
-
+		else
+		{
+			exit(2); // ar fi greseala la parsare
+		}
 	}
 	return 0;
 }

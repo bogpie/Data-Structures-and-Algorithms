@@ -38,8 +38,9 @@ void fSolveAnulareZbor(FILE* input, GraphMat* graphMat);
 void fSolveAdaugaZbor(FILE* input, GraphMat* graphMat);
 void fSolveMaxResurse(FILE* input, FILE* output, int nrIslands, Island* vIslands);
 void fSolveMaxCantitate(FILE* input, FILE* output, int nrIslands, Island* vIslands);
-void fSolveTimpZbor(FILE* input, GraphMat* graphMat);
-void fSolveMinZbor(FILE* input, GraphMat* graphMat);
+void fSolveDrumZbor(FILE* input, FILE* output, GraphMat* graphMat);
+void fSolveTimpZbor(FILE* input, FILE* output, GraphMat* graphMat);
+void fSolveMinZbor(FILE* input, FILE* output, GraphMat* graphMat);
 void fNameToIndex(char* name, int* adrIndex);
 
 #endif

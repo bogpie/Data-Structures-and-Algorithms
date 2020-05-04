@@ -51,12 +51,12 @@ void fDijkstra(GraphMat* graphMat, int source, int destination, int* adrTime, in
 				{
 					vDist[neighbourIndex] = newDist;
 					HeapNode* newNode = malloc(sizeof(HeapNode));
-					newNode->dist = newDist;
+					newNode->dist = newDist + wait;
 					newNode->index = neighbourIndex;
 					vPrev[neighbourIndex] = minNode->index;
 					int crtTime = INT_MAX, foundPosition = -1;
 					fFindInHeap(heap, neighbourIndex, &foundPosition, &crtTime);
-					if (newNode->dist + wait < crtTime) // stationarea ar putea fi o problema
+					if (newNode->dist < crtTime) // stationarea ar putea fi o problema
 					{
 						if (foundPosition != -1)
 						{

@@ -211,7 +211,6 @@ void fInitGraphMat(GraphMat** adrGraphMat, int nrVertexes, int nrEdges)
 {
 	GraphMat* graphMat = malloc(sizeof(GraphMat));
 	fPointerTest(graphMat);
-	*adrGraphMat = graphMat;
 	graphMat->mat = calloc(nrVertexes + 1, sizeof(int*)); // indexare in input de la 1
 	graphMat->nrVertexes = nrVertexes;
 	graphMat->nrEdges = nrEdges;
@@ -222,6 +221,7 @@ void fInitGraphMat(GraphMat** adrGraphMat, int nrVertexes, int nrEdges)
 	}
 
 	fPointerTest(graphMat->mat);
+	*adrGraphMat = graphMat;
 }
 
 void fEraseGraphList(GraphList* graphList)

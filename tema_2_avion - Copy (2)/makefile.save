@@ -1,7 +1,0 @@
-build:
-	gcc -Wall piele_bogdan_312ab_tema_2.c MinHeapHeader. MainHeader.c GraphHeader.c TrieHeader.c UtilHeader.c -o avion
-run:
-	./avion date.in rezultate.out
-clean:
-	rm -f *.o
-	rm -f avion

@@ -10,7 +10,6 @@ int main(int argc, char* argv[])
 	Island* vIslands;
 	fReadIslands(input, &nrIslands, &vIslands);
 
-
 	GraphMat* graphMat;
 	fReadConnections(input, nrIslands, &graphMat);
 	
@@ -19,7 +18,7 @@ int main(int argc, char* argv[])
 		char query[NAMELENGTH];
 		query[0] = '\0';
 		fscanf(input, "%s", query);
-		if (query[0] == '\0')
+		if (query[0] == '\0' || feof(input))
 		{
 			break;
 		}
@@ -45,20 +44,26 @@ int main(int argc, char* argv[])
 		{
 			fSolveMaxResurse(input, output, nrIslands, vIslands);
 		}
-		else if (!strcmp(query, "max_cantiate_resurse"))
+		else if (!strcmp(query, "max_cantitate"))
 		{
 			fSolveMaxCantitate(input, output, nrIslands, vIslands);
 		}
+		else if (!strcmp(query, "drum_zbor"))
+		{
+			fSolveDrumZbor(input, output, graphMat);
+		}
 		else if (!strcmp(query, "timp_zbor"))
 		{
-			fSolveTimpZbor(input, graphMat);
+			fSolveTimpZbor(input, output,graphMat);
 		}
 		else if (!strcmp(query, "min_zbor"))
 		{
-			fSolveMinZbor(input, graphMat);
+			fSolveMinZbor(input, output, graphMat);
 		}
-		else exit(1); // ar fi greseala la parsare
-
+		else
+		{
+			exit(2); // ar fi greseala la parsare
+		}
 	}
 	return 0;
 }
