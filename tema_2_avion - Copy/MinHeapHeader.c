@@ -214,13 +214,14 @@ void fDeleteNode(Heap* heap, int pos)
 	}
 }
 
-void fFindInHeap(Heap* heap, int searchedIndex, int* adrFoundPosition)
+void fFindInHeap(Heap* heap, int searchedIndex, int* adrFoundPosition, int* adrCrtTime)
 {
 	int i;
 	for (i = 0; i < heap->size;++i)
 	{
 		if (heap->arr[i]->index == searchedIndex)
 		{
+			*adrCrtTime = heap->arr[i]->dist;
 			*adrFoundPosition = i;
 			return;
 		}

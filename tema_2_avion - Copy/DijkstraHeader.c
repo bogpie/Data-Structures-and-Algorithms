@@ -10,7 +10,7 @@ void fPrintPath(int* vPrev, int index)
 	printf("%d ", index);
 }
 
-void fDijkstra(GraphMat* graphMat, int source,int destination,int* adrTime,int wait)
+void fDijkstra(GraphMat* graphMat, int source, int destination, int* adrTime, int wait)
 {
 	int nrVertexes = graphMat->nrVertexes;
 
@@ -27,7 +27,7 @@ void fDijkstra(GraphMat* graphMat, int source,int destination,int* adrTime,int w
 	{
 		vDist[i] = INT_MAX;
 		vPrev[i] = -1;
-		vVisited[i] = 0;	
+		vVisited[i] = 0;
 	}
 	vDist[source] = 0;
 	heapNode->dist = 0;
@@ -53,13 +53,15 @@ void fDijkstra(GraphMat* graphMat, int source,int destination,int* adrTime,int w
 					newNode->dist = newDist;
 					newNode->index = neighbourIndex;
 					vPrev[neighbourIndex] = minNode->index;
-					int foundPosition = -1;
-					fFindInHeap(heap, neighbourIndex, &foundPosition);
-					if (foundPosition != -1)
+					int crtTime = -1, foundPosition = -1;
+					fFindInHeap(heap, neighbourIndex, &foundPosition, &crtTime);
+					if (foundPosition != -1 && newNode->dist + wait < crtTime) // stationarea ar putea fi o problema
 					{
 						fDeleteNode(heap, foundPosition);
+						fInsertInHeap(heap, newNode);
 					}
-					fInsertInHeap(heap, newNode);
+
+
 				}
 
 			}
@@ -74,7 +76,7 @@ void fDijkstra(GraphMat* graphMat, int source,int destination,int* adrTime,int w
 	}*/
 
 	*adrTime = vDist[destination];
-	if(vDist != NULL) free(vDist);
-	if(vPrev != NULL) free(vPrev);
-	if(vVisited !=NULL) free(vVisited);
+	if (vDist != NULL) free(vDist);
+	if (vPrev != NULL) free(vPrev);
+	if (vVisited != NULL) free(vVisited);
 }

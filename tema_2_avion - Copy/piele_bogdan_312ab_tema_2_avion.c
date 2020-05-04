@@ -6,24 +6,32 @@ int main(int argc, char* argv[])
 	FILE* output = fopen(argv[2], "w");
 
 	int nrIslands;
-	Island* vIslands = malloc(sizeof(Island) * nrIslands);
-	fReadIslands(input, &nrIslands, vIslands);
+
+	Island* vIslands;
+	fReadIslands(input, &nrIslands, &vIslands);
+
+
 	GraphMat* graphMat;
 	fReadConnections(input, nrIslands, &graphMat);
-
-
-	while (!feof(input))
+	
+	while (1)
 	{
 		char query[NAMELENGTH];
+		query[0] = '\0';
 		fscanf(input, "%s", query);
+		if (query[0] == '\0')
+		{
+			break;
+		}
+
 
 		if (!strcmp(query, "conexiune"))
 		{
-			fSolveConexiune(input, graphMat);
+			fSolveConexiune(input, output, graphMat);
 		}
 		else if (!strcmp(query, "legatura"))
 		{
-			fSolveLegatura(input, graphMat);
+			fSolveLegatura(input, output,graphMat);
 		}
 		else if (!strcmp(query, "adauga_zbor"))
 		{
@@ -35,11 +43,11 @@ int main(int argc, char* argv[])
 		}
 		else if (!strcmp(query, "max_resurse"))
 		{
-			fSolveMaxResurse(input, nrIslands, vIslands);
+			fSolveMaxResurse(input, output, nrIslands, vIslands);
 		}
 		else if (!strcmp(query, "max_cantiate_resurse"))
 		{
-			fSolveMaxCantitate(input, nrIslands, vIslands);
+			fSolveMaxCantitate(input, output, nrIslands, vIslands);
 		}
 		else if (!strcmp(query, "timp_zbor"))
 		{

@@ -4,6 +4,6 @@
 
 #define DIJKSTRAHEADER
 void fPrintPath(int* vPrev, int index);
-void fDijkstra(GraphMat* graphMat, int source, int destination, int* adrTime, int wait);
+void fDijkstra(GraphMat* graphMat, int source, int destination, int* adrTime, int* vPrev, int wait);
 
 #endif

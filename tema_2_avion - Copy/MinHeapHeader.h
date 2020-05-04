@@ -48,6 +48,6 @@ void fDeleteNode(Heap* heap, int pos);
 
 void fHeapSort(Heap* heap);
 
-void fFindInHeap(Heap* heap, int searchedIndex, int *adrFoundPosition);
+void fFindInHeap(Heap* heap, int searchedIndex, int* adrFoundPosition,int *adrCrtTime);
 
 #endif

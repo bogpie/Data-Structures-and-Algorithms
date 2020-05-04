@@ -8,10 +8,10 @@ void fCreateGraphMat(GraphMat* graphMat, FILE* input)
 	{
 		char leftName[NAMELENGTH], rightName[NAMELENGTH];
 		int leftIndex, rightIndex, cost;
-		char aux;
-		fscanf(input, "%s%c%s%d", leftName, &aux, rightName, &cost);
-		int leftIndex = leftName[strlen(leftName) - 1] - '0';
-		int rightIndex = rightName[strlen(rightName) - 1] - '0';
+		char aux[3];
+		fscanf(input, "%s%s%s%d", leftName, aux, rightName, &cost);
+		fNameToIndex(leftName, &leftIndex);
+		fNameToIndex(rightName, &rightIndex);
 		graphMat->mat[leftIndex][rightIndex] = cost;
 		graphMat->mat[rightIndex][leftIndex] = cost;
 	}
@@ -66,7 +66,7 @@ void fInitGraphList(GraphList** adrGraphList, int nrVertexes, int nrEdges)
 	graphList = malloc(sizeof(GraphList));
 	graphList->nrEdges = 0;
 	graphList->nrVertexes = nrVertexes;
-	graphList->vLists = malloc(sizeof(ListNode*) * nrVertexes);
+	graphList->vLists = malloc(sizeof(ListNode*) * nrVertexes + 1);
 	*adrGraphList = graphList;
 
 	int i;
@@ -192,18 +192,19 @@ void fFindNeighbourList(GraphList* graphList, int x)
 	}
 }
 
-void fFindNeighbourMat(GraphMat* graphMat, int x)
+void fFindNeighbourMat(FILE* output,GraphMat* graphMat, int x)
 {
 	int nrVertexes = graphMat->nrVertexes;
 	//printf("\nincidente cu %d: ", x);
 	int j;
-	for (j = 0; j < nrVertexes; ++j)
+	for (j = 1; j <= nrVertexes; ++j)
 	{
-		if (graphMat->mat[x][j] == 1)
+		if (graphMat->mat[x][j] != 0)
 		{
-			printf("Island%d ", j);
+			fprintf(output, "Island%d ", j);
 		}
 	}
+	fprintf(output, "\n");
 }
 
 void fInitGraphMat(GraphMat** adrGraphMat, int nrVertexes, int nrEdges)
@@ -211,13 +212,13 @@ void fInitGraphMat(GraphMat** adrGraphMat, int nrVertexes, int nrEdges)
 	GraphMat* graphMat = malloc(sizeof(GraphMat));
 	fPointerTest(graphMat);
 	*adrGraphMat = graphMat;
-	graphMat->mat = calloc(nrVertexes, sizeof(int*));
+	graphMat->mat = calloc(nrVertexes + 1, sizeof(int*)); // indexare in input de la 1
 	graphMat->nrVertexes = nrVertexes;
 	graphMat->nrEdges = nrEdges;
 	int i;
-	for (i = 0; i < nrVertexes; ++i)
+	for (i = 1; i <= nrVertexes; ++i) // indexare in input de la 1
 	{
-		graphMat->mat[i] = calloc(nrVertexes, sizeof(int));
+		graphMat->mat[i] = calloc(nrVertexes + 1, sizeof(int));
 	}
 
 	fPointerTest(graphMat->mat);
@@ -253,7 +254,7 @@ void fEraseGraphList(GraphList* graphList)
 int fTestEdgeMat(GraphMat* graphMat, int x, int y)
 {
 	//printf("\ntest pe graficul cu matrice: ");
-	if (graphMat->mat[x][y] && graphMat->mat[y][x] == 0)
+	if (graphMat->mat[x][y] && graphMat->mat[y][x])
 	{
 		return 1;
 	}

@@ -20,7 +20,7 @@ void fInsertInTrie(char* word, TrieNode* trieRoot) // inserarea unui cuvant intr
 	int lg = strlen(word), i;
 	for (i = 0; i < lg; ++i) // iteram prin literele cuvantului de adaugat
 	{
-		int key = (int)word[i];
+		int key = (int)((tolower)(word[i]));
 		newNode = oldNode->vLetters[key - OFFSET]; // parcurgem trieul, pe ramura asociata literei curente din cuvant
 		if (newNode == NULL)
 		{
@@ -44,12 +44,19 @@ void fModifyWord(char** adrWord, char car, int pos) // functie de concatenare al
 	}
 	else
 	{
-		if (sizeof(word) < pos + 1)
+		if (strlen(word) < pos + 1)
 		{
 			// il realocam doar daca e nevoie de marirea dimensiunii sale
-			char* aux = (char*)realloc(word, sizeof(char) * (pos + 1));
+
+			char* oldWord = malloc(pos + 1);
+			strcpy(oldWord, word);
+			int lg = strlen(word);
+			char* aux = (char*)realloc(word, (lg + 1) * sizeof(char)); //word, (lg + 1) * sizeof(char)
+
 			if (aux)
 			{
+				strcpy(aux, oldWord);
+				free(oldWord);
 				word = aux;
 			}
 			else
@@ -65,13 +72,33 @@ void fModifyWord(char** adrWord, char car, int pos) // functie de concatenare al
 	*adrWord = word;
 }
 
-void fPrintTrie(FILE* output,TrieNode* trieRoot, char* word, int pos, int* adrNrWords) // numararea si afisarea cuvintelor din arbore; parametrii: radacina, un cuvant care se modifica in apel recursiv si pozitia ultimei litere
+void fCountTrie(TrieNode* trieRoot, int pos, int* adrNrWords) // numararea cuvintelor din arbore; parametrii: radacina, un cuvant care se modifica in apel recursiv si pozitia ultimei litere
 {
 	if (trieRoot == NULL)
 	{
 		return; // nu parcurgem dincolo de o frunza
 	}
+	int i;
+	for (i = 0; i < ALPHABET; ++i)  // pentru fiecare litera din alfabet
+	{
+		if (trieRoot->vLetters[i] != NULL) // daca sirul se continua in litera cu ordinul i 
+		{
+			fCountTrie(trieRoot->vLetters[i], pos + 1, adrNrWords); // apelam recursiv functia, avand acum ca parametrii noul nod, noul cuvant si pozitia anterioara + 1 (am adaugat o litera)
+		}
 
+	}
+	if (trieRoot->isEnd == 1) // daca am ajuns la finalul cuvantului
+	{
+		++* adrNrWords;
+	}
+}
+
+void fPrintTrie(FILE* output, TrieNode* trieRoot, char* word, int pos) // afisarea cuvintelor din arbore; parametrii: radacina, un cuvant care se modifica in apel recursiv si pozitia ultimei litere
+{
+	if (trieRoot == NULL)
+	{
+		return; // nu parcurgem dincolo de o frunza
+	}
 	int i;
 	for (i = 0; i < ALPHABET; ++i)  // pentru fiecare litera din alfabet
 	{
@@ -79,21 +106,21 @@ void fPrintTrie(FILE* output,TrieNode* trieRoot, char* word, int pos, int* adrNr
 		{
 			char car = (char)(i + OFFSET);
 			fModifyWord(&word, car, pos);  // concatenam cuvantul cu litera
-			fPrintTrie(output,trieRoot->vLetters[i], word, pos + 1,adrNrWords); // apelam recursiv functia, avand acum ca parametrii noul nod, noul cuvant si pozitia anterioara + 1 (am adaugat o litera)
+			fPrintTrie(output, trieRoot->vLetters[i], word, pos + 1); // apelam recursiv functia, avand acum ca parametrii noul nod, noul cuvant si pozitia anterioara + 1 (am adaugat o litera)
 		}
 
 	}
-
 	if (trieRoot->isEnd == 1) // daca am ajuns la finalul cuvantului
 	{
-		fModifyWord(&word, '\0', pos); // adaugam si '\0' pentru afisare corecta
-		++*adrNrWords;
+		fModifyWord(&word, '\0', pos);
+		// adaugam si '\0' pentru afisare corecta
 		// functia de afisare a cuvintelor din trie este apelata si in gasirea sufixelor
 		// prin urmare, daca termenul caruia ii cautam sufix exista in trie si nu are sufixe atunci programul ar interpreta si un sufix nul pe care nu dorim sa il afisam
 		// astfel:
 		if (pos >= 1)
 		{
-			fprintf(output,"%s ", word);
+			word[0] = toupper(word[0]);
+			fprintf(output, "%s ", word);
 		}
 	}
 }

@@ -3,41 +3,38 @@
 void fReadIslands(FILE* input, int* adrNrIslands, Island** adrVectorIslands)
 {
 	int nrIslands = 0;
-	Island* vIslands = malloc(sizeof(Island) * nrIslands + 1); //indexarea insulelor in input e de al 1
-
 	fscanf(input, "%d", &nrIslands);
+	*adrNrIslands = nrIslands;
+
+	Island* vIslands = malloc(sizeof(Island) * (nrIslands + 2)); //indexarea insulelor in input e de al 1
+
+
+
 
 	for (int idIsland = 1; idIsland <= nrIslands; ++idIsland)
 	{
 		char vChar[NAMELENGTH];
 		Island island;
 
-		fgets(vChar, NAMELENGTH, input);
-		while (vChar[0] != '\n');
+		fscanf(input, "%s", vChar);
 
-		while (vChar[0] != 'I')
-		{
-			fscanf(input, "%s", vChar);
-		}
+
 
 		fStrAlloc(&island.name, vChar);
 
+		//fscanf(input, "%s", vChar);island.nrResources = atoi(vChar);
 		fscanf(input, "%d", &island.nrResources);
-		island.vResources = malloc(sizeof(Resource) * island.nrResources);
+
+		island.vResources = malloc(sizeof(Resource) * (island.nrResources + 2));
 		for (int idResource = 0; idResource < island.nrResources; ++idResource)
 		{
-			Resource resource;// optional
-			//char vChar[NAMELENGTH];
-			fscanf(input, "%s%d", vChar, &resource.quantity);
+			Resource resource;
+			fscanf(input, "%s", vChar);
 			fStrAlloc(&resource.name, vChar);
+			//fscanf(input, "%s", vChar); resource.quantity = atoi(vChar);
+			fscanf(input, "%d", &resource.quantity);
 			island.vResources[idResource] = resource;
-		}
-		char breakLine;
-		
-		fscanf(input, "%c", &breakLine);
-		if (breakLine != '\n')
-		{
-			fscanf(input, "%c", &breakLine);
+
 		}
 
 		vIslands[idIsland] = island;
@@ -80,7 +77,7 @@ void fSolveLegatura(FILE* input, FILE* output, GraphMat* graphMat)
 	char islandName[NAMELENGTH];
 	fscanf(input, "%s", islandName);
 	int islandIndex = islandName[strlen(islandName) - 1] - '0';
-	fFindNeighbourMat(output,graphMat, islandIndex);
+	fFindNeighbourMat(output, graphMat, islandIndex);
 }
 
 void fSolveMaxResurse(FILE* input, FILE* output, int nrIslands, Island* vIslands)
@@ -99,8 +96,10 @@ void fSolveMaxResurse(FILE* input, FILE* output, int nrIslands, Island* vIslands
 	}
 	char* word = NULL;
 	int nrResources = 0;
+	fCountTrie(trieRoot, 0, &nrResources);
+	fprintf(output, "%d ", nrResources);
+	fPrintTrie(output, trieRoot, word, 0);
 	fprintf(output, "\n");
-	fPrintTrie(output,trieRoot, word, 0, &nrResources);
 }
 
 void fSolveAdaugaZbor(FILE* input, GraphMat* graphMat) //move to graphheader??
@@ -129,7 +128,6 @@ void fSolveMaxCantitate(FILE* input, FILE* output, int nrIslands, Island* vIslan
 	char searched[NAMELENGTH];
 	int maxim = -1;
 	fscanf(input, "%s", searched);
-	fprintf(output, "\n");
 	for (int idIsland = 1; idIsland <= nrIslands; ++idIsland)
 	{
 		Island island = vIslands[idIsland];
@@ -165,33 +163,45 @@ void fSolveMaxCantitate(FILE* input, FILE* output, int nrIslands, Island* vIslan
 			}
 		}
 	}
-
+	fprintf(output, "\n");
 }
 
-void fSolveTimpZbor(FILE* input, GraphMat* graphMat)
+void fSolveDrumZbor(FILE* input, FILE* output, GraphMat* graphMat) /// lipeste !!
 {
 	char leftName[NAMELENGTH], rightName[NAMELENGTH];
-	int cost;
-	fscanf(input, "%s%s%d", leftName, rightName, &cost);
+	fscanf(input, "%s%s", leftName, rightName);
 	int leftIndex, rightIndex;
 	fNameToIndex(leftName, &leftIndex);
 	fNameToIndex(rightName, &rightIndex);
 	int time;
-
-	fDijkstra(graphMat, leftIndex, rightIndex, &time, 0);
+	int* vPrev = malloc(sizeof(int) * (graphMat->nrVertexes + 1));
+	fDijkstra(graphMat, leftIndex, rightIndex, &time, vPrev, 0);
+	//printf("\nde la nodul sursa %d la nodurile:", source);
+	fPrintPath(vPrev, leftIndex);
 }
 
-void fSolveMinZbor(FILE* input, GraphMat* graphMat)
+void fSolveTimpZbor(FILE* input, FILE* output, GraphMat* graphMat)
 {
 	char leftName[NAMELENGTH], rightName[NAMELENGTH];
-	int cost;
-	fscanf(input, "%s%s%d", leftName, rightName, &cost);
+	fscanf(input, "%s%s", leftName, rightName);
 	int leftIndex, rightIndex;
 	fNameToIndex(leftName, &leftIndex);
 	fNameToIndex(rightName, &rightIndex);
 	int time;
+	int* vPrev = malloc(sizeof(int) * (graphMat->nrVertexes + 1));
+	fDijkstra(graphMat, leftIndex, rightIndex, &time, vPrev, 0);
+}
 
-	fDijkstra(graphMat, leftIndex, rightIndex, &time, 15);
+void fSolveMinZbor(FILE* input, FILE* output, GraphMat* graphMat)
+{
+	char leftName[NAMELENGTH], rightName[NAMELENGTH];
+	fscanf(input, "%s%s", leftName, rightName);
+	int leftIndex, rightIndex;
+	fNameToIndex(leftName, &leftIndex);
+	fNameToIndex(rightName, &rightIndex);
+	int time;
+	int* vPrev = malloc(sizeof(int) * (graphMat->nrVertexes + 1));
+	fDijkstra(graphMat, leftIndex, rightIndex, &time, vPrev, 15);
 }
 
 void fNameToIndex(char* name, int* adrIndex)

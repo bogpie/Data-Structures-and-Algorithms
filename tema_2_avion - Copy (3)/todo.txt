@@ -1,4 +1,0 @@
-fpointertest
-freepointers
-readme
-??consistency static dynamic

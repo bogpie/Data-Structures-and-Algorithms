@@ -16,7 +16,7 @@ struct TrieNode
 
 void fInitTrieNode(TrieNode** adrNode);
 void fInsertInTrie(char* word, TrieNode* trieRoot);
-void fPrintTrie(TrieNode* trieRoot, char* word, int pos,int* adrNrWords);
+void fPrintTrie(FILE* output,TrieNode* trieRoot, char* word, int pos,int* adrNrWords);
 void fSearchInTrie(TrieNode* trieRoot, char* word, int* adrFound, TrieNode** adrFoundNode);
 void fEraseTree(TrieNode* trieRoot);
 void fModifyWord(char** adrWord, char car, int pos);

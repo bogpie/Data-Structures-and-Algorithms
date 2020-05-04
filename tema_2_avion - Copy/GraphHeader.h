@@ -38,7 +38,7 @@ void fEraseGraphMat(GraphMat* graphMat);
 void fPrintGraphList(GraphList* graphList);
 void fPrintGraphMat(GraphMat* graphMat);
 void fFindNeighbourList(GraphList* graphList, int x);
-void fFindNeighbourMat(GraphMat* graphMat, int x);
+void fFindNeighbourMat(FILE* output,GraphMat* graphMat, int x);
 void fInitGraphMat(GraphMat** adrGraphMat, int nrVertexes, int nrEdges);
 void fEraseGraphList(GraphList* graphList);
 int fTestEdgeMat(GraphMat* graphMat, int x, int y);

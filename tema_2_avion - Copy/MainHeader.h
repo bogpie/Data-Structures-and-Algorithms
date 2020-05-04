@@ -6,6 +6,7 @@
 #define _CRT_SECURE_NO_WARNINGS
 
 #include "UtilHeader.h"
+
 #include "GraphHeader.h"
 #include "MinHeapHeader.h"
 #include "DijkstraHeader.h"
@@ -29,14 +30,16 @@ struct Island
 	int tolerance;
 };
 
-void fReadIslands(FILE* input, int* adrNrIslands, Island* vIslands);
+void fReadIslands(FILE* input, int* adrNrIslands, Island** adrVectorIslands);
 void fReadConnections(FILE* input, int nrIslands, GraphMat** adrGraphMat);
-void fSolveConexiune(FILE* input, GraphMat* grpahMat);
-void fSolveLegatura(FILE* input, GraphMat* grpahMat);
+void fSolveConexiune(FILE* input, FILE* output, GraphMat* graphMat);
+void fSolveLegatura(FILE* input, FILE* output, GraphMat* graphMat);
 void fSolveAnulareZbor(FILE* input, GraphMat* graphMat);
-void fSolveMaxResurse(FILE* input, int nrIslands, Island* vIslands);
-void fSolveMaxCantitate(FILE* input, int nrIslands, Island* vIslands);
+void fSolveAdaugaZbor(FILE* input, GraphMat* graphMat);
+void fSolveMaxResurse(FILE* input, FILE* output, int nrIslands, Island* vIslands);
+void fSolveMaxCantitate(FILE* input, FILE* output, int nrIslands, Island* vIslands);
 void fSolveTimpZbor(FILE* input, GraphMat* graphMat);
 void fSolveMinZbor(FILE* input, GraphMat* graphMat);
+void fNameToIndex(char* name, int* adrIndex);
 
 #endif

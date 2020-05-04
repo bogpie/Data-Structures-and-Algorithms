@@ -7,10 +7,10 @@ void fPrintPath(int* vPrev, int index)
 		return;
 	}
 	fPrintPath(vPrev, vPrev[index]);
-	printf("%d ", index);
+	printf("Island%d ", index);
 }
 
-void fDijkstra(GraphMat* graphMat, int source, int destination, int* adrTime, int wait)
+void fDijkstra(GraphMat* graphMat, int source, int destination, int* adrTime, int* vPrev, int wait)
 {
 	int nrVertexes = graphMat->nrVertexes;
 
@@ -18,9 +18,9 @@ void fDijkstra(GraphMat* graphMat, int source, int destination, int* adrTime, in
 	fInitHeap(&heap, nrVertexes);
 	HeapNode* heapNode = malloc(sizeof(HeapNode));
 
-	int* vDist = malloc(nrVertexes * sizeof(int));
-	int* vPrev = malloc(nrVertexes * sizeof(int));
-	int* vVisited = malloc(nrVertexes * sizeof(int));
+	int* vDist = malloc((nrVertexes+1) * sizeof(int));
+	//int* vPrev = malloc(nrVertexes * sizeof(int));
+	int* vVisited = malloc((nrVertexes + 1) * sizeof(int));
 
 	int i;
 	for (i = 0; i < nrVertexes; ++i)
@@ -68,12 +68,7 @@ void fDijkstra(GraphMat* graphMat, int source, int destination, int* adrTime, in
 		}
 	}
 
-	/*printf("\nde la nodul sursa %d la nodurile:", source);
-	for (i = 0; i < nrVertexes; ++i)
-	{
-		printf("\n%d -> distanta %d pe traseul : ", i, vDist[i]);
-		fPrintPath(vPrev, i);
-	}*/
+	
 
 	*adrTime = vDist[destination];
 	if (vDist != NULL) free(vDist);

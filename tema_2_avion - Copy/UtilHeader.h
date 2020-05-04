@@ -9,6 +9,7 @@
 	#include <stdio.h>
 	#include <stdlib.h>
 	#include <string.h>
+	#include <limits.h>
 
 	int fMin(int a, int b);
 	int fMax(int a, int b);
