@@ -39,3 +39,21 @@ void fPointerTest(void* ptr)
 	}
 }
 
+void fSort(int* arr, int size)
+{
+	int sorted = 0;
+	while (!sorted)
+	{
+		sorted = 1;
+		for (int i = 1; i < size; ++i)
+		{
+			if (arr[i] < arr[i - 1])
+			{
+				sorted = 0;
+				fSwap(&arr[i], &arr[i - 1]);
+			}
+		}
+	}
+
+}
+

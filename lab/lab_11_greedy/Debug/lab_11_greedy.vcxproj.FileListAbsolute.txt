@@ -1,0 +1,2 @@
+C:\Users\Administrator\Documents\GitHub\sda\lab_11_greedy\Debug\lab_11_greedy.exe
+C:\Users\Administrator\Documents\GitHub\sda\lab_11_greedy\Debug\lab_11_greedy.pdb

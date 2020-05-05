@@ -1,7 +1,6 @@
-#include "MinHeapHeader.h"
-#include <limits.h>
+#include "MainHeader.h"
 
-void fCreateHeap(Heap** adrHeap, int capacity)
+void fInitHeap(Heap** adrHeap, int capacity)
 {
 	Heap* heap = malloc(sizeof(Heap));
 
@@ -12,7 +11,7 @@ void fCreateHeap(Heap** adrHeap, int capacity)
 
 	heap->size = 0;
 	heap->capacity = capacity;
-	heap->arr = malloc(sizeof(int) * capacity);
+	heap->arr = malloc(sizeof(Object) * capacity);
 
 	*adrHeap = heap;
 }
@@ -20,7 +19,7 @@ void fCreateHeap(Heap** adrHeap, int capacity)
 void fResize(Heap* heap)
 {
 	heap->capacity *= 2;
-	int* arr = realloc(heap->arr, sizeof(int) * heap->capacity);
+	Object* arr = realloc(heap->arr, sizeof(Object) * heap->capacity);
 	if (heap->arr == NULL)
 	{
 		printf("no more memory left");
@@ -45,7 +44,7 @@ void fPrint(Heap* heap)
 	int i;
 	for (i = 0; i < heap->size; ++i)
 	{
-		printf("%d ", (*heap).arr[i]);
+		printf("%d ", (*heap).arr[i].index);
 	}
 }
 
@@ -95,13 +94,13 @@ void fFindMinim(Heap* heap, int* adrMinim)
 	{
 		*adrMinim = INT_MAX;
 	}
-	*adrMinim = heap->arr[0];
+	*adrMinim = heap->arr[0].efficiency;
 }
 
-void fSwap(int* adrA, int* adrB)
+void fSwap(Object* adrA, Object* adrB)
 {
 	//interschimbare
-	int aux = *adrA;
+	Object aux = *adrA;
 	*adrA = *adrB;
 	*adrB = aux;
 }
@@ -122,17 +121,17 @@ void fHeapifyDown(Heap* heap, int pos)
 		{
 			return;
 		}
-		int* arr = heap->arr;
+		Object* arr = heap->arr;
 		if (leftChild != -1)
 		{
-			if (arr[leftChild] < arr[posMin])
+			if (arr[leftChild].efficiency < arr[posMin].efficiency)
 			{
 				posMin = leftChild;
 			}
 		}
 		if (rightChild != -1)
 		{
-			if (arr[rightChild] < arr[posMin])
+			if (arr[rightChild].efficiency < arr[posMin].efficiency)
 			{
 				posMin = rightChild;
 			}
@@ -163,9 +162,9 @@ void fHeapifyUp(Heap* heap, int pos)
 		{
 			break;
 		}
-		int* arr = heap->arr;
+		Object* arr = heap->arr;
 
-		if (arr[parent] > arr[posMax])
+		if (arr[parent].efficiency > arr[posMax].efficiency)
 		{
 			posMax = parent;
 		}
@@ -180,7 +179,7 @@ void fHeapifyUp(Heap* heap, int pos)
 	return;
 }
 
-void fInsert(Heap* heap, int key)
+void fInsert(Heap* heap, Object obj)
 {
 	int pos;
 	if (heap->size == heap->capacity)
@@ -189,7 +188,7 @@ void fInsert(Heap* heap, int key)
 	}
 
 	pos = heap->size++;
-	heap->arr[pos] = key;
+	heap->arr[pos] = obj;
 
 	fHeapifyUp(heap, pos);
 
@@ -203,9 +202,10 @@ void fDeleteNode(Heap* heap, int pos)
 	int parent;
 	fParent(heap, pos, &parent);
 
-	heap->arr[--heap->size] = 0;
+	--heap->size;
+	heap->arr[heap->size].efficiency = heap->arr[heap->size].cost = heap->arr[heap->size].index = heap->arr[heap->size].weight = 0;
 
-	if (heap->arr[pos] < heap->arr[parent])
+	if (heap->arr[pos].efficiency < heap->arr[parent].efficiency)
 	{
 		fHeapifyUp(heap, pos);
 	}
@@ -222,7 +222,7 @@ void fHeapSort(Heap* heap)
 	{
 		fResize(heap);
 	}
-	for (int i = (n - 1) / 2; i >= 0; --i)
+	for (int i = (n - 1) / 2 ; i >= 0; --i)
 	{
 		fHeapifyDown(heap, i);
 	}
@@ -232,7 +232,7 @@ void fHeapSort(Heap* heap)
 	while (heap->size > 0)
 	{
 		n = heap->size;
-		int popped = heap->arr[0];
+		Object popped = heap->arr[0];
 		fDeleteNode(heap, 0); // care modifica si heap->size
 
 		heap->arr[heap->size] = popped;
