@@ -24,6 +24,7 @@ int main(int argc, char* argv[])
 		}
 		else if (query[0] >= '0' && query[0] <= '9')
 		{
+			nrIslands = atoi(query);
 			break;
 		}
 		else if (!strcmp(query, "conexiune"))
@@ -68,23 +69,51 @@ int main(int argc, char* argv[])
 		}
 	}
 	// testele 9->14
-	int tolerance; //int oldnrislnads?
-	fscanf(input, "%d%d", &nrIslands, &tolerance);
+	int tolerance;
+	int totalPlanes = 0; //int oldnrislnads?
+	short boolContinue = 0;
+	fscanf(input, "%d", &tolerance);
 	for (int idIsland = 1; idIsland <= nrIslands; ++idIsland)
 	{
 		fscanf(input, "%d", &vIslands[idIsland].nrPlanes);
+		int nrPlanes = vIslands[idIsland].nrPlanes;
+		if (nrPlanes > tolerance)
+		{
+			boolContinue = 1;
+		}
+		totalPlanes += nrPlanes;
+	}
+	if (totalPlanes > tolerance * nrIslands)
+	{
+		fprintf(output, "Stack overflow!");
+		return 0;
 	}
 	for (int idIsland = 1; idIsland <= nrIslands; ++idIsland)
 	{
-		Island island = vIslands[idIsland];
-		island.vPlanes = malloc(sizeof(int) * island.nrPlanes);
-		for (int idPlane = 0; idPlane < island.nrPlanes; ++idPlane)
+		vIslands[idIsland].vPlanes = malloc(sizeof(int) * vIslands[idIsland].nrPlanes);
+		for (int idPlane = 0; idPlane < vIslands[idIsland].nrPlanes; ++idPlane)
 		{
-			fscanf(input,"%d", &island.vPlanes[idPlane]);
-			fSort(island.vPlanes, island.nrPlanes);
+			fscanf(input, "%d", &vIslands[idIsland].vPlanes[idPlane]);
 		}
-		vIslands[idIsland] = island;
-
+		vIslands[idIsland] = vIslands[idIsland];
+	}
+	if (!boolContinue)
+	{
+		for (int idIsland = 1; idIsland <= nrIslands; ++idIsland)
+		{
+			fprintf(output, "Island%d\n", idIsland);
+			for (int idPlane = 0; idPlane < vIslands[idIsland].nrPlanes; ++idPlane)
+			{
+				fprintf(output, "%d ", vIslands[idIsland].vPlanes[idPlane]);
+			}
+			fprintf(output,"\n");
+		}
+		fprintf(output, "\n");
+		return 0;
+	}
+	for (int idIsland = 1; idIsland <= nrIslands; ++idIsland)
+	{
+		fCountSort(vIslands[idIsland].vPlanes, vIslands[idIsland].nrPlanes);
 	}
 
 	return 0;

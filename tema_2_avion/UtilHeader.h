@@ -17,6 +17,6 @@ int fMin(int a, int b);
 int fMax(int a, int b);
 void fStrAlloc(char** adrPtr, char str[]);
 void fPointerTest(void* ptr);
-void fSort(int* arr, int size);
+void fCountSort(int* arr, int size);
 
 #endif

@@ -39,21 +39,32 @@ void fPointerTest(void* ptr)
 	}
 }
 
-void fSort(int* arr, int size)
+void fCountSort(int* arr, int size) ///
 {
-	int sorted = 0;
-	while (!sorted)
+	//int sorted = 0;
+	int* freq = malloc(sizeof(int) * 100);
+	
+	int i;
+	for (i = 0; i < size; ++i)
 	{
-		sorted = 1;
-		for (int i = 1; i < size; ++i)
-		{
-			if (arr[i] < arr[i - 1])
-			{
-				sorted = 0;
-				fSwap(&arr[i], &arr[i - 1]);
-			}
-		}
+		++freq[arr[i]];
 	}
 
+	i = 0;
+	while (i < 100)
+	{
+		if (freq[i])
+		{
+			while (freq[i])
+			{
+				arr[i] = ++freq[arr[i]];
+				++i;
+			}
+		}
+		else
+		{
+			++i;
+		}
+	}
 }
 
