@@ -1,0 +1,3 @@
+gcc -Wall piele_bogdan_lab_12.c -o exec
+./exec numeFisier.in 
+(aici input1.in , input2.in,etc)
