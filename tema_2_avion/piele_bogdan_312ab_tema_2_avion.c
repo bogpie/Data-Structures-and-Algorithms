@@ -10,7 +10,8 @@ int main(int argc, char* argv[])
 	Island* vIslands;
 	fReadIslands(input, &nrIslands, &vIslands);
 
-	GraphMat* graphMat = NULL; // ???
+	GraphMat* graphMat;
+	graphMat = NULL;
 	fReadConnections(input, nrIslands, &graphMat);
 
 	while (1)
@@ -84,14 +85,14 @@ int main(int argc, char* argv[])
 		}
 		totalPlanes += nrPlanes;
 	}
-	if (totalPlanes > tolerance* nrIslands)
+	if (totalPlanes > tolerance * nrIslands)
 	{
 		fprintf(output, "Stack overflow!");
 		return 0;
 	}
 	for (int idIsland = 1; idIsland <= nrIslands; ++idIsland)
 	{
-		vIslands[idIsland].vPlanes = malloc(100*sizeof(int) * vIslands[idIsland].nrPlanes);
+		vIslands[idIsland].vPlanes = malloc(sizeof(int) * fMax(vIslands[idIsland].nrPlanes,tolerance));
 		for (int idPlane = 0; idPlane < vIslands[idIsland].nrPlanes; ++idPlane)
 		{
 			fscanf(input, "%d", &vIslands[idIsland].vPlanes[idPlane]);
@@ -116,18 +117,12 @@ int main(int argc, char* argv[])
 	{
 		fCountSort(vIslands[idIsland].vPlanes, vIslands[idIsland].nrPlanes);
 	}
-	Heap** vHeap = malloc(100*sizeof(Heap*) * (nrIslands + 1));
+	Heap** vHeap = malloc(sizeof(Heap*) * (nrIslands + 1));
 
 	for (int idIsland = 1; idIsland <= nrIslands; ++idIsland)
 	{
-		fInitHeap(&vHeap[idIsland], tolerance);
+		fInitHeap(&vHeap[idIsland], 4);
 	}
-	/*for (int idIsland = 1; idIsland <= nrIslands; ++idIsland)
-	{
-		HeapNode* heapNode = malloc(100*sizeof(HeapNode));
-		//heapNode->index = heapNode->dist = 0; fInsertInHeap(vHeap[idIsland], heapNode);
-	}*/
-
 	free(graphMat);
 	fInitGraphMat(&graphMat, nrIslands, 0);
 
@@ -151,11 +146,10 @@ int main(int argc, char* argv[])
 		Island island = vIslands[idIsland];
 		if (island.nrPlanes > tolerance)
 		{
-			vIslands[idIsland].nrPlanes = tolerance;
 			int excess = island.nrPlanes - tolerance;
-			int* vExcess = malloc(100*sizeof(int) * (excess + 1));
+			int* vExcess = malloc(sizeof(int) * excess);
 			int idExcess = 0;
-			for (int idPlane = island.nrPlanes-excess; idPlane < island.nrPlanes; ++idPlane)
+			for (int idPlane = island.nrPlanes - excess; idPlane < island.nrPlanes; ++idPlane)
 			{
 				//int plane = island.vPlanes[idPlane];
 				vExcess[idExcess] = island.vPlanes[idPlane]; // vExcess[1] = 22
@@ -163,29 +157,10 @@ int main(int argc, char* argv[])
 				++idExcess;
 			}
 
-			BackParam backParam;
-			backParam.excess = excess;
-			backParam.graphMat = graphMat;
-			backParam.idIsland = idIsland;
-			backParam.nrIslands = nrIslands;
-			backParam.vIslands = vIslands;
-			backParam.vHeap = vHeap;
-			backParam.level = 0;
-			backParam.vLevel = calloc(100*excess + 1, sizeof(int));
-			backParam.vAlready = calloc(100*nrIslands + 1, sizeof(int));
-			backParam.graphMat = graphMat;
-
-			if (backParam.vHeap[4]->size == 4)
-			{
-				int breakPoint = 1;
-			}
-
-			fBack(backParam);
-			vHeap = backParam.vHeap;
-
 			int boolBreak = 1;
 			for (int idNeighbour = 1; idNeighbour <= nrIslands; ++idNeighbour)
 			{
+				if (idNeighbour == idIsland || !fTestEdgeMat(graphMat, idIsland, idNeighbour)) continue;
 				if (vIslands[idNeighbour].nrPlanes < tolerance)
 				{
 					boolBreak = 0;
@@ -197,6 +172,25 @@ int main(int argc, char* argv[])
 				chainTransfer = 1;
 				break;
 			}
+
+			BackParam backParam;
+			backParam.excess = excess;
+			backParam.graphMat = graphMat;
+			backParam.idIsland = idIsland;
+			backParam.nrIslands = nrIslands;
+			backParam.vIslands = vIslands;
+			backParam.vHeap = vHeap;
+			backParam.level = 0;
+			backParam.vLevel = calloc(100 * excess + 1, sizeof(int));
+			backParam.vAlready = calloc(100 * nrIslands + 1, sizeof(int));
+			backParam.graphMat = graphMat;
+
+
+			vIslands[idIsland].nrPlanes = tolerance;
+			fBack(backParam);
+			vHeap = backParam.vHeap;
+
+
 
 			for (int idIsland2 = 1; idIsland2 <= nrIslands; ++idIsland2)
 			{
@@ -258,35 +252,84 @@ int main(int argc, char* argv[])
 	if (chainTransfer) // transfer in lant
 	{
 		int q[20];
-		int u = 0, p = 0, size = 0;
-		int excess;
-
-		for (int idIsland = 1; idIsland <= nrIslands; ++idIsland)
+		int* inQueue = NULL;;
+		while (chainTransfer)
 		{
-			if (vIslands[idIsland].nrPlanes > tolerance)
+			chainTransfer = 0;
+			if (inQueue != NULL) free(inQueue);
+			int* inQueue = calloc(nrIslands + 1, sizeof(int));
+			int p = 0, u = 0;
+			int excess;
+
+			for (int idIsland = 1; idIsland <= nrIslands; ++idIsland)
 			{
-				q[0] = idIsland;
-				excess = vIslands[idIsland].nrPlanes - tolerance;
-				size = 1;
+				if (vIslands[idIsland].nrPlanes > tolerance)
+				{
+					q[p = u = 0] = idIsland;
+					inQueue[idIsland] = 1;
+					excess = vIslands[idIsland].nrPlanes - tolerance;
+					chainTransfer = 1;
+					break;
+				}
+			}
+
+			if (!chainTransfer)
+			{
 				break;
 			}
-		}
-		while (size > 0)
-		{
-			int idIsland = q[p];
-			for (int idNeighbour = 1; idNeighbour <= nrIslands; ++idNeighbour)
+
+			while (p <= u)
 			{
-				if (idNeighbour == idIsland)
+				int idIsland = q[p];
+				Island island = vIslands[idIsland];
+				for (int idNeighbour = 1; idNeighbour <= nrIslands; ++idNeighbour)
 				{
-					continue;
+					if (idNeighbour == idIsland || inQueue[idNeighbour] == 1 || !fTestEdgeMat(graphMat, idIsland, idNeighbour))
+					{
+						continue;
+					}
+					Island neighbour = vIslands[idNeighbour];
+					int stop = vIslands[idIsland].nrPlanes - excess - 1;
+					if (neighbour.nrPlanes + excess <= tolerance)
+					{
+						for (int idPlane = island.nrPlanes - 1; idPlane > stop; --idPlane)
+						{
+							vIslands[idNeighbour].vPlanes[vIslands[idNeighbour].nrPlanes++] = island.vPlanes[idPlane];
+							vIslands[idIsland].vPlanes[--vIslands[idIsland].nrPlanes] = 0;
+						}
+						p = u + 1; // ca sa reia coada de la 0
+						break;
+					}
+					else
+					{
+						q[++u] = idNeighbour;
+						inQueue[idNeighbour] = 1;
+					}
+
 				}
-				if (vIslands[idIsland].nrP)
+				++p;
 			}
-			++p;
+		}
+		for (int idIsland = 1; idIsland <= nrIslands; ++idIsland)
+		{
+			fCountSort(vIslands[idIsland].vPlanes, vIslands[idIsland].nrPlanes);
+		}
+		for (int idIsland = 1; idIsland <= nrIslands; ++idIsland)
+		{
+			fprintf(output, "Island%d\n", idIsland);
+			for (int idPlane = 0; idPlane < vIslands[idIsland].nrPlanes; ++idPlane)
+			{
+				fprintf(output, "%d ", vIslands[idIsland].vPlanes[idPlane]);
+			}
+			fprintf(output, "\n");
 		}
 	}
-
-
 	fprintf(output, "\n");
+
+
+	fEraseGraphMat(graphMat);
+
+
+
 	return 0;
 }

@@ -20,10 +20,10 @@ void fCreateGraphMat(GraphMat* graphMat, FILE* input)
 void fEraseGraphMat(GraphMat* graphMat)
 {
 	int i;
-	for (i = 0; i < graphMat->nrVertexes; ++i)
+	for (i = 1; i <= graphMat->nrVertexes; ++i)
 	{
 		int j;
-		for (j = 0; j < graphMat->nrVertexes; ++j)
+		for (j = 1; j <= graphMat->nrVertexes; ++j)
 		{
 			graphMat->mat[i][j] = 0;
 		}
@@ -73,15 +73,15 @@ void fFindNeighbourMat(FILE* output, GraphMat* graphMat, int x)
 
 void fInitGraphMat(GraphMat** adrGraphMat, int nrVertexes, int nrEdges)
 {
-	GraphMat* graphMat = malloc(100*sizeof(GraphMat));
+	GraphMat* graphMat = malloc(sizeof(GraphMat));
 	fPointerTest(graphMat);
-	graphMat->mat = calloc(100*nrVertexes + 1, sizeof(int*)); // indexare in input de la 1
+	graphMat->mat = calloc(nrVertexes + 1, sizeof(int*)); // indexare in input de la 1
 	graphMat->nrVertexes = nrVertexes;
 	graphMat->nrEdges = nrEdges;
 	int i;
 	for (i = 1; i <= nrVertexes; ++i) // indexare in input de la 1
 	{
-		graphMat->mat[i] = calloc(100*nrVertexes + 1, sizeof(int));
+		graphMat->mat[i] = calloc(nrVertexes + 1, sizeof(int));
 	}
 
 	fPointerTest(graphMat->mat);
