@@ -4,7 +4,6 @@
 
 #define MINHEAPHEADER
 
-
 typedef struct HeapNode HeapNode;
 struct HeapNode
 {
@@ -18,7 +17,6 @@ struct Heap
 	int size, capacity;
 	HeapNode **arr;
 };
-
 
 void fInitHeap(Heap** adrHeap, int capacity);
 

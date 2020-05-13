@@ -116,28 +116,16 @@ int main(int argc, char* argv[])
 	{
 		fCountSort(vIslands[idIsland].vPlanes, vIslands[idIsland].nrPlanes);
 	}
-	Heap** vHeap = malloc(sizeof(Heap*) * nrIslands);
-
-	for (int idIsland = 1; idIsland <= nrIslands; ++idIsland)
-	{
-		fInitHeap(&vHeap[idIsland], tolerance);
-	}
-	for (int idIsland = 1; idIsland <= nrIslands; ++idIsland)
-	{
-		HeapNode* heapNode = malloc(sizeof(HeapNode));
-		heapNode->dist = 0;
-		heapNode->index = heapNode->dist;
-		fInsertInHeap(vHeap[idIsland], heapNode);
-	}
 	for (int idIsland = 1; idIsland <= nrIslands; ++idIsland)
 	{
 		Island island = vIslands[idIsland];
 		if (island.nrPlanes > tolerance)
 		{
-			int excess = island.nrPlanes - tolerance;
+			int excess = tolerance - island.nrPlanes;
 			int* vExcess = malloc(sizeof(int) * excess);
+			int* vCorrespPlane = malloc(sizeof(int) * excess);
 			int idExcess = 0;
-			for (int idPlane = excess + 1; idPlane < island.nrPlanes; ++idPlane)
+			for (int idPlane = tolerance - island.nrPlanes; idPlane < island.nrPlanes; ++idPlane)
 			{
 				//int plane = island.vPlanes[idPlane];
 				vExcess[idExcess] = island.vPlanes[idPlane]; // vExcess[1] = 22
@@ -149,43 +137,31 @@ int main(int argc, char* argv[])
 			backParam.graphMat = graphMat;
 			backParam.idIsland = idIsland;
 			backParam.nrIslands = nrIslands;
+			backParam.vExcess = vExcess;
 			backParam.vIslands = vIslands;
-			backParam.vHeap = vHeap;
-			backParam.level = 0;
-			backParam.vLevel = calloc(excess, sizeof(int));
-			backParam.vAlready = calloc(nrIslands, sizeof(int));
-			fBack(backParam);
-			vHeap = backParam.vHeap;
 
-			for (int idIsland = 1; idIsland <= nrIslands; ++idIsland)
+			for (int idNeighbour = 1; idNeighbour <= nrIslands; ++idNeighbour)
 			{
-				if (vHeap[idIsland]->size <= 1) continue;
-				fHeapSort(vHeap[idIsland]);
-			}
-
-			static int vPowers[] = { 1, 10, 100, 1000, 10000 };
-
-			for (int idIsland = 1; idIsland <= nrIslands; ++idIsland)
-			{
-				printf("Island%d\n", idIsland);
-				for (int idSolution = 0; idSolution < vHeap[idIsland]->size; ++idSolution)
+				if (idNeighbour == idIsland
+					|| !fTestEdgeMat(graphMat, idIsland, idNeighbour)
+					|| vIslands[idNeighbour].nrPlanes >= tolerance)
 				{
-					for (int idPlane = 0; idPlane < vIslands[idIsland].nrPlanes; ++idPlane)
-					{
-						printf("%d ", vIslands[idIsland].vPlanes[idPlane]);
-					}
-
-					for (int idDigit = 0; idDigit < tolerance; ++idDigit)
-					{
-						int digit = (vHeap[idIsland]->arr[idDigit]->dist / vPowers[idDigit]) % 10;
-						if (digit == 0) continue;
-						else
-						{
-							printf("%d ", vExcess[digit]);
-						}
-					}
+					continue;
 				}
+
+				int needed = tolerance - vIslands[idNeighbour].nrPlanes;
+
+				backParam.idNeighbour = idNeighbour;
+				int* vLevel = malloc(sizeof(excess));
+				backParam.vLevel = vLevel;
+				for (int given = needed; given >= 1; --given)
+				{
+					backParam.given = given;
+					fBack(backParam);
+				}
+				
 			}
+
 		}
 	}
 	return 0;

@@ -8,23 +8,14 @@ void fReadIslands(FILE* input, int* adrNrIslands, Island** adrVectorIslands)
 
 	Island* vIslands = malloc(sizeof(Island) * (nrIslands + 1)); //indexarea insulelor in input e de al 1
 
-
-
-
 	for (int idIsland = 1; idIsland <= nrIslands; ++idIsland)
 	{
 		char vChar[NAMELENGTH];
 		Island island;
-
 		fscanf(input, "%s", vChar);
-
-
-
 		fStrAlloc(&island.name, vChar);
-
 		//fscanf(input, "%s", vChar);island.nrResources = atoi(vChar);
 		fscanf(input, "%d", &island.nrResources);
-
 		island.vResources = malloc(sizeof(Resource) * island.nrResources);
 		for (int idResource = 0; idResource < island.nrResources; ++idResource)
 		{
@@ -36,7 +27,6 @@ void fReadIslands(FILE* input, int* adrNrIslands, Island** adrVectorIslands)
 			island.vResources[idResource] = resource;
 
 		}
-
 		vIslands[idIsland] = island;
 	}
 	*adrNrIslands = nrIslands;
@@ -230,4 +220,55 @@ void fNameToIndex(char* name, int* adrIndex)
 	int firstDigit = name[strlen(name) - 2] - '0';
 	int secondDigit = name[strlen(name) - 1] - '0';
 	*adrIndex = firstDigit * (firstDigit > 0 && firstDigit < 9) * 10 + secondDigit;
+}
+
+void fBack(BackParam backParam)
+{
+	int idIsland = backParam.idIsland;
+	int nrIslands = backParam.nrIslands;
+	Island* vIslands = backParam.vIslands;
+	int tolerance = vIslands[idIsland].tolerance;
+
+	if (backParam.level == backParam.excess)
+	{
+		int* vCode = calloc(nrIslands, sizeof(int));
+		for (int idLevel = 0; idLevel < backParam.level; ++idLevel)
+		{
+			int idIsland = backParam.vLevel[idLevel];
+			vCode[idIsland] = vCode[idIsland] * 10 + (idLevel+1);
+		}
+		for (int idIsland = 1; idIsland <= nrIslands; ++idIsland)
+		{
+			if (!vCode[idIsland]) continue;
+			int foundPosition,time;
+			fFindInHeap(backParam.vHeap, vCode[idIsland], &foundPosition, &time);
+			if (foundPosition) continue;
+			HeapNode* heapNode = malloc(sizeof(HeapNode));
+			heapNode->dist = heapNode->index = vCode[idIsland];
+			fInsertInHeap(backParam.vHeap[idIsland], heapNode);
+		}
+	}
+
+	for (int idNeighbour = 1; idNeighbour <= nrIslands; ++idNeighbour)
+	{
+		if
+			(
+				idNeighbour == idIsland ||
+				vIslands[idNeighbour].nrPlanes >= tolerance
+				)
+		{
+			continue;
+		}
+		if (backParam.vAlready[idNeighbour] == 1 && backParam.vLevel[backParam.level - 1] != idNeighbour)
+		{
+			continue; 
+			// daca deja i s-au atribuit avioane si nu se continua atribuirea
+		}
+		int oldValue = backParam.vLevel[backParam.level];
+		backParam.vLevel[backParam.level++] = idNeighbour;
+		backParam.vAlready[idNeighbour] = 1;
+		fBack(backParam);
+		backParam.vLevel[--backParam.level] = oldValue;
+		backParam.vAlready[idNeighbour] = 0;
+	}
 }

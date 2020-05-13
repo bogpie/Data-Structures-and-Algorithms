@@ -30,6 +30,20 @@ struct Island
 	int tolerance;
 };
 
+typedef struct BackParam BackParam;
+struct BackParam
+{
+	Island* vIslands;
+	int nrIslands;
+	GraphMat* graphMat;
+	int idIsland;
+	int excess;
+	int* vLevel;
+	int level;
+	int* vAlready;
+	Heap** vHeap;
+};
+
 void fReadIslands(FILE* input, int* adrNrIslands, Island** adrVectorIslands);
 void fReadConnections(FILE* input, int nrIslands, GraphMat** adrGraphMat);
 void fSolveConexiune(FILE* input, FILE* output, GraphMat* graphMat);
@@ -42,5 +56,6 @@ void fSolveDrumZbor(FILE* input, FILE* output, GraphMat* graphMat);
 void fSolveTimpZbor(FILE* input, FILE* output, GraphMat* graphMat);
 void fSolveMinZbor(FILE* input, FILE* output, GraphMat* graphMat);
 void fNameToIndex(char* name, int* adrIndex);
+void fBack(BackParam backParam);
 
 #endif

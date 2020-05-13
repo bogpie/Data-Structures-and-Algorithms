@@ -42,29 +42,28 @@ void fPointerTest(void* ptr)
 void fCountSort(int* arr, int size) ///
 {
 	//int sorted = 0;
-	int* freq = malloc(sizeof(int) * 100);
+	int* freq = calloc(100,sizeof(int));
 	
-	int i;
-	for (i = 0; i < size; ++i)
+	int id;
+	for (id = 0; id < size; ++id)
 	{
-		++freq[arr[i]];
+		++freq[arr[id]];
 	}
 
-	i = 0;
-	while (i < 100)
+	int number = 0;
+	id = 0;
+	while (number < 100)
 	{
-		if (freq[i])
+		if (freq[number]>0)
 		{
-			while (freq[i])
+			while (freq[number])
 			{
-				arr[i] = ++freq[arr[i]];
-				++i;
+				arr[id++] = number;
+				--freq[number];
 			}
 		}
-		else
-		{
-			++i;
-		}
+		++number;
+
 	}
 }
 
