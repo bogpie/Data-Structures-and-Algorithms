@@ -2,7 +2,7 @@
 
 void fInitTrieNode(TrieNode** adrNode) // initializare a unui nod, cu nodul transmsis prin referinta (adica adresa nodului este un parametru)
 {
-	*adrNode = malloc(sizeof(TrieNode)); // initializam dinamic nodul
+	*adrNode = malloc(100*sizeof(TrieNode)); // initializam dinamic nodul
 
 	int i;
 	for (i = 0; i < ALPHABET; ++i) // pentru fiecare litera din alfabet
@@ -40,7 +40,7 @@ void fModifyWord(char** adrWord, char car, int pos) // functie de concatenare al
 	char* word = *adrWord;
 	if (word == NULL)
 	{
-		word = malloc(sizeof(char)); // alocam cuvantul
+		word = malloc(100*sizeof(char)); // alocam cuvantul
 	}
 	/*
 	else
@@ -48,7 +48,7 @@ void fModifyWord(char** adrWord, char car, int pos) // functie de concatenare al
 		if (strlen(word) < pos + 1)
 		{
 			// il realocam doar daca e nevoie de marirea dimensiunii sale
-			char* oldWord = malloc(pos + 1);
+			char* oldWord = malloc(100*pos + 1);
 			strcpy(oldWord, word);
 			int lg = strlen(word);
 			char* aux = (char*)realloc(word, (lg + 1) * sizeof(char)); //word, (lg + 1) * sizeof(char)

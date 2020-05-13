@@ -10,7 +10,7 @@ int main(int argc, char* argv[])
 	Island* vIslands;
 	fReadIslands(input, &nrIslands, &vIslands);
 
-	GraphMat* graphMat;
+	GraphMat* graphMat = NULL; // ???
 	fReadConnections(input, nrIslands, &graphMat);
 
 	while (1)
@@ -91,7 +91,7 @@ int main(int argc, char* argv[])
 	}
 	for (int idIsland = 1; idIsland <= nrIslands; ++idIsland)
 	{
-		vIslands[idIsland].vPlanes = malloc(sizeof(int) * vIslands[idIsland].nrPlanes);
+		vIslands[idIsland].vPlanes = malloc(100*sizeof(int) * vIslands[idIsland].nrPlanes);
 		for (int idPlane = 0; idPlane < vIslands[idIsland].nrPlanes; ++idPlane)
 		{
 			fscanf(input, "%d", &vIslands[idIsland].vPlanes[idPlane]);
@@ -116,7 +116,7 @@ int main(int argc, char* argv[])
 	{
 		fCountSort(vIslands[idIsland].vPlanes, vIslands[idIsland].nrPlanes);
 	}
-	Heap** vHeap = malloc(sizeof(Heap*) * nrIslands);
+	Heap** vHeap = malloc(100*sizeof(Heap*) * (nrIslands + 1));
 
 	for (int idIsland = 1; idIsland <= nrIslands; ++idIsland)
 	{
@@ -124,7 +124,7 @@ int main(int argc, char* argv[])
 	}
 	/*for (int idIsland = 1; idIsland <= nrIslands; ++idIsland)
 	{
-		HeapNode* heapNode = malloc(sizeof(HeapNode));
+		HeapNode* heapNode = malloc(100*sizeof(HeapNode));
 		//heapNode->index = heapNode->dist = 0; fInsertInHeap(vHeap[idIsland], heapNode);
 	}*/
 
@@ -144,6 +144,8 @@ int main(int argc, char* argv[])
 		}
 	}
 
+	int chainTransfer = 0;
+
 	for (int idIsland = 1; idIsland <= nrIslands; ++idIsland)
 	{
 		Island island = vIslands[idIsland];
@@ -151,12 +153,13 @@ int main(int argc, char* argv[])
 		{
 			vIslands[idIsland].nrPlanes = tolerance;
 			int excess = island.nrPlanes - tolerance;
-			int* vExcess = malloc(sizeof(int) * excess);
+			int* vExcess = malloc(100*sizeof(int) * (excess + 1));
 			int idExcess = 0;
-			for (int idPlane = excess + 1; idPlane < island.nrPlanes; ++idPlane)
+			for (int idPlane = island.nrPlanes-excess; idPlane < island.nrPlanes; ++idPlane)
 			{
 				//int plane = island.vPlanes[idPlane];
 				vExcess[idExcess] = island.vPlanes[idPlane]; // vExcess[1] = 22
+				//should sort !!
 				++idExcess;
 			}
 
@@ -168,18 +171,39 @@ int main(int argc, char* argv[])
 			backParam.vIslands = vIslands;
 			backParam.vHeap = vHeap;
 			backParam.level = 0;
-			backParam.vLevel = calloc(excess + 1, sizeof(int));
-			backParam.vAlready = calloc(nrIslands + 1, sizeof(int));
+			backParam.vLevel = calloc(100*excess + 1, sizeof(int));
+			backParam.vAlready = calloc(100*nrIslands + 1, sizeof(int));
 			backParam.graphMat = graphMat;
+
+			if (backParam.vHeap[4]->size == 4)
+			{
+				int breakPoint = 1;
+			}
+
 			fBack(backParam);
 			vHeap = backParam.vHeap;
 
-			for (int idIsland = 1; idIsland <= nrIslands; ++idIsland)
+			int boolBreak = 1;
+			for (int idNeighbour = 1; idNeighbour <= nrIslands; ++idNeighbour)
 			{
-				if (vHeap[idIsland]->size <= 1) continue;
-				int size = vHeap[idIsland]->size;
-				fHeapSort(vHeap[idIsland]);
-				vHeap[idIsland]->size = size; // sortarea inseamna mereu "stergerea" minimului => decrementare continua de heap->size => reinitializam
+				if (vIslands[idNeighbour].nrPlanes < tolerance)
+				{
+					boolBreak = 0;
+					break;
+				}
+			}
+			if (boolBreak)
+			{
+				chainTransfer = 1;
+				break;
+			}
+
+			for (int idIsland2 = 1; idIsland2 <= nrIslands; ++idIsland2)
+			{
+				if (vHeap[idIsland2]->size <= 1) continue;
+				int size = vHeap[idIsland2]->size;
+				fHeapSort(vHeap[idIsland2]);
+				vHeap[idIsland2]->size = size; // sortarea inseamna mereu "stergerea" minimului => decrementare continua de heap->size => reinitializam
 			}
 
 			const int vPowers[] = { 1, 10, 100, 1000, 10000 };
@@ -230,6 +254,38 @@ int main(int argc, char* argv[])
 			}
 		}
 	}
+
+	if (chainTransfer) // transfer in lant
+	{
+		int q[20];
+		int u = 0, p = 0, size = 0;
+		int excess;
+
+		for (int idIsland = 1; idIsland <= nrIslands; ++idIsland)
+		{
+			if (vIslands[idIsland].nrPlanes > tolerance)
+			{
+				q[0] = idIsland;
+				excess = vIslands[idIsland].nrPlanes - tolerance;
+				size = 1;
+				break;
+			}
+		}
+		while (size > 0)
+		{
+			int idIsland = q[p];
+			for (int idNeighbour = 1; idNeighbour <= nrIslands; ++idNeighbour)
+			{
+				if (idNeighbour == idIsland)
+				{
+					continue;
+				}
+				if (vIslands[idIsland].nrP)
+			}
+			++p;
+		}
+	}
+
 
 	fprintf(output, "\n");
 	return 0;

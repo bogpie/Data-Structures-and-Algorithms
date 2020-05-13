@@ -2,7 +2,7 @@
 
 void fInitHeap(Heap** adrHeap, int capacity)
 {
-	Heap* heap = malloc(sizeof(Heap));
+	Heap* heap = malloc(100*sizeof(Heap));
 
 	if (heap == NULL)
 	{
@@ -10,8 +10,8 @@ void fInitHeap(Heap** adrHeap, int capacity)
 	}
 
 	heap->size = 0;
-	heap->capacity = capacity;
-	heap->arr = malloc(sizeof(int) * capacity);
+	heap->capacity = 200; // ??
+	heap->arr = malloc(100*sizeof(int) * capacity);
 
 	*adrHeap = heap;
 }
@@ -182,7 +182,7 @@ void fHeapifyUp(Heap* heap, int pos)
 void fInsertInHeap(Heap* heap, HeapNode* heapNode)
 {
 	int pos;
-	if (heap->size == heap->capacity)
+	if (heap->size >= heap->capacity)
 	{
 		fResize(heap);
 	}
@@ -218,8 +218,18 @@ void fDeleteNode(Heap* heap, int pos)
 void fFindInHeap(Heap* heap, int searchedIndex, int* adrFoundPosition, int* adrCrtTime)
 {
 	int i;
+
+	if (heap->size > 10)
+	{
+		int breakPoint = 1;
+	}
+
 	for (i = 0; i < heap->size; ++i)
 	{
+		if (searchedIndex == 123)
+		{
+			int breakpoint = 1;
+		}
 		if (heap->arr[i]->index == searchedIndex)
 		{
 			*adrCrtTime = heap->arr[i]->dist;

@@ -6,7 +6,7 @@ void fReadIslands(FILE* input, int* adrNrIslands, Island** adrVectorIslands)
 	fscanf(input, "%d", &nrIslands);
 	*adrNrIslands = nrIslands;
 
-	Island* vIslands = malloc(sizeof(Island) * (nrIslands + 1)); //indexarea insulelor in input e de al 1
+	Island* vIslands = malloc(100*sizeof(Island) * (nrIslands + 1)); //indexarea insulelor in input e de al 1
 
 	for (int idIsland = 1; idIsland <= nrIslands; ++idIsland)
 	{
@@ -16,7 +16,7 @@ void fReadIslands(FILE* input, int* adrNrIslands, Island** adrVectorIslands)
 		fStrAlloc(&island.name, vChar);
 		//fscanf(input, "%s", vChar);island.nrResources = atoi(vChar);
 		fscanf(input, "%d", &island.nrResources);
-		island.vResources = malloc(sizeof(Resource) * island.nrResources);
+		island.vResources = malloc(100*sizeof(Resource) * island.nrResources);
 		for (int idResource = 0; idResource < island.nrResources; ++idResource)
 		{
 			Resource resource;
@@ -31,14 +31,19 @@ void fReadIslands(FILE* input, int* adrNrIslands, Island** adrVectorIslands)
 	}
 	*adrNrIslands = nrIslands;
 	*adrVectorIslands = vIslands;
-
 }
 
 void fReadConnections(FILE* input, int nrIslands, GraphMat** adrGraphMat)
 {
-	GraphMat* graphMat;
+	GraphMat* graphMat = *adrGraphMat;
 	int nrEdges;
 	fscanf(input, "%d", &nrEdges);
+
+	if (graphMat != NULL)
+	{
+		free(graphMat);
+	}
+
 	fInitGraphMat(&graphMat, nrIslands, nrEdges);
 	fCreateGraphMat(graphMat, input);
 	*adrGraphMat = graphMat;
@@ -84,7 +89,7 @@ void fSolveMaxResurse(FILE* input, FILE* output, int nrIslands, Island* vIslands
 			fInsertInTrie(resource.name, trieRoot);
 		}
 	}
-	char* word = malloc(NAMELENGTH);
+	char* word = malloc(100*NAMELENGTH);
 	int nrResources = 0;
 	fCountTrie(trieRoot, 0, &nrResources);
 	fprintf(output, "%d ", nrResources);
@@ -166,7 +171,7 @@ void fSolveDrumZbor(FILE* input, FILE* output, GraphMat* graphMat) /// lipeste !
 	fNameToIndex(leftName, &idLeft);
 	fNameToIndex(rightName, &idRight);
 	int time = INT_MAX;
-	int* vPrev = malloc(sizeof(int) * (graphMat->nrVertexes + 1));
+	int* vPrev = malloc(100*sizeof(int) * (graphMat->nrVertexes + 1));
 	fDijkstra(graphMat, idLeft, idRight, &time, vPrev, 0);
 	//printf("\nde la nodul sursa %d la nodurile:", source);
 	if (time != INT_MAX)
@@ -188,7 +193,7 @@ void fSolveTimpZbor(FILE* input, FILE* output, GraphMat* graphMat)
 	fNameToIndex(leftName, &idLeft);
 	fNameToIndex(rightName, &idRight);
 	int time = INT_MAX;
-	int* vPrev = malloc(sizeof(int) * (graphMat->nrVertexes + 1));
+	int* vPrev = malloc(100*sizeof(int) * (graphMat->nrVertexes + 1));
 	fDijkstra(graphMat, idLeft, idRight, &time, vPrev, 0);
 
 	if (time == INT_MAX)
@@ -210,7 +215,7 @@ void fSolveMinZbor(FILE* input, FILE* output, GraphMat* graphMat)
 	fNameToIndex(leftName, &idLeft);
 	fNameToIndex(rightName, &idRight);
 	int time;
-	int* vPrev = malloc(sizeof(int) * (graphMat->nrVertexes + 1));
+	int* vPrev = malloc(100*sizeof(int) * (graphMat->nrVertexes + 1));
 	fDijkstra(graphMat, idLeft, idRight, &time, vPrev, 15);
 	fprintf(output, "%d\n", time);
 }
@@ -231,8 +236,8 @@ void fBack(BackParam backParam)
 
 	if (backParam.level == backParam.excess)
 	{
-		int* vCode = calloc(nrIslands + 1, sizeof(int));
-		int* vAdd = calloc(nrIslands + 1, sizeof(int));
+		int* vCode = calloc(100*nrIslands + 1, sizeof(int));
+		int* vAdd = calloc(100*nrIslands + 1, sizeof(int));
 		for (int idLevel = 0; idLevel < backParam.level; ++idLevel)
 		{
 			int idIsland = backParam.vLevel[idLevel];
@@ -256,7 +261,7 @@ void fBack(BackParam backParam)
 				int foundPosition, time;
 				fFindInHeap(backParam.vHeap[idIsland], vCode[idIsland], &foundPosition, &time);
 				if (foundPosition != -1) continue;
-				HeapNode* heapNode = malloc(sizeof(HeapNode));
+				HeapNode* heapNode = malloc(100*sizeof(HeapNode));
 				heapNode->dist = heapNode->index = vCode[idIsland];
 				fInsertInHeap(backParam.vHeap[idIsland], heapNode);
 			}
@@ -265,6 +270,7 @@ void fBack(BackParam backParam)
 	}
 	else for (int idNeighbour = 1; idNeighbour <= nrIslands; ++idNeighbour)
 	{
+
 		if
 			(
 				idNeighbour == idIsland ||
@@ -285,10 +291,11 @@ void fBack(BackParam backParam)
 		}
 		int oldValue = backParam.vLevel[backParam.level];
 		backParam.vLevel[backParam.level++] = idNeighbour;
+		int oldAlready = backParam.vAlready[idNeighbour];
 		backParam.vAlready[idNeighbour] = 1;
 		fBack(backParam);
 		backParam.vLevel[--backParam.level] = oldValue;
-		backParam.vAlready[idNeighbour] = 0;
+		backParam.vAlready[idNeighbour] = oldAlready;
 	}
 
 }

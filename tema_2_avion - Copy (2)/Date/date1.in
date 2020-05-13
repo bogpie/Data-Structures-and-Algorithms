@@ -1,0 +1,25 @@
+5
+Island1
+	3
+	Fier 300
+	Aur 250
+	Lemn 450
+Island2
+	1
+	Argint 300
+Island3
+	2
+	Aur 200
+	Piatra 150
+Island4
+	1
+	Diamant 300
+Island5
+	0
+4
+Island1 - Island3 30
+Island1 - Island5 25
+Island2 - Island5 40
+Island3 - Island4 50
+conexiune Island1 Island5
+conexiune Island1 Island2

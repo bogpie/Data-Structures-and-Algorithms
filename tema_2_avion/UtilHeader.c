@@ -19,7 +19,7 @@ void fStrAlloc(char** adrPtr, char str[])
 	//daca citim direct intr-o variabila alocata dinamic un sir de caractere exista riscul sa fi alocat prea putin
 	//asa ca folosim un string str[] pentru memorarea sirului de caractere, pe care il copiem intr-un vector din heap, folosindu-ne de lungimea sirului
 	char* ptr = *adrPtr;
-	ptr = malloc(sizeof(char) * strlen(str));
+	ptr = malloc(100*sizeof(char) * strlen(str));
 	if (ptr != 0)
 	{
 		strcpy(ptr, str);
@@ -42,7 +42,7 @@ void fPointerTest(void* ptr)
 void fCountSort(int* arr, int size) ///
 {
 	//int sorted = 0;
-	int* freq = calloc(100,sizeof(int));
+	int* freq = calloc(100*100,sizeof(int));
 	
 	int id;
 	for (id = 0; id < size; ++id)
