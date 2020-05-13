@@ -49,10 +49,10 @@ void fSolveConexiune(FILE* input, FILE* output, GraphMat* graphMat)
 	char leftName[NAMELENGTH], rightName[NAMELENGTH];
 	fscanf(input, "%s", leftName);
 	fscanf(input, "%s", rightName);
-	int leftIndex, rightIndex;
-	fNameToIndex(leftName, &leftIndex);
-	fNameToIndex(rightName, &rightIndex);
-	if (fTestEdgeMat(graphMat, leftIndex, rightIndex))
+	int idLeft, idRight;
+	fNameToIndex(leftName, &idLeft);
+	fNameToIndex(rightName, &idRight);
+	if (fTestEdgeMat(graphMat, idLeft, idRight))
 	{
 		fprintf(output, "OK\n");
 	}
@@ -97,10 +97,10 @@ void fSolveAdaugaZbor(FILE* input, GraphMat* graphMat) //move to graphheader??
 	char leftName[NAMELENGTH], rightName[NAMELENGTH];
 	int cost;
 	fscanf(input, "%s%s%d", leftName, rightName, &cost);
-	int leftIndex, rightIndex;
-	fNameToIndex(leftName, &leftIndex);
-	fNameToIndex(rightName, &rightIndex);
-	graphMat->mat[leftIndex][rightIndex] = graphMat->mat[rightIndex][leftIndex] = cost;
+	int idLeft, idRight;
+	fNameToIndex(leftName, &idLeft);
+	fNameToIndex(rightName, &idRight);
+	graphMat->mat[idLeft][idRight] = graphMat->mat[idRight][idLeft] = cost;
 	graphMat->nrEdges++;
 }
 
@@ -109,10 +109,10 @@ void fSolveAnulareZbor(FILE* input, GraphMat* graphMat)
 	char leftName[NAMELENGTH], rightName[NAMELENGTH];
 	int cost;
 	fscanf(input, "%s%s%d", leftName, rightName, &cost);
-	int leftIndex, rightIndex;
-	fNameToIndex(leftName, &leftIndex);
-	fNameToIndex(rightName, &rightIndex);
-	graphMat->mat[leftIndex][rightIndex] = graphMat->mat[rightIndex][leftIndex] = 0;
+	int idLeft, idRight;
+	fNameToIndex(leftName, &idLeft);
+	fNameToIndex(rightName, &idRight);
+	graphMat->mat[idLeft][idRight] = graphMat->mat[idRight][idLeft] = 0;
 }
 
 void fSolveMaxCantitate(FILE* input, FILE* output, int nrIslands, Island* vIslands)
@@ -162,16 +162,16 @@ void fSolveDrumZbor(FILE* input, FILE* output, GraphMat* graphMat) /// lipeste !
 {
 	char leftName[NAMELENGTH], rightName[NAMELENGTH];
 	fscanf(input, "%s%s", leftName, rightName);
-	int leftIndex, rightIndex;
-	fNameToIndex(leftName, &leftIndex);
-	fNameToIndex(rightName, &rightIndex);
+	int idLeft, idRight;
+	fNameToIndex(leftName, &idLeft);
+	fNameToIndex(rightName, &idRight);
 	int time = INT_MAX;
 	int* vPrev = malloc(sizeof(int) * (graphMat->nrVertexes + 1));
-	fDijkstra(graphMat, leftIndex, rightIndex, &time, vPrev, 0);
+	fDijkstra(graphMat, idLeft, idRight, &time, vPrev, 0);
 	//printf("\nde la nodul sursa %d la nodurile:", source);
 	if (time != INT_MAX)
 	{
-		fPrintPath(output, vPrev, leftIndex, rightIndex);
+		fPrintPath(output, vPrev, idLeft, idRight);
 	}
 	else
 	{
@@ -184,12 +184,12 @@ void fSolveTimpZbor(FILE* input, FILE* output, GraphMat* graphMat)
 {
 	char leftName[NAMELENGTH], rightName[NAMELENGTH];
 	fscanf(input, "%s%s", leftName, rightName);
-	int leftIndex, rightIndex;
-	fNameToIndex(leftName, &leftIndex);
-	fNameToIndex(rightName, &rightIndex);
+	int idLeft, idRight;
+	fNameToIndex(leftName, &idLeft);
+	fNameToIndex(rightName, &idRight);
 	int time = INT_MAX;
 	int* vPrev = malloc(sizeof(int) * (graphMat->nrVertexes + 1));
-	fDijkstra(graphMat, leftIndex, rightIndex, &time, vPrev, 0);
+	fDijkstra(graphMat, idLeft, idRight, &time, vPrev, 0);
 
 	if (time == INT_MAX)
 	{
@@ -206,12 +206,12 @@ void fSolveMinZbor(FILE* input, FILE* output, GraphMat* graphMat)
 {
 	char leftName[NAMELENGTH], rightName[NAMELENGTH];
 	fscanf(input, "%s%s", leftName, rightName);
-	int leftIndex, rightIndex;
-	fNameToIndex(leftName, &leftIndex);
-	fNameToIndex(rightName, &rightIndex);
+	int idLeft, idRight;
+	fNameToIndex(leftName, &idLeft);
+	fNameToIndex(rightName, &idRight);
 	int time;
 	int* vPrev = malloc(sizeof(int) * (graphMat->nrVertexes + 1));
-	fDijkstra(graphMat, leftIndex, rightIndex, &time, vPrev, 15);
+	fDijkstra(graphMat, idLeft, idRight, &time, vPrev, 15);
 	fprintf(output, "%d\n", time);
 }
 
@@ -231,25 +231,39 @@ void fBack(BackParam backParam)
 
 	if (backParam.level == backParam.excess)
 	{
-		int* vCode = calloc(nrIslands, sizeof(int));
+		int* vCode = calloc(nrIslands + 1, sizeof(int));
+		int* vAdd = calloc(nrIslands + 1, sizeof(int));
 		for (int idLevel = 0; idLevel < backParam.level; ++idLevel)
 		{
 			int idIsland = backParam.vLevel[idLevel];
-			vCode[idIsland] = vCode[idIsland] * 10 + (idLevel+1);
+			++vAdd[idIsland];
+			vCode[idIsland] = vCode[idIsland] * 10 + (idLevel + 1);
 		}
+		int boolSkip = 0;
 		for (int idIsland = 1; idIsland <= nrIslands; ++idIsland)
 		{
-			if (!vCode[idIsland]) continue;
-			int foundPosition,time;
-			fFindInHeap(backParam.vHeap, vCode[idIsland], &foundPosition, &time);
-			if (foundPosition) continue;
-			HeapNode* heapNode = malloc(sizeof(HeapNode));
-			heapNode->dist = heapNode->index = vCode[idIsland];
-			fInsertInHeap(backParam.vHeap[idIsland], heapNode);
+			if (vIslands[idIsland].nrPlanes + vAdd[idIsland] > tolerance)
+			{
+				boolSkip = 1;
+				break;
+			}
 		}
+		if (boolSkip == 0)
+		{
+			for (int idIsland = 1; idIsland <= nrIslands; ++idIsland)
+			{
+				//if (!vCode[idIsland]) continue;
+				int foundPosition, time;
+				fFindInHeap(backParam.vHeap[idIsland], vCode[idIsland], &foundPosition, &time);
+				if (foundPosition != -1) continue;
+				HeapNode* heapNode = malloc(sizeof(HeapNode));
+				heapNode->dist = heapNode->index = vCode[idIsland];
+				fInsertInHeap(backParam.vHeap[idIsland], heapNode);
+			}
+		}
+		return;
 	}
-
-	for (int idNeighbour = 1; idNeighbour <= nrIslands; ++idNeighbour)
+	else for (int idNeighbour = 1; idNeighbour <= nrIslands; ++idNeighbour)
 	{
 		if
 			(
@@ -259,9 +273,14 @@ void fBack(BackParam backParam)
 		{
 			continue;
 		}
+		if (!fTestEdgeMat(backParam.graphMat, idIsland, idNeighbour))
+		{
+			continue;
+		}
+
 		if (backParam.vAlready[idNeighbour] == 1 && backParam.vLevel[backParam.level - 1] != idNeighbour)
 		{
-			continue; 
+			continue;
 			// daca deja i s-au atribuit avioane si nu se continua atribuirea
 		}
 		int oldValue = backParam.vLevel[backParam.level];
@@ -271,4 +290,5 @@ void fBack(BackParam backParam)
 		backParam.vLevel[--backParam.level] = oldValue;
 		backParam.vAlready[idNeighbour] = 0;
 	}
+
 }

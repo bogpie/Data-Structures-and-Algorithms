@@ -7,13 +7,13 @@ void fCreateGraphMat(GraphMat* graphMat, FILE* input)
 	for (iEdge = 0; iEdge < graphMat->nrEdges; ++iEdge)
 	{
 		char leftName[NAMELENGTH], rightName[NAMELENGTH];
-		int leftIndex, rightIndex, cost;
+		int idLeft, idRight, cost;
 		char aux[3];
 		fscanf(input, "%s%s%s%d", leftName, aux, rightName, &cost);
-		fNameToIndex(leftName, &leftIndex);
-		fNameToIndex(rightName, &rightIndex);
-		graphMat->mat[leftIndex][rightIndex] = cost;
-		graphMat->mat[rightIndex][leftIndex] = cost;
+		fNameToIndex(leftName, &idLeft);
+		fNameToIndex(rightName, &idRight);
+		graphMat->mat[idLeft][idRight] = cost;
+		graphMat->mat[idRight][idLeft] = cost;
 	}
 }
 
@@ -192,7 +192,7 @@ void fFindNeighbourList(GraphList* graphList, int x)
 	}
 }
 
-void fFindNeighbourMat(FILE* output,GraphMat* graphMat, int x)
+void fFindNeighbourMat(FILE* output, GraphMat* graphMat, int x)
 {
 	int nrVertexes = graphMat->nrVertexes;
 	//printf("\nincidente cu %d: ", x);
@@ -300,47 +300,4 @@ void fCopyMat(int** sourceMat, int*** adrDestMat, int nrVertexes)
 		}
 	}
 	*adrDestMat = destMat;
-}
-
-void fRoy(GraphMat* graphMat, int nrVertexes)
-{
-	int** pathMat;
-	pathMat = calloc(nrVertexes, sizeof(int*));
-	int i;
-	for (i = 0; i < nrVertexes; ++i)
-	{
-		pathMat[i] = calloc(nrVertexes, sizeof(int));
-	}
-	fCopyMat(graphMat->mat, &pathMat, nrVertexes);
-	int index1;
-	for (index1 = 0; index1 < nrVertexes; ++index1)
-	{
-		int index2;
-		for (index2 = 0; index2 < nrVertexes; ++index2)
-		{
-			if (index1 == index2) continue;
-			int intermediar;
-			for (intermediar = 0; intermediar < nrVertexes; ++intermediar)
-			{
-				if (pathMat[index1][index2]) continue;
-				if (pathMat[index1][intermediar] == 1 && pathMat[intermediar][index2] == 1)
-				{
-					pathMat[index1][index2] = 1;
-				}
-			}
-		}
-	}
-
-	for (index1 = 0; index1 < nrVertexes; ++index1)
-	{
-		printf("\nexista drum de la %d la : ", index1);
-		int index2;
-		for (index2 = 0; index2 < nrVertexes; ++index2)
-		{
-			if (pathMat[index1][index2])
-			{
-				printf("%d ", index2);
-			}
-		}
-	}
 }

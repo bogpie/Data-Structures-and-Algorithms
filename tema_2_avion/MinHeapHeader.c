@@ -124,14 +124,14 @@ void fHeapifyDown(Heap* heap, int pos)
 		HeapNode** arr = heap->arr;
 		if (leftChild != -1)
 		{
-			if (arr[leftChild] < arr[posMin])
+			if (arr[leftChild]->dist < arr[posMin]->dist)
 			{
 				posMin = leftChild;
 			}
 		}
 		if (rightChild != -1)
 		{
-			if (arr[rightChild] < arr[posMin])
+			if (arr[rightChild]->dist < arr[posMin]->dist)
 			{
 				posMin = rightChild;
 			}
@@ -202,7 +202,8 @@ void fDeleteNode(Heap* heap, int pos)
 	int parent;
 	fParent(heap, pos, &parent);
 
-	heap->arr[--heap->size] = 0;
+	heap->arr[heap->size - 1]->dist = heap->arr[heap->size - 1]->index = 0;
+	--heap->size;
 
 	if (heap->arr[pos] < heap->arr[parent])
 	{
@@ -217,7 +218,7 @@ void fDeleteNode(Heap* heap, int pos)
 void fFindInHeap(Heap* heap, int searchedIndex, int* adrFoundPosition, int* adrCrtTime)
 {
 	int i;
-	for (i = 0; i < heap->size;++i)
+	for (i = 0; i < heap->size; ++i)
 	{
 		if (heap->arr[i]->index == searchedIndex)
 		{
@@ -226,7 +227,7 @@ void fFindInHeap(Heap* heap, int searchedIndex, int* adrFoundPosition, int* adrC
 			return;
 		}
 	}
-	*adrFoundPosition= -1;
+	*adrFoundPosition = -1;
 	return;
 }
 
@@ -248,10 +249,12 @@ void fHeapSort(Heap* heap)
 	while (heap->size > 0)
 	{
 		n = heap->size;
-		int popped = heap->arr[0]->index;
+		int poppedIndex = heap->arr[0]->index;
+		int poppedDist = heap->arr[0]->dist;
 		fDeleteNode(heap, 0); // care modifica si heap->size
 
-		heap->arr[heap->size]->index = popped;
+		heap->arr[heap->size]->index = poppedIndex;
+		heap->arr[heap->size]->dist = poppedDist;
 		// stergerea presupune in functia mea decrementarea size-ului heap-ului si modificarea valorii de sters cu 0
 		// asa ca, pentru o eventuala afisare sortata, trebuie resetata valoarea ultimului nod de la 0 la valoarea gasita (nu vrem sa se piarda)
 		// ea va fi ignorata la urmatoarele operatii pe arbore (pentru ca heap->size tocmai a fost decrementat)

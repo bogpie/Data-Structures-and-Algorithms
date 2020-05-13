@@ -44,6 +44,5 @@ void fEraseGraphList(GraphList* graphList);
 int fTestEdgeMat(GraphMat* graphMat, int x, int y);
 void fTestEdgeList(GraphList* graphList, int x, int y);
 void fCopyMat(int** sourceMat, int*** adrDestMat, int nrVertexes);
-void fRoy(GraphMat* graphMat, int nrVertexes);
 
 #endif

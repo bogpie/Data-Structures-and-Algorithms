@@ -122,18 +122,34 @@ int main(int argc, char* argv[])
 	{
 		fInitHeap(&vHeap[idIsland], tolerance);
 	}
-	for (int idIsland = 1; idIsland <= nrIslands; ++idIsland)
+	/*for (int idIsland = 1; idIsland <= nrIslands; ++idIsland)
 	{
 		HeapNode* heapNode = malloc(sizeof(HeapNode));
-		heapNode->dist = 0;
-		heapNode->index = heapNode->dist;
-		fInsertInHeap(vHeap[idIsland], heapNode);
+		//heapNode->index = heapNode->dist = 0; fInsertInHeap(vHeap[idIsland], heapNode);
+	}*/
+
+	free(graphMat);
+	fInitGraphMat(&graphMat, nrIslands, 0);
+
+	for (int idLeft = 1; idLeft <= nrIslands; ++idLeft)
+	{
+		for (int idRight = 1; idRight <= nrIslands; ++idRight)
+		{
+			int cost;
+			fscanf(input, "%d", &cost); // 0 || 1
+			graphMat->mat[idLeft][idRight] = cost;
+			graphMat->mat[idRight][idLeft] = cost;
+			graphMat->nrEdges += 2;
+
+		}
 	}
+
 	for (int idIsland = 1; idIsland <= nrIslands; ++idIsland)
 	{
 		Island island = vIslands[idIsland];
 		if (island.nrPlanes > tolerance)
 		{
+			vIslands[idIsland].nrPlanes = tolerance;
 			int excess = island.nrPlanes - tolerance;
 			int* vExcess = malloc(sizeof(int) * excess);
 			int idExcess = 0;
@@ -152,41 +168,69 @@ int main(int argc, char* argv[])
 			backParam.vIslands = vIslands;
 			backParam.vHeap = vHeap;
 			backParam.level = 0;
-			backParam.vLevel = calloc(excess, sizeof(int));
-			backParam.vAlready = calloc(nrIslands, sizeof(int));
+			backParam.vLevel = calloc(excess + 1, sizeof(int));
+			backParam.vAlready = calloc(nrIslands + 1, sizeof(int));
+			backParam.graphMat = graphMat;
 			fBack(backParam);
 			vHeap = backParam.vHeap;
 
 			for (int idIsland = 1; idIsland <= nrIslands; ++idIsland)
 			{
 				if (vHeap[idIsland]->size <= 1) continue;
+				int size = vHeap[idIsland]->size;
 				fHeapSort(vHeap[idIsland]);
+				vHeap[idIsland]->size = size; // sortarea inseamna mereu "stergerea" minimului => decrementare continua de heap->size => reinitializam
 			}
 
-			static int vPowers[] = { 1, 10, 100, 1000, 10000 };
+			const int vPowers[] = { 1, 10, 100, 1000, 10000 };
 
 			for (int idIsland = 1; idIsland <= nrIslands; ++idIsland)
 			{
-				printf("Island%d\n", idIsland);
+				fprintf(output, "Island%d\n", idIsland);
 				for (int idSolution = 0; idSolution < vHeap[idIsland]->size; ++idSolution)
 				{
-					for (int idPlane = 0; idPlane < vIslands[idIsland].nrPlanes; ++idPlane)
+					int solution = vHeap[idIsland]->arr[idSolution]->dist;
+					int solutionBak = solution;
+					int nrDigits = 0;
+
+					while (solution)
 					{
-						printf("%d ", vIslands[idIsland].vPlanes[idPlane]);
+						solution /= 10;
+						++nrDigits;
 					}
 
-					for (int idDigit = 0; idDigit < tolerance; ++idDigit)
+					solution = solutionBak;
+
+					for (int idPlane = 0; idPlane < vIslands[idIsland].nrPlanes; ++idPlane)
 					{
-						int digit = (vHeap[idIsland]->arr[idDigit]->dist / vPowers[idDigit]) % 10;
-						if (digit == 0) continue;
+						fprintf(output, "%d ", vIslands[idIsland].vPlanes[idPlane]);
+					}
+
+					if (!solution)
+					{
+						fprintf(output, "\n");
+						break;
+					}
+
+					for (int idDigit = 0; idDigit < nrDigits; ++idDigit)
+					{
+						int digit = (solution / vPowers[nrDigits - idDigit - 1]) % 10;
+						if (digit == 0)
+						{
+							continue;
+						}
 						else
 						{
-							printf("%d ", vExcess[digit]);
+							fprintf(output, "%d ", vExcess[digit - 1]);
 						}
 					}
+					fprintf(output, "\n");
+
 				}
 			}
 		}
 	}
+
+	fprintf(output, "\n");
 	return 0;
 }
