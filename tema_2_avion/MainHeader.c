@@ -1,12 +1,73 @@
 #include "MainHeader.h"
 
+void fSolvePart1(FILE* input, FILE* output, int nrIslands, Island* vIslands,GraphMat* graphMat,int *adrboolSkip)
+{
+	while (1)
+	{
+		char query[NAMELENGTH];
+		query[0] = '\0';
+		fscanf(input, "%s", query);
+		if (query[0] == '\0' || feof(input))
+		{
+			*adrboolSkip = 1;
+			return; // testele 1->8
+		}
+		else if (query[0] >= '0' && query[0] <= '9')
+		{
+			nrIslands = atoi(query);
+			break;
+		}
+		else if (!strcmp(query, "conexiune"))
+		{
+			fSolveConexiune(input, output, graphMat);
+		}
+		else if (!strcmp(query, "legatura"))
+		{
+			fSolveLegatura(input, output, graphMat);
+		}
+		else if (!strcmp(query, "adauga_zbor"))
+		{
+			fSolveAdaugaZbor(input, graphMat);
+		}
+		else if (!strcmp(query, "anulare_zbor"))
+		{
+			fSolveAnulareZbor(input, graphMat);
+		}
+		else if (!strcmp(query, "max_resurse"))
+		{
+			fSolveMaxResurse(input, output, nrIslands, vIslands);
+		}
+		else if (!strcmp(query, "max_cantitate"))
+		{
+			fSolveMaxCantitate(input, output, nrIslands, vIslands);
+		}
+		else if (!strcmp(query, "drum_zbor"))
+		{
+			fSolveDrumZbor(input, output, graphMat);
+		}
+		else if (!strcmp(query, "timp_zbor"))
+		{
+			fSolveTimpZbor(input, output, graphMat);
+		}
+		else if (!strcmp(query, "min_zbor"))
+		{
+			fSolveMinZbor(input, output, graphMat);
+		}
+		else
+		{
+			exit(2); // ar fi greseala la parsare
+		}
+	}
+
+}
+
 void fReadIslands(FILE* input, int* adrNrIslands, Island** adrVectorIslands)
 {
 	int nrIslands = 0;
 	fscanf(input, "%d", &nrIslands);
 	*adrNrIslands = nrIslands;
-
-	Island* vIslands = malloc(sizeof(Island) * (nrIslands + 1)); //indexarea insulelor in input e de al 1
+	
+	Island* vIslands = malloc(2*sizeof(Island) * (nrIslands)); //indexarea insulelor in input e de al 1
 
 	for (int idIsland = 1; idIsland <= nrIslands; ++idIsland)
 	{
@@ -257,7 +318,6 @@ void fBack(BackParam backParam)
 		{
 			for (int idIsland = 1; idIsland <= nrIslands; ++idIsland)
 			{
-				//if (!vCode[idIsland]) continue;
 				int foundPosition, time;
 				fFindInHeap(backParam.vHeap[idIsland], vCode[idIsland], &foundPosition, &time);
 				if (foundPosition != -1) continue;
@@ -266,6 +326,8 @@ void fBack(BackParam backParam)
 				fInsertInHeap(backParam.vHeap[idIsland], heapNode);
 			}
 		}
+		if (vCode != NULL) free(vCode);
+		if (vAdd != NULL) free(vAdd);
 		return;
 	}
 	else for (int idNeighbour = 1; idNeighbour <= nrIslands; ++idNeighbour)

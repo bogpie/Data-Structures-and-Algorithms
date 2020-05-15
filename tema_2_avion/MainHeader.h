@@ -44,6 +44,7 @@ struct BackParam
 	Heap** vHeap;
 };
 
+void fSolvePart1(FILE* input, FILE* output, int nrIslands, Island* vIslands, GraphMat* graphMat,int *adrBoolSkip);
 void fReadIslands(FILE* input, int* adrNrIslands, Island** adrVectorIslands);
 void fReadConnections(FILE* input, int nrIslands, GraphMat** adrGraphMat);
 void fSolveConexiune(FILE* input, FILE* output, GraphMat* graphMat);
