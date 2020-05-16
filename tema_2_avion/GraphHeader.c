@@ -10,8 +10,8 @@ void fCreateGraphMat(GraphMat* graphMat, FILE* input)
 		int idLeft, idRight, cost;
 		char aux[3];
 		fscanf(input, "%s%s%s%d", leftName, aux, rightName, &cost);
-		fNameToIndex(leftName, &idLeft);
-		fNameToIndex(rightName, &idRight);
+		idLeft = atoi(leftName + 6);
+		idRight = atoi(rightName + 6);
 		graphMat->mat[idLeft][idRight] = cost;
 		graphMat->mat[idRight][idLeft] = cost;
 	}
@@ -98,3 +98,18 @@ int fTestEdgeMat(GraphMat* graphMat, int x, int y)
 	return 0;
 }
 
+void fReadIslandsMat(FILE* input,GraphMat* graphMat)
+{
+	for (int idLeft = 1; idLeft <= graphMat->nrVertexes; ++idLeft)
+	{
+		for (int idRight = 1; idRight <= graphMat->nrVertexes; ++idRight)
+		{
+			int cost;
+			fscanf(input, "%d", &cost);			// 0 || 1
+			graphMat->mat[idLeft][idRight] = cost;
+			graphMat->mat[idRight][idLeft] = cost;
+			graphMat->nrEdges += 2;
+
+		}
+	}
+}

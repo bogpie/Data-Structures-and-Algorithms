@@ -22,7 +22,7 @@ void fResize(Heap* heap)
 	{
 		printf("no more memory left");
 		free(arr);
-		exit(0);
+		exit(1);
 	}
 	else
 	{

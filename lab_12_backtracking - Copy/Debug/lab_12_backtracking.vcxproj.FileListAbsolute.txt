@@ -1,2 +1,0 @@
-C:\Users\Administrator\Documents\GitHub\sda\lab_12_backtracking\Debug\lab_12_backtracking.exe
-C:\Users\Administrator\Documents\GitHub\sda\lab_12_backtracking\Debug\lab_12_backtracking.pdb

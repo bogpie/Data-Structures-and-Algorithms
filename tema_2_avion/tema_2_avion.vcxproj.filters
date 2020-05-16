@@ -36,6 +36,9 @@
     <ClCompile Include="MinHeapHeader.c">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="QueueHeader.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="MainHeader.h">
@@ -54,6 +57,9 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="MinHeapHeader.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="QueueHeader.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

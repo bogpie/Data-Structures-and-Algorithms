@@ -22,9 +22,7 @@ void fDijkstra(GraphMat* graphMat, int source, int destination, int* adrTime, in
 	HeapNode* heapNode = malloc(sizeof(HeapNode));
 
 	int* vDist = malloc((nrVertexes+1) * sizeof(int));
-	//int* vPrev = malloc(nrVertexes * sizeof(int));
-	//int* vVisited = malloc((nrVertexes + 1) * sizeof(int));
-
+	
 	int i;
 	for (i = 1; i <= nrVertexes; ++i)
 	{
@@ -72,10 +70,7 @@ void fDijkstra(GraphMat* graphMat, int source, int destination, int* adrTime, in
 			}
 		}
 	}
-
-	
 	*adrTime = vDist[destination];
 	if (vDist != NULL) free(vDist);
-	//if (vPrev != NULL) free(vPrev);
-	//if (vVisited != NULL) free(vVisited);
+	
 }

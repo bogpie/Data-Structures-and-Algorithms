@@ -21,7 +21,8 @@ void fStrAlloc(char** adrPtr, char str[])
 	*adrPtr = malloc(sizeof(char) * strlen(str));
 	if (*adrPtr != NULL)
 	{
-		strcpy(*adrPtr, str);
+		//strcpy(*adrPtr, str);
+		*adrPtr = strdup(str);
 	}
 	else
 	{
@@ -37,7 +38,7 @@ void fPointerTest(void* ptr)
 	}
 }
 
-void fCountSort(int* arr, int size) ///
+void fCountSort(int* arr, int size)
 {
 	//int sorted = 0;
 	int* freq = calloc(100,sizeof(int));
@@ -63,7 +64,6 @@ void fCountSort(int* arr, int size) ///
 		++number;
 
 	}
-
 	if (freq) free(freq);
 }
 

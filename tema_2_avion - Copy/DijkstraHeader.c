@@ -22,9 +22,7 @@ void fDijkstra(GraphMat* graphMat, int source, int destination, int* adrTime, in
 	HeapNode* heapNode = malloc(sizeof(HeapNode));
 
 	int* vDist = malloc((nrVertexes+1) * sizeof(int));
-	//int* vPrev = malloc(nrVertexes * sizeof(int));
-	//int* vVisited = malloc((nrVertexes + 1) * sizeof(int));
-
+	
 	int i;
 	for (i = 1; i <= nrVertexes; ++i)
 	{
@@ -38,22 +36,23 @@ void fDijkstra(GraphMat* graphMat, int source, int destination, int* adrTime, in
 
 	while (heap->size > 0)
 	{
-		HeapNode* minNode = heap->arr[0];
+		int minNodeIndex = heap->arr[0]->index;
+		int minNodeDist = heap->arr[0]->dist;
 		fDeleteNode(heap, 0);
 		int neighbourIndex;
 		for (neighbourIndex = 1; neighbourIndex <= nrVertexes; ++neighbourIndex)
 		{
-			int cost = graphMat->mat[minNode->index][neighbourIndex];
+			int cost = graphMat->mat[minNodeIndex][neighbourIndex];
 			if (cost != 0)
 			{
-				int newDist = minNode->dist + cost;
+				int newDist = minNodeDist + cost;
 				if (newDist < vDist[neighbourIndex])
 				{
 					vDist[neighbourIndex] = newDist;
 					HeapNode* newNode = malloc(sizeof(HeapNode));
 					newNode->dist = newDist + wait;
 					newNode->index = neighbourIndex;
-					vPrev[neighbourIndex] = minNode->index;
+					vPrev[neighbourIndex] = minNodeIndex;
 					int crtTime = INT_MAX, foundPosition = -1;
 					fFindInHeap(heap, neighbourIndex, &foundPosition, &crtTime);
 					if (newNode->dist < crtTime) // stationarea ar putea fi o problema
@@ -71,10 +70,7 @@ void fDijkstra(GraphMat* graphMat, int source, int destination, int* adrTime, in
 			}
 		}
 	}
-
-	
 	*adrTime = vDist[destination];
 	if (vDist != NULL) free(vDist);
-	//if (vPrev != NULL) free(vPrev);
-	//if (vVisited != NULL) free(vVisited);
+	
 }

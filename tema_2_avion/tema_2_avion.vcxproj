@@ -143,6 +143,7 @@
     <ClCompile Include="MainHeader.c" />
     <ClCompile Include="MinHeapHeader.c" />
     <ClCompile Include="piele_bogdan_312ab_tema_2_avion.c" />
+    <ClCompile Include="QueueHeader.c" />
     <ClCompile Include="TrieHeader.c" />
     <ClCompile Include="UtilHeader.c" />
   </ItemGroup>
@@ -151,6 +152,7 @@
     <ClInclude Include="GraphHeader.h" />
     <ClInclude Include="MainHeader.h" />
     <ClInclude Include="MinHeapHeader.h" />
+    <ClInclude Include="QueueHeader.h" />
     <ClInclude Include="TrieHeader.h" />
     <ClInclude Include="UtilHeader.h" />
   </ItemGroup>

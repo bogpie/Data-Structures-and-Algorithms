@@ -1,38 +1,44 @@
-5
+6
 Island1
-	3
-	Fier 300
-	Aur 250
-	Lemn 450
+	2
+	Aur 100
+	Lemn 150
 Island2
-	1
-	Argint 300
+	0
 Island3
 	2
-	Aur 200
+	Aur 150
 	Piatra 150
 Island4
 	1
-	Diamant 300
+	Argint 300
 Island5
-	0
-4
-Island1 - Island3 30
-Island1 - Island5 25
+	1
+	Fier 200
+Island6
+	4
+	Argint 300
+	Granit 230
+	Lemn 120
+	Carbune 500
+7
+Island1 - Island2 28
+Island2 - Island3 40
+Island4 - Island6 45
+Island3 - Island1 10
 Island2 - Island5 40
-Island3 - Island4 50
-conexiune Island1 Island5
-conexiune Island1 Island2
-5
-4
-4 7 2 1 3
-1 2 5 6
-3 9 17 18 22 77 98
-4 7
-12
-19 21 33
-0 1 0 0 1
-1 0 1 1 0
-0 1 0 1 0
-0 1 1 0 0
-1 0 0 0 0
+Island4 - Island2 50
+Island1 - Island6 35
+legatura Island1
+max_resurse 
+legatura Island3
+anulare_zbor Island4 Island6
+anulare_zbor Island1 Island6
+conexiune Island2 Island5
+adauga_zbor Island1 Island6 25
+max_cantitate Argint
+conexiune Island3 Island5
+max_cantitate Aur
+
+
+

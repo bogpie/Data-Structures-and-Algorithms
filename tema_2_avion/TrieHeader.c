@@ -42,32 +42,6 @@ void fModifyWord(char** adrWord, char car, int pos) // functie de concatenare al
 	{
 		word = malloc(sizeof(char)); // alocam cuvantul
 	}
-	/*
-	else
-	{
-		if (strlen(word) < pos + 1)
-		{
-			// il realocam doar daca e nevoie de marirea dimensiunii sale
-			char* oldWord = malloc(pos + 1);
-			strcpy(oldWord, word);
-			int lg = strlen(word);
-			char* aux = (char*)realloc(word, (lg + 1) * sizeof(char)); //word, (lg + 1) * sizeof(char)
-
-			if (aux)
-			{
-				strcpy(aux, oldWord);
-				free(oldWord);
-				word = aux;
-			}
-			else
-			{
-				printf("\n\nnu s-a putut realoca");
-				exit(1);
-			}
-		}
-	}
-	*/
-
 	word[pos] = car; // concatenam cuvantul cu litera
 	*adrWord = word;
 }
