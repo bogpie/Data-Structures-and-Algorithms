@@ -44,7 +44,7 @@ struct BackParam
 	Heap** vHeap;
 };
 
-void fSolvePart1(FILE* input, FILE* output, int nrIslands, Island* vIslands, GraphMat* graphMat,int *adrBoolSkip);
+void fSolvePart1(FILE* input, FILE* output, int* adrNrIslands, Island* vIslands, GraphMat* graphMat, int* adrboolSkip);
 void fReadIslands(FILE* input, int* adrNrIslands, Island** adrVectorIslands);
 void fReadConnections(FILE* input, int nrIslands, GraphMat** adrGraphMat);
 void fSolveConexiune(FILE* input, FILE* output, GraphMat* graphMat);
@@ -58,5 +58,6 @@ void fSolveTimpZbor(FILE* input, FILE* output, GraphMat* graphMat);
 void fSolveMinZbor(FILE* input, FILE* output, GraphMat* graphMat);
 void fNameToIndex(char* name, int* adrIndex);
 void fBack(BackParam backParam);
+void fChainTransfer(GraphMat* graphMat,Island* vIslands, int nrIslands, FILE* output);
 
 #endif

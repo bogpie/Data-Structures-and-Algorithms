@@ -20,14 +20,22 @@ void fCreateGraphMat(GraphMat* graphMat, FILE* input)
 void fEraseGraphMat(GraphMat* graphMat)
 {
 	int i;
-	for (i = 1; i <= graphMat->nrVertexes; ++i)
+	if (graphMat != NULL)
 	{
-		if (graphMat->mat[i] == NULL) continue;
-		//int j; for (j = 1; j <= graphMat->nrVertexes; ++j) graphMat->mat[i][j] = 0;
-		free(graphMat->mat[i]);
+		if (graphMat->mat != NULL)
+		{
+			for (i = 1; i <= graphMat->nrVertexes; ++i)
+			{
+				if (graphMat->mat[i] != NULL)
+				{
+					free(graphMat->mat[i]);
+				}
+
+			}
+			free(graphMat->mat);
+		}
+		free(graphMat);
 	}
-	//graphMat->nrEdges = 0; graphMat->nrVertexes = 0;
-	if (graphMat != NULL) free(graphMat);
 }
 
 void fPrintGraphMat(GraphMat* graphMat)

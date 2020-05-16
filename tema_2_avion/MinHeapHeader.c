@@ -3,17 +3,14 @@
 void fInitHeap(Heap** adrHeap, int capacity)
 {
 	Heap* heap = malloc(sizeof(Heap));
-
 	if (heap == NULL)
 	{
 		exit(1);
 	}
-
 	heap->size = 0;
 	capacity = 30;
-	heap->capacity = capacity; // ??
+	heap->capacity = capacity;
 	heap->arr = malloc(capacity*sizeof(int));
-
 	*adrHeap = heap;
 }
 
@@ -267,5 +264,22 @@ void fHeapSort(Heap* heap)
 
 		fHeapifyDown(heap, 0);
 	}
+
+}
+
+void fEraseHeap(Heap* heap)
+{
+	if (heap->arr)
+	{
+		for (int i = 0; i < heap->size; ++i)
+		{
+			if (heap->arr[i])
+			{
+				free(heap->arr[i]);
+			}
+		}
+		free(heap->arr);
+	}
+	free(heap);
 
 }

@@ -1,6 +1,6 @@
 #include "MainHeader.h"
 
-void fSolvePart1(FILE* input, FILE* output, int nrIslands, Island* vIslands,GraphMat* graphMat,int *adrboolSkip)
+void fSolvePart1(FILE* input, FILE* output, int* adrNrIslands, Island* vIslands, GraphMat* graphMat, int* adrboolSkip)
 {
 	while (1)
 	{
@@ -14,7 +14,7 @@ void fSolvePart1(FILE* input, FILE* output, int nrIslands, Island* vIslands,Grap
 		}
 		else if (query[0] >= '0' && query[0] <= '9')
 		{
-			nrIslands = atoi(query);
+			*adrNrIslands = atoi(query);
 			break;
 		}
 		else if (!strcmp(query, "conexiune"))
@@ -35,11 +35,11 @@ void fSolvePart1(FILE* input, FILE* output, int nrIslands, Island* vIslands,Grap
 		}
 		else if (!strcmp(query, "max_resurse"))
 		{
-			fSolveMaxResurse(input, output, nrIslands, vIslands);
+			fSolveMaxResurse(input, output, *adrNrIslands, vIslands);
 		}
 		else if (!strcmp(query, "max_cantitate"))
 		{
-			fSolveMaxCantitate(input, output, nrIslands, vIslands);
+			fSolveMaxCantitate(input, output, *adrNrIslands, vIslands);
 		}
 		else if (!strcmp(query, "drum_zbor"))
 		{
@@ -66,16 +66,19 @@ void fReadIslands(FILE* input, int* adrNrIslands, Island** adrVectorIslands)
 	int nrIslands = 0;
 	fscanf(input, "%d", &nrIslands);
 	*adrNrIslands = nrIslands;
-	
-	Island* vIslands = malloc(2*sizeof(Island) * (nrIslands)); //indexarea insulelor in input e de al 1
-
+	Island* vIslands = malloc(sizeof(Island) * (nrIslands + 1)); //indexarea insulelor in input e de al 1
 	for (int idIsland = 1; idIsland <= nrIslands; ++idIsland)
 	{
-		char vChar[NAMELENGTH];
+		vIslands[idIsland].vResources = NULL;
+		vIslands[idIsland].vPlanes = NULL;
+		vIslands[idIsland].vResources = NULL;
+	}
+	for (int idIsland = 1; idIsland <= nrIslands; ++idIsland)
+	{
+		char vChar[8]; // islandXY
 		Island island;
 		fscanf(input, "%s", vChar);
 		fStrAlloc(&island.name, vChar);
-		//fscanf(input, "%s", vChar);island.nrResources = atoi(vChar);
 		fscanf(input, "%d", &island.nrResources);
 		island.vResources = malloc(sizeof(Resource) * island.nrResources);
 		for (int idResource = 0; idResource < island.nrResources; ++idResource)
@@ -83,7 +86,6 @@ void fReadIslands(FILE* input, int* adrNrIslands, Island** adrVectorIslands)
 			Resource resource;
 			fscanf(input, "%s", vChar);
 			fStrAlloc(&resource.name, vChar);
-			//fscanf(input, "%s", vChar); resource.quantity = atoi(vChar);
 			fscanf(input, "%d", &resource.quantity);
 			island.vResources[idResource] = resource;
 
@@ -99,12 +101,10 @@ void fReadConnections(FILE* input, int nrIslands, GraphMat** adrGraphMat)
 	GraphMat* graphMat = *adrGraphMat;
 	int nrEdges;
 	fscanf(input, "%d", &nrEdges);
-
 	if (graphMat != NULL)
 	{
 		free(graphMat);
 	}
-
 	fInitGraphMat(&graphMat, nrIslands, nrEdges);
 	fCreateGraphMat(graphMat, input);
 	*adrGraphMat = graphMat;
@@ -156,6 +156,7 @@ void fSolveMaxResurse(FILE* input, FILE* output, int nrIslands, Island* vIslands
 	fprintf(output, "%d ", nrResources);
 	fPrintTrie(output, trieRoot, word, 0);
 	fprintf(output, "\n");
+	fEraseTree(trieRoot);
 }
 
 void fSolveAdaugaZbor(FILE* input, GraphMat* graphMat) //move to graphheader??
@@ -358,6 +359,86 @@ void fBack(BackParam backParam)
 		fBack(backParam);
 		backParam.vLevel[--backParam.level] = oldValue;
 		backParam.vAlready[idNeighbour] = oldAlready;
+	}
+
+}
+
+void fChainTransfer(GraphMat* graphMat,Island* vIslands, int nrIslands, FILE* output)
+{
+	int chainTransfer = 1;
+	int tolerance = vIslands[1].tolerance;
+	int q[20];
+	int* inQueue = NULL;;
+	while (chainTransfer)
+	{
+		chainTransfer = 0;
+		if (inQueue != NULL) free(inQueue);
+		inQueue = calloc(nrIslands + 1, sizeof(int));
+		int p = 0, u = 0;
+		int excess;
+
+		for (int idIsland = 1; idIsland <= nrIslands; ++idIsland)
+		{
+			if (vIslands[idIsland].nrPlanes > tolerance)
+			{
+				q[p = u = 0] = idIsland;
+				inQueue[idIsland] = 1;
+				excess = vIslands[idIsland].nrPlanes - tolerance;
+				chainTransfer = 1;
+				break;
+			}
+		}
+
+		if (!chainTransfer)
+		{
+			if (inQueue != NULL) free(inQueue);
+			break;
+		}
+
+		while (p <= u)
+		{
+			int idIsland = q[p];
+			Island island = vIslands[idIsland];
+			for (int idNeighbour = 1; idNeighbour <= nrIslands; ++idNeighbour)
+			{
+				if (idNeighbour == idIsland || inQueue[idNeighbour] == 1 || !fTestEdgeMat(graphMat, idIsland, idNeighbour))
+				{
+					continue;
+				}
+				Island neighbour = vIslands[idNeighbour];
+				int stop = vIslands[idIsland].nrPlanes - excess - 1;
+				if (neighbour.nrPlanes + excess <= tolerance)
+				{
+					for (int idPlane = island.nrPlanes - 1; idPlane > stop; --idPlane)
+					{
+						vIslands[idNeighbour].vPlanes[vIslands[idNeighbour].nrPlanes++] = island.vPlanes[idPlane];
+						vIslands[idIsland].vPlanes[--vIslands[idIsland].nrPlanes] = 0;
+					}
+					p = u + 1; // ca sa reia coada de la 0
+					break;
+				}
+				else
+				{
+					q[++u] = idNeighbour;
+					inQueue[idNeighbour] = 1;
+				}
+
+			}
+			++p;
+		}
+	}
+	for (int idIsland = 1; idIsland <= nrIslands; ++idIsland)
+	{
+		fCountSort(vIslands[idIsland].vPlanes, vIslands[idIsland].nrPlanes);
+	}
+	for (int idIsland = 1; idIsland <= nrIslands; ++idIsland)
+	{
+		fprintf(output, "Island%d\n", idIsland);
+		for (int idPlane = 0; idPlane < vIslands[idIsland].nrPlanes; ++idPlane)
+		{
+			fprintf(output, "%d ", vIslands[idIsland].vPlanes[idPlane]);
+		}
+		fprintf(output, "\n");
 	}
 
 }
