@@ -107,7 +107,7 @@ void fSolvePart2(FILE* input, FILE* output, int nrIslands)
 		}
 		totalPlanes += nrPlanes;
 	}
-	if (totalPlanes > tolerance * nrIslands)
+	if (totalPlanes > tolerance* nrIslands)
 	{
 		fprintf(output, "Stack overflow!");
 		return;
@@ -147,7 +147,7 @@ void fSolvePart2(FILE* input, FILE* output, int nrIslands)
 	}
 	GraphMat* graphMat = NULL;
 	fInitGraphMat(&graphMat, nrIslands, 0);		 // function
-	fReadIslandsMat(input, graphMat);
+	fCreateGraphMatFromMat(input, graphMat);
 
 	int chainTransfer = 0;
 	fTryBack(output, graphMat, vIslands, vHeap, &chainTransfer);
@@ -228,7 +228,7 @@ void fReadConnections(FILE* input, int nrIslands, GraphMat** adrGraphMat)
 		free(graphMat);
 	}
 	fInitGraphMat(&graphMat, nrIslands, nrEdges);
-	fCreateGraphMat(graphMat, input);
+	fCreateGraphMatFromEdges(graphMat, input);
 	*adrGraphMat = graphMat;
 }
 
@@ -410,7 +410,7 @@ void fBack(BackParam backParam)
 	//explicatia completa - in README
 
 	int idIsland = backParam.idIsland;
-	int nrIslands = backParam.nrIslands;
+	int nrIslands = backParam.graphMat->nrVertexes;
 	Island* vIslands = backParam.vIslands;
 	int tolerance = vIslands[idIsland].tolerance;
 
@@ -454,12 +454,12 @@ void fBack(BackParam backParam)
 		if
 			(
 				idNeighbour == idIsland ||
-				vIslands[idNeighbour].nrPlanes >= tolerance
+				vIslands[idNeighbour].nrPlanes >= tolerance // daca varful iterat prin potentialii vecini este chiar insula sau nu este cu depasire de toleranta, renunta
 				)
 		{
 			continue;
 		}
-		if (!fTestEdgeMat(backParam.graphMat, idIsland, idNeighbour))
+		if (!fTestEdgeMat(backParam.graphMat, idIsland, idNeighbour)) // daca nu este vecin, renunta
 		{
 			continue;
 		}
@@ -472,10 +472,10 @@ void fBack(BackParam backParam)
 		int oldValue = backParam.vLevel[backParam.level];
 		backParam.vLevel[backParam.level++] = idNeighbour;
 		int oldAlready = backParam.vAlready[idNeighbour];
-		backParam.vAlready[idNeighbour] = 1;
+		backParam.vAlready[idNeighbour] = 1; // deja am asignat avionul la o insula si marcam asta
 		fBack(backParam);
 		backParam.vLevel[--backParam.level] = oldValue;
-		backParam.vAlready[idNeighbour] = oldAlready;
+		backParam.vAlready[idNeighbour] = oldAlready; // se reseteaza valorile. nu mai avem asignat la o insula avionul.
 	}
 
 }
@@ -605,7 +605,6 @@ void fTryBack(FILE* output, GraphMat* graphMat, Island* vIslands, Heap** vHeap, 
 			backParam.excess = excess;
 			backParam.graphMat = graphMat;
 			backParam.idIsland = idIsland;
-			backParam.nrIslands = nrIslands;
 			backParam.vIslands = vIslands;
 			backParam.vHeap = vHeap;
 			backParam.level = 0;

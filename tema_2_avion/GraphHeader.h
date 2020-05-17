@@ -28,7 +28,8 @@ struct GraphList
 };
 
 void fPointerTest(void* ptr);
-void fCreateGraphMat(GraphMat* graphMat, FILE* input);
+void fCreateGraphMatFromEdges(GraphMat* graphMat, FILE* input);
+void fCreateGraphMatFromMat(FILE* input, GraphMat* graphMat);
 void fEraseGraphMat(GraphMat* graphMat);
 void fPrintGraphMat(GraphMat* graphMat);
 void fFindNeighbourMat(FILE* output,GraphMat* graphMat, int x);

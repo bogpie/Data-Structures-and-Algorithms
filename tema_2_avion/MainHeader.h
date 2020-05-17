@@ -34,15 +34,14 @@ struct Island
 typedef struct BackParam BackParam;
 struct BackParam
 {
-	Island* vIslands;
-	int nrIslands;
-	GraphMat* graphMat;
-	int idIsland;
-	int excess;
-	int* vLevel;
-	int level;
-	int* vAlready;
-	Heap** vHeap;
+	Island* vIslands; // vectorul de insule
+	GraphMat* graphMat; // graful cu matricea de adiacenta
+	int idIsland; // id-ul insulei cu exces
+	int excess; // numarul de avioane cu care trece peste toleranta
+	int* vLevel; // vectorul de niveluri specifice backtrackingului. nivelurile sunt avioane de transferat, valorile din vector sunt insule.
+	int level; // nivelul curent
+	int* vAlready; // vector de aparitii. marcheaza daca am gasit o corespondenta sau nu pentru o INSULA.
+	Heap** vHeap; // heap cu solutii. explicatia in README
 };
 
 void fReadIslands(FILE* input, int* adrNrIslands, Island** adrVectorIslands);
@@ -59,7 +58,6 @@ void fSolveMinZbor(FILE* input, FILE* output, GraphMat* graphMat);
 void fBack(BackParam backParam);
 void fTryBack(FILE* output, GraphMat* graphMat, Island* vIslands, Heap** vHeap, int* adrChainTransfer);
 void fChainTransfer(GraphMat* graphMat,Island* vIslands, int nrIslands, FILE* output);
-void fReadIslandsMat(FILE* input, GraphMat* graphMat);
 void fSolvePart1(FILE* input, FILE* output, int* adrNrIslands);
 void fSolvePart2(FILE* input, FILE* output, int nrIslands);
 
