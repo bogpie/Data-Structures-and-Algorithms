@@ -1,7 +1,7 @@
 #include "MainHeader.h"
 
 
-void fCreateGraphMat(GraphMat* graphMat, FILE* input)
+void fCreateGraphMatFromEdges(GraphMat* graphMat, FILE* input) // citirea insulelor daca sunt prezentate ca muchii
 {
 	int iEdge;
 	for (iEdge = 0; iEdge < graphMat->nrEdges; ++iEdge)
@@ -98,7 +98,7 @@ int fTestEdgeMat(GraphMat* graphMat, int x, int y)
 	return 0;
 }
 
-void fReadIslandsMat(FILE* input,GraphMat* graphMat)
+void fCreateGraphMatFromMat(FILE* input,GraphMat* graphMat) // citirea insulelor, daca sunt prezentate printr-o matrice de adiacenta
 {
 	for (int idLeft = 1; idLeft <= graphMat->nrVertexes; ++idLeft)
 	{
