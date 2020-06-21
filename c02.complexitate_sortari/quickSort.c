@@ -3,6 +3,7 @@
 void split(int v[],int low,int high)
 {
     int pivot = v[high];
+	return pivot;
 
 }
 
